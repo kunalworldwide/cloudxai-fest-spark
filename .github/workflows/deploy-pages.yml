@@ -37,6 +37,8 @@ jobs:
           fi
 
       - name: Build
+        env:
+          VITE_BASE: '/'
         run: npm run build
 
       - name: Show built files (debug)

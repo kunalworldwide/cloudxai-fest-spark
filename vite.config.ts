@@ -9,9 +9,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig(({ mode }) => ({
-  // Use a base path when building for GitHub Pages (project site).
-  // Replace 'cloudxai-fest-spark' with your repo name if it changes.
-  base: mode === "development" ? "/" : "/cloudxai-fest-spark/",
+  // Base path for built assets. Allow override with VITE_BASE env var.
+  // - If VITE_BASE is set, use it (useful for custom domains like cloudconf.ai -> '/')
+  // - Otherwise, default to '/' in development and '/<repo>/' for production project-site
+  base: process.env.VITE_BASE
+    ? process.env.VITE_BASE
+    : mode === "development"
+    ? "/"
+    : "/cloudxai-fest-spark/",
   server: {
     host: "::",
     port: 8080,
