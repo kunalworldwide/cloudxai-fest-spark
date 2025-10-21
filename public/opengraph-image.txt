@@ -1,0 +1,10 @@
+Please replace this file with an actual opengraph image (1200x630px) containing:
+
+Title: CloudxAI Conference 2026
+Subtitle: Enterprise Cloud & AI
+Date: March 14, 2026
+Location: Bengaluru, India
+
+Background: Professional gradient or technology-themed image
+Colors: Match the website's theme
+Logo: Conference logo if available

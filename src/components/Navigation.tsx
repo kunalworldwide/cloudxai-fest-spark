@@ -13,8 +13,10 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
-          <div className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            CloudxAI Fest
+          <div className="flex items-center space-x-2">
+            <div className="font-bold text-xl text-foreground">
+              CloudxAI Conference 2026
+            </div>
           </div>
 
           {/* Navigation Links */}

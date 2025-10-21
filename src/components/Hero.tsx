@@ -15,21 +15,22 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
       </div>
 
-      {/* Animated gradient overlay */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 animate-gradient-shift bg-300%" />
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center animate-fade-in-up">
+      <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="inline-block mb-6 px-6 py-2 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-sm">
-          <span className="text-sm font-medium text-primary">A Premier Tech Conference</span>
+          <span className="text-sm font-medium text-primary">Global Cloud & AI Conference</span>
         </div>
 
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent animate-gradient-shift bg-300%">
-          CloudxAI
+        <h1 className="text-6xl md:text-7xl font-bold mb-6 text-foreground">
+          CloudxAI Conference
+          <span className="text-3xl md:text-4xl font-medium block mt-2">2026</span>
         </h1>
 
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-          Where Cloud Computing Meets Artificial Intelligence
+          Shaping the Future of Enterprise Technology
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
@@ -47,7 +48,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button 
             size="lg" 
-            className="bg-destructive hover:bg-destructive/90 text-destructive-foreground text-lg px-8 py-6 animate-glow-pulse"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
           >
             Register Now
           </Button>

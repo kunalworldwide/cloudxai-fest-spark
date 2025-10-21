@@ -1,0 +1,12 @@
+Please replace this with a favicon.ico file that contains:
+
+1. Simple "C" or cloud icon
+2. Uses the website's primary colors
+3. Readable at small sizes (16x16, 32x32)
+4. Save as favicon.ico in this directory
+
+Recommended specifications:
+- Include multiple sizes: 16x16, 32x32, 48x48
+- Use PNG format for each size
+- Convert to .ico format
+- Keep file size under 100KB
