@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+#  Welcome to your Lovable project
 
 [![Website Status](https://img.shields.io/badge/site-cloudconf.ai-blue)](https://cloudconf.ai)
 
