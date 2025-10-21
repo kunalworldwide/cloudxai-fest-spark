@@ -1,5 +1,7 @@
 # Welcome to your Lovable project
 
+[![Website Status](https://img.shields.io/badge/site-cloudconf.ai-blue)](https://cloudconf.ai)
+
 ## Project info
 
 **URL**: https://lovable.dev/projects/f1f928df-b151-42a8-b44d-ba01fbf66df0

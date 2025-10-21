@@ -1,0 +1,79 @@
+name: Build and deploy to gh-pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+
+  wait-for-https:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for HTTPS to be enabled for cloudconf.ai
+        id: wait_https
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const axios = require('axios');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const domain = 'cloudconf.ai';
+            const maxAttempts = 20;
+            const delayMs = 15000; // 15s
+
+            async function sleep(ms){ return new Promise(r=>setTimeout(r, ms)); }
+
+            for(let i=0;i<maxAttempts;i++){
+              const resp = await github.rest.repos.getPages({ owner, repo });
+              const cname = resp.data.cname || '';
+              const httpsEnforced = resp.data.https_enforced || false;
+              if(cname === domain && httpsEnforced){
+                core.setOutput('done', 'true');
+                return;
+              }
+              await sleep(delayMs);
+            }
+            core.setOutput('done','false');
+
+      - name: Create issue when HTTPS active
+        if: steps.wait_https.outputs.done == 'true'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Pages: HTTPS enabled for cloudconf.ai',
+              body: 'GitHub Pages has enabled HTTPS for cloudconf.ai and the site should now be available over HTTPS.'
+            })
