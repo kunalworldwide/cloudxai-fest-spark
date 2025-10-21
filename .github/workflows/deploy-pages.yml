@@ -56,42 +56,4 @@ jobs:
           publish_dir: ./dist
           publish_branch: gh-pages
 
-  wait-for-https:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Wait for HTTPS to be enabled for cloudconf.ai
-        id: wait_https
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const owner = context.repo.owner;
-            const repo = context.repo.repo;
-            const domain = 'cloudconf.ai';
-            const maxAttempts = 20;
-            const delayMs = 15000; // 15s
 
-            function sleep(ms){ return new Promise(r=>setTimeout(r, ms)); }
-
-            for(let i=0;i<maxAttempts;i++){
-              const resp = await github.rest.repos.getPages({ owner, repo });
-              const cname = resp.data.cname || '';
-              const httpsEnforced = resp.data.https_enforced || false;
-              if(cname === domain && httpsEnforced){
-                return 'true';
-              }
-              await sleep(delayMs);
-            }
-            return 'false';
-
-      - name: Create issue when HTTPS active
-        if: steps.wait_https.outputs.result == 'true'
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: 'Pages: HTTPS enabled for cloudconf.ai',
-              body: 'GitHub Pages has enabled HTTPS for cloudconf.ai and the site should now be available over HTTPS.'
-            })

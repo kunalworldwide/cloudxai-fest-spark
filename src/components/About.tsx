@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="py-24 relative">
+    <section id="about" className="py-24 relative">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -20,9 +20,9 @@ const About = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 max-w-5xl mx-auto">
           {[
             { number: "4", label: "Keynote Speakers" },
-            { number: "500+", label: "Attendees" },
+            { number: "300+", label: "Attendees" },
             { number: "20+", label: "Sessions" },
-            { number: "2", label: "Days" },
+            { number: "1", label: "Day" },
           ].map((stat, index) => (
             <div 
               key={index} 

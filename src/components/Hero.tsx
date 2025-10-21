@@ -65,7 +65,7 @@ const Hero = () => {
           <p className="text-sm text-muted-foreground mb-4">POWERED BY</p>
           <div className="inline-block">
             <div className="text-3xl font-bold text-foreground">
-              CAST.AI
+              CAST AI
             </div>
           </div>
         </div>
