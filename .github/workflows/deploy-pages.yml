@@ -39,6 +39,14 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Show built files (debug)
+        run: |
+          echo "Working dir: $(pwd)"
+          echo "Contents of repo root:"
+          ls -la
+          echo "Contents of dist (if present):"
+          ls -la dist || true
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -55,29 +63,27 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const axios = require('axios');
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const domain = 'cloudconf.ai';
             const maxAttempts = 20;
             const delayMs = 15000; // 15s
 
-            async function sleep(ms){ return new Promise(r=>setTimeout(r, ms)); }
+            function sleep(ms){ return new Promise(r=>setTimeout(r, ms)); }
 
             for(let i=0;i<maxAttempts;i++){
               const resp = await github.rest.repos.getPages({ owner, repo });
               const cname = resp.data.cname || '';
               const httpsEnforced = resp.data.https_enforced || false;
               if(cname === domain && httpsEnforced){
-                core.setOutput('done', 'true');
-                return;
+                return 'true';
               }
               await sleep(delayMs);
             }
-            core.setOutput('done','false');
+            return 'false';
 
       - name: Create issue when HTTPS active
-        if: steps.wait_https.outputs.done == 'true'
+        if: steps.wait_https.outputs.result == 'true'
         uses: actions/github-script@v6
         with:
           script: |
