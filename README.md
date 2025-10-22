@@ -1,20 +1,10 @@
-#  Welcome to your Lovable project
+# CloudxAI Fest Spark
 
 [![Website Status](https://img.shields.io/badge/site-cloudconf.ai-blue)](https://cloudconf.ai)
 
-## Project info
-
-**URL**: https://lovable.dev/projects/f1f928df-b151-42a8-b44d-ba01fbf66df0
-
-## How can I edit this code?
+## How to Edit This Code
 
 There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/f1f928df-b151-42a8-b44d-ba01fbf66df0) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
@@ -62,14 +52,19 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## How to Deploy This Project
 
-Simply open [Lovable](https://lovable.dev/projects/f1f928df-b151-42a8-b44d-ba01fbf66df0) and click on Share -> Publish.
+You can deploy this project to any static hosting service that supports Vite applications. Here are some popular options:
 
-## Can I connect a custom domain to my Lovable project?
+1. Vercel
+2. Netlify
+3. GitHub Pages
+4. Cloudflare Pages
 
-Yes, you can!
+To build the project for production:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```sh
+npm run build
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This will create a `dist` directory with your optimized production build.
