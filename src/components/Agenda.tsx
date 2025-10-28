@@ -11,36 +11,10 @@ const Agenda = () => {
       description: "Keynotes, 25-min sessions, networking breaks",
       agendaItems: [
         {
-          time: "09:30 AM",
-          title: "Registration & Networking Breakfast",
-          type: "Event",
-        },
-        {
-          time: "10:00 AM",
-          title: "Opening Keynote: The Future of Cloud & AI",
-          type: "Keynote",
-          speaker: "TBA",
-        },
-        {
-          time: "11:00 AM",
-          title: "Technical Sessions",
-          type: "Sessions",
-          description: "25-minute focused presentations"
-        },
-        {
-          time: "01:00 PM",
-          title: "Networking Lunch",
-          type: "Break",
-        },
-        {
-          time: "02:00 PM",
-          title: "Afternoon Sessions",
-          type: "Sessions",
-        },
-        {
-          time: "04:30 PM",
-          title: "Closing Keynote",
-          type: "Keynote",
+          time: "TBA",
+          title: "Full Day Program",
+          type: "Announcing Soon",
+          description: "Detailed schedule coming soon"
         },
       ],
     },
@@ -52,22 +26,10 @@ const Agenda = () => {
       description: "In-depth workshops on AI technologies",
       agendaItems: [
         {
-          time: "11:30 AM",
-          title: "AI Enabler Workshop",
-          type: "Workshop",
-          duration: "1.5 hours"
-        },
-        {
-          time: "01:30 PM",
-          title: "DBO Implementation Workshop",
-          type: "Workshop",
-          duration: "1 hour"
-        },
-        {
-          time: "02:45 PM",
-          title: "CLM & OMNI Integration Workshop",
-          type: "Workshop",
-          duration: "1.5 hours"
+          time: "TBA",
+          title: "AI Technology Workshops",
+          type: "Announcing Soon",
+          description: "In-depth hands-on sessions"
         },
       ],
     },
@@ -78,25 +40,34 @@ const Agenda = () => {
       description: "VIP and Executive exclusive sessions",
       agendaItems: [
         {
-          time: "12:00 PM",
-          title: "Executive Lunch & Networking",
-          type: "VIP Event",
-          duration: "1.5 hours"
+          time: "TBA",
+          title: "Executive Sessions",
+          type: "Announcing Soon",
+          description: "VIP exclusive content"
         },
       ],
     },
   ];
 
   return (
-    <section id="agenda" className="py-24 relative">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+    <section id="agenda" className="py-24 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+      </div>
+      
+      <div className="container mx-auto px-6 relative">
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent animate-gradient-shift bg-300%">
             Event Agenda
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
             A carefully curated program designed to inspire, educate, and connect
           </p>
+          <div className="inline-block px-6 py-2 rounded-full bg-accent/20 border border-accent/50 animate-glow-pulse">
+            <span className="text-accent font-semibold">📅 Full Schedule Announcing Soon</span>
+          </div>
           <div className="flex items-center justify-center gap-4 mt-4">
             <Presentation className="w-5 h-5 text-muted-foreground" />
             <span className="text-muted-foreground">3 Parallel Tracks</span>
@@ -149,17 +120,11 @@ const Agenda = () => {
                         </div>
 
                         {/* Content card */}
-                        <div className="bg-card border border-border rounded-xl p-6 hover:border-primary transition-colors">
+                        <div className="bg-card border border-border rounded-xl p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:scale-105">
                           <div className="flex items-start justify-between mb-2">
                             <div>
                               <div className="text-sm text-accent font-semibold mb-1">{item.time}</div>
                               <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
-                              {item.speaker && (
-                                <p className="text-sm text-muted-foreground mt-1">Speaker: {item.speaker}</p>
-                              )}
-                              {item.duration && (
-                                <p className="text-sm text-muted-foreground mt-1">Duration: {item.duration}</p>
-                              )}
                               {item.description && (
                                 <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
                               )}
