@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Mic2 } from "lucide-react";
+import keynoteStageImg from "@/assets/keynote-stage.jpg";
 
 const Keynotes = () => {
   const keynotes = [
@@ -27,8 +28,18 @@ const Keynotes = () => {
 
   return (
     <section id="keynotes" className="py-24 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+      {/* Background image with overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${keynoteStageImg})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background/95" />
+      
+      {/* Animated accents */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
+      </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">

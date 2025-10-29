@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import conferenceCrowd from "@/assets/conference-crowd.jpg";
 
 const Hero = () => {
   return (
@@ -8,11 +8,11 @@ const Hero = () => {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroBg} 
-          alt="Tech conference background" 
-          className="w-full h-full object-cover opacity-40"
+          src={conferenceCrowd} 
+          alt="Massive tech conference crowd at CloudxAI with LED screens and stage lighting" 
+          className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
       </div>
 
       {/* Subtle gradient overlay */}
