@@ -51,6 +51,17 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Bottom */}
+        <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-muted-foreground">
+            © 2026 CloudxAI. All rights reserved.
+          </p>
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <span>Powered by</span>
+            <span className="font-bold text-foreground">CAST.AI</span>
+          </div>
+        </div>
+
         {/* Organised By Section */}
         <div className="py-12 border-t border-border">
           <h4 className="text-xl font-semibold text-center mb-8">Organised By</h4>
@@ -71,17 +82,6 @@ const Footer = () => {
               />
               <p className="text-sm font-medium text-foreground">AIXchange</p>
             </div>
-          </div>
-        </div>
-
-        {/* Bottom */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            © 2026 CloudxAI. All rights reserved.
-          </p>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Powered by</span>
-            <span className="font-bold text-foreground">CAST.AI</span>
           </div>
         </div>
       </div>
