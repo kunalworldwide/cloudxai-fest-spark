@@ -5,24 +5,16 @@ import keynoteStageImg from "@/assets/keynote-stage.jpg";
 const Keynotes = () => {
   const keynotes = [
     {
-      title: "The Future of Cloud Computing",
-      description: "Exploring next-generation cloud architectures and their impact on global infrastructure",
-      tag: "Cloud Infrastructure",
+      tag: "Keynote 1",
     },
     {
-      title: "AI at Scale: Challenges & Solutions",
-      description: "Real-world insights into deploying and managing AI systems at enterprise scale",
-      tag: "Artificial Intelligence",
+      tag: "Keynote 2",
     },
     {
-      title: "Security in the AI Era",
-      description: "Addressing emerging security challenges in AI-powered cloud environments",
-      tag: "Security",
+      tag: "Keynote 3",
     },
     {
-      title: "Innovation & Sustainability",
-      description: "Building sustainable tech solutions for tomorrow's challenges",
-      tag: "Sustainability",
+      tag: "Keynote 4",
     },
   ];
 
@@ -43,47 +35,56 @@ const Keynotes = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <Mic2 className="w-6 h-6 text-primary animate-glow-pulse" />
+            <span className="text-sm uppercase tracking-wider text-primary font-semibold">Speakers</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent animate-gradient-shift">
             Featured Keynotes
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Industry leaders sharing transformative insights and visions for the future
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
+            World-class speakers sharing transformative insights
           </p>
+          <div className="inline-block px-4 py-2 rounded-full bg-accent/10 border border-accent/30">
+            <span className="text-accent font-semibold">Announcing Soon</span>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {keynotes.map((keynote, index) => (
             <Card 
               key={index}
-              className="group p-8 bg-card/50 backdrop-blur-sm border-border hover:border-primary transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 animate-scale-in cursor-pointer"
-              style={{ animationDelay: `${index * 0.15}s` }}
+              className="group p-6 bg-card/50 backdrop-blur-sm border-border hover:border-primary transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 animate-scale-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <Mic2 className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <div className="flex-1">
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-accent/10 text-accent border border-accent/30 mb-3">
-                    {keynote.tag}
-                  </span>
-                  <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {keynote.title}
-                  </h3>
-                </div>
-              </div>
-              <p className="text-muted-foreground leading-relaxed">
-                {keynote.description}
-              </p>
-              
-              {/* Speaker placeholder */}
-              <div className="mt-6 pt-6 border-t border-border">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-primary" />
-                  <div>
-                    <div className="text-sm font-medium text-foreground">Speaker TBA</div>
-                    <div className="text-xs text-muted-foreground">To be announced soon</div>
+              {/* Silhouette */}
+              <div className="relative mb-6 aspect-square rounded-xl overflow-hidden bg-gradient-to-br from-primary/20 to-accent/20 border border-border">
+                <div className="absolute inset-0 flex items-end justify-center pb-8">
+                  <div className="relative w-32 h-40">
+                    {/* Head */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-gradient-to-br from-muted to-muted-foreground/50 opacity-80" />
+                    {/* Body */}
+                    <div className="absolute top-14 left-1/2 -translate-x-1/2 w-24 h-28 rounded-t-full bg-gradient-to-br from-muted to-muted-foreground/50 opacity-80" 
+                         style={{ clipPath: 'ellipse(50% 50% at 50% 0%)' }} 
+                    />
                   </div>
                 </div>
+                {/* Question mark overlay */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-6xl font-bold text-primary/20 group-hover:text-primary/40 transition-colors">?</span>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-accent/10 text-accent border border-accent/30 mb-3">
+                  {keynote.tag}
+                </span>
+                <h3 className="text-lg font-bold text-foreground mb-2">
+                  Speaker Announcement
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Coming Soon
+                </p>
               </div>
             </Card>
           ))}

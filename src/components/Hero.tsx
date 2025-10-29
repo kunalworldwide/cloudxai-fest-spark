@@ -72,6 +72,14 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* Scroll down animation */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float">
+        <span className="text-sm text-muted-foreground">Scroll to explore</span>
+        <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex items-start justify-center p-2">
+          <div className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce" />
+        </div>
+      </div>
+
       {/* Decorative elements */}
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
     </section>
