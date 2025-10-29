@@ -1,4 +1,6 @@
 import { Mail, Twitter, Linkedin, Github } from "lucide-react";
+import aixchangeLogo from "@/assets/aixchange-logo.png";
+import cloudComputingCircleLogo from "@/assets/cloud-computing-circle-logo.png";
 
 const Footer = () => {
   return (
@@ -46,6 +48,29 @@ const Footer = () => {
                 <span>info@cloudxai.com</span>
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Organised By Section */}
+        <div className="py-12 border-t border-border">
+          <h4 className="text-xl font-semibold text-center mb-8">Organised By</h4>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
+            <div className="flex flex-col items-center">
+              <img 
+                src={cloudComputingCircleLogo} 
+                alt="Cloud Computing Circle" 
+                className="h-24 w-24 object-contain mb-3"
+              />
+              <p className="text-sm font-medium text-foreground">Cloud Computing Circle</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <img 
+                src={aixchangeLogo} 
+                alt="AIXchange" 
+                className="h-20 object-contain mb-3"
+              />
+              <p className="text-sm font-medium text-foreground">AIXchange</p>
+            </div>
           </div>
         </div>
 
