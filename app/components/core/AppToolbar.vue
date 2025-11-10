@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar>
+  <v-app-bar color="#2562ff" elevation="0" class="text-white" scroll-behavior="fully-hide">
     <v-toolbar-title>
       <v-icon class="mr-2">mdi-cloud-outline</v-icon>
       <span>CloudxAI Conference</span>
