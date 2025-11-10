@@ -32,18 +32,8 @@
         <p class="mt-5">Powered by</p>
         <h1 class="text-h4" style="line-height: 0.9">Cast AI</h1>
       </v-col>
-      <v-col cols="4">
-        <h1>Get Ready for the Future of AI</h1>
-        <p>
-          The CloudxAI Conference is a gathering of experts and enthusiasts in
-          the field of cloud and AI. It is the premier destination for
-          technology leaders, innovators, and professionals to explore the
-          convergence of cloud computing and artificial intelligence in the
-          enterprise landscape. Join industry leaders and experts for an
-          intensive day of knowledge sharing, featuring cutting-edge insights,
-          technical deep-dives, and strategic networking opportunities.
-        </p>
-        <v-btn color="primary" variant="outlined">Register</v-btn>
+      <v-col cols="4" class="text-center">
+        <v-icon size="400" opacity="0.5">mdi-cloud-outline</v-icon>
       </v-col>
     </v-row>
     <!-- Hero Section End -->
