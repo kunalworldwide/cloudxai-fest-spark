@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <CoreAppToolbar />
-    <v-main class="px-0">
+    <v-main class="px-0 mt-3">
         <NuxtPage />
     </v-main>
   </v-app>

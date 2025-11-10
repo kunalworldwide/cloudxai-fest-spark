@@ -12,16 +12,14 @@
       <span>Home</span>
     </v-btn>
     <v-btn>
-        <v-icon>mdi-information-outline</v-icon>
-        <span>About</span>
+      <v-icon>mdi-information-outline</v-icon>
+      <span>About</span>
     </v-btn>
   </v-app-bar>
 </template>
 
 <script lang="ts" setup>
-
 </script>
 
 <style>
-
 </style>
