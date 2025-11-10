@@ -12,6 +12,8 @@
         <p>March 14, 2026</p>
         <p>9 AM IST Onwords</p>
         <v-btn color="" class="mt-10" size="large" variant="outlined">Register</v-btn>
+
+        <h1 class="text-h4 mt-5" style="line-height: 1.2;">Powered by <br>Cast AI</h1>
       </v-col>
       <v-col cols="5">
         <h1>Get Ready for the Future of AI</h1>
