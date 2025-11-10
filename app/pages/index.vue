@@ -5,17 +5,34 @@
       class="align-center text-white pa-15 justify-center"
       style="background-color: #2562ff; height: 100vh"
     >
-      <v-col cols="7">
-        <h1 class="text-h1">Welcome to the <br> CloudxAI Conference</h1>
-        <p class="text-h4">The CloudxAI Conference is a gathering of experts and enthusiasts in
-          the field of cloud and AI. </p>
+      <v-col cols="8">
+        <v-slide-y-reverse-transition>
+          <h1 v-show="showTitle" class="text-h1">
+            Welcome to the <br />
+            CloudxAI Conference
+          </h1>
+        </v-slide-y-reverse-transition>
+        <v-slide-y-transition>
+          <p v-show="showTitle" class="text-h4">
+            The CloudxAI Conference is a gathering of experts and enthusiasts in
+            the field of cloud and AI.
+          </p>
+        </v-slide-y-transition>
         <p>March 14, 2026</p>
         <p>9 AM IST Onwords</p>
-        <v-btn color="" class="mt-10" size="large" variant="outlined">Register</v-btn>
+        <v-btn
+          color=""
+          class="mt-10"
+          size="x-large"
+          variant="outlined"
+          append-icon="mdi-arrow-top-right"
+          >Register</v-btn
+        >
 
-        <h1 class="text-h4 mt-5" style="line-height: 1.2;">Powered by <br>Cast AI</h1>
+        <p class="mt-5">Powered by</p>
+        <h1 class="text-h4" style="line-height: 0.9">Cast AI</h1>
       </v-col>
-      <v-col cols="5">
+      <v-col cols="4">
         <h1>Get Ready for the Future of AI</h1>
         <p>
           The CloudxAI Conference is a gathering of experts and enthusiasts in
@@ -203,6 +220,11 @@ definePageMeta({
 });
 
 const faqData = ref(faq);
+const showTitle = ref(false);
+
+onMounted(() => {
+  showTitle.value = true;
+});
 
 const eventStats = ref([
   {
