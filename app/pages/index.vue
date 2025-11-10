@@ -1,18 +1,19 @@
 <template>
-  <v-container fluid class="pa-0 h-100">
+  <v-container fluid class="pa-0">
     <!-- Hero Section -->
     <v-row
-      class="align-center text-white pa-10"
-      style="background-color: #2562ff"
+      class="align-center text-white pa-15 justify-center"
+      style="background-color: #2562ff; height: 100vh"
     >
-      <v-col cols="6">
-        <h1>Home</h1>
-        <p>Welcome to the CloudxAI Conference</p>
+      <v-col cols="7">
+        <h1 class="text-h1">Welcome to the <br> CloudxAI Conference</h1>
+        <p class="text-h4">The CloudxAI Conference is a gathering of experts and enthusiasts in
+          the field of cloud and AI. </p>
         <p>March 14, 2026</p>
         <p>9 AM IST Onwords</p>
-        <v-btn color="primary" variant="outlined">Register</v-btn>
+        <v-btn color="" class="mt-10" size="large" variant="outlined">Register</v-btn>
       </v-col>
-      <v-col cols="6">
+      <v-col cols="5">
         <h1>Get Ready for the Future of AI</h1>
         <p>
           The CloudxAI Conference is a gathering of experts and enthusiasts in
@@ -176,9 +177,12 @@
       </v-col>
     </v-row>
     <!-- FAQ Section End -->
-     
+
     <!-- Countdown Section -->
-    <v-row class="justify-center mt-10 py-10 px-15 text-center" style="background-color: #2562ff">
+    <v-row
+      class="justify-center mt-10 py-10 px-15 text-center"
+      style="background-color: #2562ff"
+    >
       <v-col cols="12" lg="10" xl="12">
         <h1 class="text-h2">Countdown</h1>
         <p>The event will start in</p>
