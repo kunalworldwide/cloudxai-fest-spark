@@ -4,6 +4,7 @@
     <v-main class="px-0 mt-3">
         <NuxtPage />
     </v-main>
+    <CoreAppFooter />
   </v-app>
 </template>
 
