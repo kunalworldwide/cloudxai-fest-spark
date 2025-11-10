@@ -35,6 +35,11 @@
       <v-col cols="4" class="text-center">
         <v-icon size="400" opacity="0.5">mdi-cloud-outline</v-icon>
       </v-col>
+
+      <v-col cols="12" class="text-center opacity-50 animate-bounce">
+        <v-icon size="40" class="" color="white">mdi-mouse-move-down</v-icon>
+        <p class="mt-0 text-white">Scroll down to learn more</p>
+      </v-col>
     </v-row>
     <!-- Hero Section End -->
 
