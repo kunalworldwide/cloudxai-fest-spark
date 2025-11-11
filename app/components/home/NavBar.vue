@@ -1,8 +1,8 @@
 <template>
   <div class="nav-bar" style="z-index:20; position:relative;">
-      <v-toolbar color="transparent" flat class="px-4">
+      <v-toolbar color="transparent" flat class="">
         <!-- Logo and Text on Left -->
-        <div class="d-flex align-center ga-3">
+        <div class="d-flex align-center ga-3 ml-4">
           <v-avatar size="40" color="primary">
             <v-icon color="white">mdi-cloud-outline</v-icon>
           </v-avatar>
@@ -31,6 +31,11 @@ import NavBarContent from './NavBarContent.vue';
   font-size: 16px;
   letter-spacing: 0;
 }
+
+@media (max-width: 768px) {
+  .nav-bar{
+  padding-right:0%;
+}}
 
 
 
