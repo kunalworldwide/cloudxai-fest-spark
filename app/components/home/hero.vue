@@ -148,7 +148,7 @@ const heroSlides = ref([
 .hero-background {
   height: calc(100svh - 64px);
   padding:60px;
-  padding-top: 24px;
+  padding-top: 0px;
 }
 
 .hero-slide-container {
@@ -160,7 +160,7 @@ const heroSlides = ref([
     border: 1px solid white;
     border-right: none;
     height: 100%;
-    width: 50%;
+    width: 45%;
     padding: 16px;
 
     .hero-slide-content {
@@ -196,7 +196,7 @@ const heroSlides = ref([
   }
 
   .hero-image-conatiner {
-    width: 50%;
+    width: 55%;
     height: 100%;
   }
 }
@@ -245,6 +245,7 @@ const heroSlides = ref([
 @media (max-width: 768px) {
   .hero-background {
     padding:24px;
+    padding-top: 0px;
   }
 
   .hero-slide-content{
@@ -261,6 +262,7 @@ display: none !important;
   }
   .hero-background {
     padding:16px;
+    padding-top: 0px;
   }
 
   .hero-slide-content{

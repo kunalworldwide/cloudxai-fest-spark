@@ -9,8 +9,10 @@
 
     <HomeEvenList />
 
+    <HomeEventAgendas />
+
     <!-- Featured Keynotes Section -->
-    <v-row class="justify-center ma-0 mt-10 py-10 px-15 text-center">
+    <!-- <v-row class="justify-center ma-0 mt-10 py-10 px-15 text-center">
       <v-col cols="12" lg="10" xl="10">
         <h1 class="text-h2">Featured Keynotes</h1>
         <p>Meet the experts who will be speaking at the event</p>
@@ -26,7 +28,7 @@
           </v-row>
         </v-container>
       </v-col>
-    </v-row>
+    </v-row> -->
     <!-- Featured Keynotes Section End -->
 
     <!-- Partners Section -->

@@ -17,9 +17,11 @@
   </v-app-bar>
 </template>
 
-<script lang="ts" setup>
+<script  setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import NavBarContent from '../home/NavBarContent.vue';
+
+import NavBarContent from "../home/NavBarContent.vue"
+
 const showToolbar = ref(false)
 
 const handleScroll = () => {

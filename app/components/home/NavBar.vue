@@ -2,7 +2,7 @@
   <div class="nav-bar" style="z-index:20; position:relative;">
       <v-toolbar color="transparent" flat class="">
         <!-- Logo and Text on Left -->
-        <div class="d-flex align-center ga-3 ml-4">
+        <div class="d-flex align-center ga-3">
           <v-avatar size="40" color="primary">
             <v-icon color="white">mdi-cloud-outline</v-icon>
           </v-avatar>
@@ -24,6 +24,7 @@ import NavBarContent from './NavBarContent.vue';
 
 <style scoped lang="scss">
 .nav-bar{
+  padding-left:64px;
   padding-right:25%;
 }
 
@@ -34,6 +35,7 @@ import NavBarContent from './NavBarContent.vue';
 
 @media (max-width: 768px) {
   .nav-bar{
+    padding-left:16px;
   padding-right:0%;
 }}
 
