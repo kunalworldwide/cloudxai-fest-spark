@@ -82,7 +82,7 @@
     <!-- FAQ Section End -->
 
     <!-- Countdown Section -->
-    <v-row
+    <!-- <v-row
       class="justify-center ma-0 mt-10 py-10 px-15 text-center"
       style="background-color: #2562ff"
     >
@@ -92,7 +92,9 @@
 
         <SharedCountDown />
       </v-col>
-    </v-row>
+    </v-row> -->
+
+    <HomeCountDown />
     <!-- Countdown Section End -->
   </v-container>
 </template>
