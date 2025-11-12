@@ -52,33 +52,7 @@
     <!-- Partners Section End -->
 
     <!-- FAQ Section (Accordion) -->
-    <v-row class="justify-center ma-0 mt-10 py-10 px-15">
-      <v-col cols="12" lg="10" xl="8">
-        <v-container>
-          <v-row class="ma-0">
-            <v-col cols="3">
-              <h1 class="text-h2">FAQ</h1>
-              <p>Frequently Asked Questions</p>
-
-              <v-btn color="primary" class="mt-3" variant="outlined"
-                >Register</v-btn
-              >
-            </v-col>
-            <v-col cols="9">
-              <v-expansion-panels>
-                <v-expansion-panel
-                  v-for="item in faqData"
-                  :key="item.question"
-                  :title="item.question"
-                  :text="item.answer"
-                >
-                </v-expansion-panel>
-              </v-expansion-panels>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-col>
-    </v-row>
+    
     <!-- FAQ Section End -->
 
     <!-- Countdown Section -->
@@ -93,6 +67,7 @@
         <SharedCountDown />
       </v-col>
     </v-row> -->
+    <HomeFaq />
 
     <HomeCountDown />
     <!-- Countdown Section End -->
@@ -100,12 +75,11 @@
 </template>
 
 <script setup>
-import faq from "@/assets/data/faq.json";
 definePageMeta({
   layout: "default",
 });
 
-const faqData = ref(faq);
+
 
 
 </script>
