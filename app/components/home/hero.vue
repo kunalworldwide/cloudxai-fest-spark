@@ -141,6 +141,7 @@ const heroSlides = ref([
 <style scoped lang="scss">
 
 .hero-main-conatiner {
+  // background-color: #050537;
   background-image: url("../../assets/images/home.jpg");
   background-size: cover;
   background-position: center;
@@ -164,7 +165,7 @@ const heroSlides = ref([
     padding: 16px;
 
     .hero-slide-content {
-      padding-left: calc(100% - 599px);
+      padding-left: calc(100% - 650px);
       .date-chip {
         margin-bottom: 16px;
       }
