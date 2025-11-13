@@ -2,7 +2,7 @@
   <v-footer class="footer-with-bg py-12">
     <v-container>
       <!-- Main Footer Content -->
-      <v-row class="text-white mb-8">
+      <v-row class="text-white mb-8 justify-space-between">
         <!-- Contact Info Section -->
         <v-col cols="12" md="6" lg="4">
           <div class="mb-6">
@@ -39,7 +39,7 @@
         </v-col> -->
 
         <!-- Social Links Section -->
-        <v-col class="float-right" cols="12" lg="4">
+        <v-col  cols="12" lg="4">
           <h3 class="text-subtitle-1 font-weight-bold mb-4">Follow us:</h3>
           <div class="d-flex gap-3">
             <v-btn
