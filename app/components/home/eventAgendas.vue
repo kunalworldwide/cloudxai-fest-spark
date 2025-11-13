@@ -111,11 +111,11 @@ export default {
 
 <style scoped lang="scss">
 .event-agendas {
-  padding: 80px 20px;
+  padding: 80px 40px 80px 20px;
   background-color: #ffffff;
 
   @media (max-width: 768px) {
-    padding: 60px 16px;
+    padding: 60px 36px 60px 16px;
   }
 
   &__container {
