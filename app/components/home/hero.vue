@@ -34,7 +34,7 @@
                   <v-btn
                     :color="slide.ctaColor"
                     :variant="slide.ctaVariant"
-                    size="x-large"
+                    size="large"
 
                     class="text-none rounded-xl"
                     :append-icon="slide.ctaIcon"
@@ -141,7 +141,6 @@ const heroSlides = ref([
 <style scoped lang="scss">
 
 .hero-main-conatiner {
-  // background-color: #050537;
   background-image: url("../../assets/images/home.jpg");
   background-size: cover;
   background-position: center;
@@ -243,19 +242,6 @@ const heroSlides = ref([
   }
 }
 
-@media (max-width: 768px) {
-  .hero-background {
-    padding:24px;
-    padding-top: 0px;
-  }
-
-  .hero-slide-content{
-    &>h1{
-      font-size: 3rem !important;
-    }
-  }
-
-}
 
 @media (max-width: 768px) {
   .background-svg{
@@ -276,6 +262,18 @@ display: none !important;
     }
   }
 
+}
+
+@media (max-width: 480px) {
+  .hero-slide-content{
+    &>h1{
+      font-size: 2.25rem !important;
+    }
+
+    .footer-value{
+      font-size: 1.25rem !important;
+    }
+  }
 }
 
 .hero-location {
