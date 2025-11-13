@@ -2,7 +2,7 @@
   <v-container fluid class="pa-0">
     <!-- Hero Section -->
     <HomeHero />
-    
+
     <!-- Hero Section End -->
 
     <HomeAboutEvent />
@@ -10,6 +10,9 @@
     <HomeEvenList />
 
     <HomeEventAgendas />
+
+    <HomeMarqee />
+
     <HomePartners />
 
     <!-- Featured Keynotes Section -->
@@ -52,7 +55,7 @@
     <!-- Partners Section End -->
 
     <!-- FAQ Section (Accordion) -->
-    
+
     <!-- FAQ Section End -->
 
     <!-- Countdown Section -->
@@ -78,12 +81,6 @@
 definePageMeta({
   layout: "default",
 });
-
-
-
-
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
