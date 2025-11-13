@@ -118,6 +118,10 @@ export default {
     padding: 60px 36px 60px 16px;
   }
 
+  @media(max-width:500px){
+    padding: 40px 25px 40px 5px;
+  }
+
   &__container {
     max-width: 1400px;
     margin: 0 auto;
