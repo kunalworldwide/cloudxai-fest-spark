@@ -8,9 +8,9 @@
             variant="text"
             color="white"
             class="text-none nav-btn"
-
+            to="/"
           >
-            Pages
+            Home
           </v-btn>
 
           <v-btn
@@ -20,17 +20,7 @@
             class="text-none nav-btn"
 
           >
-            Speakers
-          </v-btn>
-
-          <v-btn
-            v-bind="props"
-            variant="text"
-            color="white"
-            class="text-none nav-btn"
-
-          >
-            Resources
+            Contact Us
           </v-btn>
 
 

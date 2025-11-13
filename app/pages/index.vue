@@ -82,6 +82,21 @@
 definePageMeta({
   layout: "default",
 });
+
+// SEO
+useHead({
+  title: "CloudxAI Conference 2026 Bengaluru",
+  meta: [
+    { name: "description", content: "CloudxAI Conference 2026 Bengaluru" },
+    { name: "keywords", content: "conference, event, cloudxai, bengaluru" },
+    { name: "author", content: "TechFerment" },
+    { name: "robots", content: "index, follow" },
+    { name: "googlebot", content: "index, follow" },
+    { name: "bingbot", content: "index, follow" },
+    { name: "yandexbot", content: "index, follow" },
+    { name: "sitemap", content: "https://techmilap.com/sitemap.xml" },
+  ],
+});
 </script>
 
 <style scoped lang="scss"></style>
