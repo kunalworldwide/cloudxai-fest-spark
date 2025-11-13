@@ -4,7 +4,7 @@
       <!-- Section Label -->
       <div class="event-agendas__label">
         <span class="event-agendas__label-rule"></span>
-        <span class="event-agendas__label-text">EVENT AGENDAS</span>
+        <span class="event-agendas__label-text">EVENT SPEAKERS</span>
       </div>
 
       <!-- Section Heading -->
@@ -22,12 +22,12 @@
           <div class="event-agendas__card-inner">
             <div class="event-agendas__image-container">
               <img
-                :src="speaker.image"
+                :src="`images/${speaker.image}`"
                 :alt="speaker.name"
                 class="event-agendas__image"
               />
               <!-- Social Media Panel (visible on hover) -->
-              <div class="event-agendas__social-panel">
+              <!-- <div class="event-agendas__social-panel">
                 <a
                   v-for="social in speaker.socials"
                   :key="social.name"
@@ -38,7 +38,7 @@
                 >
                   <v-icon size="20" :color="social.color || '#1e3a8a'">{{ social.icon }}</v-icon>
                 </a>
-              </div>
+              </div> -->
             </div>
             <h3 class="event-agendas__name">{{ speaker.name }}</h3>
             <p class="event-agendas__role">{{ speaker.role }}</p>
@@ -56,9 +56,9 @@ export default {
     return {
       speakers: [
         {
-          name: 'MELLISSA BRAYAN',
-          role: 'CEO, Mindstation',
-          image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop',
+          name: 'Speaker Announcement',
+          role: 'Coming Soon',
+          image: 'defaultAvatar.png',
           socials: [
             { name: 'calendar', icon: 'mdi-calendar-blank', url: '#' },
             { name: 'menu', icon: 'mdi-menu', url: '#' },
@@ -68,9 +68,9 @@ export default {
           ]
         },
         {
-          name: 'BRANDON MAXWELL',
-          role: 'Global Activist',
-          image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop',
+          name: 'Speaker Announcement',
+          role: 'Coming Soon',
+          image: 'defaultAvatar.png',
           socials: [
             { name: 'calendar', icon: 'mdi-calendar-blank', url: '#' },
             { name: 'menu', icon: 'mdi-menu', url: '#' },
@@ -80,9 +80,9 @@ export default {
           ]
         },
         {
-          name: 'JENNY WILLIAMSON',
-          role: 'Global Activist',
-          image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop',
+          name: 'Speaker Announcement',
+            role: 'Coming Soon',
+            image: 'defaultAvatar.png',
           socials: [
             { name: 'calendar', icon: 'mdi-calendar-blank', url: '#' },
             { name: 'menu', icon: 'mdi-menu', url: '#' },
@@ -92,9 +92,9 @@ export default {
           ]
         },
         {
-          name: 'JACOB BALLINGER',
-          role: 'Global Activist',
-          image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
+          name: 'Speaker Announcement',
+          role: 'Coming Soon',
+          image: 'defaultAvatar.png',
           socials: [
             { name: 'calendar', icon: 'mdi-calendar-blank', url: '#' },
             { name: 'menu', icon: 'mdi-menu', url: '#' },
@@ -243,35 +243,35 @@ export default {
     transition: all 0.4s ease;
     position: relative;
 
-    .event-agendas__card:hover & {
-      transform: translateY(-8px);
-    }
+    // .event-agendas__card:hover & {
+    //   transform: translateY(-8px);
+    // }
 
     // Border frame on hover
-    &::before {
-      content: '';
-      position: absolute;
-      top: -10px;
-      left: -10px;
-      width: 150px;
-      height: 150px;
-      border-left: 5px solid #2B5BA8;
-      border-top: 5px solid #2B5BA8;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      pointer-events: none;
-      z-index: 1;
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   top: -10px;
+    //   left: -10px;
+    //   width: 150px;
+    //   height: 150px;
+    //   border-left: 5px solid #2B5BA8;
+    //   border-top: 5px solid #2B5BA8;
+    //   opacity: 0;
+    //   transition: opacity 0.4s ease;
+    //   pointer-events: none;
+    //   z-index: 1;
 
-      @media (max-width: 768px) {
-        width: 100px;
-        height: 100px;
-        border-width: 4px;
-      }
-    }
+    //   @media (max-width: 768px) {
+    //     width: 100px;
+    //     height: 100px;
+    //     border-width: 4px;
+    //   }
+    // }
 
-    .event-agendas__card:hover &::before {
-      opacity: 1;
-    }
+    // .event-agendas__card:hover &::before {
+    //   opacity: 1;
+    // }
   }
 
   &__image-container {
@@ -325,10 +325,10 @@ export default {
       gap: 12px;
     }
 
-    .event-agendas__card:hover & {
-      opacity: 1;
-      transform: translate(0, -50%);
-    }
+    // .event-agendas__card:hover & {
+    //   opacity: 1;
+    //   transform: translate(0, -50%);
+    // }
   }
 
   &__social-link {
@@ -347,10 +347,10 @@ export default {
       height: 36px;
     }
 
-    &:hover {
-      background: #2563eb;
-      transform: scale(1.1);
-    }
+    // &:hover {
+    //   background: #2563eb;
+    //   transform: scale(1.1);
+    // }
 
     .v-icon {
       color: white !important;

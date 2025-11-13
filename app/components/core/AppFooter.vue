@@ -26,7 +26,7 @@
         </v-col>
 
         <!-- Address Section -->
-        <v-col cols="12" md="6" lg="4">
+        <!-- <v-col cols="12" md="6" lg="4">
           <h3 class="text-subtitle-1 font-weight-bold mb-3">Our address:</h3>
           <div class="d-flex">
             <v-icon size="small" class="mr-2 mt-1">mdi-map-marker-outline</v-icon>
@@ -36,10 +36,10 @@
               <p class="mb-0">United States of America</p>
             </div>
           </div>
-        </v-col>
+        </v-col> -->
 
         <!-- Social Links Section -->
-        <v-col cols="12" lg="4">
+        <v-col class="float-right" cols="12" lg="4">
           <h3 class="text-subtitle-1 font-weight-bold mb-4">Follow us:</h3>
           <div class="d-flex gap-3">
             <v-btn
@@ -103,7 +103,7 @@
       <v-row class="text-white align-center">
         <v-col cols="12" md="6">
           <p class="text-body-2 mb-0">
-            Copyright © 2025 <span class="text-primary font-weight-medium">CloudxAI Conference</span> | All Right Reserved
+            Design and Developed by <span class="text-primary font-weight-medium">TechFerment</span> | All Right Reserved
           </p>
         </v-col>
         <v-col cols="12" md="6" class="text-md-right">

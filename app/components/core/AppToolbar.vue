@@ -27,17 +27,17 @@
 
     <NavBarContent />
   </v-app-bar>
-  <!-- <v-btn
+  <v-btn
       class="scroll-top-btn"
       color="#2562FF"
       icon
       size="large"
-      elevation="8"
+      elevation="12"
       @click="scrollToTop"
       v-if="showToolbar"
     >
       <v-icon>mdi-arrow-up</v-icon>
-    </v-btn> -->
+    </v-btn>
 </template>
 
 <script  setup>
@@ -66,9 +66,9 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
-// const scrollToTop = () => {
-//   window.scrollTo({ top: 0, behavior: 'smooth' });
-// };
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 </script>
 
 <style scoped lang="scss">
@@ -77,12 +77,12 @@ onUnmounted(() => {
   padding-left: 32px !important;
   padding-right: 32px !important;
 }
-// .scroll-top-btn {
-//   position: absolute;
-//   bottom: 32px;
-//   right: 32px;
-//   z-index: 1000;
-// }
+.scroll-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1000;
+}
 
 @media (max-width: 768px) {
   .app-nav-bar {

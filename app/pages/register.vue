@@ -126,7 +126,11 @@ const featuredTickets = computed(() => {
 
 <style scoped lang="scss">
 .register-container {
+  // background-image: url('@/assets/images/home.jpg');
+  // background-size: contain;
+  // background-repeat: no-repeat;
   background: linear-gradient(135deg, #0a1435 0%, #1a2b5e 50%, #3A99Ff 100%);
+  // background: linear-gradient(135deg, #0a1435 0%, #1a2b5e 50%, #3A99Ff 100%);
   min-height: 100vh;
   padding-top: 0px;
   padding-bottom: 80px;
@@ -134,39 +138,39 @@ const featuredTickets = computed(() => {
   overflow: hidden;
   
   // Decorative circles background
-  &::before {
-    content: '';
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    top: 10%;
-    left: -100px;
-    animation: float 6s ease-in-out infinite;
-  }
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   width: 300px;
+  //   height: 300px;
+  //   border-radius: 50%;
+  //   background: rgba(255, 255, 255, 0.05);
+  //   top: 10%;
+  //   left: -100px;
+  //   animation: float 6s ease-in-out infinite;
+  // }
   
-  &::after {
-    content: '';
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.03);
-    bottom: -100px;
-    right: -150px;
-    animation: float 8s ease-in-out infinite reverse;
-  }
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   width: 400px;
+  //   height: 400px;
+  //   border-radius: 50%;
+  //   background: rgba(255, 255, 255, 0.03);
+  //   bottom: -100px;
+  //   right: -150px;
+  //   animation: float 8s ease-in-out infinite reverse;
+  // }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-}
+// @keyframes float {
+//   0%, 100% {
+//     transform: translateY(0px);
+//   }
+//   50% {
+//     transform: translateY(20px);
+//   }
+// }
 
 .ticket-booking-section {
   position: relative;

@@ -7,7 +7,8 @@
 
     <HomeAboutEvent />
 
-    <HomeEvenList />
+    <!-- <HomeEvenList /> -->
+    <HomeWhatToExpect />
 
     <HomeEventAgendas />
 
