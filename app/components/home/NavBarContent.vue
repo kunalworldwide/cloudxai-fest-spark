@@ -1,0 +1,271 @@
+<template>
+  <div>
+    <!-- Desktop Navigation (visible above 768px) -->
+    <div class="d-none d-md-flex align-center ga-2 ">
+
+      <v-btn
+            v-bind="props"
+            variant="text"
+            color="white"
+            class="text-none nav-btn"
+
+          >
+            Pages
+          </v-btn>
+
+          <v-btn
+            v-bind="props"
+            variant="text"
+            color="white"
+            class="text-none nav-btn"
+
+          >
+            Speakers
+          </v-btn>
+
+          <v-btn
+            v-bind="props"
+            variant="text"
+            color="white"
+            class="text-none nav-btn"
+
+          >
+            Resources
+          </v-btn>
+
+
+          <div class="d-flex " style="gap: 14px;">
+            
+            <v-btn
+              icon
+              size="small"
+              :color="props.socialLogoColor"
+              href="https://twitter.com"
+              target="_blank"
+            >
+              <v-icon>mdi-twitter</v-icon>
+            </v-btn>
+            <v-btn
+              icon
+              size="small"
+              :color="props.socialLogoColor"
+              href="https://instagram.com"
+              target="_blank"
+            >
+              <v-icon>mdi-instagram</v-icon>
+            </v-btn>
+            <v-btn
+              icon
+              size="small"
+              :color="props.socialLogoColor"
+              href="https://linkedin.com"
+              target="_blank"
+            >
+              <v-icon>mdi-linkedin</v-icon>
+            </v-btn>
+            
+          </div>
+    </div>
+
+    <!-- Mobile Hamburger Menu (visible below 768px) -->
+    <div class="d-flex d-md-none">
+      <v-btn
+        icon
+        variant="text"
+        color="white"
+        @click="drawer = !drawer"
+      >
+        <v-icon>mdi-menu</v-icon>
+      </v-btn>
+    </div>
+
+    <!-- Mobile Sidebar Navigation - Teleported to body to avoid container constraints -->
+    <Teleport to="body">
+      <v-navigation-drawer
+        v-model="drawer"
+        temporary
+        location="right"
+        class="mobile-sidebar"
+        width="280"
+        style="background-color: #1a1d3a !important; z-index: 9999 !important;"
+      >
+        <div class="sidebar-header" style="display: flex; justify-content: flex-end; padding: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+          <v-btn
+            icon
+            variant="text"
+            color="white"
+            @click="drawer = false"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </div>
+
+        <div class="sidebar-buttons" style="padding: 8px 16px;">
+          <v-btn variant="text" color="white" class="text-none">
+            Pages
+          </v-btn>
+
+          <v-btn variant="text" color="white" class="text-none">
+            Speakers
+          </v-btn>
+
+          <v-btn variant="text" color="white" class="text-none">
+            Resources
+          </v-btn>
+          <div class="d-flex justify-center mt-4" style="gap: 24px;">
+            
+            <v-btn
+            variant="outlined"
+              icon
+              size="small"
+              color="white"
+              href="https://twitter.com"
+              target="_blank"
+            >
+              <v-icon>mdi-twitter</v-icon>
+            </v-btn>
+            <v-btn
+              variant="outlined"
+              icon
+              size="small"
+              color="white"
+              href="https://instagram.com"
+              target="_blank"
+            >
+              <v-icon>mdi-instagram</v-icon>
+            </v-btn>
+            <v-btn
+              variant="outlined"
+              icon
+              size="small"
+              color="white"
+              href="https://linkedin.com"
+              target="_blank"
+            >
+              <v-icon>mdi-linkedin</v-icon>
+            </v-btn>
+            
+          </div>
+        </div>
+      </v-navigation-drawer>
+    </Teleport>
+  </div>
+</template>
+
+<script setup >
+import { ref } from 'vue'
+const props = defineProps({
+  socialLogoColor: {
+    type: String,
+    default: 'white'
+  }
+})
+
+const drawer = ref(false)
+
+const handleNavigation = () => {
+  // Add your navigation logic here
+  drawer.value = false
+}
+</script>
+
+<style scoped lang="scss">
+// Desktop dropdown styles
+.dropdown-list {
+  padding: 16px 0;
+  border-radius: 12px;
+  min-width: 220px;
+}
+
+.dropdown-item {
+  color: white !important;
+  padding: 12px 24px !important;
+  min-height: 48px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+  .item-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .hover-line {
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .item-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    
+    .hover-line {
+      width: 20px;
+      opacity: 1;
+      margin-right: 12px;
+    }
+  }
+}
+
+// Mobile sidebar styles - Note: using unscoped styles for teleported content
+:deep(.mobile-sidebar) {
+  background-color: #1a1d3a !important;
+  z-index: 9999 !important;
+  
+  .sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+
+ 
+  
+
+
+}
+.sidebar-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+:deep(.v-overlay) {
+  z-index: 9998 !important;
+}
+
+// Responsive breakpoint
+@media (max-width: 768px) {
+  .d-md-flex {
+    display: none !important;
+  }
+  
+  .d-md-none {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .d-md-flex {
+    display: flex !important;
+  }
+  
+  .d-md-none {
+    display: none !important;
+  }
+}
+</style>

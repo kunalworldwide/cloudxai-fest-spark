@@ -1,14 +1,18 @@
 [
   {
-    "question": "What is the event?",
-    "answer": "The event is a gathering of experts and enthusiasts in the field of cloud and AI. It is the premier destination for technology leaders, innovators, and professionals to explore the convergence of cloud computing and artificial intelligence in the enterprise landscape."
+    "question": "Can I return my ticket before the event start?",
+    "answer": "Yes, tickets can be returned up to 7 days before the event for a full refund. Please contact our support team for assistance."
   },
   {
-    "question": "What is the event?",
-    "answer": "The event is a gathering of experts and enthusiasts in the field of cloud and AI. It is the premier destination for technology leaders, innovators, and professionals to explore the convergence of cloud computing and artificial intelligence in the enterprise landscape."
+    "question": "When is the conference taking place?",
+    "answer": "The conference will be held on December 15-17, 2025. Check the event schedule for detailed timing of each session."
   },
   {
-    "question": "What is the event?",
-    "answer": "The event is a gathering of experts and enthusiasts in the field of cloud and AI. It is the premier destination for technology leaders, innovators, and professionals to explore the convergence of cloud computing and artificial intelligence in the enterprise landscape."
+    "question": "What is the cost to attend the conference?",
+    "answer": "Ticket prices vary based on the pass type. Early bird tickets start at $299, and VIP passes are available for $599."
+  },
+  {
+    "question": "What topics will be covered at the conference?",
+    "answer": "The conference covers Cloud Computing, Artificial Intelligence, Machine Learning, DevOps, and Enterprise Architecture with industry-leading speakers."
   }
 ]

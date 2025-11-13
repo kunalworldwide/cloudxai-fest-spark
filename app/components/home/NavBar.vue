@@ -1,13 +1,8 @@
 <template>
-  <v-app-bar 
-    v-if="showToolbar"
-    scroll-behavior="hide"
-    color="#2562ff" 
-    elevation="4" 
-    class="text-white app-nav-bar"
-    
-  >
-  <div class="d-flex align-center ga-3" style="width: 180px;">
+  <div class="nav-bar" style="z-index:20; position:relative;">
+      <v-toolbar color="transparent" flat class="">
+        <!-- Logo and Text on Left -->
+        <div class="d-flex align-center ga-3" style="width: 180px;">
           <svg width="509" height="108" viewBox="0 0 509 108" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M342.559 107.472H323.671L409.024 0H427.741L342.559 107.472Z" fill="#3A99FF"/>
 <path d="M389.495 87.1357H408.385L360.07 20.292H341.354L389.495 87.1357Z" fill="#3A99FF"/>
@@ -23,51 +18,48 @@
 
         </div>
 
-    <v-spacer />
+        <v-spacer></v-spacer>
 
-    <NavBarContent />
-  </v-app-bar>
+        <!-- Three Dropdowns on Right -->
+         <NavBarContent :socialLogoColor="props.socialLogoColor" />
+         
+      </v-toolbar>
+    </div>
 </template>
 
-<script  setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+<script setup>
 
-import NavBarContent from "../home/NavBarContent.vue"
-
-const showToolbar = ref(false)
-
-const handleScroll = () => {
-  // The navbar is in the hero section which is 100svh
-  // Show toolbar when scrolled past the hero section (navbar out of view)
-  const scrollPosition = window.scrollY
-  const viewportHeight = window.innerHeight
-  
-  // Show toolbar when scrolled past 70% of viewport height (navbar is out of view)
-  showToolbar.value = scrollPosition > viewportHeight * 0.2
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-  handleScroll() // Check initial state
+const props = defineProps({
+  socialLogoColor: {
+    type: String,
+    default: 'white'
+  }
 })
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+import NavBarContent from './NavBarContent.vue';
 </script>
 
 <style scoped lang="scss">
+.nav-bar{
+  padding-left:64px;
+  padding-right:64px;
+  // padding-right:11%;
+}
 
-.app-nav-bar {
-  padding-left: 32px !important;
-  padding-right: 32px !important;
+.nav-btn {
+  font-size: 16px;
+  letter-spacing: 0;
 }
 
 @media (max-width: 768px) {
-  .app-nav-bar {
-    padding-left: 16px !important;
-    padding-right: 8px !important;
-  }
+  .nav-bar{
+    padding-left:16px;
+  padding-right:16px;
+}}
+
+
+
+// Global style for dropdown menu
+:deep(.v-overlay__content) {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
-// Styles handled by Vuetify's scroll-behavior="hide"
 </style>

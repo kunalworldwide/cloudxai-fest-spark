@@ -1,130 +1,22 @@
 <template>
   <v-container fluid class="pa-0">
     <!-- Hero Section -->
-    <v-row
-      class="align-center text-white pa-15 justify-center"
-      style="background-color: #2562ff; height: 100vh"
-    >
-      <v-col cols="8">
-        <v-slide-y-reverse-transition>
-          <h1 v-show="showTitle" class="text-h1">
-            Welcome to the <br />
-            CloudxAI Conference
-          </h1>
-        </v-slide-y-reverse-transition>
-        <v-slide-y-transition>
-          <p v-show="showTitle" class="text-h4">
-            The CloudxAI Conference is a gathering of experts and enthusiasts in
-            the field of cloud and AI.
-          </p>
-        </v-slide-y-transition>
-        <p>March 14, 2026</p>
-        <p>9 AM IST Onwords</p>
-        <v-btn
-          color=""
-          class="mt-10"
-          size="x-large"
-          variant="outlined"
-          append-icon="mdi-arrow-top-right"
-          >Register</v-btn
-        >
+    <HomeHero />
 
-        <p class="mt-5">Powered by</p>
-        <h1 class="text-h4" style="line-height: 0.9">Cast AI</h1>
-      </v-col>
-      <v-col cols="4" class="text-center">
-        <v-icon size="400" opacity="0.5">mdi-cloud-outline</v-icon>
-      </v-col>
-
-      <v-col cols="12" class="text-center opacity-50 animate-bounce">
-        <v-icon size="40" class="" color="white">mdi-mouse-move-down</v-icon>
-        <p class="mt-0 text-white">Scroll down to learn more</p>
-      </v-col>
-    </v-row>
     <!-- Hero Section End -->
 
-    <!-- About Section -->
-    <v-row class="justify-center">
-      <v-col cols="12" lg="10" xl="10">
-        <v-container>
-          <v-row class="align-center">
-            <v-col cols="4">
-              <v-card class="pa-3" variant="flat" rounded="lg" color="#2562FF">
-                <div class="d-flex align-center">
-                  <v-avatar size="60" color="#90FFF2" class="mr-3">
-                    <v-icon size="35">mdi-calendar-outline</v-icon>
-                  </v-avatar>
-                  <div>
-                    <h2>March 14, 2026</h2>
-                    <p>9 AM IST Onwords</p>
-                  </div>
-                </div>
-              </v-card>
+    <HomeAboutEvent />
 
-              <v-card
-                class="pa-3 mt-3"
-                variant="flat"
-                rounded="lg"
-                color="#2562FF"
-              >
-                <div class="d-flex align-center">
-                  <v-avatar size="60" color="#90FFF2" class="mr-3">
-                    <v-icon size="35">mdi-map-marker-outline</v-icon>
-                  </v-avatar>
-                  <div>
-                    <h2>Nimhans Convention Center</h2>
-                    <p>Bengaluru, Karnataka</p>
-                  </div>
-                </div>
-              </v-card>
-            </v-col>
-            <v-col cols="8">
-              <h2>About Event</h2>
-              <h1>Get Ready for the Future of AI</h1>
-              <p class="text-body-1">
-                The CloudxAI Conference is a gathering of experts and
-                enthusiasts in the field of cloud and AI.
-              </p>
-              <p class="text-body-1 mt-3">
-                CloudxAI Conference is the premier destination for technology
-                leaders, innovators, and professionals to explore the
-                convergence of cloud computing and artificial intelligence in
-                the enterprise landscape. Join industry leaders and experts for
-                an intensive day of knowledge sharing, featuring cutting-edge
-                insights, technical deep-dives, and strategic networking
-                opportunities.
-              </p>
-              <v-btn class="mt-3" color="primary" variant="outlined"
-                >Register</v-btn
-              >
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-col>
-    </v-row>
-    <!-- About Section End -->
+    <HomeEvenList />
 
-    <!-- Event Stats Section -->
-    <v-row
-      class="justify-center mt-10 py-10 px-15"
-      style="background-color: #2562ff"
-    >
-      <v-col cols="2" v-for="stat in eventStats" :key="stat.title">
-        <v-card
-          class="pa-3 text-center text-white"
-          color="transparent"
-          variant="flat"
-          rounded="lg"
-        >
-          <h2 class="text-h6">{{ stat.title }}</h2>
-          <p class="text-h1">{{ stat.value }}</p>
-        </v-card>
-      </v-col>
-    </v-row>
-    <!-- Event End -->
+    <HomeEventAgendas />
+
+    <HomeMarqee />
+
+    <HomePartners />
 
     <!-- Featured Keynotes Section -->
-    <v-row class="justify-center mt-10 py-10 px-15 text-center">
+    <!-- <v-row class="justify-center ma-0 mt-10 py-10 px-15 text-center">
       <v-col cols="12" lg="10" xl="10">
         <h1 class="text-h2">Featured Keynotes</h1>
         <p>Meet the experts who will be speaking at the event</p>
@@ -133,18 +25,18 @@
         >
 
         <v-container class="mt-5">
-          <v-row>
+          <v-row class="ma-0">
             <v-col cols="3" v-for="i in 4" :key="i">
               <SharedSpeakerCard :item="i" />
             </v-col>
           </v-row>
         </v-container>
       </v-col>
-    </v-row>
+    </v-row> -->
     <!-- Featured Keynotes Section End -->
 
     <!-- Partners Section -->
-    <v-row class="justify-center mt-10 py-10 px-15 text-center">
+    <!-- <v-row class="justify-center ma-0 mt-10 py-10 px-15 text-center">
       <v-col cols="12" lg="10" xl="10">
         <h1 class="text-h2">Partners</h1>
         <p>Meet the partners who will be sponsoring the event</p>
@@ -159,42 +51,16 @@
           </v-row>
         </v-container>
       </v-col>
-    </v-row>
+    </v-row> -->
     <!-- Partners Section End -->
 
     <!-- FAQ Section (Accordion) -->
-    <v-row class="justify-center mt-10 py-10 px-15">
-      <v-col cols="12" lg="10" xl="8">
-        <v-container>
-          <v-row>
-            <v-col cols="3">
-              <h1 class="text-h2">FAQ</h1>
-              <p>Frequently Asked Questions</p>
 
-              <v-btn color="primary" class="mt-3" variant="outlined"
-                >Register</v-btn
-              >
-            </v-col>
-            <v-col cols="9">
-              <v-expansion-panels>
-                <v-expansion-panel
-                  v-for="item in faqData"
-                  :key="item.question"
-                  :title="item.question"
-                  :text="item.answer"
-                >
-                </v-expansion-panel>
-              </v-expansion-panels>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-col>
-    </v-row>
     <!-- FAQ Section End -->
 
     <!-- Countdown Section -->
-    <v-row
-      class="justify-center mt-10 py-10 px-15 text-center"
+    <!-- <v-row
+      class="justify-center ma-0 mt-10 py-10 px-15 text-center"
       style="background-color: #2562ff"
     >
       <v-col cols="12" lg="10" xl="12">
@@ -203,52 +69,18 @@
 
         <SharedCountDown />
       </v-col>
-    </v-row>
+    </v-row> -->
+    <HomeFaq />
+
+    <HomeCountDown />
     <!-- Countdown Section End -->
   </v-container>
 </template>
 
 <script setup>
-import faq from "@/assets/data/faq.json";
 definePageMeta({
   layout: "default",
 });
-
-const faqData = ref(faq);
-const showTitle = ref(false);
-
-onMounted(() => {
-  showTitle.value = true;
-});
-
-const eventStats = ref([
-  {
-    title: "Speakers",
-    value: 100,
-    icon: "mdi-account-outline",
-  },
-  {
-    title: "Participants",
-    value: 500,
-    icon: "mdi-account-group-outline",
-  },
-  {
-    title: "Partners",
-    value: 100,
-    icon: "mdi-handshake-outline",
-  },
-  {
-    title: "Sessions",
-    value: 10,
-    icon: "mdi-presentation-outline",
-  },
-  {
-    title: "Tracks",
-    value: 10,
-    icon: "mdi-track-light-outline",
-  },
-]);
 </script>
 
-<style>
-</style>
+<style scoped lang="scss"></style>
