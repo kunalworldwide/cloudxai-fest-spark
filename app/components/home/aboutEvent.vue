@@ -70,13 +70,13 @@
 const eventDetails = ref([
   {
     icon: "mdi-calendar-outline",
-    title: "20-25 February, 2024",
-    subtitle: "7.00 am - 8.00 pm",
+    title: "March 14, 2026",
+    subtitle: "8.00 am - 7.00 pm",
   },
   {
     icon: "mdi-map-marker-outline",
-    title: "Mine Arena Banquet Hall",
-    subtitle: "23rd Avenue, Chicago USA",
+    title: "Nimhans Convention Center",
+    subtitle: "Bengaluru, Karnataka, India",
   },
 ]);
 
@@ -154,6 +154,7 @@ const eventStats = ref([
   flex-direction: column;
   gap: 12px;
   flex: 1 1 360px;
+  padding-right:64px;
 }
 
 .about-event__label {
@@ -210,7 +211,7 @@ const eventStats = ref([
   .event-stats__item {
     .event-card {
       display: flex;
-
+      gap: 10px;
       justify-content: start;
       align-items: center;
       & > p {
@@ -220,6 +221,7 @@ const eventStats = ref([
       & > h2 {
         max-width: 190px;
         text-align: left;
+        line-height: 100%;
       }
     }
   }
@@ -229,7 +231,9 @@ const eventStats = ref([
   .event-stats {
     justify-content: center;
   }
+  
 }
+
 
 @media (max-width: 1080px) {
   .about-event {

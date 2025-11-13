@@ -95,16 +95,7 @@
     </div>
 
 
-    <v-btn
-      class="scroll-top-btn"
-      color="#2562FF"
-      icon
-      size="large"
-      elevation="8"
-      @click="scrollToTop"
-    >
-      <v-icon>mdi-arrow-up</v-icon>
-    </v-btn>
+    
   </section>
 </template>
 
@@ -312,9 +303,7 @@ watch(itemsPerPage, () => {
   }
 });
 
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
+
 </script>
 
 <style scoped lang="scss">
@@ -540,13 +529,7 @@ const scrollToTop = () => {
   }
 }
 
-.scroll-top-btn {
-  position: fixed;
-  bottom: 32px;
-  right: 32px;
-  z-index: 1000;
-  display: none;
-}
+
 
 @media (max-width: 1200px) {
   .event-list {
