@@ -17,6 +17,7 @@
         </div>
       </div>
     </div>
+
     <div class="partners-container partners-container-2" >
       <h2 class="partners-title">Community Partners</h2>
 
@@ -36,6 +37,8 @@
 </template>
 
 <script setup>
+import communityPartners from "@/assets/data/community-partners.json";
+const communityPartnersData = ref(communityPartners);
 const partners = [
   {
     id: 1,
