@@ -6,11 +6,9 @@
     elevation="4"
     class="text-white app-nav-bar"
   >
-    <div class="d-flex align-center ga-3" style="width: 180px">
-      <NuxtLink to="/">
+      <NuxtLink class="d-flex align-center" to="/">
         <svg
-          style="width: 180px;"
-          height="108"
+        style="width: 180px;"
           viewBox="0 0 509 108"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +55,6 @@
           />
         </svg>
       </NuxtLink>
-    </div>
 
     <v-spacer />
 

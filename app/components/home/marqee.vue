@@ -122,9 +122,6 @@
     height: 40px;
   }
   
-  .marquee-content {
-    padding-right: 60px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -141,9 +138,6 @@
     width: 30px;
     height: 30px;
   }
-  
-  .marquee-content {
-    padding-right: 40px;
-  }
+
 }
 </style>

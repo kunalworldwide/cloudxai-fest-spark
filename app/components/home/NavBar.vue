@@ -2,10 +2,12 @@
   <div class="nav-bar" style="z-index: 20; position: relative">
     <v-toolbar color="transparent" flat class="">
       <!-- Logo and Text on Left -->
-      <div class="d-flex align-center ga-3" style="width: 180px">
+  
+        <NuxtLink class="d-flex align-center" to="/">
+
+        
         <svg
-          width="509"
-          height="108"
+          style="width: 180px;"
           viewBox="0 0 509 108"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +53,8 @@
             fill="white"
           />
         </svg>
-      </div>
+      </NuxtLink>
+
 
       <v-spacer></v-spacer>
 
