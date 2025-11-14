@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <div class="partners-container partners-container-2" >
+    <div class="partners-container partners-container-2">
       <h2 class="partners-title">Community Partners</h2>
 
       <div class="partners-grid-2">
@@ -28,11 +28,22 @@
           :key="partner.name"
           class="partner-card-2"
         >
-          <div class="partner-logo">
-            <a :href="partner.link" target="_blank" class="text-center">
-              <img :src="`/images/partners/${partner.image}`" :alt="partner.name" />
-            </a>
-          </div>
+          <v-tooltip :text="`${partner.name}`" location="bottom">
+            <template v-slot:activator="{ props }">
+              <div class="partner-logo" v-bind="props">
+                <a
+                  :href="partner.link"
+                  target="_blank"
+                  class="text-center"
+                >
+                  <img
+                    :src="`/images/partners/${partner.image}`"
+                    :alt="partner.name"
+                  />
+                </a>
+              </div>
+            </template>
+          </v-tooltip>
         </div>
       </div>
     </div>
