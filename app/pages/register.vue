@@ -136,6 +136,10 @@ const bookTicket = (ticketId) => {
   window.open(url, "_blank");
 };
 
+// Get the base URL for og:image
+const url = useRequestURL();
+const ogImageUrl = `${url.origin}/cover.png`;
+
 // SEO
 useHead({
   title: "Book a Conference Ticket",
@@ -147,7 +151,15 @@ useHead({
     { name: "googlebot", content: "index, follow" },
     { name: "bingbot", content: "index, follow" },
     { name: "yandexbot", content: "index, follow" },
-    { name: "sitemap", content: "https://techmilap.com/sitemap.xml" },
+    { name: "og:image", content: ogImageUrl },
+    { name: "og:title", content: "Book a Conference Ticket" },
+    { name: "og:description", content: "Book your ticket to attend the conference" },
+    { name: "og:url", content: url.origin },
+    { name: "og:type", content: "website" },
+    { name: "og:locale", content: "en_US" },
+    { name: "og:site_name", content: "Book a Conference Ticket" },
+    { name: "og:image:width", content: "1200" },
+    { name: "og:image:height", content: "630" },
   ],
 });
 </script>
