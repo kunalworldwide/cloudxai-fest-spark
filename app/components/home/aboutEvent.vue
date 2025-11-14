@@ -83,19 +83,19 @@ const eventDetails = ref([
 const eventStats = ref([
   {
     title: "Amazing Speakers",
-    value: 100,
+    value: "10+",
   },
   {
-    title: "Registered Participants",
-    value: "2K",
+    title: "Participants",
+    value: "500+",
   },
   {
     title: "Partners",
-    value: 100,
+    value: "10+",
   },
   {
     title: "Sessions",
-    value: 10,
+    value: "10+",
   },
 ]);
 </script>
