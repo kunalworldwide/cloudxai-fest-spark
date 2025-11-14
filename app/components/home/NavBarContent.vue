@@ -3,7 +3,7 @@
     <!-- Desktop Navigation (visible above 768px) -->
     <div class="d-none d-md-flex align-center ga-2 ">
 
-      <v-btn
+      <!-- <v-btn
             v-bind="props"
             variant="text"
             color="white"
@@ -11,9 +11,9 @@
             to="/"
           >
             Home
-          </v-btn>
+          </v-btn> -->
 
-          <v-btn
+          <!-- <v-btn
             v-bind="props"
             variant="text"
             color="white"
@@ -21,7 +21,7 @@
 
           >
             Contact Us
-          </v-btn>
+          </v-btn> -->
 
 
           <div class="d-flex " style="gap: 14px;">
