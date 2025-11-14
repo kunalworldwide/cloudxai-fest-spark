@@ -91,17 +91,14 @@
         </div>
 
         <div class="sidebar-buttons" style="padding: 8px 16px;">
-          <v-btn variant="text" color="white" class="text-none">
-            Pages
+          <v-btn variant="text" color="white" class="text-none" to="/">
+            Home
           </v-btn>
 
-          <v-btn variant="text" color="white" class="text-none">
-            Speakers
+          <v-btn variant="text" color="white" class="text-none" to="/register">
+            Register
           </v-btn>
 
-          <v-btn variant="text" color="white" class="text-none">
-            Resources
-          </v-btn>
           <div class="d-flex justify-center mt-4" style="gap: 24px;">
             
             <v-btn
