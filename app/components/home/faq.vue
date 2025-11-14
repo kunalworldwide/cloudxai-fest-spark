@@ -22,8 +22,9 @@
               class="purchase-btn mt-8" 
               size="large"
               rounded="pill"
+              to="/register"
             >
-              Purchase Ticket
+              Book a Ticket
             </v-btn>
           </v-col>
           

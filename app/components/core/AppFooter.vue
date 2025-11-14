@@ -7,21 +7,21 @@
         <v-col cols="12" md="6" lg="4">
           <div class="mb-6">
             <h2 class="text-h5 font-weight-bold mb-4">CloudxAI Conference</h2>
-            <p class="text-body-2 mb-6" style="max-width: 400px;">
-              Contact team CloudxAI for any of your query related to AI and cloud computing events
+            <p class="text-body-2 mb-6" style="max-width: 400px">
+              CloudxAI Conference is the premier destination for technology leaders, innovators, and professionals to explore the convergence of cloud computing and artificial intelligence in the enterprise landscape.
             </p>
           </div>
-          
+
           <div class="mb-4">
             <h3 class="text-subtitle-1 font-weight-bold mb-3">Contact us:</h3>
             <div class="d-flex align-center mb-2">
               <v-icon size="small" class="mr-2">mdi-email-outline</v-icon>
               <span class="text-body-2">info@cloudxai.com</span>
             </div>
-            <div class="d-flex align-center">
+            <!-- <div class="d-flex align-center">
               <v-icon size="small" class="mr-2">mdi-phone-outline</v-icon>
               <span class="text-body-2">+1 (555) 123-4567</span>
-            </div>
+            </div> -->
           </div>
         </v-col>
 
@@ -39,7 +39,7 @@
         </v-col> -->
 
         <!-- Social Links Section -->
-        <v-col  cols="12" lg="4">
+        <v-col cols="12" lg="4">
           <h3 class="text-subtitle-1 font-weight-bold mb-4">Follow us:</h3>
           <div class="d-flex gap-3">
             <v-btn
@@ -103,14 +103,28 @@
       <v-row class="text-white align-center">
         <v-col cols="12" md="6">
           <p class="text-body-2 mb-0">
-            Design and Developed by <span class="text-primary font-weight-medium">TechFerment</span> | All Right Reserved
+            Design and Developed by
+            <span class="text-primary font-weight-medium"><a href="https://techferment.com" style="color: #3A99FF;text-decoration: none;" target="_blank">TechFerment</a></span> |
+            All Right Reserved
           </p>
         </v-col>
         <v-col cols="12" md="6" class="text-md-right">
           <div class="d-flex flex-wrap justify-md-end gap-4">
-            <a href="#" class="text-white text-decoration-none text-body-2 hover-link">Booking Info</a>
-            <a href="#" class="text-white text-decoration-none text-body-2 hover-link">Terms & Conditions</a>
-            <a href="#" class="text-white text-decoration-none text-body-2 hover-link">Privacy Policy</a>
+            <a
+              href="#"
+              class="text-white text-decoration-none text-body-2 hover-link"
+              >Booking Info</a
+            >
+            <a
+              href="#"
+              class="text-white text-decoration-none text-body-2 hover-link"
+              >Terms & Conditions</a
+            >
+            <a
+              href="#"
+              class="text-white text-decoration-none text-body-2 hover-link"
+              >Privacy Policy</a
+            >
           </div>
         </v-col>
       </v-row>
@@ -123,18 +137,18 @@
 
 <style scoped>
 .footer-with-bg {
-  background-color: #020D46;
+  background-color: #020d46;
   position: relative;
 }
 
 .footer-with-bg::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('@/assets/images/home-4-img-carousel-svg.svg');
+  background-image: url("@/assets/images/home-4-img-carousel-svg.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -163,8 +177,8 @@
   gap: 16px;
 }
 
-@media(min-width: 1440px){
-  .footer-with-bg{
+@media (min-width: 1440px) {
+  .footer-with-bg {
     padding-top: 180px !important;
   }
 }

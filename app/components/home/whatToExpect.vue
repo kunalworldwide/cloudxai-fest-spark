@@ -1,91 +1,63 @@
 <template>
   <section class="event-list">
     <div class="event-list__container">
-     
       <div class="event-list__header">
         <div class="event-list__label">
           <span class="event-list__label-rule"></span>
-          <span class="event-list__label-text">What To Expect</span>
+          <span class="event-list__label-text">Experience </span>
         </div>
-        <h1 class="event-list__title">
-          Our <span>THEME</span>
-        </h1>
+        <h1 class="event-list__title">WHAT <span> AWAITS YOU </span></h1>
       </div>
 
-      <v-container
-      fluid
-        class="event-list__carousel pa-0"
-      >
-        
-          <div class="event-list__grid">
-            <v-card
-              v-for="event in eventsByDay"
-              :key="event.id"
-              class="event-card"
-              rounded="xl"
-            >
-              <div class="event-card__content">
-                
-                <div class="event-card__info">
-                  <h3 class="event-card__title">{{ event.title }}</h3>
-                  
-                  <p class="event-card__description">{{ event.description }}</p>
-                  
-                </div>
+      <v-container fluid class="event-list__carousel pa-0">
+        <div class="event-list__grid">
+          <v-card
+            v-for="event in eventsByDay"
+            :key="event.id"
+            class="event-card"
+            rounded="xl"
+          >
+            <div class="event-card__content">
+              <div class="event-card__info">
+                <h3 class="event-card__title">{{ event.title }}</h3>
+
+                <p class="event-card__description">{{ event.description }}</p>
               </div>
-            </v-card>
-          </div>
+            </div>
+          </v-card>
+        </div>
       </v-container>
-
     </div>
-
   </section>
 </template>
 
 <script setup>
-
-
-
-
-
-
-
-
-
 const eventsByDay = [
-    {
-      id: 1,
-      title: 'Opening Keynote 2024',
-      time: '9:00 - 10:30 AM',
-      date: 'Feb 22, 2024',
-      description: 'A day-long Open House for prospective Math students at Yale.',
-    },
-    {
-      id: 2,
-      title: 'Climate Workshop',
-      time: '11:00 AM - 1:00 PM',
-      date: 'Feb 22, 2024',
-      description: 'Event featuring a reception for prospective Math students to enjoy at Yale.',
-      image: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&w=800&q=80',
-    },
-    {
-      id: 3,
-      title: 'Climate Workshop',
-      time: '11:00 AM - 1:00 PM',
-      date: 'Feb 22, 2024',
-      description: 'Event featuring a reception for prospective Math students to enjoy at Yale.',
-      image: 'https://images.unsplash.com/photo-1591115765373-5207764f72e7?auto=format&fit=crop&w=800&q=80',
-    },
-  ]
-
-
-
+  {
+    id: 1,
+    title: "Explore",
+    description:
+      "Uncover cutting-edge frameworks, tools, and workflows transforming software into intelligent systems. Learn from real-world deployment stories and discover how multi-agent orchestration turns innovative concepts into practical solutions.",
+  },
+  {
+    id: 2,
+    title: "Witness",
+    description:
+      "See autonomous AI systems come alive through live demonstrations, interactive showcases, and compelling case studies. Experience firsthand the transformative power of agentic AI in action.",
+  },
+  {
+    id: 3,
+    title: "Network",
+    description:
+      "Join India's premier AI agent community gathering. Connect with visionary founders, groundbreaking researchers, and innovative developers who are shaping the future of intelligent software.",
+  },
+];
 </script>
 
 <style scoped lang="scss">
 .event-list {
   background-color: #0a1435;
-  padding: 64px 80px ;
+  padding: 64px 80px;
 
   position: relative;
 }
@@ -168,7 +140,6 @@ const eventsByDay = [
   height: 100%;
 }
 
-
 .event-card__info {
   width: 100%;
   padding: 32px;
@@ -184,10 +155,6 @@ const eventsByDay = [
   line-height: 1.3;
 }
 
-
-
-
-
 .event-card__description {
   color: rgba(255, 255, 255, 0.8);
   font-size: 1rem;
@@ -195,9 +162,6 @@ const eventsByDay = [
   margin-bottom: 24px;
   flex-grow: 1;
 }
-
-
-
 
 @media (max-width: 1200px) {
   .event-list {
@@ -217,21 +181,17 @@ const eventsByDay = [
 @media (max-width: 968px) {
   .event-list {
     // padding: 0px 24px 48px 24px;
-padding: 48px 24px;
+    padding: 48px 24px;
   }
-
-
 
   .event-list__grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-
   .event-card__info {
     padding: 20px;
   }
-
 }
 
 @media (max-width: 600px) {
@@ -242,7 +202,6 @@ padding: 48px 24px;
   .event-list__header {
     margin-bottom: 32px;
   }
-
 
   .event-card__title {
     font-size: 1.25rem;
@@ -255,16 +214,12 @@ padding: 48px 24px;
   .event-card__description {
     font-size: 0.9375rem;
   }
-
-
 }
 
 @media (max-width: 500px) {
   .event-card__content {
     flex-direction: column;
   }
-
-
 
   .event-card__info {
     width: 100%;
