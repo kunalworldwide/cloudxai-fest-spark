@@ -51,12 +51,21 @@
                   </div>
                 </div>
                 <div class="footer-content">
-                  <p class="text-body-2 text-uppercase opacity-70 mb-1">
+                  <p class="text-body-2 text-uppercase opacity-70 mb-2">
                     Powered by
                   </p>
-                  <h2 class="text-h4 footer-value">
+                  <a href="https://cast.ai/" target="_blank" class="footer-value">
+                    <v-img
+                      src="/images/cast-ai.svg"
+                      alt="Cast AI"
+                      class="footer-value-image"
+                      cover
+                      width="120px"
+                    ></v-img>
+                  </a>
+                  <!-- <h2 class="text-h4 footer-value">
                     Cast AI
-                  </h2>
+                  </h2> -->
                 </div>
               </div>
             </div>

@@ -33,16 +33,16 @@
           <span class="about-event__label-text">About Event</span>
         </div>
         <h1 class="about-event__headline">
-          Get The Best <span>Experience In The World Of Climate Change</span>
+          Get The Best <span>Experience In The World Of Agentic AI</span>
         </h1>
         <p class="about-event__body">
-          To get the most out of the climate world, whether through events,
+          To get the most out of the agentic AI world, whether through events,
           learning, or engagement, consider a holistic approach that integrates
           diverse perspectives and actions.
         </p>
         <p class="about-event__body">
           Dive into immersive sessions, connect with industry leaders, and
-          explore innovative solutions shaping the future of our planet.
+          explore innovative solutions shaping the future of our AI world.
         </p>
       </div>
     </div>
