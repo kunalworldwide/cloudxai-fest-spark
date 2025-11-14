@@ -3,8 +3,9 @@
     <div class="partners-container">
       <h2 class="partners-title">OUR PARTNERS</h2>
 
-      <div class="partners-grid">
-        <div v-for="partner in partners" :key="partner.id" class="partner-card">
+      <div class="partners-grid text-center">
+        <p class="text-white text-h4">Coming Soon</p>
+        <!-- <div v-for="partner in partners" :key="partner.id" class="partner-card">
           <div class="partner-logo">
             <img :src="partner.logo" :alt="partner.name" />
           </div>
@@ -14,7 +15,7 @@
           >
             {{ partner.tier }}
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -23,12 +24,14 @@
 
       <div class="partners-grid-2">
         <div
-          v-for="partner in partners"
-          :key="partner.id"
+          v-for="partner in communityPartnersData"
+          :key="partner.name"
           class="partner-card-2"
         >
           <div class="partner-logo">
-            <img :src="partner.logo" :alt="partner.name" />
+            <a :href="partner.link" target="_blank" class="text-center">
+              <img :src="`/images/partners/${partner.image}`" :alt="partner.name" />
+            </a>
           </div>
         </div>
       </div>

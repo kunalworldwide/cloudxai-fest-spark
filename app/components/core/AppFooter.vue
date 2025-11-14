@@ -39,7 +39,7 @@
         </v-col> -->
 
         <!-- Social Links Section -->
-        <v-col cols="12" lg="4">
+        <!-- <v-col cols="12" lg="4">
           <h3 class="text-subtitle-1 font-weight-bold mb-4">Follow us:</h3>
           <div class="d-flex gap-3">
             <v-btn
@@ -93,7 +93,7 @@
               <v-icon>mdi-youtube</v-icon>
             </v-btn>
           </div>
-        </v-col>
+        </v-col> -->
       </v-row>
 
       <!-- Divider -->
@@ -108,7 +108,7 @@
             All Right Reserved
           </p>
         </v-col>
-        <v-col cols="12" md="6" class="text-md-right">
+        <!-- <v-col cols="12" md="6" class="text-md-right">
           <div class="d-flex flex-wrap justify-md-end gap-4">
             <a
               href="#"
@@ -126,7 +126,7 @@
               >Privacy Policy</a
             >
           </div>
-        </v-col>
+        </v-col> -->
       </v-row>
     </v-container>
   </v-footer>
