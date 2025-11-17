@@ -122,13 +122,27 @@
 </template>
 
 <script setup>
-import tickets from "@/assets/data/tickets.json";
 
-const ticketsData = ref(tickets);
+const ticketsData = ref(null);
+
+
+
+const getAllTickets = async () => {
+  try {
+    const response = await $fetch("https://techmilap.com/api/events/691ad96d85cd703cf3deff95");
+    console.log(response);
+    ticketsData.value = response.tickets || [];
+  } catch (error) {
+    console.error("Error fetching tickets:", error);
+  }
+};
 
 // Show all tickets sorted by price
 const featuredTickets = computed(() => {
-  return ticketsData.value.sort((a, b) => a.price - b.price);
+  if (!ticketsData.value || ticketsData.value.length === 0) {
+    return [];
+  }
+  return [...ticketsData.value].sort((a, b) => a.price - b.price);
 });
 
 const bookTicket = (ticketId) => {
@@ -139,6 +153,10 @@ const bookTicket = (ticketId) => {
 // Get the base URL for og:image
 const url = useRequestURL();
 const ogImageUrl = `${url.origin}/cover.png`;
+
+onMounted(() => {
+  getAllTickets();
+});
 
 // SEO
 useHead({
