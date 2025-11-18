@@ -40,7 +40,7 @@
             <v-col
               cols="12"
               sm="6"
-              md="6"
+              md="4"
               v-for="ticket in featuredTickets"
               :key="ticket._id"
             >
@@ -122,20 +122,21 @@
 </template>
 
 <script setup>
+import tickets from "@/assets/data/tickets.json"; 
 
-const ticketsData = ref(null);
+const ticketsData = ref(tickets);
 
-
-
-const getAllTickets = async () => {
-  try {
-    const response = await $fetch("https://techmilap.com/api/events/691ad96d85cd703cf3deff95");
-    console.log(response);
-    ticketsData.value = response.tickets || [];
-  } catch (error) {
-    console.error("Error fetching tickets:", error);
-  }
-};
+// const getAllTickets = async () => {
+//   try {
+//     let url ="https://demotechevent.vercel.app/api/events/689b4ef291f77a93a402d4db"
+//     // let url = "https://techmilap.com/api/events/691ad96d85cd703cf3deff95"
+//     const response = await $fetch(url);
+//     console.log(response);
+//     ticketsData.value = response.tickets || [];
+//   } catch (error) {
+//     console.error("Error fetching tickets:", error);
+//   }
+// };
 
 // Show all tickets sorted by price
 const featuredTickets = computed(() => {
@@ -146,7 +147,8 @@ const featuredTickets = computed(() => {
 });
 
 const bookTicket = (ticketId) => {
-  let url = `https://techmilap.com/forms/attendee?ticketTemplateId=${ticketId}`;
+  // https://techmilap.com/events/691ad96d85cd703cf3deff95/forms/attendee?ticketTemplateId=691ad98185cd703cf3deffad
+  let url = `https://techmilap.com/events/691ad96d85cd703cf3deff95/forms/attendee?ticketTemplateId=${ticketId}`;
   window.open(url, "_blank");
 };
 
@@ -155,7 +157,7 @@ const url = useRequestURL();
 const ogImageUrl = `${url.origin}/cover.png`;
 
 onMounted(() => {
-  getAllTickets();
+  // getAllTickets();
 });
 
 // SEO
@@ -384,8 +386,8 @@ useHead({
 
     .perk-item {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      // align-items: center;
+      // justify-content: center;
       gap: 8px;
       font-size: 0.875rem;
       color: #374151;
@@ -404,8 +406,8 @@ useHead({
 
     .feature-item {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      //align-items: center;
+      //justify-content: center;
       gap: 8px;
       font-size: 0.8125rem;
       color: #6b7280;
@@ -414,8 +416,8 @@ useHead({
 
   .ticket-quantity {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    //align-items: center;
+    //justify-content: center;
     font-size: 0.75rem;
     color: #9ca3af;
     margin-bottom: 20px;

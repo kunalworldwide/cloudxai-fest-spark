@@ -1,133 +1,61 @@
 [
-    {
-      "name": "Basic Pass",
-      "description": "Ideal for students and first-time attendees, the Basic Pass offers entry to all keynote sessions and panel discussions, standard seating, and a digital participation certificate.",
-      "price": 499,
-      "currency": "INR",
-      "startDate": null,
-      "endDate": null,
-      "hasSalesPeriod": false,
-      "quantity": 86,
-      "visibility": "public",
-      "perks": [
-        "Certificate"
-      ],
-      "ticketType": "paid",
-      "tier": "basic",
-      "ticketNumber": "TKT-2G2OWF-4745",
-      "_id": "689b4ef291f77a93a402d4d8"
-    },
-    {
-      "name": "Silver Pass",
-      "description": "Perfect for tech professionals seeking focused learning, the Silver Pass includes all Basic benefits plus access to one premium workshop, an event kit with a badge and notebook, and reserved seating.",
-      "price": 999,
-      "currency": "INR",
-      "startDate": null,
-      "endDate": null,
-      "hasSalesPeriod": false,
-      "quantity": 6,
-      "visibility": "public",
-      "perks": [
-        "Badge",
-        "Notebook"
-      ],
-      "ticketType": "paid",
-      "tier": "silver",
-      "ticketNumber": "TKT-P8Y2YI-4745",
-      "_id": "689b4ef291f77a93a402d4d9"
-    },
-    {
-      "name": "Gold Pass",
-      "description": "A balanced choice for those who want both learning and networking opportunities, the Gold Pass offers all Silver benefits along with three premium workshops, access to the networking lounge, and a complimentary event T-shirt.",
-      "price": 1199,
-      "currency": "INR",
-      "startDate": null,
-      "endDate": null,
-      "hasSalesPeriod": false,
-      "quantity": 8,
-      "visibility": "public",
-      "perks": [
-        "T-shirt",
-        "Networking lounge"
-      ],
-      "ticketType": "paid",
-      "tier": "gold",
-      "ticketNumber": "TKT-KUF3CO-4745",
-      "_id": "689b4ef291f77a93a402d4da"
-    },
-    {
-      "name": "Genral Admission",
-      "description": "",
-      "price": 0,
-      "currency": "INR",
-      "startDate": null,
-      "endDate": null,
-      "hasSalesPeriod": false,
-      "quantity": 2,
-      "visibility": "public",
-      "perks": [],
-      "ticketType": "free",
-      "tier": "basic",
-      "_id": "68d7b04e4bc2cd6a35220e01"
-    },
-    {
-      "name": "New paid test",
-      "description": "",
-      "price": 1011,
-      "currency": "INR",
-      "startDate": null,
-      "endDate": null,
-      "hasSalesPeriod": false,
-      "quantity": 89,
-      "visibility": "public",
-      "perks": [],
-      "ticketType": "paid",
-      "tier": "silver",
-      "_id": "68f9dd36b8b7cf4c99dbc4c3"
-    },
-    {
-      "name": "New Free test",
-      "description": "",
-      "price": 0,
-      "currency": "INR",
-      "startDate": null,
-      "endDate": null,
-      "hasSalesPeriod": false,
-      "quantity": 10,
-      "visibility": "public",
-      "perks": [],
-      "ticketType": "free",
-      "tier": "basic",
-      "_id": "68f9ddbab8b7cf4c99dbc51e"
-    },
-    {
-      "name": "general",
-      "description": "",
-      "price": 0,
-      "currency": "INR",
-      "startDate": null,
-      "endDate": null,
-      "hasSalesPeriod": false,
-      "quantity": 1000,
-      "visibility": "public",
-      "perks": [],
-      "ticketType": "free",
-      "tier": "basic",
-      "_id": "68ffc0944445bbf16a0aed0e"
-    },
-    {
-      "name": "general",
-      "description": "",
-      "price": 900,
-      "currency": "INR",
-      "startDate": null,
-      "endDate": null,
-      "hasSalesPeriod": false,
-      "quantity": 99,
-      "visibility": "public",
-      "perks": [],
-      "ticketType": "paid",
-      "tier": "basic",
-      "_id": "68ffc0944445bbf16a0aed0f"
-    }
+  {
+    "name": "Super Early Bird",
+    "description": "The essential pass for the forward-thinking professional. Secure your spot at the absolute lowest price and be part of the core experience.\n\nDeepest Discount: The absolute lowest price available for the conference.\n\nFull Conference Access: Get full entry to all keynotes, sessions, and the main expo floor.",
+    "price": 999,
+    "currency": "INR",
+    "startDate": "2025-11-22T00:00:00.000Z",
+    "endDate": "2025-11-30T00:00:00.000Z",
+    "hasSalesPeriod": true,
+    "quantity": 100,
+    "visibility": "public",
+    "perks": [
+      "Full day access to main conference keynotes and sessions.",
+      "Official conference swag bag",
+      "Post-event access to all session recordings"
+    ],
+    "ticketType": "paid",
+    "tier": "basic",
+    "_id": "691ad98185cd703cf3deffad"
+  },
+  {
+    "name": "Super Early Bird Student",
+    "description": "Designed for the next generation of AI and cloud leaders. This pass provides full conference access at a price built for students.\nStudent-Only Price: A deeply discounted rate exclusively for students.\n(Note: A valid student ID must be presented at check-in).",
+    "price": 799,
+    "currency": "INR",
+    "startDate": "2025-11-22T00:00:00.000Z",
+    "endDate": "2025-12-31T00:00:00.000Z",
+    "hasSalesPeriod": true,
+    "quantity": 50,
+    "visibility": "public",
+    "perks": [
+      "Full day access to main conference keynotes and sessions.",
+      "Official conference swag bag",
+      "Post-event access to all session recordings"
+    ],
+    "ticketType": "paid",
+    "tier": "basic",
+    "_id": "691ad98185cd703cf3deffae"
+  },
+  {
+    "name": "Golden Pass",
+    "description": "The all-access, premium experience. This pass is for attendees who want to connect with speakers, bypass lines, and unlock the entire conference, including all workshops.",
+    "price": 2499,
+    "currency": "INR",
+    "startDate": "2025-11-22T00:00:00.000Z",
+    "endDate": "2025-11-30T00:00:00.000Z",
+    "hasSalesPeriod": true,
+    "quantity": 25,
+    "visibility": "public",
+    "perks": [
+      "All-Inclusive Workshops access",
+      "Access to the private VIP & Speaker Lounge",
+      "A premium delegate swag bag.",
+      "Reserved priority seating in all main-stage keynotes.",
+      "All perks from other tiers"
+    ],
+    "ticketType": "paid",
+    "tier": "gold",
+    "_id": "691ad98185cd703cf3deffaf"
+  }
   ]
