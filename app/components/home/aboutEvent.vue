@@ -67,6 +67,8 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import stats from '@/assets/data/stats.json';
 const eventDetails = ref([
   {
     icon: "mdi-calendar-outline",
@@ -80,24 +82,7 @@ const eventDetails = ref([
   },
 ]);
 
-const eventStats = ref([
-  {
-    title: "Amazing Speakers",
-    value: "10+",
-  },
-  {
-    title: "Participants",
-    value: "500+",
-  },
-  {
-    title: "Partners",
-    value: "10+",
-  },
-  {
-    title: "Sessions",
-    value: "10+",
-  },
-]);
+const eventStats = ref(stats);
 </script>
 
 <style scoped lang="scss">
