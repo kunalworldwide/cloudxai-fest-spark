@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <NuxtLoadingIndicator />
     <CoreAppToolbar />
     <v-main class="px-0 mt-0 " width="100%" style="--v-layout-top:0 !important;">
         <NuxtPage />

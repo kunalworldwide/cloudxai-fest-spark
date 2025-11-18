@@ -7,7 +7,8 @@
 
     <HomeAboutEvent />
 
-    <HomeEvenList />
+    <!-- <HomeEvenList /> -->
+    <HomeWhatToExpect />
 
     <HomeEventAgendas />
 
@@ -80,6 +81,34 @@
 <script setup>
 definePageMeta({
   layout: "default",
+});
+
+// Get the base URL for og:image
+const url = useRequestURL();
+const ogImageUrl = `${url.origin}/cover.jpg`;
+
+// SEO
+useHead({
+  title: "CloudxAI Conference 2026 Bengaluru",
+  meta: [
+    { name: "description", content: "CloudxAI Conference 2026 Bengaluru" },
+    { name: "keywords", content: "conference, event, cloudxai, bengaluru" },
+    { name: "author", content: "TechFerment" },
+    { name: "robots", content: "index, follow" },
+    { name: "googlebot", content: "index, follow" },
+    { name: "bingbot", content: "index, follow" },
+    { name: "yandexbot", content: "index, follow" },
+    { name: "sitemap", content: "https://techmilap.com/sitemap.xml" },
+    { name: "og:image", content: ogImageUrl },
+    { name: "og:title", content: "CloudxAI Conference 2026 Bengaluru" },
+    { name: "og:description", content: "CloudxAI Conference 2026 Bengaluru" },
+    { name: "og:url", content: url.origin },
+    { name: "og:type", content: "website" },
+    { name: "og:locale", content: "en_US" },
+    { name: "og:site_name", content: "CloudxAI Conference 2026 Bengaluru" },
+    { name: "og:image:width", content: "1200" },
+    { name: "og:image:height", content: "630" },
+  ],
 });
 </script>
 

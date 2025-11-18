@@ -3,35 +3,25 @@
     <!-- Desktop Navigation (visible above 768px) -->
     <div class="d-none d-md-flex align-center ga-2 ">
 
-      <v-btn
+      <!-- <v-btn
+            v-bind="props"
+            variant="text"
+            color="white"
+            class="text-none nav-btn"
+            to="/"
+          >
+            Home
+          </v-btn> -->
+
+          <!-- <v-btn
             v-bind="props"
             variant="text"
             color="white"
             class="text-none nav-btn"
 
           >
-            Pages
-          </v-btn>
-
-          <v-btn
-            v-bind="props"
-            variant="text"
-            color="white"
-            class="text-none nav-btn"
-
-          >
-            Speakers
-          </v-btn>
-
-          <v-btn
-            v-bind="props"
-            variant="text"
-            color="white"
-            class="text-none nav-btn"
-
-          >
-            Resources
-          </v-btn>
+            Contact Us
+          </v-btn> -->
 
 
           <div class="d-flex " style="gap: 14px;">
@@ -101,17 +91,14 @@
         </div>
 
         <div class="sidebar-buttons" style="padding: 8px 16px;">
-          <v-btn variant="text" color="white" class="text-none">
-            Pages
+          <v-btn variant="text" color="white" class="text-none" to="/">
+            Home
           </v-btn>
 
-          <v-btn variant="text" color="white" class="text-none">
-            Speakers
+          <v-btn variant="text" color="white" class="text-none" to="/register">
+            Register
           </v-btn>
 
-          <v-btn variant="text" color="white" class="text-none">
-            Resources
-          </v-btn>
           <div class="d-flex justify-center mt-4" style="gap: 24px;">
             
             <v-btn

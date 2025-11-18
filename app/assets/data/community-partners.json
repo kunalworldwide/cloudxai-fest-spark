@@ -1,0 +1,57 @@
+[
+    {
+        "name":"GDG Cloud Bangalore",
+        "link": "https://gdg.community.dev/gdg-cloud-bangalore/",
+        "image": "gdgcloudbanglore.png"
+    },
+    {
+        "name":"KSUG.AI India",
+        "link": "https://www.meetup.com/ksug-in/",
+        "image": "ksug.png"
+    },
+    {
+        "name": "AWS User Group-Bengaluru",
+        "link": "https://www.meetup.com/awsugblr/",
+        "image": "awsblr.png"
+    },
+    {
+        "name": "Kong/BENGALURU",
+        "link": "https://www.meetup.com/kong-bengaluru/",
+        "image": "kongblr.png"
+    },
+    {
+        "name":"Resiliency & Platform Engineering Bengaluru",
+        "link": "https://community.cncf.io/resiliency-platform-engineering-bengaluru/",
+        "image": "prblr.png"
+    },
+    {
+        "name":"Microsoft Azure User Group-Bangalore",
+        "link": "https://www.meetup.com/microsoft-azure-bangalore/",
+        "image": "azure.png"
+    },
+    {
+        "name":"DevOps Malayalam",
+        "link": "https://www.linkedin.com/company/devopsmalayalam",
+        "image": "devopsmal.png"
+    },
+    {
+        "name": "Docker Bangalore",
+        "link": "https://www.meetup.com/docker-bangalore/",
+        "image": "dockerblr.png"
+    },
+    {
+        "name": "Collabnix",
+        "link": "https://collabnix.com/",
+        "image": "collabnix.png"
+    },
+    {
+        "name": "Experts Live India",
+        "link": "https://www.linkedin.com/company/experts-live-india/",
+        "image": "expert.png"
+    },
+    {
+        "name": "Innovation Tech Community",
+        "link": "https://www.linkedin.com/company/innovation-tech-community",
+        "image": "itc.png"
+    }
+]

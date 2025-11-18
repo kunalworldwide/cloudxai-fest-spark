@@ -1,18 +1,14 @@
 [
   {
-    "question": "Can I return my ticket before the event start?",
-    "answer": "Yes, tickets can be returned up to 7 days before the event for a full refund. Please contact our support team for assistance."
-  },
-  {
     "question": "When is the conference taking place?",
-    "answer": "The conference will be held on December 15-17, 2025. Check the event schedule for detailed timing of each session."
+    "answer": "The conference will be held on March 14, 2026. Check the event schedule for detailed timing of each session."
   },
   {
     "question": "What is the cost to attend the conference?",
-    "answer": "Ticket prices vary based on the pass type. Early bird tickets start at $299, and VIP passes are available for $599."
+    "answer": "Ticket prices vary based on the pass type. You can check the ticket prices on the registration page."
   },
   {
     "question": "What topics will be covered at the conference?",
-    "answer": "The conference covers Cloud Computing, Artificial Intelligence, Machine Learning, DevOps, and Enterprise Architecture with industry-leading speakers."
+    "answer": "The conference covers AI Agents, Multi-Agent Orchestration, and Real-World Deployment Stories with industry-leading speakers."
   }
 ]

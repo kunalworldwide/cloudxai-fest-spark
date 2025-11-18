@@ -33,16 +33,16 @@
           <span class="about-event__label-text">About Event</span>
         </div>
         <h1 class="about-event__headline">
-          Get The Best <span>Experience In The World Of Climate Change</span>
+          Get The Best <span>Experience In The World Of Agentic AI</span>
         </h1>
         <p class="about-event__body">
-          To get the most out of the climate world, whether through events,
+          To get the most out of the agentic AI world, whether through events,
           learning, or engagement, consider a holistic approach that integrates
           diverse perspectives and actions.
         </p>
         <p class="about-event__body">
           Dive into immersive sessions, connect with industry leaders, and
-          explore innovative solutions shaping the future of our planet.
+          explore innovative solutions shaping the future of our AI world.
         </p>
       </div>
     </div>
@@ -67,37 +67,22 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import stats from '@/assets/data/stats.json';
 const eventDetails = ref([
   {
     icon: "mdi-calendar-outline",
-    title: "20-25 February, 2024",
-    subtitle: "7.00 am - 8.00 pm",
+    title: "March 14, 2026",
+    subtitle: "8.00 am - 7.00 pm",
   },
   {
     icon: "mdi-map-marker-outline",
-    title: "Mine Arena Banquet Hall",
-    subtitle: "23rd Avenue, Chicago USA",
+    title: "Nimhans Convention Center",
+    subtitle: "Bengaluru, Karnataka, India",
   },
 ]);
 
-const eventStats = ref([
-  {
-    title: "Amazing Speakers",
-    value: 100,
-  },
-  {
-    title: "Registered Participants",
-    value: "2K",
-  },
-  {
-    title: "Partners",
-    value: 100,
-  },
-  {
-    title: "Sessions",
-    value: 10,
-  },
-]);
+const eventStats = ref(stats);
 </script>
 
 <style scoped lang="scss">
@@ -154,6 +139,7 @@ const eventStats = ref([
   flex-direction: column;
   gap: 12px;
   flex: 1 1 360px;
+  padding-right:64px;
 }
 
 .about-event__label {
@@ -210,7 +196,7 @@ const eventStats = ref([
   .event-stats__item {
     .event-card {
       display: flex;
-
+      gap: 10px;
       justify-content: start;
       align-items: center;
       & > p {
@@ -220,6 +206,7 @@ const eventStats = ref([
       & > h2 {
         max-width: 190px;
         text-align: left;
+        line-height: 100%;
       }
     }
   }
@@ -229,7 +216,9 @@ const eventStats = ref([
   .event-stats {
     justify-content: center;
   }
+  
 }
+
 
 @media (max-width: 1080px) {
   .about-event {

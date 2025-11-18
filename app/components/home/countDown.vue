@@ -6,7 +6,7 @@
           <!-- Title Section -->
           <v-col cols="12" md="6" lg="5" class="countdown-title-col">
             <h1 class="countdown-title">
-              Countdown Until<br />Event day 1
+              Countdown Until<br />Event
             </h1>
           </v-col>
 
