@@ -85,7 +85,7 @@ definePageMeta({
 
 // Get the base URL for og:image
 const url = useRequestURL();
-const ogImageUrl = `${url.origin}/cover.png`;
+const ogImageUrl = `${url.origin}/cover.jpg`;
 
 // SEO
 useHead({
