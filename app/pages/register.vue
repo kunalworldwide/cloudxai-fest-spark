@@ -172,7 +172,7 @@ useHead({
     { name: "og:image", content: "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg" },
     { name: "og:title", content: "Book a Conference Ticket" },
     { name: "og:description", content: "Book your ticket to attend the conference" },
-    { name: "og:url", content: url.origin },
+    { name: "og:url", content: "https://cloudconf.ai/" },
     { name: "og:type", content: "website" },
     { name: "og:locale", content: "en_US" },
     { name: "og:site_name", content: "Book a Conference Ticket" },

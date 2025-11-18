@@ -83,9 +83,6 @@ definePageMeta({
   layout: "default",
 });
 
-// Get the base URL for og:image
-const url = useRequestURL();
-
 
 // SEO
 useHead({
@@ -101,7 +98,7 @@ useHead({
     { name: "og:image", content: "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg" },
     { name: "og:title", content: "CloudxAI Conference 2026 Bengaluru" },
     { name: "og:description", content: "CloudxAI Conference 2026 Bengaluru" },
-    { name: "og:url", content: url.origin },
+    { name: "og:url", content: "https://cloudconf.ai/" },
     { name: "og:type", content: "website" },
     { name: "og:locale", content: "en_US" },
     { name: "og:site_name", content: "CloudxAI Conference 2026 Bengaluru" },
