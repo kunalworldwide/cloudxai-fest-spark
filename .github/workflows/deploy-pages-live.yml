@@ -1,0 +1,55 @@
+name: Build and deploy main-live to gh-pages
+
+on:
+  push:
+    branches:
+      - main-live
+
+# Give the workflow explicit permissions so the built-in GITHUB_TOKEN can push to `gh-pages`.
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # allow actions to push back to the repo using the workflow token
+          persist-credentials: true
+          # fetch full history (useful for gh-pages action and commit metadata)
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+
+      - name: Generate static site (Nuxt)
+        run: npm run generate
+
+      - name: Show built files (debug)
+        run: |
+          echo "Working dir: $(pwd)"
+          echo "Contents of repo root:"
+          ls -la
+          echo "Contents of .output/public (if present):"
+          ls -la .output/public || true
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./.output/public
+          publish_branch: gh-pages
