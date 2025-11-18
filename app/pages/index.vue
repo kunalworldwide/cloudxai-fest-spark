@@ -85,7 +85,7 @@ definePageMeta({
 
 // Get the base URL for og:image
 const url = useRequestURL();
-const ogImageUrl = `${url.origin}/cover.jpg`;
+
 
 // SEO
 useHead({
@@ -98,8 +98,7 @@ useHead({
     { name: "googlebot", content: "index, follow" },
     { name: "bingbot", content: "index, follow" },
     { name: "yandexbot", content: "index, follow" },
-    { name: "sitemap", content: "https://techmilap.com/sitemap.xml" },
-    { name: "og:image", content: ogImageUrl },
+    { name: "og:image", content: "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg" },
     { name: "og:title", content: "CloudxAI Conference 2026 Bengaluru" },
     { name: "og:description", content: "CloudxAI Conference 2026 Bengaluru" },
     { name: "og:url", content: url.origin },

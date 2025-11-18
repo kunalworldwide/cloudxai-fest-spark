@@ -153,8 +153,6 @@ const bookTicket = (ticketId) => {
 };
 
 // Get the base URL for og:image
-const url = useRequestURL();
-const ogImageUrl = `${url.origin}/cover.jpg`;
 
 onMounted(() => {
   // getAllTickets();
@@ -171,7 +169,7 @@ useHead({
     { name: "googlebot", content: "index, follow" },
     { name: "bingbot", content: "index, follow" },
     { name: "yandexbot", content: "index, follow" },
-    { name: "og:image", content: ogImageUrl },
+    { name: "og:image", content: "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg" },
     { name: "og:title", content: "Book a Conference Ticket" },
     { name: "og:description", content: "Book your ticket to attend the conference" },
     { name: "og:url", content: url.origin },
