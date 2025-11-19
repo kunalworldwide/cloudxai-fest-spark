@@ -33,16 +33,20 @@
           <span class="about-event__label-text">About Event</span>
         </div>
         <h1 class="about-event__headline">
-          Get The Best <span>Experience In The World Of Agentic AI</span>
+
+          First, <span>we built the cloud. <br> Now, we're teaching it to run itself.</span>
         </h1>
         <p class="about-event__body">
-          To get the most out of the agentic AI world, whether through events,
-          learning, or engagement, consider a holistic approach that integrates
-          diverse perspectives and actions.
+          We're bringing together engineers, developers, and platform teams driving the next phase of cloud-native evolution  - where automation starts to think for itself.
+
         </p>
         <p class="about-event__body">
-          Dive into immersive sessions, connect with industry leaders, and
-          explore innovative solutions shaping the future of our AI world.
+          CloudxAI focuses on how we move from reactive operations to intelligent systems that scale, optimize, and manage themselves.
+          <br>
+          Sessions explore AI-driven orchestration, GPU-aware scheduling, FinOps automation, and application performance intelligence — grounded in real systems, real architectures, and real production lessons.
+          <br>This is where the people running today’s cloud prepare for tomorrow’s: the intelligent cloud.
+<br>When compute learns, the cloud thinks.
+
         </p>
       </div>
     </div>
