@@ -1,4 +1,4 @@
-import{_ as w}from"./BMljl-dD.js";import{_ as x,r as B,m as C,E as D,u as N,c as i,b as n,w as a,o,a as e,H as g,S as v,ae as S,T as A,y,t as c,ah as l,d as r}from"./CiOwc8N5.js";import{E as I,a3 as f,a4 as m,r as d,V}from"./B-wX8gPD.js";import"./DRzYAiw7.js";const E=[{name:"Super Early Bird",description:`The essential pass for the forward-thinking professional. Secure your spot at the absolute lowest price and be part of the core experience.
+import{_ as w}from"./B5c2IInG.js";import{_ as x,r as B,m as C,E as D,u as N,c as i,b as n,w as a,o,a as e,H as g,S as v,ae as S,T as A,y,t as c,ah as l,d as r}from"./DoODY6Ca.js";import{E as I,a3 as f,a4 as m,r as d,V}from"./BaCAwu7Y.js";import"./Buhaqeol.js";const E=[{name:"Super Early Bird",description:`The essential pass for the forward-thinking professional. Secure your spot at the absolute lowest price and be part of the core experience.
 
 Deepest Discount: The absolute lowest price available for the conference.
 
