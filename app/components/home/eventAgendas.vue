@@ -1,5 +1,5 @@
 <template>
-  <section class="event-agendas">
+  <section id="speakers" class="event-agendas">
     <div class="event-agendas__container">
       <!-- Section Label -->
       <div class="event-agendas__label">

@@ -95,8 +95,30 @@
             Home
           </v-btn>
 
+
           <v-btn variant="text" color="white" class="text-none" to="/register">
             Register
+          </v-btn>
+
+          <v-btn variant="text" color="white" class="text-none" @click="scrollToSection('speakers')">
+            Speakers
+          </v-btn>
+
+          <v-btn variant="text" color="white" class="text-none" @click="scrollToSection('partners')">
+            Partners
+          </v-btn>
+          
+          <v-btn disabled variant="text" color="white" class="text-none" to="/abc">
+            Agenda (Coming Soon)
+          </v-btn>
+
+
+          <v-btn disabled variant="text" color="white" class="text-none" to="/def">
+            Call For Papers (Coming Soon)
+          </v-btn>
+
+          <v-btn variant="text" color="white" class="text-none" to="/ghi">
+            About Us
           </v-btn>
 
           <div class="d-flex justify-center mt-4" style="gap: 24px;">
@@ -149,6 +171,18 @@ const props = defineProps({
 })
 
 const drawer = ref(false)
+
+const scrollToSection = (sectionId) => {
+  drawer.value = false
+  
+  // Small delay to allow drawer to close on mobile
+  setTimeout(() => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }, 100)
+}
 
 const handleNavigation = () => {
   // Add your navigation logic here
