@@ -54,7 +54,7 @@
                 <div class="ticket-card-body-container">
                   <div class="ticket-card-body">
                     <h3 class="ticket-tier" v-if="ticket.name">
-                      {{ ticket.tier.toUpperCase() }}
+                      {{ ticket.name.toUpperCase() }}
                     </h3>
 
                     <p class="ticket-description" v-if="ticket.description">
