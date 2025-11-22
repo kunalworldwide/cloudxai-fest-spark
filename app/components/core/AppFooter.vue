@@ -2,7 +2,7 @@
   <v-footer class="footer-with-bg py-12">
     <v-container>
       <!-- Main Footer Content -->
-      <v-row class="text-white mb-8 justify-space-between">
+      <v-row class="text-white  justify-space-between">
         <!-- Contact Info Section -->
         <v-col cols="12" md="6" lg="4">
           <div class="mb-6">
@@ -16,13 +16,15 @@
             <h3 class="text-subtitle-1 font-weight-bold mb-3">Contact us:</h3>
             <div class="d-flex align-center mb-2">
               <v-icon size="small" class="mr-2">mdi-email-outline</v-icon>
-              <span class="text-body-2">info@cloudxai.com</span>
+              <span class="text-body-2">contact@cloudconf.ai</span>
             </div>
             <!-- <div class="d-flex align-center">
               <v-icon size="small" class="mr-2">mdi-phone-outline</v-icon>
               <span class="text-body-2">+1 (555) 123-4567</span>
             </div> -->
           </div>
+
+        
         </v-col>
 
         <!-- Address Section -->
@@ -94,6 +96,22 @@
             </v-btn>
           </div>
         </v-col> -->
+      </v-row>
+
+      <v-row class="mb-8">
+        <v-col cols="12" md="12" class="d-flex cta-btn  ga-4">
+          
+            <span class="text-body-2" style="color: #fff;">
+              Secure your spot now at the CloudXAI conference and be a part of the cloud shift from
+automation to intelligence movement.
+<br>Tickets are limited, and will be released in batches.
+            </span>
+
+            <v-btn color="white" rounded="xl" variant="tonal">Register Now</v-btn>
+
+          
+
+        </v-col>
       </v-row>
 
       <!-- Divider -->
@@ -175,6 +193,18 @@
 
 .gap-4 {
   gap: 16px;
+}
+
+.cta-btn{
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media(max-width: 768px) {
+  .cta-btn{
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 1440px) {

@@ -8,9 +8,10 @@
     <HomeAboutEvent />
 
     <!-- <HomeEvenList /> -->
-    <HomeWhatToExpect />
-
+    
     <HomeEventAgendas />
+    
+    <HomeWhatToExpect />
 
     <HomeMarqee />
 

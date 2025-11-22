@@ -1,11 +1,11 @@
 <template>
-  <section class="partners-section">
-    <div class="partners-container">
+  <section class="partners-section" id="partners">
+    <!-- <div class="partners-container">
       <h2 class="partners-title">OUR PARTNERS</h2>
 
       <div class="partners-grid text-center">
         <p class="text-white text-h4">Coming Soon</p>
-        <!-- <div v-for="partner in partners" :key="partner.id" class="partner-card">
+        <div v-for="partner in partners" :key="partner.id" class="partner-card">
           <div class="partner-logo">
             <img :src="partner.logo" :alt="partner.name" />
           </div>
@@ -15,12 +15,12 @@
           >
             {{ partner.tier }}
           </div>
-        </div> -->
+        </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="partners-container partners-container-2">
-      <h2 class="partners-title">Community Partners</h2>
+      <h2 class="partners-title">OUR PARTNERS</h2>
 
       <div class="partners-grid-2">
         <div
@@ -157,13 +157,11 @@ const partners = [
   z-index: 1;
 }
 
-.partners-container-2 {
-  margin-top: 140px;
-}
 
 .partners-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
+  line-height: 100%;
   text-align: center;
   margin-bottom: 80px;
   background: linear-gradient(135deg, #4fd1c5 0%, #63b3ed 100%);

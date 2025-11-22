@@ -33,19 +33,23 @@
           <span class="about-event__label-text">About Event</span>
         </div>
         <h1 class="about-event__headline">
-
-          First, <span>we built the cloud. <br> Now, we're teaching it to run itself.</span>
+          First, <span>we built the cloud. Now, we’re teaching it to run itself.</span>
         </h1>
         <p class="about-event__body">
-          We're bringing together engineers, developers, and platform teams driving the next phase of cloud-native evolution  - where automation starts to think for itself.
-
+          We’re bringing together the community of engineers, AI and application developers, platform
+teams, and cloud practitioners who are building the next phase of cloud-native evolution, where
+automation begins to think for itself.
         </p>
         <p class="about-event__body">
-          CloudxAI focuses on how we move from reactive operations to intelligent systems that scale, optimize, and manage themselves.
-          <br>
+          Meet and hear from well-known speakers, the leading brands, and the engineering teams
+          driving real innovation across the cloud-native ecosystem.        
+        </p>
+        <p class="about-event__body">
+          When a machine learns, the cloud starts to think.
+        <!-- <br>
           Sessions explore AI-driven orchestration, GPU-aware scheduling, FinOps automation, and application performance intelligence — grounded in real systems, real architectures, and real production lessons.
           <br>This is where the people running today’s cloud prepare for tomorrow’s: the intelligent cloud.
-<br>When compute learns, the cloud thinks.
+<br>When compute learns, the cloud thinks. -->
 
         </p>
       </div>

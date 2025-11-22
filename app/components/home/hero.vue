@@ -234,6 +234,12 @@ display: none !important;
   }
 }
 
+@media(max-height: 852px) {
+  .hero-background {
+    height: 820px;
+  }
+}
+
 .hero-location {
   color: rgba(255, 255, 255, 0.9);
 }
