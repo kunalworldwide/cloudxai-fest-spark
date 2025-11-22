@@ -34,7 +34,7 @@
       </v-row>
 
       <!-- Ticket Cards -->
-      <v-row class="justify-center">
+      <v-row class="justify-center" v-if="ticketsData && ticketsData.length > 0">
         <v-col cols="12" md="12" lg="9" xl="8">
           <v-row class="justify-center">
             <v-col
@@ -118,7 +118,7 @@
         </v-col>
       </v-row>
       <!-- Show s till tickets are loaded -->
-      <v-row style="max-width: 1200px; margin: 0 auto">
+      <v-row style="max-width: 1200px; margin: 0 auto" v-if="!ticketsData || ticketsData.length === 0">
         <v-col cols="12" md="12" class="d-flex justify-center align-center">
           <v-progress-circular
             :size="50"
