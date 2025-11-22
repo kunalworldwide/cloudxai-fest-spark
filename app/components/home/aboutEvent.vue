@@ -199,7 +199,7 @@ const eventStats = ref(stats);
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  gap: 48px;
+  gap: 64px;
 
   .event-stats__item {
     .event-card {
@@ -212,7 +212,7 @@ const eventStats = ref(stats);
         font-size: 4rem !important;
       }
       & > h2 {
-        max-width: 190px;
+        max-width: 135px;
         text-align: left;
         line-height: 100%;
       }
@@ -258,7 +258,7 @@ const eventStats = ref(stats);
   }
 }
 
-@media (max-width: 542px) {
+@media (max-width: 690px) {
   .about-event {
     padding: 16px;
   }

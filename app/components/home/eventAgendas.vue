@@ -247,35 +247,34 @@ export default {
     transition: all 0.4s ease;
     position: relative;
 
-    // .event-agendas__card:hover & {
-    //   transform: translateY(-8px);
-    // }
+    .event-agendas__card:hover & {
+      transform: translateY(-8px);
+    }
 
-    // Border frame on hover
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   top: -10px;
-    //   left: -10px;
-    //   width: 150px;
-    //   height: 150px;
-    //   border-left: 5px solid #2B5BA8;
-    //   border-top: 5px solid #2B5BA8;
-    //   opacity: 0;
-    //   transition: opacity 0.4s ease;
-    //   pointer-events: none;
-    //   z-index: 1;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 150px;
+      height: 150px;
+      border-left: 5px solid #2B5BA8;
+      border-top: 5px solid #2B5BA8;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 1;
 
-    //   @media (max-width: 768px) {
-    //     width: 100px;
-    //     height: 100px;
-    //     border-width: 4px;
-    //   }
-    // }
+      @media (max-width: 768px) {
+        width: 100px;
+        height: 100px;
+        border-width: 4px;
+      }
+    }
 
-    // .event-agendas__card:hover &::before {
-    //   opacity: 1;
-    // }
+    .event-agendas__card:hover &::before {
+      opacity: 1;
+    }
   }
 
   &__image-container {
@@ -329,10 +328,10 @@ export default {
       gap: 12px;
     }
 
-    // .event-agendas__card:hover & {
-    //   opacity: 1;
-    //   transform: translate(0, -50%);
-    // }
+    .event-agendas__card:hover & {
+      opacity: 1;
+      transform: translate(0, -50%);
+    }
   }
 
   &__social-link {
@@ -351,10 +350,10 @@ export default {
       height: 36px;
     }
 
-    // &:hover {
-    //   background: #2563eb;
-    //   transform: scale(1.1);
-    // }
+    &:hover {
+      background: #2563eb;
+      transform: scale(1.1);
+    }
 
     .v-icon {
       color: white !important;
