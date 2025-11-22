@@ -33,8 +33,6 @@
         </v-col>
       </v-row>
 
-      {{ ticketsData }}
-
       <!-- Ticket Cards -->
       <v-row class="justify-center">
         <v-col cols="12" md="12" lg="9" xl="8">
@@ -55,7 +53,7 @@
                 <!-- Card Content -->
                 <div class="ticket-card-body-container">
                   <div class="ticket-card-body">
-                    <h3 class="ticket-tier" v-if="ticket.tier">
+                    <h3 class="ticket-tier" v-if="ticket.name">
                       {{ ticket.tier.toUpperCase() }}
                     </h3>
 
@@ -119,6 +117,16 @@
           </v-row>
         </v-col>
       </v-row>
+      <!-- Show s till tickets are loaded -->
+      <v-row style="max-width: 1200px; margin: 0 auto">
+        <v-col cols="12" md="12" class="d-flex justify-center align-center">
+          <v-progress-circular
+            :size="50"
+            color="primary"
+            indeterminate
+          ></v-progress-circular>
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
@@ -129,7 +137,7 @@ const ticketsData = ref([]);
 const getAllTickets = async () => {
   try {
     // let url ="https://demotechevent.vercel.app/api/events/689b4ef291f77a93a402d4db"
-    let url = "https://techmilap.com/api/events/691ad96d85cd703cf3deff95"
+    let url = "https://techmilap.com/api/events/691ad96d85cd703cf3deff95";
     const response = await $fetch(url);
     console.log(response);
     ticketsData.value = response.tickets || [];
@@ -162,16 +170,26 @@ onMounted(() => {
 useHead({
   title: "Book a Conference Ticket",
   meta: [
-    { name: "description", content: "Book your ticket to attend the conference" },
+    {
+      name: "description",
+      content: "Book your ticket to attend the conference",
+    },
     { name: "keywords", content: "conference, ticket, booking, event" },
     { name: "author", content: "TechMilap" },
     { name: "robots", content: "index, follow" },
     { name: "googlebot", content: "index, follow" },
     { name: "bingbot", content: "index, follow" },
     { name: "yandexbot", content: "index, follow" },
-    { name: "og:image", content: "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg" },
+    {
+      name: "og:image",
+      content:
+        "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg",
+    },
     { name: "og:title", content: "Book a Conference Ticket" },
-    { name: "og:description", content: "Book your ticket to attend the conference" },
+    {
+      name: "og:description",
+      content: "Book your ticket to attend the conference",
+    },
     { name: "og:url", content: "https://cloudconf.ai/" },
     { name: "og:type", content: "website" },
     { name: "og:locale", content: "en_US" },
