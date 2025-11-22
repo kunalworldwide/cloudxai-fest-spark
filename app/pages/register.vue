@@ -33,6 +33,8 @@
         </v-col>
       </v-row>
 
+      {{ ticketsData }}
+
       <!-- Ticket Cards -->
       <v-row class="justify-center">
         <v-col cols="12" md="12" lg="9" xl="8">
@@ -122,21 +124,19 @@
 </template>
 
 <script setup>
-import tickets from "@/assets/data/tickets.json"; 
+const ticketsData = ref([]);
 
-const ticketsData = ref(tickets);
-
-// const getAllTickets = async () => {
-//   try {
-//     let url ="https://demotechevent.vercel.app/api/events/689b4ef291f77a93a402d4db"
-//     // let url = "https://techmilap.com/api/events/691ad96d85cd703cf3deff95"
-//     const response = await $fetch(url);
-//     console.log(response);
-//     ticketsData.value = response.tickets || [];
-//   } catch (error) {
-//     console.error("Error fetching tickets:", error);
-//   }
-// };
+const getAllTickets = async () => {
+  try {
+    // let url ="https://demotechevent.vercel.app/api/events/689b4ef291f77a93a402d4db"
+    let url = "https://techmilap.com/api/events/691ad96d85cd703cf3deff95"
+    const response = await $fetch(url);
+    console.log(response);
+    ticketsData.value = response.tickets || [];
+  } catch (error) {
+    console.error("Error fetching tickets:", error);
+  }
+};
 
 // Show all tickets sorted by price
 const featuredTickets = computed(() => {
@@ -155,7 +155,7 @@ const bookTicket = (ticketId) => {
 // Get the base URL for og:image
 
 onMounted(() => {
-  // getAllTickets();
+  getAllTickets();
 });
 
 // SEO
