@@ -108,16 +108,16 @@
             Partners
           </v-btn>
           
-          <v-btn disabled variant="text" color="white" class="text-none" to="/abc">
+          <v-btn disabled variant="text" color="white" class="text-none" to="/">
             Agenda (Coming Soon)
           </v-btn>
 
 
-          <v-btn disabled variant="text" color="white" class="text-none" to="/def">
+          <v-btn disabled variant="text" color="white" class="text-none" to="/">
             Call For Papers (Coming Soon)
           </v-btn>
 
-          <v-btn variant="text" color="white" class="text-none" to="/ghi">
+          <v-btn variant="text" color="white" class="text-none" to="/">
             About Us
           </v-btn>
 
