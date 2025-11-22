@@ -47,7 +47,11 @@
                     <v-icon size="20" class="mr-2"
                       >mdi-map-marker-outline</v-icon
                     >
-                    <span class="text-body-1">Nimhans Convention Center, Bengaluru</span>
+                    <span class="text-body-1" >
+                      <a target="_blank" href="https://maps.app.goo.gl/sKCE49noeMskaWmW7" style="color:white; text-decoration: none;">Nimhans Convention Center, Bengaluru
+                        <v-icon size="20" class="ml-2">mdi-open-in-new</v-icon>
+                      </a>
+                    </span>
                   </div>
                 </div>
                 <div class="footer-content">

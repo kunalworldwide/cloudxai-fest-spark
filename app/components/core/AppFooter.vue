@@ -2,13 +2,16 @@
   <v-footer class="footer-with-bg py-12">
     <v-container>
       <!-- Main Footer Content -->
-      <v-row class="text-white  justify-space-between">
+      <v-row class="text-white justify-space-between">
         <!-- Contact Info Section -->
         <v-col cols="12" md="6" lg="4">
           <div class="mb-6">
             <h2 class="text-h5 font-weight-bold mb-4">CloudxAI Conference</h2>
             <p class="text-body-2 mb-6" style="max-width: 400px">
-              CloudxAI Conference is the premier destination for technology leaders, innovators, and professionals to explore the convergence of cloud computing and artificial intelligence in the enterprise landscape.
+              CloudxAI Conference is the premier destination for technology
+              leaders, innovators, and professionals to explore the convergence
+              of cloud computing and artificial intelligence in the enterprise
+              landscape.
             </p>
           </div>
 
@@ -23,8 +26,6 @@
               <span class="text-body-2">+1 (555) 123-4567</span>
             </div> -->
           </div>
-
-        
         </v-col>
 
         <!-- Address Section -->
@@ -99,18 +100,16 @@
       </v-row>
 
       <v-row class="mb-8">
-        <v-col cols="12" md="12" class="d-flex cta-btn  ga-4">
-          
-            <span class="text-body-2" style="color: #fff;">
-              Secure your spot now at the CloudXAI conference and be a part of the cloud shift from
-automation to intelligence movement.
-<br>Tickets are limited, and will be released in batches.
-            </span>
+        <v-col cols="12" md="12" class="d-flex cta-btn ga-4">
+          <span class="text-body-2" style="color: #fff">
+            Secure your spot now at the CloudXAI conference and be a part of the
+            cloud shift from automation to intelligence movement.
+            <br />Tickets are limited, and will be released in batches.
+          </span>
 
-            <v-btn color="white" rounded="xl" variant="tonal">Register Now</v-btn>
-
-          
-
+          <v-btn color="white" to="/register" rounded="xl" variant="tonal"
+            >Register Now</v-btn
+          >
         </v-col>
       </v-row>
 
@@ -122,8 +121,15 @@ automation to intelligence movement.
         <v-col cols="12" md="6">
           <p class="text-body-2 mb-0">
             Design and Developed by
-            <span class="text-primary font-weight-medium"><a href="https://techferment.com" style="color: #3A99FF;text-decoration: none;" target="_blank">TechFerment</a></span> |
-            All Right Reserved
+            <span class="text-primary font-weight-medium"
+              ><a
+                href="https://techferment.com"
+                style="color: #3a99ff; text-decoration: none"
+                target="_blank"
+                >TechFerment</a
+              ></span
+            >
+            | All Right Reserved
           </p>
         </v-col>
         <!-- <v-col cols="12" md="6" class="text-md-right">
@@ -195,13 +201,13 @@ automation to intelligence movement.
   gap: 16px;
 }
 
-.cta-btn{
+.cta-btn {
   align-items: center;
   justify-content: space-between;
 }
 
-@media(max-width: 768px) {
-  .cta-btn{
+@media (max-width: 768px) {
+  .cta-btn {
     align-items: flex-start;
     flex-direction: column;
   }

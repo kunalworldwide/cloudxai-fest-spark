@@ -9,7 +9,7 @@
 
       <!-- Section Heading -->
       <h1 class="event-agendas__headline">
-        MEET OUR <span>AMAZING<br/>SPEAKERS FOR THIS EVENT</span>
+        MEET OUR <span>AMAZING<br />SPEAKERS FOR THIS EVENT</span>
       </h1>
 
       <!-- Speakers Grid -->
@@ -22,12 +22,12 @@
           <div class="event-agendas__card-inner">
             <div class="event-agendas__image-container">
               <img
-                :src="`images/${speaker.image}`"
+                :src="speaker.image ? `/images/speakers/${speaker.image}` : '/images/defaultAvatar.png'"
                 :alt="speaker.name"
                 class="event-agendas__image"
               />
               <!-- Social Media Panel (visible on hover) -->
-              <!-- <div class="event-agendas__social-panel">
+              <div class="event-agendas__social-panel">
                 <a
                   v-for="social in speaker.socials"
                   :key="social.name"
@@ -36,9 +36,11 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <v-icon size="20" :color="social.color || '#1e3a8a'">{{ social.icon }}</v-icon>
+                  <v-icon size="20" :color="social.color || '#1e3a8a'">{{
+                    social.icon
+                  }}</v-icon>
                 </a>
-              </div> -->
+              </div>
             </div>
             <h3 class="event-agendas__name">{{ speaker.name }}</h3>
             <p class="event-agendas__role">{{ speaker.role }}</p>
@@ -51,26 +53,40 @@
 
 <script>
 export default {
-  name: 'EventAgendas',
+  name: "EventAgendas",
   data() {
     return {
       speakers: [
         {
-          name: 'Speaker Announcement',
-          role: 'Coming Soon',
-          image: 'defaultAvatar.png',
+          name: "Kunal Kushwaha",
+          role: "Founder WeMakeDevs",
+          image: "kunal.png",
+          bio: "Kunal Kushwaha presently operates a YouTube channel with 3.58 lakh subscribers, making it one of the fastest-growing educational coding channels. On his channel, he produces podcasts, hosts community events, and shares engaging content on coding, tools, and various other topics.",
           socials: [
-            { name: 'calendar', icon: 'mdi-calendar-blank', url: '#' },
-            { name: 'menu', icon: 'mdi-menu', url: '#' },
-            { name: 'share', icon: 'mdi-share-variant', url: '#' },
-            { name: 'instagram', icon: 'mdi-instagram', url: '#' },
-            { name: 'facebook', icon: 'mdi-facebook', url: '#' }
-          ]
+            {
+              name: "linkedin",
+              icon: "mdi-linkedin",
+              url: "https://www.linkedin.com/in/kunal-kushwaha/",
+            },
+          ],
+        },
+        {
+          name: "Abhishek Veeramalla",
+          role: "CTO at AKVA",
+          bio: "Abhishek Veeramalla is a Principal Engineer at Red Hat and a popular YouTuber known for his educational content on DevOps and cloud computing. He is a prolific creator, with a YouTube channel that has over 550,000 subscribers and offers courses on platforms like Udemy that have helped over 1000 students land jobs",
+          image: "abhishek.png",
+          socials: [
+            {
+              name: "linkedin",
+              icon: "mdi-linkedin",
+              url: "https://www.linkedin.com/in/abhishek-veeramalla/overlay/about-this-profile/",
+            },
+          ],
         },
         {
           name: 'Speaker Announcement',
-          role: 'Coming Soon',
-          image: 'defaultAvatar.png',
+            role: 'Coming Soon',
+            image: '',
           socials: [
             { name: 'calendar', icon: 'mdi-calendar-blank', url: '#' },
             { name: 'menu', icon: 'mdi-menu', url: '#' },
@@ -82,7 +98,7 @@ export default {
         {
           name: 'Speaker Announcement',
             role: 'Coming Soon',
-            image: 'defaultAvatar.png',
+            image: '',
           socials: [
             { name: 'calendar', icon: 'mdi-calendar-blank', url: '#' },
             { name: 'menu', icon: 'mdi-menu', url: '#' },
@@ -91,22 +107,10 @@ export default {
             { name: 'facebook', icon: 'mdi-facebook', url: '#' }
           ]
         },
-        {
-          name: 'Speaker Announcement',
-          role: 'Coming Soon',
-          image: 'defaultAvatar.png',
-          socials: [
-            { name: 'calendar', icon: 'mdi-calendar-blank', url: '#' },
-            { name: 'menu', icon: 'mdi-menu', url: '#' },
-            { name: 'share', icon: 'mdi-share-variant', url: '#' },
-            { name: 'instagram', icon: 'mdi-instagram', url: '#' },
-            { name: 'facebook', icon: 'mdi-facebook', url: '#' }
-          ]
-        }
-      ]
-    }
-  }
-}
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -118,7 +122,7 @@ export default {
     padding: 60px 36px 60px 16px;
   }
 
-  @media(max-width:500px){
+  @media (max-width: 500px) {
     padding: 40px 25px 40px 5px;
   }
 
@@ -142,7 +146,7 @@ export default {
   &__label-rule {
     width: 40px;
     height: 2px;
-    background-color: #5B8FF9;
+    background-color: #5b8ff9;
 
     @media (max-width: 768px) {
       width: 30px;
@@ -152,7 +156,7 @@ export default {
   &__label-text {
     font-size: 14px;
     font-weight: 600;
-    color: #5B8FF9;
+    color: #5b8ff9;
     letter-spacing: 2px;
 
     @media (max-width: 768px) {
@@ -181,10 +185,10 @@ export default {
     @media (max-width: 768px) {
       font-size: 28px;
       margin-bottom: 40px;
-      
+
       span {
         display: inline;
-        
+
         br {
           display: none;
         }
@@ -304,7 +308,7 @@ export default {
     right: 0;
     top: 50%;
     transform: translate(100%, -50%);
-    background: linear-gradient(180deg, #7DD3C0 0%, #5FB8A8 100%);
+    background: linear-gradient(180deg, #7dd3c0 0%, #5fb8a8 100%);
     padding: 24px 12px;
     display: flex;
     flex-direction: column;
@@ -371,7 +375,7 @@ export default {
 
   &__role {
     font-size: 16px;
-    color: #5B8FF9;
+    color: #5b8ff9;
     font-weight: 500;
     margin: 0;
 
