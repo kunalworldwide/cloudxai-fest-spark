@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Kunal Kushwaha",
+    "role": "Founder WeMakeDevs",
+    "image": "kunal.png",
+    "bio": "Kunal Kushwaha presently operates a YouTube channel with 3.58 lakh subscribers, making it one of the fastest-growing educational coding channels. On his channel, he produces podcasts, hosts community events, and shares engaging content on coding, tools, and various other topics.",
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/kunal-kushwaha/"
+      }
+    ]
+  },
+  {
+    "name": "Abhishek Veeramalla",
+    "role": "CTO at AKVA",
+    "bio": "Abhishek Veeramalla is a Principal Engineer at Red Hat and a popular YouTuber known for his educational content on DevOps and cloud computing. He is a prolific creator, with a YouTube channel that has over 550,000 subscribers and offers courses on platforms like Udemy that have helped over 1000 students land jobs",
+    "image": "abhishek.png",
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/abhishek-veeramalla/overlay/about-this-profile/"
+      }
+    ]
+  },
+  {
+    "name": "Speaker Announcement",
+    "role": "Coming Soon",
+    "image": "",
+    "socials": [
+      {
+        "name": "calendar",
+        "icon": "mdi-calendar-blank",
+        "url": "#"
+      },
+      {
+        "name": "menu",
+        "icon": "mdi-menu",
+        "url": "#"
+      },
+      {
+        "name": "share",
+        "icon": "mdi-share-variant",
+        "url": "#"
+      },
+      {
+        "name": "instagram",
+        "icon": "mdi-instagram",
+        "url": "#"
+      },
+      {
+        "name": "facebook",
+        "icon": "mdi-facebook",
+        "url": "#"
+      }
+    ]
+  },
+  {
+    "name": "Speaker Announcement",
+    "role": "Coming Soon",
+    "image": "",
+    "socials": [
+      {
+        "name": "calendar",
+        "icon": "mdi-calendar-blank",
+        "url": "#"
+      },
+      {
+        "name": "menu",
+        "icon": "mdi-menu",
+        "url": "#"
+      },
+      {
+        "name": "share",
+        "icon": "mdi-share-variant",
+        "url": "#"
+      },
+      {
+        "name": "instagram",
+        "icon": "mdi-instagram",
+        "url": "#"
+      },
+      {
+        "name": "facebook",
+        "icon": "mdi-facebook",
+        "url": "#"
+      }
+    ]
+  }
+]
+

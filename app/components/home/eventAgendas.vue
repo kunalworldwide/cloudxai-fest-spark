@@ -15,7 +15,7 @@
       <!-- Speakers Grid -->
       <div class="event-agendas__grid">
         <div
-          v-for="speaker in speakers"
+          v-for="speaker in speakersData"
           :key="speaker.name"
           class="event-agendas__card"
         >
@@ -51,66 +51,9 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "EventAgendas",
-  data() {
-    return {
-      speakers: [
-        {
-          name: "Kunal Kushwaha",
-          role: "Founder WeMakeDevs",
-          image: "kunal.png",
-          bio: "Kunal Kushwaha presently operates a YouTube channel with 3.58 lakh subscribers, making it one of the fastest-growing educational coding channels. On his channel, he produces podcasts, hosts community events, and shares engaging content on coding, tools, and various other topics.",
-          socials: [
-            {
-              name: "linkedin",
-              icon: "mdi-linkedin",
-              url: "https://www.linkedin.com/in/kunal-kushwaha/",
-            },
-          ],
-        },
-        {
-          name: "Abhishek Veeramalla",
-          role: "CTO at AKVA",
-          bio: "Abhishek Veeramalla is a Principal Engineer at Red Hat and a popular YouTuber known for his educational content on DevOps and cloud computing. He is a prolific creator, with a YouTube channel that has over 550,000 subscribers and offers courses on platforms like Udemy that have helped over 1000 students land jobs",
-          image: "abhishek.png",
-          socials: [
-            {
-              name: "linkedin",
-              icon: "mdi-linkedin",
-              url: "https://www.linkedin.com/in/abhishek-veeramalla/overlay/about-this-profile/",
-            },
-          ],
-        },
-        {
-          name: 'Speaker Announcement',
-            role: 'Coming Soon',
-            image: '',
-          socials: [
-            { name: 'calendar', icon: 'mdi-calendar-blank', url: '#' },
-            { name: 'menu', icon: 'mdi-menu', url: '#' },
-            { name: 'share', icon: 'mdi-share-variant', url: '#' },
-            { name: 'instagram', icon: 'mdi-instagram', url: '#' },
-            { name: 'facebook', icon: 'mdi-facebook', url: '#' }
-          ]
-        },
-        {
-          name: 'Speaker Announcement',
-            role: 'Coming Soon',
-            image: '',
-          socials: [
-            { name: 'calendar', icon: 'mdi-calendar-blank', url: '#' },
-            { name: 'menu', icon: 'mdi-menu', url: '#' },
-            { name: 'share', icon: 'mdi-share-variant', url: '#' },
-            { name: 'instagram', icon: 'mdi-instagram', url: '#' },
-            { name: 'facebook', icon: 'mdi-facebook', url: '#' }
-          ]
-        },
-      ],
-    };
-  },
-};
+<script setup>
+import speakersData from '~/assets/data/speakers.json';
+
 </script>
 
 <style scoped lang="scss">
@@ -247,35 +190,34 @@ export default {
     transition: all 0.4s ease;
     position: relative;
 
-    // .event-agendas__card:hover & {
-    //   transform: translateY(-8px);
-    // }
+    .event-agendas__card:hover & {
+      transform: translateY(-8px);
+    }
 
-    // Border frame on hover
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   top: -10px;
-    //   left: -10px;
-    //   width: 150px;
-    //   height: 150px;
-    //   border-left: 5px solid #2B5BA8;
-    //   border-top: 5px solid #2B5BA8;
-    //   opacity: 0;
-    //   transition: opacity 0.4s ease;
-    //   pointer-events: none;
-    //   z-index: 1;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 150px;
+      height: 150px;
+      border-left: 5px solid #2B5BA8;
+      border-top: 5px solid #2B5BA8;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 1;
 
-    //   @media (max-width: 768px) {
-    //     width: 100px;
-    //     height: 100px;
-    //     border-width: 4px;
-    //   }
-    // }
+      @media (max-width: 768px) {
+        width: 100px;
+        height: 100px;
+        border-width: 4px;
+      }
+    }
 
-    // .event-agendas__card:hover &::before {
-    //   opacity: 1;
-    // }
+    .event-agendas__card:hover &::before {
+      opacity: 1;
+    }
   }
 
   &__image-container {
@@ -329,10 +271,10 @@ export default {
       gap: 12px;
     }
 
-    // .event-agendas__card:hover & {
-    //   opacity: 1;
-    //   transform: translate(0, -50%);
-    // }
+    .event-agendas__card:hover & {
+      opacity: 1;
+      transform: translate(0, -50%);
+    }
   }
 
   &__social-link {
@@ -351,10 +293,10 @@ export default {
       height: 36px;
     }
 
-    // &:hover {
-    //   background: #2563eb;
-    //   transform: scale(1.1);
-    // }
+    &:hover {
+      background: #2563eb;
+      transform: scale(1.1);
+    }
 
     .v-icon {
       color: white !important;
