@@ -34,7 +34,7 @@
                   <v-btn
                     color="white"
                     variant="flat"
-                    size="large"
+                    size="x-large"
 
                     class="text-none rounded-xl"
                     append-icon="mdi-arrow-top-right"

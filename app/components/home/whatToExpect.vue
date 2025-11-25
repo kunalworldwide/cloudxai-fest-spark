@@ -35,21 +35,21 @@
 const eventsByDay = [
   {
     id: 1,
-    title: "Explore",
+    title: "Stay Ahead",
     description:
-      "Uncover cutting-edge frameworks, tools, and workflows transforming software into intelligent systems. Learn from real-world deployment stories and discover how multi-agent orchestration turns innovative concepts into practical solutions.",
+      "Discover the core themes shaping CloudXAI, including cloud-native AI systems, multi-agent orchestration, intelligent automation and real production deployments. Gain practical insight into how leading teams are building smarter, faster and more efficient cloud architectures with AI.",
   },
   {
     id: 2,
-    title: "Witness",
+    title: "Experience",
     description:
-      "See autonomous AI systems come alive through live demonstrations, interactive showcases, and compelling case studies. Experience firsthand the transformative power of agentic AI in action.",
+      "Start your day with networking over breakfast, pick up exclusive event swag, join hands-on workshops, meet industry-leading speakers and participate in challenges and raffles. And don’t miss the closing party to wrap up the day in style.",
   },
   {
     id: 3,
     title: "Network",
     description:
-      "Join India's premier AI agent community gathering. Connect with visionary founders, groundbreaking researchers, and innovative developers who are shaping the future of intelligent software.",
+      "Connect with founders, cloud experts, influencers and peers who are defining the next era of Cloud Automation and AI Infrastructure Exchange stories, spark collaborations and build relationships within most dynamic AI and cloud community.",
   },
 ];
 </script>

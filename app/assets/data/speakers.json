@@ -26,66 +26,15 @@
     ]
   },
   {
-    "name": "Speaker Announcement",
-    "role": "Coming Soon",
-    "image": "",
+    "name": "Laurent Gil",
+    "role": "Cloud Expert, Forbes Council, Finops Foundation Governing Board Member, Co-founder at Cast AI",
+    "bio": "Laurent is Co-founder and President at Cast Ai, leading product and business development. Previously, he co-founded Zenedge (acquired by Oracle in 2018) and Viewdle (acquired by Google in 2012). He is also a FinOps Governing Board Member, recognized cloud expert, and Forbes Council member.",
+    "image": "laurent.png",
     "socials": [
       {
-        "name": "calendar",
-        "icon": "mdi-calendar-blank",
-        "url": "#"
-      },
-      {
-        "name": "menu",
-        "icon": "mdi-menu",
-        "url": "#"
-      },
-      {
-        "name": "share",
-        "icon": "mdi-share-variant",
-        "url": "#"
-      },
-      {
-        "name": "instagram",
-        "icon": "mdi-instagram",
-        "url": "#"
-      },
-      {
-        "name": "facebook",
-        "icon": "mdi-facebook",
-        "url": "#"
-      }
-    ]
-  },
-  {
-    "name": "Speaker Announcement",
-    "role": "Coming Soon",
-    "image": "",
-    "socials": [
-      {
-        "name": "calendar",
-        "icon": "mdi-calendar-blank",
-        "url": "#"
-      },
-      {
-        "name": "menu",
-        "icon": "mdi-menu",
-        "url": "#"
-      },
-      {
-        "name": "share",
-        "icon": "mdi-share-variant",
-        "url": "#"
-      },
-      {
-        "name": "instagram",
-        "icon": "mdi-instagram",
-        "url": "#"
-      },
-      {
-        "name": "facebook",
-        "icon": "mdi-facebook",
-        "url": "#"
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/laurentgil/"
       }
     ]
   }
