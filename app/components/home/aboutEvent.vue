@@ -59,6 +59,7 @@ automation begins to think for itself.
 
   <!-- Event Stats Section -->
   <div class="ma-0 event-stats">
+    <div class="event-stats__background"></div>
     <div class="event-stats__item" v-for="stat in eventStats" :key="stat.title">
       <v-card
         class="text-center text-white event-card"
@@ -81,7 +82,7 @@ const eventDetails = ref([
   {
     icon: "mdi-calendar-outline",
     title: "March 14, 2026",
-    subtitle: "8.00 am - 7.00 pm",
+    subtitle: "8.50 am - 6.00 pm",
   },
   {
     icon: "mdi-map-marker-outline",
@@ -147,7 +148,7 @@ const eventStats = ref(stats);
   flex-direction: column;
   gap: 12px;
   flex: 1 1 360px;
-  padding-right:64px;
+  padding-right:60px;
 }
 
 .about-event__label {
@@ -189,6 +190,7 @@ const eventStats = ref(stats);
 }
 
 .event-stats {
+  position: relative;
   background-image: url("@/assets/images/home.jpg");
   background-size: cover;
 
@@ -200,6 +202,16 @@ const eventStats = ref(stats);
   flex-direction: row;
   align-items: center;
   gap: 64px;
+
+  .event-stats__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+  }
 
   .event-stats__item {
     .event-card {
