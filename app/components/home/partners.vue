@@ -20,7 +20,7 @@
     </div> -->
 
     <div class="partners-container partners-container-2">
-      <h2 class="partners-title">OUR PARTNERS</h2>
+      <h2 class="partners-title">OUR <span>PARTNERS</span></h2>
 
       <div class="partners-grid-2">
         <div
@@ -160,16 +160,16 @@ const partners = [
 
 .partners-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
+  font-weight: 300;
   line-height: 100%;
   text-align: center;
   margin-bottom: 80px;
-  background: linear-gradient(135deg, #4fd1c5 0%, #63b3ed 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color:white;
   letter-spacing: 2px;
   text-transform: uppercase;
+  span{
+    font-weight: 700;
+  }
 }
 
 .partners-grid {

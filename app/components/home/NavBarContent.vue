@@ -24,7 +24,7 @@
           </v-btn> -->
 
 
-          <div class="d-flex " style="gap: 14px;">
+          <!-- <div class="d-flex " style="gap: 14px;">
             
             <v-btn
               icon
@@ -54,7 +54,7 @@
               <v-icon>mdi-linkedin</v-icon>
             </v-btn>
             
-          </div>
+          </div> -->
     </div>
 
     <!-- Mobile Hamburger Menu (visible below 768px) -->
@@ -121,7 +121,7 @@
             About Us
           </v-btn>
 
-          <div class="d-flex justify-center mt-4" style="gap: 24px;">
+          <!-- <div class="d-flex justify-center mt-4" style="gap: 24px;">
             
             <v-btn
             variant="outlined"
@@ -154,7 +154,7 @@
               <v-icon>mdi-linkedin</v-icon>
             </v-btn>
             
-          </div>
+          </div> -->
         </div>
       </v-navigation-drawer>
     </Teleport>
@@ -167,6 +167,10 @@ const props = defineProps({
   socialLogoColor: {
     type: String,
     default: 'white'
+  },
+  showSocialIcons: {
+    type: Boolean,
+    default: true
   }
 })
 
