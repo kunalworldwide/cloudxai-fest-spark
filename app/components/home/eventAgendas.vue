@@ -146,7 +146,7 @@ import speakersData from '~/assets/data/speakers.json';
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     margin-top: 40px;
 
