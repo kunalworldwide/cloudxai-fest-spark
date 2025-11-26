@@ -208,11 +208,7 @@ const partners = [
 
 .partner-card,
 .partner-card-2 {
-  background: linear-gradient(
-    135deg,
-    rgba(26, 47, 79, 0.6) 0%,
-    rgba(15, 32, 56, 0.8) 100%
-  );
+  background: #ffffff;
   border-radius: 20px;
   padding: 40px 30px 60px;
   display: flex;
@@ -221,34 +217,29 @@ const partners = [
   justify-content: center;
   min-height: 180px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(79, 209, 197, 0.2);
+  border: 1px solid #828282;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      135deg,
-      rgba(79, 209, 197, 0.1) 0%,
-      rgba(59, 130, 246, 0.1) 100%
-    );
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: #ffffff;
+  //   opacity: 0;
+  //   transition: opacity 0.4s ease;
+  // }
 
   &:hover {
     transform: translateY(-10px);
-    border-color: rgba(79, 209, 197, 0.6);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(79, 209, 197, 0.2);
-    &::before {
-      opacity: 1;
-    }
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(198, 198, 198, 0.776);
+    // &::before {
+    //   opacity: 1;
+    // }
     .partner-logo img {
       transform: scale(1.1);
     }
@@ -256,7 +247,7 @@ const partners = [
 }
 
 .partner-card-2 {
-  background: rgba(11, 4, 42, 0.577);
+  // background: rgba(11, 4, 42, 0.577);
 
   padding: 40px 40px;
   min-height: 100px;

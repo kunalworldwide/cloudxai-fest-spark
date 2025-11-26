@@ -9,6 +9,8 @@
           class="pa-4 about-event__card"
           variant="flat"
           rounded="lg"
+          target="_blank"
+          :href="detail.link"
         >
           <div class="d-flex align-center">
             <v-avatar size="64" class="mr-4 about-event__avatar">
@@ -60,6 +62,7 @@ automation begins to think for itself.
   <!-- Event Stats Section -->
   <div class="ma-0 event-stats">
     <div class="event-stats__background"></div>
+    <div class="event-stats__container">
     <div class="event-stats__item" v-for="stat in eventStats" :key="stat.title">
       <v-card
         class="text-center text-white event-card"
@@ -71,6 +74,7 @@ automation begins to think for itself.
         <h2 class="text-h5">{{ stat.title }}</h2>
       </v-card>
     </div>
+  </div>
   </div>
   <!-- Event End -->
 </template>
@@ -88,6 +92,7 @@ const eventDetails = ref([
     icon: "mdi-map-marker-outline",
     title: "Nimhans Convention Center",
     subtitle: "Bengaluru, Karnataka, India",
+    link: "https://maps.app.goo.gl/Li7Ux4gf7TFdTKnFA",
   },
 ]);
 
@@ -198,7 +203,7 @@ const eventStats = ref(stats);
   padding: 64px;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   align-items: center;
   gap: 64px;
@@ -213,6 +218,14 @@ const eventStats = ref(stats);
     opacity: 0.3;
   }
 
+  .event-stats__container{
+    max-width:1350px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 64px;
+  }
+
   .event-stats__item {
     .event-card {
       display: flex;
@@ -224,7 +237,7 @@ const eventStats = ref(stats);
         font-size: 4rem !important;
       }
       & > h2 {
-        max-width: 135px;
+        max-width: 154px;
         text-align: left;
         line-height: 100%;
       }
@@ -233,9 +246,9 @@ const eventStats = ref(stats);
 }
 
 @media (min-width: 1300px) {
-  .event-stats {
-    justify-content: center;
-  }
+  // .event-stats {
+  //   // justify-content: spa;
+  // }
   
 }
 
@@ -249,8 +262,8 @@ const eventStats = ref(stats);
     gap: 32px;
   }
 
-  .event-stats {
-    display: grid;
+  .event-stats__container {
+    display: grid !important;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -268,6 +281,8 @@ const eventStats = ref(stats);
   .about-event__card {
     width: 75%;
   }
+
+  
 }
 
 @media (max-width: 690px) {
@@ -293,9 +308,12 @@ const eventStats = ref(stats);
 
   .event-stats {
     padding: 32px;
-    display: grid;
+
+    .event-stats__container {
     grid-template-columns: repeat(1, 1fr);
     gap: 24px;
+
+  }
 
     p {
       font-size: 3rem !important;
