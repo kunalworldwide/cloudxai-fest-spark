@@ -124,7 +124,7 @@ const eventStats = ref(stats);
 }
 
 .about-event__card {
-  background-color: #2562ff;
+  background-color: #002163;
   width: 90%;
   color: #ffffff;
   box-shadow: 0px 20px 40px rgba(28, 76, 217, 0.18);
