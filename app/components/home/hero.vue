@@ -75,7 +75,8 @@
             </div>
             <div class="text-center pa-0 hero-image-conatiner">
               <v-img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
+                src="@/assets/images/side-cover.webp"
+                lazy-src="@/assets/images/side-cover.webp"
                 alt="CloudxAI Conference 2026 Bengaluru"
                 class="pa-0 hero-slide-image"
                 cover
