@@ -99,7 +99,7 @@
         </v-col> -->
       </v-row>
 
-      <v-row class="mb-8">
+      <v-row class="mb-8" v-if="route.path === '/'">
         <v-col cols="12" md="12" class="d-flex cta-btn ga-4">
           <span class="text-body-2" style="color: #fff">
             Secure your spot now at the CloudXAI conference and be a part of the
@@ -157,6 +157,9 @@
 </template>
 
 <script lang="ts" setup>
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 </script>
 
 <style scoped>
