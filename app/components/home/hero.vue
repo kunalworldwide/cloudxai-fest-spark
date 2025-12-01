@@ -74,15 +74,17 @@
               </div>
             </div>
             <div class="text-center pa-0 hero-image-conatiner">
-              <v-img
-                src="@/assets/images/side-cover.webp"
-                lazy-src="@/assets/images/side-cover.webp"
-                alt="CloudxAI Conference 2026 Bengaluru"
-                class="pa-0 hero-slide-image"
-                cover
-                height="100%"
-                width="100%"
-              ></v-img>
+              <video
+                autoplay
+                loop
+                muted
+                playsinline
+                class="pa-0"
+                style="width: 100%; height: 100%; object-fit: cover;"
+              >
+                <source src="@/assets/videos/hero.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </v-container>

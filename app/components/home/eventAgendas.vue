@@ -9,7 +9,7 @@
 
       <!-- Section Heading -->
       <h1 class="event-agendas__headline">
-        MEET OUR <span>AMAZING<br />SPEAKERS </span>
+        MEET OUR <span>AMAZING <br />SPEAKERS </span>
       </h1>
 
       <!-- Speakers Grid -->
