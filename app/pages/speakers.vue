@@ -1,59 +1,65 @@
 <template>
-  <section id="speakers" class="event-agendas">
-    <div class="event-agendas__container">
-      <!-- Section Label -->
-      <div class="event-agendas__label">
-        <span class="event-agendas__label-rule"></span>
-        <span class="event-agendas__label-text">EVENT SPEAKERS</span>
-      </div>
-
-      <!-- Section Heading -->
-      <h1 class="event-agendas__headline">
-        MEET OUR <span>AMAZING <br />SPEAKERS </span>
-      </h1>
-
-      <!-- Speakers Grid -->
-      <div class="event-agendas__grid">
-        <div
-          v-for="speaker in speakersData"
-          :key="speaker.name"
-          class="event-agendas__card"
-        >
-          <div class="event-agendas__card-inner">
-            <div class="event-agendas__image-container">
-              <img
-                :src="speaker.image ? `/images/speakers/${speaker.image}` : '/images/defaultAvatar.png'"
-                :alt="speaker.name"
-                class="event-agendas__image"
-              />
-              <!-- Social Media Panel (visible on hover) -->
-              <div class="event-agendas__social-panel">
-                <a
-                  v-for="social in speaker.socials"
-                  :key="social.name"
-                  :href="social.url"
-                  class="event-agendas__social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <v-icon size="20" :color="social.color || '#1e3a8a'">{{
-                    social.icon
-                  }}</v-icon>
-                </a>
+  <v-main>
+    <v-container fluid class="" style="max-width: 1800px">
+      <v-row class="mb-10">
+        <v-col cols="12" class="text-center">
+          <h1 class="text-h3 mt-5 font-weight-bold">Speakers</h1>
+          <p class="text-body-1">
+            Get ready to be inspired – meet the brilliant minds speaking at the
+            conference! More speakers to be added shortly.
+          </p>
+          <div class="event-agendas__grid pa-0">
+            <div
+              v-for="speaker in speakersData"
+              :key="speaker.name"
+              class="event-agendas__card"
+            >
+              <div class="event-agendas__card-inner">
+                <div class="event-agendas__image-container">
+                  <img
+                    :src="
+                      speaker.image
+                        ? `/images/speakers/${speaker.image}`
+                        : '/images/defaultAvatar.png'
+                    "
+                    :alt="speaker.name"
+                    class="event-agendas__image"
+                  />
+                  <!-- Social Media Panel (visible on hover) -->
+                  <div class="event-agendas__social-panel">
+                    <a
+                      v-for="social in speaker.socials"
+                      :key="social.name"
+                      :href="social.url"
+                      class="event-agendas__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <v-icon size="20" :color="social.color || '#1e3a8a'">{{
+                        social.icon
+                      }}</v-icon>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="event-agendas__name">{{ speaker.name }}</h3>
+                <p class="event-agendas__role">{{ speaker.role }}</p>
               </div>
             </div>
-            <h3 class="event-agendas__name">{{ speaker.name }}</h3>
-            <p class="event-agendas__role">{{ speaker.role }}</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-main>
 </template>
 
-<script setup>
-import speakersData from '~/assets/data/speakers.json';
+<script  setup>
+import speakersData from "~/assets/data/speakers.json";
 
+const speakers = ref(speakersData);
+
+definePageMeta({
+  layout: "default",
+});
 </script>
 
 <style scoped lang="scss">
@@ -146,7 +152,7 @@ import speakersData from '~/assets/data/speakers.json';
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     margin-top: 40px;
 
@@ -195,14 +201,14 @@ import speakersData from '~/assets/data/speakers.json';
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: -10px;
       left: -10px;
       width: 150px;
       height: 150px;
-      border-left: 5px solid #2B5BA8;
-      border-top: 5px solid #2B5BA8;
+      border-left: 5px solid #2b5ba8;
+      border-top: 5px solid #2b5ba8;
       opacity: 0;
       transition: opacity 0.4s ease;
       pointer-events: none;

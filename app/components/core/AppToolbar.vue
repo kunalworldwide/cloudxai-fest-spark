@@ -2,7 +2,7 @@
   <v-app-bar
     v-if="showToolbar"
     scroll-behavior="hide"
-    color="#2562ff"
+    color="#002163"
     elevation="4"
     class="text-white app-nav-bar"
   >

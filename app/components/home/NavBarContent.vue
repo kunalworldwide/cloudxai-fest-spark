@@ -1,19 +1,28 @@
 <template>
   <div>
     <!-- Desktop Navigation (visible above 768px) -->
-    <div class="d-none d-md-flex align-center ga-2 ">
+    <div class="d-none d-md-flex align-center ga-2">
+      <v-btn
+        variant="text"
+        class="text-none nav-btn"
+        to="/"
+        rounded="xl"
+        color="white"
+      >
+        Home
+      </v-btn>
+      <v-btn
+        variant="text"
+        class="text-none nav-btn"
+        to="/speakers"
+        rounded="xl"
+        color="white"
+      >
+        Speakers
+      </v-btn>
+      
 
       <!-- <v-btn
-            v-bind="props"
-            variant="text"
-            color="white"
-            class="text-none nav-btn"
-            to="/"
-          >
-            Home
-          </v-btn> -->
-
-          <!-- <v-btn
             v-bind="props"
             variant="text"
             color="white"
@@ -23,8 +32,7 @@
             Contact Us
           </v-btn> -->
 
-
-          <!-- <div class="d-flex " style="gap: 14px;">
+      <!-- <div class="d-flex " style="gap: 14px;">
             
             <v-btn
               icon
@@ -59,12 +67,7 @@
 
     <!-- Mobile Hamburger Menu (visible below 768px) -->
     <div class="d-flex d-md-none">
-      <v-btn
-        icon
-        variant="text"
-        color="white"
-        @click="drawer = !drawer"
-      >
+      <v-btn icon variant="text" color="white" @click="drawer = !drawer">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
     </div>
@@ -77,41 +80,52 @@
         location="right"
         class="mobile-sidebar"
         width="280"
-        style="background-color: #1a1d3a !important; z-index: 9999 !important;"
+        style="background-color: #1a1d3a !important; z-index: 9999 !important"
       >
-        <div class="sidebar-header" style="display: flex; justify-content: flex-end; padding: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
-          <v-btn
-            icon
-            variant="text"
-            color="white"
-            @click="drawer = false"
-          >
+        <div
+          class="sidebar-header"
+          style="
+            display: flex;
+            justify-content: flex-end;
+            padding: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          "
+        >
+          <v-btn icon variant="text" color="white" @click="drawer = false">
             <v-icon>mdi-close</v-icon>
           </v-btn>
         </div>
 
-        <div class="sidebar-buttons" style="padding: 8px 16px;">
+        <div class="sidebar-buttons" style="padding: 8px 16px">
           <v-btn variant="text" color="white" class="text-none" to="/">
             Home
           </v-btn>
-
 
           <v-btn variant="text" color="white" class="text-none" to="/register">
             Register
           </v-btn>
 
-          <v-btn variant="text" color="white" class="text-none" @click="scrollToSection('speakers')">
+          <v-btn
+            variant="text"
+            color="white"
+            class="text-none"
+            @click="scrollToSection('speakers')"
+          >
             Speakers
           </v-btn>
 
-          <v-btn variant="text" color="white" class="text-none" @click="scrollToSection('partners')">
+          <v-btn
+            variant="text"
+            color="white"
+            class="text-none"
+            @click="scrollToSection('partners')"
+          >
             Partners
           </v-btn>
-          
+
           <v-btn disabled variant="text" color="white" class="text-none" to="/">
             Agenda (Coming Soon)
           </v-btn>
-
 
           <v-btn disabled variant="text" color="white" class="text-none" to="/">
             Call For Papers (Coming Soon)
@@ -162,36 +176,36 @@
 </template>
 
 <script setup >
-import { ref } from 'vue'
+import { ref } from "vue";
 const props = defineProps({
   socialLogoColor: {
     type: String,
-    default: 'white'
+    default: "white",
   },
   showSocialIcons: {
     type: Boolean,
-    default: true
-  }
-})
+    default: true,
+  },
+});
 
-const drawer = ref(false)
+const drawer = ref(false);
 
 const scrollToSection = (sectionId) => {
-  drawer.value = false
-  
+  drawer.value = false;
+
   // Small delay to allow drawer to close on mobile
   setTimeout(() => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, 100)
-}
+  }, 100);
+};
 
 const handleNavigation = () => {
   // Add your navigation logic here
-  drawer.value = false
-}
+  drawer.value = false;
+};
 </script>
 
 <style scoped lang="scss">
@@ -208,13 +222,13 @@ const handleNavigation = () => {
   min-height: 48px;
   transition: all 0.3s ease;
   cursor: pointer;
-  
+
   .item-content {
     display: flex;
     align-items: center;
     width: 100%;
   }
-  
+
   .hover-line {
     display: inline-block;
     width: 0;
@@ -226,17 +240,17 @@ const handleNavigation = () => {
     transition: all 0.3s ease;
     white-space: nowrap;
   }
-  
+
   .item-text {
     font-size: 16px;
     font-weight: 400;
     color: white;
     transition: all 0.3s ease;
   }
-  
+
   &:hover {
     background-color: rgba(255, 255, 255, 0.08) !important;
-    
+
     .hover-line {
       width: 20px;
       opacity: 1;
@@ -249,25 +263,19 @@ const handleNavigation = () => {
 :deep(.mobile-sidebar) {
   background-color: #1a1d3a !important;
   z-index: 9999 !important;
-  
+
   .sidebar-header {
     display: flex;
     justify-content: flex-end;
     padding: 16px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-
-
- 
-  
-
-
 }
-.sidebar-buttons{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+.sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
 :deep(.v-overlay) {
   z-index: 9998 !important;
@@ -278,7 +286,7 @@ const handleNavigation = () => {
   .d-md-flex {
     display: none !important;
   }
-  
+
   .d-md-none {
     display: flex !important;
   }
@@ -288,7 +296,7 @@ const handleNavigation = () => {
   .d-md-flex {
     display: flex !important;
   }
-  
+
   .d-md-none {
     display: none !important;
   }

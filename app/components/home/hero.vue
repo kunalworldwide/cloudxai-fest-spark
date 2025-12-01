@@ -27,7 +27,7 @@
                   March 14, 2026
                 </v-chip>
                 <h1 class=" ">
-                  CloudxAI Conference Bengaluru 2026
+                  CloudxAI Conference
                 </h1>
 
                 <div class="hero-slide-actions">
@@ -105,7 +105,7 @@ import NavBar from './NavBar.vue';
 <style scoped lang="scss">
 
 .hero-main-conatiner {
-  background-image: url("../../assets/images/bg-hero.webp");
+  background-image: url("../../assets/images/bgg-hero.png");
   background-size: cover;
   background-position: center;
 }
@@ -121,7 +121,10 @@ import NavBar from './NavBar.vue';
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 1px solid white;
+    border: 1px solid #296fb9;
+    // border-radius: 10px;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
     border-right: none;
     height: 100%;
     width: 45%;
