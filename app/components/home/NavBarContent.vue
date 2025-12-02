@@ -118,7 +118,7 @@
             variant="text"
             color="white"
             class="text-none"
-            @click="scrollToSection('partners')"
+            to="/sponsors"
           >
             Partners
           </v-btn>
@@ -131,9 +131,9 @@
             Call For Papers (Coming Soon)
           </v-btn>
 
-          <v-btn variant="text" color="white" class="text-none" to="/">
+          <!-- <v-btn variant="text" color="white" class="text-none" to="/">
             About Us
-          </v-btn>
+          </v-btn> -->
 
           <!-- <div class="d-flex justify-center mt-4" style="gap: 24px;">
             
