@@ -131,7 +131,7 @@
             class="text-none"
             to="/sponsors"
           >
-            Partners
+            Sponsors
           </v-btn>
 
           <v-btn disabled variant="text" color="white" class="text-none" to="/">
