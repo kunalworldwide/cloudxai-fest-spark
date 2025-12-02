@@ -1,35 +1,44 @@
 <template>
   <section class="partners-section" id="partners">
-    <!-- <div class="partners-container">
-      <h2 class="partners-title">OUR PARTNERS</h2>
+    <div class="partners-container" style="margin-bottom: 80px;">
 
-      <div class="partners-grid text-center">
-        <p class="text-white text-h4">Coming Soon</p>
-        <div v-for="partner in partners" :key="partner.id" class="partner-card">
-          <div class="partner-logo">
-            <img :src="partner.logo" :alt="partner.name" />
-          </div>
-          <div
-            class="partner-tier"
-            :class="`tier-${partner.tier.toLowerCase()}`"
-          >
-            {{ partner.tier }}
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <div class="partners-container partners-container-2 text-center">
+      <h2 class="partners-title mb-2">OUR <span>Sponsors</span></h2>
+      <div class="partners-title-content">
+      <p>Partner with us to showcase your innovation and connect with industry leaders at CLOUDxAI, Bengaluru 2026</p>
       <v-btn
         to="/sponsors"
+        size="large"
         rounded="xl"
-        variant="text"
+        variant="tonal"
         append-icon="mdi-arrow-right"
         color="white"
         class="mb-7"
         >Become a Sponsor</v-btn
       >
-      <h2 class="partners-title">OUR <span>PARTNERS</span></h2>
+    </div>
+
+
+
+      <div class="partners-grid-2 text-center" style="max-width: 700px; margin: 0 auto;">
+        <div v-for="partner in partners" :key="partner.id" class="partner-card-2">
+          <div class="partner-logo">
+            <!-- <p class="text-medium font-weight-bold custom-text">{{ partner.name }}</p> -->
+            <p class="text-medium font-weight-bold custom-text">Coming <br> Soon</p>
+            <!-- <img :src="partner.logo" :alt="partner.name" /> -->
+          </div>
+          <!-- <div
+            class="partner-tier"
+            :class="`tier-${partner.tier.toLowerCase()}`"
+          >
+            {{ partner.tier }}
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="partners-container partners-container-2 text-center">
+      
+      <h2 class="partners-title mb-12">OUR <span>Partners</span></h2>
 
       <div class="partners-grid-2">
         <div
@@ -65,76 +74,24 @@ const communityPartnersData = ref(communityPartners);
 const partners = [
   {
     id: 1,
-    name: "Avasan",
-    logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-3-1.svg",
+    name: "Coming Soon",
+    // logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-3-1.svg",
     tier: "General",
   },
   {
     id: 2,
-    name: "ZRND",
-    logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-3-1.svg",
+    name: "Coming Soon",
+    // logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-3-1.svg",
     tier: "Graphene",
   },
   {
     id: 3,
-    name: "Vezlor",
-    logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-4-1.svg",
+    name: "Coming Soon",
+    // logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-4-1.svg",
     tier: "Platinum",
   },
-  {
-    id: 4,
-    name: "Purplezen",
-    logo: "	https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-5-1.svg",
-    tier: "Graphene",
-  },
-  {
-    id: 5,
-    name: "Avasan",
-    logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-3-1.svg",
-    tier: "General",
-  },
-  {
-    id: 6,
-    name: "ZRND",
-    logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-3-1.svg",
-    tier: "Hosting Partner",
-  },
-  {
-    id: 7,
-    name: "Vezlor",
-    logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-4-1.svg",
-    tier: "Graphene",
-  },
-  {
-    id: 8,
-    name: "Purplezen",
-    logo: "	https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-5-1.svg",
-    tier: "Silver",
-  },
-  {
-    id: 9,
-    name: "Avasan",
-    logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-3-1.svg",
-    tier: "General",
-  },
-  {
-    id: 10,
-    name: "ZRND",
-    logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-3-1.svg",
-    tier: "Graphene",
-  },
-  {
-    id: 11,
-    name: "Vezlor",
-    logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-4-1.svg",
-    tier: "Graphene",
-  },
-  {
-    id: 12,
-    name: "Purplezen",
-    logo: "	https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-5-1.svg",
-    tier: "Graphene",
-  },
+  
+  
 ];
 </script>
 
@@ -171,13 +128,31 @@ const partners = [
   font-weight: 300;
   line-height: 100%;
   text-align: center;
-  margin-bottom: 80px;
   color: white;
   letter-spacing: 2px;
   text-transform: uppercase;
   span {
     font-weight: 700;
   }
+}
+
+.partners-title-content{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 20px;
+&>p{
+  color: white;
+}
+}
+
+.custom-text{
+  color: #bdbdbd;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 100%;
+  transform: rotate(-10deg);
 }
 
 .partners-grid {

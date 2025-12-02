@@ -18,14 +18,14 @@
               Discussing the best techniques for branding to deep dive into consumers mind.
             </p>
             
-            <v-btn 
+            <!-- <v-btn 
               class="purchase-btn mt-8" 
               size="large"
               rounded="pill"
               to="/register"
             >
               Book a Ticket
-            </v-btn>
+            </v-btn> -->
           </v-col>
           
           <!-- Right Side - FAQ Items -->

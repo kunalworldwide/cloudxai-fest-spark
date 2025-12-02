@@ -3,14 +3,14 @@
     <v-container fluid class="footer-container">
       <!-- Main Footer Content -->
       <v-row class="mb-8" v-if="route.path !== '/register'">
-        <v-col cols="12" md="12" class=" cta-btn ga-4 text-center" >
-          <span class="" style="color: #fff">
-            Secure your spot now at the CLOUDxAI conference and be a part of the
+        <v-col cols="12" md="12" class=" cta-btn ga-4 mx-3 " >
+          <span class="" style="color: #fff; font-size: 24px;">
+            Secure your spot now at the CloudXAI conference and be a part of the
             cloud shift from automation to intelligence movement.
             <br />Tickets are limited, and will be released in batches.
           </span>
           <br>
-          <v-btn color="white" to="/register" rounded="xl" variant="flat" class="mt-2"
+          <v-btn size="large" append-icon="mdi-arrow-right" color="white" to="/register" rounded="xl" variant="flat" class="mt-2"
             >Register Now</v-btn
           >
         </v-col>
@@ -222,10 +222,16 @@ const route = useRoute()
   gap: 16px;
 }
 
-/* .cta-btn {
-  align-items: center;
-  justify-content: space-between;
-} */
+.cta-btn {
+  /* border: 1px solid #fff; */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border-radius: 16px;
+  padding:24px;
+  /* align-items: center;
+  justify-content: space-between; */
+}
 
 @media (max-width: 768px) {
   .cta-btn {
