@@ -20,7 +20,16 @@
     </div> -->
 
     <div class="partners-container partners-container-2 text-center">
-      <h2 class="partners-title">OUR <span>PARTNERS</span></h2>
+      <v-btn
+        to="/sponsors"
+        rounded="xl"
+        variant="text"
+        append-icon="mdi-arrow-right"
+        color="white"
+        class="mb-7"
+        >Become a Sponsor</v-btn
+      >
+      <h2 class="partners-title">OUR <span>SPONSORS</span></h2>
 
       <div class="partners-grid-2">
         <div
@@ -46,8 +55,6 @@
           </v-tooltip>
         </div>
       </div>
-
-      <v-btn to="/sponsors" rounded="xl" variant="text" append-icon="mdi-arrow-right" color="primary" class="mt-10">Become a Sponsor</v-btn>
     </div>
   </section>
 </template>
@@ -159,17 +166,16 @@ const partners = [
   z-index: 1;
 }
 
-
 .partners-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 300;
   line-height: 100%;
   text-align: center;
   margin-bottom: 80px;
-  color:white;
+  color: white;
   letter-spacing: 2px;
   text-transform: uppercase;
-  span{
+  span {
     font-weight: 700;
   }
 }
@@ -238,7 +244,8 @@ const partners = [
 
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(198, 198, 198, 0.776);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+      0 0 40px rgba(198, 198, 198, 0.776);
     // &::before {
     //   opacity: 1;
     // }

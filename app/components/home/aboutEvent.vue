@@ -35,24 +35,26 @@
           <span class="about-event__label-text">About Event</span>
         </div>
         <h1 class="about-event__headline">
-          First, <span>we built the cloud. Now, we’re teaching it to run itself.</span>
+          First,
+          <span>we built the cloud. Now, we’re teaching it to run itself.</span>
         </h1>
         <p class="about-event__body">
-          We’re bringing together the community of engineers, AI and application developers, platform
-teams, and cloud practitioners who are building the next phase of cloud-native evolution, where
-automation begins to think for itself.
+          We’re bringing together the community of engineers, AI and application
+          developers, platform teams, and cloud practitioners who are building
+          the next phase of cloud-native evolution, where automation begins to
+          think for itself.
         </p>
         <p class="about-event__body">
-          Meet and hear from well-known speakers, the leading brands, and the engineering teams
-          driving real innovation across the cloud-native ecosystem.        
+          Meet and hear from well-known speakers, the leading brands, and the
+          engineering teams driving real innovation across the cloud-native
+          ecosystem.
         </p>
         <p class="about-event__body">
           When a machine learns, the cloud starts to think.
-        <!-- <br>
+          <!-- <br>
           Sessions explore AI-driven orchestration, GPU-aware scheduling, FinOps automation, and application performance intelligence — grounded in real systems, real architectures, and real production lessons.
           <br>This is where the people running today’s cloud prepare for tomorrow’s: the intelligent cloud.
 <br>When compute learns, the cloud thinks. -->
-
         </p>
       </div>
     </div>
@@ -63,25 +65,29 @@ automation begins to think for itself.
   <div class="ma-0 event-stats">
     <div class="event-stats__background"></div>
     <div class="event-stats__container">
-    <div class="event-stats__item" v-for="stat in eventStats" :key="stat.title">
-      <v-card
-        class="text-center text-white event-card"
-        color="transparent"
-        variant="flat"
-        rounded="lg"
+      <div
+        class="event-stats__item"
+        v-for="stat in eventStats"
+        :key="stat.title"
       >
-        <p class="text-h1 font-weight-bold">{{ stat.value }}</p>
-        <h2 class="text-h5">{{ stat.title }}</h2>
-      </v-card>
+        <v-card
+          class="text-center text-white event-card"
+          color="transparent"
+          variant="flat"
+          rounded="lg"
+        >
+          <p class="text-h1 font-weight-bold">{{ stat.value }}</p>
+          <h2 class="text-h5">{{ stat.title }}</h2>
+        </v-card>
+      </div>
     </div>
-  </div>
   </div>
   <!-- Event End -->
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import stats from '@/assets/data/stats.json';
+import { ref } from "vue";
+import stats from "@/assets/data/stats.json";
 const eventDetails = ref([
   {
     icon: "mdi-calendar-outline",
@@ -153,7 +159,7 @@ const eventStats = ref(stats);
   flex-direction: column;
   gap: 12px;
   flex: 1 1 360px;
-  padding-right:60px;
+  padding-right: 60px;
 }
 
 .about-event__label {
@@ -196,9 +202,8 @@ const eventStats = ref(stats);
 
 .event-stats {
   position: relative;
-  background-image: url("@/assets/images/home.jpg");
+  background-image: url("@/assets/images/num.webp");
   background-size: cover;
-
   background-repeat: no-repeat;
   padding: 64px;
 
@@ -214,12 +219,12 @@ const eventStats = ref(stats);
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
-    opacity: 0.3;
+    // background-color: black;
+    // opacity: 0.3;
   }
 
-  .event-stats__container{
-    max-width:1350px;
+  .event-stats__container {
+    max-width: 1350px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -249,9 +254,7 @@ const eventStats = ref(stats);
   // .event-stats {
   //   // justify-content: spa;
   // }
-  
 }
-
 
 @media (max-width: 1080px) {
   .about-event {
@@ -281,8 +284,6 @@ const eventStats = ref(stats);
   .about-event__card {
     width: 75%;
   }
-
-  
 }
 
 @media (max-width: 690px) {
@@ -310,10 +311,9 @@ const eventStats = ref(stats);
     padding: 32px;
 
     .event-stats__container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 24px;
-
-  }
+      grid-template-columns: repeat(1, 1fr);
+      gap: 24px;
+    }
 
     p {
       font-size: 3rem !important;
