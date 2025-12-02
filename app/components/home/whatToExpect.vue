@@ -21,7 +21,7 @@
               <div class="event-card__info">
                 <h3 class="event-card__title">{{ event.title }}</h3>
 
-                <p class="event-card__description">{{ event.description }}</p>
+                <p class="event-card__description" v-html="event.description"></p>
               </div>
             </div>
           </v-card>
@@ -37,19 +37,19 @@ const eventsByDay = [
     id: 1,
     title: "Stay Ahead",
     description:
-      "Discover the core themes shaping CloudXAI, including cloud-native AI systems, multi-agent orchestration, intelligent automation and real production deployments. Gain practical insight into how leading teams are building smarter, faster and more efficient cloud architectures with AI.",
+      "Discover the core themes shaping CloudXAI, including cloud-native AI systems, multi-agent orchestration, intelligent automation and real production deployments. <br><br> Gain practical insight into how leading teams are building smarter, faster and more efficient cloud architectures with AI."
   },
   {
     id: 2,
     title: "Experience",
     description:
-      "Start your day with networking over breakfast, pick up exclusive event swag, join hands-on workshops, meet industry-leading speakers and participate in challenges and raffles. And don’t miss the closing party to wrap up the day in style.",
+      "Start your day with networking over breakfast, picking up exclusive event swag, and joining hands-on workshops.<br><br> Meet industry-leading speakers, participate in challenges and raffles, and don't miss the closing party to wrap up the day in style.",
   },
   {
     id: 3,
     title: "Network",
     description:
-      "Connect with founders, cloud experts, influencers and peers who are defining the next era of Cloud Automation and AI Infrastructure Exchange stories, spark collaborations and build relationships within most dynamic AI and cloud community.",
+      "Connect with founders, cloud experts, influencers, and peers who are shaping the next era of Cloud Automation and AI Infrastructure.<br><br>  Exchange stories, spark new collaborations, and build meaningful relationships within the most dynamic AI and cloud community.",
   },
 ];
 </script>
@@ -157,7 +157,7 @@ const eventsByDay = [
 
 .event-card__description {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 24px;
   flex-grow: 1;
