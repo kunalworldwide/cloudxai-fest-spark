@@ -2,9 +2,23 @@
   <v-footer class="footer-with-bg py-12">
     <v-container fluid class="footer-container">
       <!-- Main Footer Content -->
+      <v-row class="mb-8" v-if="route.path !== '/register'">
+        <v-col cols="12" md="12" class=" cta-btn ga-4" >
+          <span class="" style="color: #fff">
+            Secure your spot now at the CloudXAI conference and be a part of the
+            cloud shift from automation to intelligence movement.
+            <br />Tickets are limited, and will be released in batches.
+          </span>
+          <br>
+          <v-btn color="white" to="/register" rounded="xl" variant="flat" class="mt-2"
+            >Register Now</v-btn
+          >
+        </v-col>
+      </v-row>
       <v-row class="text-white justify-space-between ">
         <!-- Contact Info Section -->
         <v-col cols="12" md="12" lg="12">
+          
           <div class="mb-6">
             <h2 class="text-h5 font-weight-bold mb-4">CloudxAI Conference</h2>
             <p class="text-body-2 mb-6" style="max-width: 400px">
@@ -99,19 +113,19 @@
         </v-col> -->
       </v-row>
 
-      <v-row class="mb-8" v-if="route.path !== '/register'">
-        <v-col cols="12" md="12" class="d-flex cta-btn ga-4">
-          <span class="text-body-2" style="color: #fff">
+      <!-- <v-row class="mb-8" v-if="route.path !== '/register'">
+        <v-col cols="12" md="12" class=" cta-btn ga-4" >
+          <span class="" style="color: #fff">
             Secure your spot now at the CloudXAI conference and be a part of the
             cloud shift from automation to intelligence movement.
             <br />Tickets are limited, and will be released in batches.
           </span>
-
-          <v-btn color="white" to="/register" rounded="xl" variant="tonal"
+          <br>
+          <v-btn color="white" to="/register" rounded="xl" variant="flat" class="mt-2"
             >Register Now</v-btn
           >
         </v-col>
-      </v-row>
+      </v-row> -->
 
       <!-- Divider -->
       <v-divider class="border-opacity-25 mb-6"></v-divider>
@@ -208,10 +222,10 @@ const route = useRoute()
   gap: 16px;
 }
 
-.cta-btn {
+/* .cta-btn {
   align-items: center;
   justify-content: space-between;
-}
+} */
 
 @media (max-width: 768px) {
   .cta-btn {

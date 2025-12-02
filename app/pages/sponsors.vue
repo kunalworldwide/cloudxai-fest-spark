@@ -117,6 +117,7 @@
       </v-container>
     </div>
   </v-main>
+  <HomeCountDown />
 </template>
 
 <script setup>
