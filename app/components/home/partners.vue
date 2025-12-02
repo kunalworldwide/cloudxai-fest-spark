@@ -1,6 +1,6 @@
 <template>
   <section class="partners-section" id="partners">
-    <div class="partners-container" style="margin-bottom: 80px;">
+    <div class="partners-container" >
 
       <h2 class="partners-title mb-2">OUR <span>Sponsors</span></h2>
       <div class="partners-title-content">
@@ -20,7 +20,7 @@
 
 
       <div class="partners-grid-2 text-center" style="max-width: 700px; margin: 0 auto;">
-        <div v-for="partner in partners" :key="partner.id" class="partner-card-2">
+        <div v-for="partner in partners" :key="partner.id" class="partner-card">
           <div class="partner-logo">
             <!-- <p class="text-medium font-weight-bold custom-text">{{ partner.name }}</p> -->
             <p class="text-medium font-weight-bold custom-text">Coming <br> Soon</p>
@@ -36,9 +36,12 @@
       </div>
     </div>
 
+    
+  </section>
+  <section class="partners-section partners-section-2">
     <div class="partners-container partners-container-2 text-center">
       
-      <h2 class="partners-title mb-12">OUR <span>Partners</span></h2>
+      <h2 class="partners-title mb-12" style="color: #050537;">OUR <span>Partners</span></h2>
 
       <div class="partners-grid-2">
         <div
@@ -103,17 +106,23 @@ const partners = [
   position: relative;
   overflow: hidden;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 30%, #0a1435 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, #0a1435 0%, transparent 50%);
-    pointer-events: none;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: radial-gradient(circle at 20% 30%, #0a1435 0%, transparent 50%),
+  //     radial-gradient(circle at 80% 70%, #0a1435 0%, transparent 50%);
+  //   pointer-events: none;
+  // }
+}
+
+.partners-section-2 {
+  background: white;
+  border-bottom: 1px solid #dedede;
+
 }
 
 .partners-container {
@@ -122,6 +131,8 @@ const partners = [
   position: relative;
   z-index: 1;
 }
+
+
 
 .partners-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -204,6 +215,8 @@ gap: 20px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  min-height: 100px;
+
 
   // &::before {
   //   content: "";
@@ -230,12 +243,6 @@ gap: 20px;
   }
 }
 
-.partner-card-2 {
-  // background: rgba(11, 4, 42, 0.577);
-
-  // padding: 40px 40px;
-  min-height: 100px;
-}
 
 .partner-logo {
   width: 100%;
