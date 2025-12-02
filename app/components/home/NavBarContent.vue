@@ -29,7 +29,7 @@
         rounded="xl"
         color="white"
       >
-        Sponsorships
+        Sponsorship
       </v-btn>
       
 
