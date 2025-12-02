@@ -89,10 +89,10 @@
           </div>
         </v-container>
       </v-carousel>
-      <div class="d-flex align-end pa-0 background-svg" style="width: 320px; height:120%; background-color: #1e3a8a; position:absolute; right:-100px; bottom:-40px">
+      <!-- <div class="d-flex align-end pa-0 background-svg" style="width: 320px; height:120%; background-color: #1e3a8a; position:absolute; right:-100px; bottom:-40px">
        
 
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -166,6 +166,9 @@ import NavBar from './NavBar.vue';
   .hero-image-conatiner {
     width: 55%;
     height: 100%;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    overflow: hidden;
   }
 }
 
@@ -175,10 +178,12 @@ import NavBar from './NavBar.vue';
     align-items: center;
 
     .hero-slide-content-main {
-      border-right: 1px solid white;
+      border-right: 1px solid #296fb9;
       justify-content: flex-start;
 
       border-bottom: none;
+      border-bottom-left-radius: 0px !important;
+      border-top-right-radius: 10px !important;
       width: 100%;
       height: 50%;
       padding: 24px;
@@ -206,6 +211,9 @@ import NavBar from './NavBar.vue';
     .hero-image-conatiner {
       width: 100%;
       height: 50%;
+      border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
     }
   }
 }

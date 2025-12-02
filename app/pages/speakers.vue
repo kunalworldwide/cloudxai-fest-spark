@@ -1,9 +1,9 @@
 <template>
   <v-main>
-    <v-container fluid class="" style="max-width: 1800px">
+    <v-container fluid class="pb-0" style="max-width: 1800px">
       <v-row class="mb-10">
-        <v-col cols="12" class="text-center">
-          <h1 class="text-h3 mt-5 font-weight-bold">Speakers</h1>
+        <v-col cols="12" class="text-center speaker-container">
+          <h1 class=" mt-5 cai-text-heading-2 " style="text-transform: uppercase">Our Amazing <span style="color: #1e3a8a;">Speakers</span></h1>
           <p class="text-body-1">
             Get ready to be inspired – meet the brilliant minds speaking at the
             conference! More speakers to be added shortly.
@@ -48,7 +48,9 @@
           </div>
         </v-col>
       </v-row>
+      <HomeCountDown />
     </v-container>
+
   </v-main>
 </template>
 
@@ -63,6 +65,10 @@ definePageMeta({
 </script>
 
 <style scoped lang="scss">
+
+.speaker-container{
+  padding-right: 30px;
+}
 .event-agendas {
   padding: 80px 40px 80px 20px;
   background-color: #ffffff;

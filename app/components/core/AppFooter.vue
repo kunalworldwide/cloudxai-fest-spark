@@ -1,10 +1,10 @@
 <template>
   <v-footer class="footer-with-bg py-12">
-    <v-container>
+    <v-container fluid class="footer-container">
       <!-- Main Footer Content -->
-      <v-row class="text-white justify-space-between">
+      <v-row class="text-white justify-space-between ">
         <!-- Contact Info Section -->
-        <v-col cols="12" md="6" lg="4">
+        <v-col cols="12" md="12" lg="12">
           <div class="mb-6">
             <h2 class="text-h5 font-weight-bold mb-4">CloudxAI Conference</h2>
             <p class="text-body-2 mb-6" style="max-width: 400px">
@@ -99,7 +99,7 @@
         </v-col> -->
       </v-row>
 
-      <v-row class="mb-8" v-if="route.path === '/'">
+      <v-row class="mb-8" v-if="route.path !== '/register'">
         <v-col cols="12" md="12" class="d-flex cta-btn ga-4">
           <span class="text-body-2" style="color: #fff">
             Secure your spot now at the CloudXAI conference and be a part of the
@@ -175,10 +175,10 @@ const route = useRoute()
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("@/assets/images/home-4-img-carousel-svg.svg");
+  /* background-image: url("@/assets/images/home-4-img-carousel-svg.svg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   opacity: 0.1;
   pointer-events: none;
 }
@@ -186,6 +186,10 @@ const route = useRoute()
 .footer-with-bg .v-container {
   position: relative;
   z-index: 1;
+}
+
+.footer-container{
+  max-width: 1400px;
 }
 
 .hover-link {

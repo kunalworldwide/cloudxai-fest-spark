@@ -2,9 +2,11 @@
   <v-app>
     <NuxtLoadingIndicator />
     <!--  ONLY SHOW ON HOME PAGE -->
+      <CoreAppToolbar v-if="route.path === '/' && route.name === 'index'" />
     
     <!-- <HomeComonNavbar v-if="route.path === '/' && route.name === 'index'" /> -->
-    <HomeComonNavbar v-if="!isHomePage" />
+    <HomeComonNavbar v-if="route.path !== '/' && route.name !== 'index'" />
+    <!-- <HomeComonNavbar v-if="!isHomePage" /> -->
     <v-main class="px-0 mt-0" width="100%" style="--v-layout-top: 0 !important">
       <!-- <h1 class="text-h1 py-10">{{ isHomePage }}</h1> -->
       <NuxtPage />

@@ -34,7 +34,7 @@
                 <a
                   :href="partner.link"
                   target="_blank"
-                  class="text-center"
+                  class="text-center d-flex align-center justify-center"
                 >
                   <img
                     :src="`/images/partners/${partner.image}`"
@@ -210,7 +210,7 @@ const partners = [
 .partner-card-2 {
   background: #ffffff;
   border-radius: 20px;
-  padding: 40px 30px 60px;
+  // padding: 40px 30px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -249,7 +249,7 @@ const partners = [
 .partner-card-2 {
   // background: rgba(11, 4, 42, 0.577);
 
-  padding: 40px 40px;
+  // padding: 40px 40px;
   min-height: 100px;
 }
 

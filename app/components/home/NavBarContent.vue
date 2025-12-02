@@ -109,7 +109,7 @@
             variant="text"
             color="white"
             class="text-none"
-            @click="scrollToSection('speakers')"
+            to="/speakers"
           >
             Speakers
           </v-btn>
@@ -189,11 +189,14 @@ const props = defineProps({
 });
 
 const drawer = ref(false);
+const route = useRoute();
 
 const scrollToSection = (sectionId) => {
   drawer.value = false;
+  if (route.path !== '/' && route.name !== 'index') {
+    navigateTo('/');
+  }
 
-  // Small delay to allow drawer to close on mobile
   setTimeout(() => {
     const element = document.getElementById(sectionId);
     if (element) {

@@ -133,8 +133,11 @@
           ></v-progress-circular>
         </v-col>
       </v-row>
+      
     </v-container>
+    
   </div>
+  <HomeCountDown />
 </template>
 
 <script setup>
@@ -211,7 +214,7 @@ useHead({
   // background-image: url('@/assets/images/home.jpg');
   // background-size: contain;
   // background-repeat: no-repeat;
-  background: linear-gradient(135deg, #0a1435 0%, #1a2b5e 50%, #3a99ff 100%);
+  // background: linear-gradient(135deg, #0a1435 0%, #1a2b5e 50%, #3a99ff 100%);
   // background: linear-gradient(135deg, #0a1435 0%, #1a2b5e 50%, #3A99Ff 100%);
   min-height: 100vh;
   padding-top: 0px;
@@ -260,7 +263,7 @@ useHead({
 }
 
 .booking-header {
-  color: white;
+  color: #1e3a8a;
   margin-bottom: 40px;
 
   .main-title {
@@ -268,7 +271,7 @@ useHead({
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 8px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   .subtitle {
@@ -285,7 +288,7 @@ useHead({
   gap: 0;
   max-width: 600px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgb(243, 243, 243);
   border-radius: 8px;
   padding: 20px;
   backdrop-filter: blur(10px);
@@ -333,6 +336,7 @@ useHead({
   overflow: hidden;
   background: white;
   // box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 1px solid #d4d4d4;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
   display: flex;
