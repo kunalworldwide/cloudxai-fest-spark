@@ -1,6 +1,6 @@
 <template>
   <v-main>
-  <div class="register-container">
+  <div class="register-container mt-10">
     <v-container fluid class="ticket-booking-section">
       <!-- Header Section -->
       <v-row class="justify-center text-center mb-10">

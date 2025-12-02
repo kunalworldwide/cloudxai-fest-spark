@@ -62,6 +62,38 @@ const speakers = ref(speakersData);
 definePageMeta({
   layout: "default",
 });
+
+useHead({
+  title: "Speakers - CloudxAI Conference",
+  meta: [
+    {
+      name: "description",
+      content: "Meet the brilliant minds speaking at the conference!",
+    },
+    { name: "keywords", content: "conference, ticket, booking, event" },
+    { name: "author", content: "TechMilap" },
+    { name: "robots", content: "index, follow" },
+    { name: "googlebot", content: "index, follow" },
+    { name: "bingbot", content: "index, follow" },
+    { name: "yandexbot", content: "index, follow" },
+    {
+      name: "og:image",
+      content:
+        "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg",
+    },
+    { name: "og:title", content: "Book a Conference Ticket" },
+    {
+      name: "og:description",
+      content: "Meet the brilliant minds speaking at the conference!",
+    },
+    { name: "og:url", content: "https://cloudconf.ai/" },
+    { name: "og:type", content: "website" },
+    { name: "og:locale", content: "en_US" },
+    { name: "og:site_name", content: "Speakers - CloudxAI Conference" },
+    { name: "og:image:width", content: "1200" },
+    { name: "og:image:height", content: "630" },
+  ],
+});
 </script>
 
 <style scoped lang="scss">
