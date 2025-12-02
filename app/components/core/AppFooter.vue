@@ -4,11 +4,12 @@
       <!-- Main Footer Content -->
       <v-row class="mb-8" v-if="route.path !== '/register'">
         <v-col cols="12" md="12" class=" cta-btn ga-4 mx-3 " >
-          <span class="" style="color: #fff; font-size: 24px;">
-            Secure your spot now at the CloudXAI conference and be a part of the
+          <span class="" style="color: #fff; font-size: 20px;">
+            <span style="font-weight: 600; font-size: 28px;">Secure your spot now at the CloudXAI conference.</span> <br> Be a part of the
             cloud shift from automation to intelligence movement.
-            <br />Tickets are limited, and will be released in batches.
+            Tickets are limited, and will be released in batches.
           </span>
+          <br>
           <br>
           <v-btn size="large" append-icon="mdi-arrow-right" color="white" to="/register" rounded="xl" variant="flat" class="mt-2"
             >Register Now</v-btn
@@ -223,15 +224,20 @@ const route = useRoute()
 }
 
 .cta-btn {
-  /* border: 1px solid #fff; */
+  border: 2px solid rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
   border-radius: 16px;
-  padding:24px;
+  padding: 32px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    0 0 40px rgba(255, 255, 255, 0.15);
   /* align-items: center;
   justify-content: space-between; */
 }
+
 
 @media (max-width: 768px) {
   .cta-btn {
