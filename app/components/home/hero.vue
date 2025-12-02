@@ -107,7 +107,7 @@ import NavBar from './NavBar.vue';
 <style scoped lang="scss">
 
 .hero-main-conatiner {
-  background-image: url("../../assets/images/bgg-hero.png");
+  background-image: url("../../assets/images/bgg-hero.webp");
   background-size: cover;
   background-position: center;
 }

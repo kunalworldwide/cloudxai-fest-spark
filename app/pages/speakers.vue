@@ -64,7 +64,7 @@ definePageMeta({
 });
 
 useHead({
-  title: "Speakers - CloudxAI Conference",
+  title: "Speakers - CLOUDxAI Conference",
   meta: [
     {
       name: "description",
@@ -89,7 +89,7 @@ useHead({
     { name: "og:url", content: "https://cloudconf.ai/" },
     { name: "og:type", content: "website" },
     { name: "og:locale", content: "en_US" },
-    { name: "og:site_name", content: "Speakers - CloudxAI Conference" },
+    { name: "og:site_name", content: "Speakers - CLOUDxAI Conference" },
     { name: "og:image:width", content: "1200" },
     { name: "og:image:height", content: "630" },
   ],

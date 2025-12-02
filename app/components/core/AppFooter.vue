@@ -3,9 +3,9 @@
     <v-container fluid class="footer-container">
       <!-- Main Footer Content -->
       <v-row class="mb-8" v-if="route.path !== '/register'">
-        <v-col cols="12" md="12" class=" cta-btn ga-4" >
+        <v-col cols="12" md="12" class=" cta-btn ga-4 text-center" >
           <span class="" style="color: #fff">
-            Secure your spot now at the CloudXAI conference and be a part of the
+            Secure your spot now at the CLOUDxAI conference and be a part of the
             cloud shift from automation to intelligence movement.
             <br />Tickets are limited, and will be released in batches.
           </span>
@@ -20,9 +20,9 @@
         <v-col cols="12" md="12" lg="12">
           
           <div class="mb-6">
-            <h2 class="text-h5 font-weight-bold mb-4">CloudxAI Conference</h2>
+            <h2 class="text-h5 font-weight-bold mb-4">CLOUDxAI Conference</h2>
             <p class="text-body-2 mb-6" style="max-width: 400px">
-              CloudxAI Conference is the premier destination for technology
+              CLOUDxAI Conference is the premier destination for technology
               leaders, innovators, and professionals to explore the convergence
               of cloud computing and artificial intelligence in the enterprise
               landscape.
@@ -116,7 +116,7 @@
       <!-- <v-row class="mb-8" v-if="route.path !== '/register'">
         <v-col cols="12" md="12" class=" cta-btn ga-4" >
           <span class="" style="color: #fff">
-            Secure your spot now at the CloudXAI conference and be a part of the
+            Secure your spot now at the CLOUDxAI conference and be a part of the
             cloud shift from automation to intelligence movement.
             <br />Tickets are limited, and will be released in batches.
           </span>

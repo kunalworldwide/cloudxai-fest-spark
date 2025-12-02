@@ -29,7 +29,7 @@
         class="mb-7"
         >Become a Sponsor</v-btn
       >
-      <h2 class="partners-title">OUR <span>SPONSORS</span></h2>
+      <h2 class="partners-title">OUR <span>PARTNERS</span></h2>
 
       <div class="partners-grid-2">
         <div

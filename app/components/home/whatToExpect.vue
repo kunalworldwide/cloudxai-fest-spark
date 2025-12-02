@@ -37,7 +37,7 @@ const eventsByDay = [
     id: 1,
     title: "Stay Ahead",
     description:
-      "Discover the core themes shaping CloudXAI, including cloud-native AI systems, multi-agent orchestration, intelligent automation and real production deployments. <br><br> Gain practical insight into how leading teams are building smarter, faster and more efficient cloud architectures with AI."
+      "Discover the core themes shaping CLOUDxAI, including cloud-native AI systems, multi-agent orchestration, intelligent automation and real production deployments. <br><br> Gain practical insight into how leading teams are building smarter, faster and more efficient cloud architectures with AI."
   },
   {
     id: 2,

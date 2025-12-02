@@ -138,22 +138,22 @@ const featureRows = {
 };
 
 useHead({
-  title: "Sponsors - CloudxAI Conference",
+  title: "Sponsors - CLOUDxAI Conference",
   meta: [
-    { name: "description", content: "Sponsors - CloudxAI Conference" },
-    { name: "keywords", content: "conference, event, cloudxai, bengaluru" },
+    { name: "description", content: "Sponsors - CLOUDxAI Conference" },
+    { name: "keywords", content: "conference, event, CLOUDxAI, bengaluru" },
     { name: "author", content: "TechFerment" },
     { name: "robots", content: "index, follow" },
     { name: "googlebot", content: "index, follow" },
     { name: "bingbot", content: "index, follow" },
     { name: "yandexbot", content: "index, follow" },
     { name: "og:image", content: "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg" },
-    { name: "og:title", content: "Sponsors - CloudxAI Conference" },
-    { name: "og:description", content: "Sponsors - CloudxAI Conference" },
+    { name: "og:title", content: "Sponsors - CLOUDxAI Conference" },
+    { name: "og:description", content: "Sponsors - CLOUDxAI Conference" },
     { name: "og:url", content: "https://cloudconf.ai/" },
     { name: "og:type", content: "website" },
     { name: "og:locale", content: "en_US" },
-    { name: "og:site_name", content: "Sponsors - CloudxAI Conference" },
+    { name: "og:site_name", content: "Sponsors - CLOUDxAI Conference" },
     { name: "og:image:width", content: "1200" },
     { name: "og:image:height", content: "630" },
   ],
