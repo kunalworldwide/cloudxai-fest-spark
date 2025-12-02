@@ -1,0 +1,213 @@
+[
+  {
+    "id": "diamond",
+    "name": "Diamond",
+    "slots": "(1 slot only)",
+    "price": "$7,900 USD",
+    "class": "diamond",
+    "order": 1,
+    "features": {
+      "speakingSlot": {
+        "label": "Speaking slot",
+        "value": "<strong>25 min.*</strong>, main stage"
+      },
+      "booth": {
+        "label": "Booth",
+        "value": "<strong>Booth 3m x 3m</strong><br>(in priority area)"
+      },
+      "tickets": {
+        "label": "Tickets",
+        "value": "<strong>8</strong> tickets"
+      },
+      "socialMedia": {
+        "label": "Social media",
+        "value": "<strong>3</strong> posts"
+      },
+      "website": {
+        "label": "Website, brandwall onsite",
+        "value": "<strong>Big logo</strong>"
+      },
+      "logoStage": {
+        "label": "Logo at the stage",
+        "value": "<strong>Main and second stage</strong>"
+      },
+      "slideDecks": {
+        "label": "Slide decks",
+        "value": "Logo"
+      },
+      "welcomeBag": {
+        "label": "Welcome bag",
+        "value": "Your flyers or brochures<br>in the welcome bag"
+      }
+    }
+  },
+  {
+    "id": "platinum",
+    "name": "Platinum",
+    "slots": "(2 slots)",
+    "price": "$4,900 USD",
+    "class": "platinum",
+    "order": 2,
+    "features": {
+      "speakingSlot": {
+        "label": "Speaking slot",
+        "value": "<strong>15 min.*</strong>, main stage"
+      },
+      "booth": {
+        "label": "Booth",
+        "value": "<strong>Booth 3m x 2m</strong>"
+      },
+      "tickets": {
+        "label": "Tickets",
+        "value": "<strong>5</strong> tickets"
+      },
+      "socialMedia": {
+        "label": "Social media",
+        "value": "<strong>2</strong> posts"
+      },
+      "website": {
+        "label": "Website, brandwall onsite",
+        "value": "<strong>Big logo</strong>"
+      },
+      "logoStage": {
+        "label": "Logo at the stage",
+        "value": "<strong>Main stage</strong>"
+      },
+      "slideDecks": {
+        "label": "Slide decks",
+        "value": "Logo"
+      },
+      "welcomeBag": {
+        "label": "Welcome bag",
+        "value": "--"
+      }
+    }
+  },
+  {
+    "id": "gold",
+    "name": "Gold",
+    "slots": "(3 slots)",
+    "price": "$1,900 USD",
+    "class": "gold",
+    "order": 3,
+    "features": {
+      "speakingSlot": {
+        "label": "Speaking slot",
+        "value": "<strong>15 min.*</strong>, second stage"
+      },
+      "booth": {
+        "label": "Booth",
+        "value": "<strong>Table + roll-up</strong>"
+      },
+      "tickets": {
+        "label": "Tickets",
+        "value": "<strong>3</strong> tickets"
+      },
+      "socialMedia": {
+        "label": "Social media",
+        "value": "<strong>1</strong> post"
+      },
+      "website": {
+        "label": "Website, brandwall onsite",
+        "value": "Logo"
+      },
+      "logoStage": {
+        "label": "Logo at the stage",
+        "value": "Second stage"
+      },
+      "slideDecks": {
+        "label": "Slide decks",
+        "value": "--"
+      },
+      "welcomeBag": {
+        "label": "Welcome bag",
+        "value": "--"
+      }
+    }
+  },
+  {
+    "id": "workshop",
+    "name": "Workshop",
+    "slots": "(2 slots)",
+    "price": "$1,700 USD",
+    "class": "workshop",
+    "order": 4,
+    "features": {
+      "speakingSlot": {
+        "label": "Speaking slot",
+        "value": "<strong>90 min.</strong> workshop"
+      },
+      "booth": {
+        "label": "Booth",
+        "value": "--"
+      },
+      "tickets": {
+        "label": "Tickets",
+        "value": "<strong>4</strong> tickets"
+      },
+      "socialMedia": {
+        "label": "Social media",
+        "value": "<strong>1</strong> post"
+      },
+      "website": {
+        "label": "Website, brandwall onsite",
+        "value": "Logo"
+      },
+      "logoStage": {
+        "label": "Logo at the stage",
+        "value": "--"
+      },
+      "slideDecks": {
+        "label": "Slide decks",
+        "value": "--"
+      },
+      "welcomeBag": {
+        "label": "Welcome bag",
+        "value": "--"
+      }
+    }
+  },
+  {
+    "id": "expo",
+    "name": "Expo",
+    "slots": "",
+    "price": "$900 USD",
+    "class": "expo",
+    "order": 5,
+    "features": {
+      "speakingSlot": {
+        "label": "Speaking slot",
+        "value": "--"
+      },
+      "booth": {
+        "label": "Booth",
+        "value": "<strong>Table + roll-up</strong>"
+      },
+      "tickets": {
+        "label": "Tickets",
+        "value": "<strong>2</strong> tickets"
+      },
+      "socialMedia": {
+        "label": "Social media",
+        "value": "--"
+      },
+      "website": {
+        "label": "Website, brandwall onsite",
+        "value": "Logo"
+      },
+      "logoStage": {
+        "label": "Logo at the stage",
+        "value": "--"
+      },
+      "slideDecks": {
+        "label": "Slide decks",
+        "value": "--"
+      },
+      "welcomeBag": {
+        "label": "Welcome bag",
+        "value": "--"
+      }
+    }
+  }
+]
+

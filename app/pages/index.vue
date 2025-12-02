@@ -9,7 +9,7 @@
 
     <!-- <HomeEvenList /> -->
     
-    <HomeEventAgendas />
+    <HomeFeatureSpeakers />
     
     <HomeWhatToExpect />
 

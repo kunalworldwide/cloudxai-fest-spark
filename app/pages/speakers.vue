@@ -1,62 +1,106 @@
 <template>
-  <section id="speakers" class="event-agendas">
-    <div class="event-agendas__container">
-      <!-- Section Label -->
-      <div class="event-agendas__label">
-        <span class="event-agendas__label-rule"></span>
-        <span class="event-agendas__label-text">EVENT SPEAKERS</span>
-      </div>
-
-      <!-- Section Heading -->
-      <h1 class="event-agendas__headline">
-        MEET OUR <span>AMAZING <br />SPEAKERS </span>
-      </h1>
-
-      <!-- Speakers Grid -->
-      <div class="event-agendas__grid">
-        <div
-          v-for="speaker in speakersData"
-          :key="speaker.name"
-          class="event-agendas__card"
-        >
-          <div class="event-agendas__card-inner">
-            <div class="event-agendas__image-container">
-              <img
-                :src="speaker.image ? `/images/speakers/${speaker.image}` : '/images/defaultAvatar.png'"
-                :alt="speaker.name"
-                class="event-agendas__image"
-              />
-              <!-- Social Media Panel (visible on hover) -->
-              <div class="event-agendas__social-panel">
-                <a
-                  v-for="social in speaker.socials"
-                  :key="social.name"
-                  :href="social.url"
-                  class="event-agendas__social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <v-icon size="20" :color="social.color || '#1e3a8a'">{{
-                    social.icon
-                  }}</v-icon>
-                </a>
+  <v-main>
+    <v-container fluid class="pb-0" style="max-width: 1800px">
+      <v-row class="mb-10">
+        <v-col cols="12" class="text-center speaker-container">
+          <h1 class=" mt-5 cai-text-heading-2 " style="text-transform: uppercase">Our Amazing <span style="color: #1e3a8a;">Speakers</span></h1>
+          <p class="text-body-1">
+            Get ready to be inspired – meet the brilliant minds speaking at the
+            conference! More speakers to be added shortly.
+          </p>
+          <div class="event-agendas__grid pa-0">
+            <div
+              v-for="speaker in speakersData"
+              :key="speaker.name"
+              class="event-agendas__card"
+            >
+              <div class="event-agendas__card-inner">
+                <div class="event-agendas__image-container">
+                  <img
+                    :src="
+                      speaker.image
+                        ? `/images/speakers/${speaker.image}`
+                        : '/images/defaultAvatar.png'
+                    "
+                    :alt="speaker.name"
+                    class="event-agendas__image"
+                  />
+                  <!-- Social Media Panel (visible on hover) -->
+                  <div class="event-agendas__social-panel">
+                    <a
+                      v-for="social in speaker.socials"
+                      :key="social.name"
+                      :href="social.url"
+                      class="event-agendas__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <v-icon size="20" :color="social.color || '#1e3a8a'">{{
+                        social.icon
+                      }}</v-icon>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="event-agendas__name">{{ speaker.name }}</h3>
+                <p class="event-agendas__role">{{ speaker.role }}</p>
               </div>
             </div>
-            <h3 class="event-agendas__name">{{ speaker.name }}</h3>
-            <p class="event-agendas__role">{{ speaker.role }}</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </v-col>
+      </v-row>
+      <HomeCountDown />
+    </v-container>
+
+  </v-main>
 </template>
 
-<script setup>
-import speakersData from '~/assets/data/speakers.json';
+<script  setup>
+import speakersData from "~/assets/data/speakers.json";
 
+const speakers = ref(speakersData);
+
+definePageMeta({
+  layout: "default",
+});
+
+useHead({
+  title: "Speakers - CloudxAI Conference",
+  meta: [
+    {
+      name: "description",
+      content: "Meet the brilliant minds speaking at the conference!",
+    },
+    { name: "keywords", content: "conference, ticket, booking, event" },
+    { name: "author", content: "TechMilap" },
+    { name: "robots", content: "index, follow" },
+    { name: "googlebot", content: "index, follow" },
+    { name: "bingbot", content: "index, follow" },
+    { name: "yandexbot", content: "index, follow" },
+    {
+      name: "og:image",
+      content:
+        "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg",
+    },
+    { name: "og:title", content: "Book a Conference Ticket" },
+    {
+      name: "og:description",
+      content: "Meet the brilliant minds speaking at the conference!",
+    },
+    { name: "og:url", content: "https://cloudconf.ai/" },
+    { name: "og:type", content: "website" },
+    { name: "og:locale", content: "en_US" },
+    { name: "og:site_name", content: "Speakers - CloudxAI Conference" },
+    { name: "og:image:width", content: "1200" },
+    { name: "og:image:height", content: "630" },
+  ],
+});
 </script>
 
 <style scoped lang="scss">
+
+.speaker-container{
+  padding-right: 30px;
+}
 .event-agendas {
   padding: 80px 40px 80px 20px;
   background-color: #ffffff;
@@ -146,7 +190,7 @@ import speakersData from '~/assets/data/speakers.json';
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     margin-top: 40px;
 
@@ -195,14 +239,14 @@ import speakersData from '~/assets/data/speakers.json';
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: -10px;
       left: -10px;
       width: 150px;
       height: 150px;
-      border-left: 5px solid #2B5BA8;
-      border-top: 5px solid #2B5BA8;
+      border-left: 5px solid #2b5ba8;
+      border-top: 5px solid #2b5ba8;
       opacity: 0;
       transition: opacity 0.4s ease;
       pointer-events: none;

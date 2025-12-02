@@ -27,7 +27,7 @@
                   March 14, 2026
                 </v-chip>
                 <h1 class=" ">
-                  CloudxAI Conference Bengaluru 2026
+                  CloudxAI Conference
                 </h1>
 
                 <div class="hero-slide-actions">
@@ -80,6 +80,7 @@
                 muted
                 playsinline
                 class="pa-0"
+                 poster="/images/default-video.png"
                 style="width: 100%; height: 100%; object-fit: cover;"
               >
                 <source src="@/assets/videos/hero.mp4" type="video/mp4" />
@@ -89,10 +90,10 @@
           </div>
         </v-container>
       </v-carousel>
-      <div class="d-flex align-end pa-0 background-svg" style="width: 320px; height:120%; background-color: #1e3a8a; position:absolute; right:-100px; bottom:-40px">
+      <!-- <div class="d-flex align-end pa-0 background-svg" style="width: 320px; height:120%; background-color: #1e3a8a; position:absolute; right:-100px; bottom:-40px">
        
 
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -105,7 +106,7 @@ import NavBar from './NavBar.vue';
 <style scoped lang="scss">
 
 .hero-main-conatiner {
-  background-image: url("../../assets/images/bg-hero.webp");
+  background-image: url("../../assets/images/bgg-hero.png");
   background-size: cover;
   background-position: center;
 }
@@ -121,7 +122,10 @@ import NavBar from './NavBar.vue';
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 1px solid white;
+    border: 1px solid #296fb9;
+    // border-radius: 10px;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
     border-right: none;
     height: 100%;
     width: 45%;
@@ -163,6 +167,9 @@ import NavBar from './NavBar.vue';
   .hero-image-conatiner {
     width: 55%;
     height: 100%;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    overflow: hidden;
   }
 }
 
@@ -172,10 +179,12 @@ import NavBar from './NavBar.vue';
     align-items: center;
 
     .hero-slide-content-main {
-      border-right: 1px solid white;
+      border-right: 1px solid #296fb9;
       justify-content: flex-start;
 
       border-bottom: none;
+      border-bottom-left-radius: 0px !important;
+      border-top-right-radius: 10px !important;
       width: 100%;
       height: 50%;
       padding: 24px;
@@ -203,6 +212,9 @@ import NavBar from './NavBar.vue';
     .hero-image-conatiner {
       width: 100%;
       height: 50%;
+      border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
     }
   }
 }
