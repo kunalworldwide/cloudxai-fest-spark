@@ -10,7 +10,7 @@
           </p>
           <div class="event-agendas__grid pa-0">
             <div
-              v-for="speaker in speakersData"
+              v-for="speaker in speakers"
               :key="speaker.name"
               class="event-agendas__card"
             >
@@ -57,7 +57,7 @@
 <script  setup>
 import speakersData from "~/assets/data/speakers.json";
 
-const speakers = ref(speakersData);
+const speakers = ref(speakersData.filter(speaker => speaker.visible));
 
 definePageMeta({
   layout: "default",

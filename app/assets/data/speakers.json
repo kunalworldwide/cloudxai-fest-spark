@@ -5,6 +5,7 @@
     "image": "kunal.png",
     "bio": "Kunal Kushwaha presently operates a YouTube channel with 3.58 lakh subscribers, making it one of the fastest-growing educational coding channels. On his channel, he produces podcasts, hosts community events, and shares engaging content on coding, tools, and various other topics.",
     "isFeatured": true,
+    "visible": true,
     "socials": [
       {
         "name": "linkedin",
@@ -19,6 +20,7 @@
     "bio": "Abhishek Veeramalla is a Principal Engineer at Red Hat and a popular YouTuber known for his educational content on DevOps and cloud computing. He is a prolific creator, with a YouTube channel that has over 550,000 subscribers and offers courses on platforms like Udemy that have helped over 1000 students land jobs",
     "image": "abhishek.png",
     "isFeatured": true,
+    "visible": true,
     "socials": [
       {
         "name": "linkedin",
@@ -33,6 +35,7 @@
     "bio": "Laurent is Co-founder and President at Cast Ai, leading product and business development. Previously, he co-founded Zenedge (acquired by Oracle in 2018) and Viewdle (acquired by Google in 2012). He is also a FinOps Governing Board Member, recognized cloud expert, and Forbes Council member.",
     "image": "laurent.png",
     "isFeatured": true,
+    "visible": true,
     "socials": [
       {
         "name": "linkedin",
@@ -47,6 +50,7 @@
     "bio": "Ravi Shankar has 15 years of experience in IT and DevOps and specializes in building scalable cloud and automation solutions across AWS and Azure. He is also a Udemy instructor and YouTuber, sharing DevOps knowledge with a community of over 100,000 learners. Ravi is passionate about simplifying complex technologies and helping professionals grow in their careers.",
     "image": "ravi.webp",
     "isFeatured": false,
+    "visible": true,
     "socials": [
       {
         "name": "linkedin",
@@ -61,6 +65,7 @@
     "bio": "Chandika is a seasoned DevOps and cloud engineering professional with over 10 years of experience in Linux systems, multi-cloud platforms, DevOps, containerization, and automation. She has worked across diverse environments, helping teams build reliable, scalable, and efficient platforms. She enjoys mentoring peers, contributing to discussions, and creating learning content that supports the broader tech community. Outside of her core work, Chandika is enthusiastic about staying current with evolving technologies and sharing practical, real-world insights through social media platforms.",
     "image": "chandika.webp",
     "isFeatured": false,
+    "visible": true,
     "socials": [
       {
         "name": "linkedin",
@@ -75,6 +80,7 @@
     "bio": "Ranjini Ganeshan is a Staff DevOps Engineer at Trellix with over 15 years of experience in cloud, SRE, and automation. She specializes in Kubernetes, observability, and cost optimization on AWS. Ranjini actively contributes to the tech community by speaking at meetups and writing on Medium. She is passionate about building resilient, scalable systems and helping teams innovate faster. Outside of work, she enjoys terrace gardening and spending time with her two boys.",
     "image": "ranjini.webp",
     "isFeatured": false,
+    "visible": true,
     "socials": [
       {
         "name": "linkedin",
@@ -89,6 +95,7 @@
     "bio": "Ram Iyengar is the Chief Evangelist at Cloud Foundry Foundation, driving community engagement and platform advocacy.",
     "image": "ram.png",
     "isFeatured": false,
+    "visible": false,
     "socials": [
       {
         "name": "linkedin",
@@ -103,6 +110,7 @@
     "bio": "Ajeet Singh Raina is a Technology Influencer, Developer Advocate at Docker, and the author of Collabnix.com. He is also a Distinguished Arm Ambassador, sharing insights on containerization, cloud-native technologies, and DevOps practices.",
     "image": "ajeet.png",
     "isFeatured": false,
+    "visible": true,
     "socials": [
       {
         "name": "linkedin",
@@ -131,6 +139,7 @@
     "bio": "Aparna leads the storage and platform teams at DigitalOcean, where she and her teams build dependable, easy-to-use cloud infrastructure. She enjoys applying AI thoughtfully to improve how teams build and operate cloud systems. Most importantly, she always focuses on getting the fundamentals right - performance, efficiency, scale, and automation.",
     "image": "aparna.webp",
     "isFeatured": false,
+    "visible": true,
     "socials": [
       {
         "name": "linkedin",
