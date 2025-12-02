@@ -20,6 +20,17 @@
       >
         Speakers
       </v-btn>
+
+
+      <v-btn
+        variant="text"
+        class="text-none nav-btn"
+        to="/sponsors"
+        rounded="xl"
+        color="white"
+      >
+        Sponsorships
+      </v-btn>
       
 
       <!-- <v-btn

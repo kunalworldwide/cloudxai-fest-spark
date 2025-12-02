@@ -21,13 +21,14 @@
                 <v-chip
                   variant="flat"
                   color="rgba(255,255,255,0.2)"
-                  class="text-subtitle-1 align-self-start date-chip"
+                  size="x-large"
+                  class="text-subtitle-1 align-self-start date-chip px-6"
                 >
                   <v-icon start size="20">mdi-calendar-blank-outline</v-icon>
                   March 14, 2026
                 </v-chip>
                 <h1 class=" ">
-                  CloudxAI Conference
+                  CLOUDxAI Conference
                 </h1>
 
                 <div class="hero-slide-actions">
