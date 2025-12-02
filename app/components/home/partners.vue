@@ -19,7 +19,7 @@
       </div>
     </div> -->
 
-    <div class="partners-container partners-container-2">
+    <div class="partners-container partners-container-2 text-center">
       <h2 class="partners-title">OUR <span>PARTNERS</span></h2>
 
       <div class="partners-grid-2">
@@ -46,6 +46,8 @@
           </v-tooltip>
         </div>
       </div>
+
+      <v-btn to="/sponsors" rounded="xl" variant="text" append-icon="mdi-arrow-right" color="primary" class="mt-10">Become a Sponsor</v-btn>
     </div>
   </section>
 </template>
