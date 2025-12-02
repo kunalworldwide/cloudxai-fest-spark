@@ -1,6 +1,6 @@
 <template>
+  <v-main>
   <div class="register-container">
-    <HomeNavBar />
     <v-container fluid class="ticket-booking-section">
       <!-- Header Section -->
       <v-row class="justify-center text-center mb-10">
@@ -137,6 +137,7 @@
     </v-container>
     
   </div>
+</v-main>
   <HomeCountDown />
 </template>
 
@@ -217,7 +218,6 @@ useHead({
   // background: linear-gradient(135deg, #0a1435 0%, #1a2b5e 50%, #3a99ff 100%);
   // background: linear-gradient(135deg, #0a1435 0%, #1a2b5e 50%, #3A99Ff 100%);
   min-height: 100vh;
-  padding-top: 0px;
   padding-bottom: 80px;
   position: relative;
   overflow: hidden;
@@ -344,7 +344,7 @@ useHead({
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 25px 20px rgba(0, 0, 0, 0.1);
   }
 }
 
