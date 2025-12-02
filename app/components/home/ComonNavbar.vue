@@ -69,7 +69,7 @@
   </v-btn>
 </template>
 
-<script  setup>
+<script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 
 import NavBarContent from "../home/NavBarContent.vue";
@@ -102,9 +102,12 @@ const scrollToTop = () => {
 
 <style scoped lang="scss">
 .app-nav-bar {
-  padding-left: 32px !important;
-  padding-right: 32px !important;
+  //   padding-left: 32px !important;
+  //   padding-right: 32px !important;
+  padding-left: 64px;
+  padding-right: 64px;
 }
+// }
 .scroll-top-btn {
   position: fixed;
   bottom: 32px;
@@ -115,7 +118,7 @@ const scrollToTop = () => {
 @media (max-width: 768px) {
   .app-nav-bar {
     padding-left: 16px !important;
-    padding-right: 8px !important;
+    padding-right: 16px !important;
   }
 }
 // Styles handled by Vuetify's scroll-behavior="hide"
