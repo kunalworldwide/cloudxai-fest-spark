@@ -12,7 +12,7 @@
         variant="tonal"
         append-icon="mdi-arrow-right"
         color="white"
-        class="mb-7"
+        class="mb-7 mt-5"
         >Become a Sponsor</v-btn
       >
     </div>

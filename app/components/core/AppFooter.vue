@@ -5,7 +5,7 @@
       <v-row class="mb-8" v-if="route.path !== '/register'">
         <v-col cols="12" md="12" class=" cta-btn ga-4 mx-3 " >
           <span class="" style="color: #fff; font-size: 20px;">
-            <span style="font-weight: 600; font-size: 28px;">Secure your spot now at the CloudXAI conference.</span> <br> Be a part of the
+            <span style="font-weight: 600; font-size: 28px;">Secure your spot now at the CLOUDXAI conference.</span> <br> Be a part of the
             cloud shift from automation to intelligence movement.
             Tickets are limited, and will be released in batches.
           </span>
