@@ -109,7 +109,7 @@
           <v-col cols="12" md="8">
             <p class="contact-text">Ready to become a sponsor?</p>
             <p class="text-small font-weight-light mb-8">Contact us to discuss sponsorship opportunities contact@cloudconf.ai</p>
-            <v-btn rounded elevation="0" size="large" color="#339CFF" href="mailto:contact@cloudconf.ai" class="contact-btn">
+            <v-btn rounded elevation="0" size="large" color="#339CFF" href="https://forms.gle/Fva2b3wmocRkiw4PA" target="_blank" class="contact-btn">
               Contact Us
             </v-btn>
           </v-col>
