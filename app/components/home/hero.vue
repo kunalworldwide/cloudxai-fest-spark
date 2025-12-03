@@ -1,7 +1,7 @@
 <template>
   <div
     class="hero-main-conatiner"
-    style="position: relative; overflow: hidden; height: 100svh"
+    style="position: relative; overflow: hidden;"
   >
     <NavBar />
     <div class="hero-background">
@@ -153,6 +153,7 @@ import NavBar from "./NavBar.vue";
   background-image: url("../../assets/images/bgg-hero.webp");
   background-size: cover;
   background-position: center;
+  height: 100svh;
 }
 .hero-background {
   height: calc(100svh - 64px);
@@ -318,6 +319,9 @@ import NavBar from "./NavBar.vue";
 }
 
 @media (max-height: 852px) {
+  .hero-main-conatiner {
+    height: 900px !important;
+  }
   .hero-background {
     height: 820px;
   }
