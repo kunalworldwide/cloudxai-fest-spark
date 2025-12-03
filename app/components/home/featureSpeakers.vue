@@ -1,49 +1,83 @@
 <template>
   <section id="speakers" class="event-agendas">
     <div class="event-agendas__container">
-      <!-- Section Label -->
       <div class="event-agendas__label">
         <span class="event-agendas__label-rule"></span>
         <span class="event-agendas__label-text">EVENT SPEAKERS</span>
       </div>
 
-      <!-- Section Heading -->
       <h1 class="event-agendas__headline">
-        MEET OUR <span>AMAZING <br />SPEAKERS </span>
+        MEET OUR <span>AMAZING <br />SPEAKERS</span>
       </h1>
 
-      <!-- Speakers Grid -->
-      <div class="event-agendas__grid">
-        <div
-          v-for="speaker in featureSpeakers"
-          :key="speaker.name"
-          class="event-agendas__card"
-        >
-          <div class="event-agendas__card-inner">
-            <div class="event-agendas__image-container">
-              <img
-                :src="speaker.image ? `/images/speakers/${speaker.image}` : '/images/defaultAvatar.png'"
-                :alt="speaker.name"
-                class="event-agendas__image"
-              />
-              <!-- Social Media Panel (visible on hover) -->
-              <div class="event-agendas__social-panel">
-                <a
-                  v-for="social in speaker.socials"
-                  :key="social.name"
-                  :href="social.url"
-                  class="event-agendas__social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <v-icon size="20" :color="social.color || '#1e3a8a'">{{
-                    social.icon
-                  }}</v-icon>
-                </a>
+      <div class="event-agendas__marquee-wrapper">
+        <div class="event-agendas__marquee">
+          <div class="event-agendas__marquee-content">
+            <div
+              v-for="speaker in featureSpeakers"
+              :key="speaker.name"
+              class="event-agendas__card"
+            >
+              <div class="event-agendas__card-inner">
+                <div class="event-agendas__image-container">
+                  <img
+                    :src="speaker.image ? `/images/speakers/${speaker.image}` : '/images/defaultAvatar.png'"
+                    :alt="speaker.name"
+                    class="event-agendas__image"
+                  />
+                  <!-- Social Media Panel (visible on hover) -->
+                  <div class="event-agendas__social-panel">
+                    <a
+                      v-for="social in speaker.socials"
+                      :key="social.name"
+                      :href="social.url"
+                      class="event-agendas__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <v-icon size="20" :color="social.color || '#1e3a8a'">{{
+                        social.icon
+                      }}</v-icon>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="event-agendas__name">{{ speaker.name }}</h3>
+                <p class="event-agendas__role">{{ speaker.role }}</p>
               </div>
             </div>
-            <h3 class="event-agendas__name">{{ speaker.name }}</h3>
-            <p class="event-agendas__role">{{ speaker.role }}</p>
+          </div>
+          <div class="event-agendas__marquee-content" aria-hidden="true">
+            <div
+              v-for="speaker in featureSpeakers"
+              :key="`duplicate-${speaker.name}`"
+              class="event-agendas__card"
+            >
+              <div class="event-agendas__card-inner">
+                <div class="event-agendas__image-container">
+                  <img
+                    :src="speaker.image ? `/images/speakers/${speaker.image}` : '/images/defaultAvatar.png'"
+                    :alt="speaker.name"
+                    class="event-agendas__image"
+                  />
+                  <div class="event-agendas__social-panel">
+                    <a
+                      v-for="social in speaker.socials"
+                      :key="social.name"
+                      :href="social.url"
+                      class="event-agendas__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <v-icon size="20" :color="social.color || '#1e3a8a'">{{
+                        social.icon
+                      }}</v-icon>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="event-agendas__name">{{ speaker.name }}</h3>
+                <p class="event-agendas__role">{{ speaker.role }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -149,27 +183,48 @@ const featureSpeakers = speakersData.filter(speaker => speaker.isFeatured);
     }
   }
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+  &__marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
     margin-top: 40px;
+  }
 
-    @media (max-width: 1200px) {
-      gap: 24px;
+  &__marquee {
+    display: flex;
+    width: 100%;
+
+    &:hover .event-agendas__marquee-content {
+      animation-play-state: paused;
+    }
+  }
+
+  &__marquee-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    animation: marqueeScroll 30s linear infinite;
+    flex-shrink: 0;
+    padding-right: 40px;
+
+    @media (max-width: 768px) {
+      gap: 30px;
+      animation: marqueeScroll 25s linear infinite;
+      padding-right: 30px;
     }
 
-    @media (max-width: 992px) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
+    @media (max-width: 480px) {
+      gap: 20px;
+      animation: marqueeScroll 20s linear infinite;
+      padding-right: 20px;
     }
+  }
 
-    @media (max-width: 600px) {
-      grid-template-columns: 1fr;
-      gap: 24px;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
+  @keyframes marqueeScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
     }
   }
 
@@ -180,9 +235,17 @@ const featureSpeakers = speakersData.filter(speaker => speaker.isFeatured);
     text-align: center;
     position: relative;
     padding: 20px 0 0 20px;
+    width: 350px;
+    flex-shrink: 0;
+    overflow: visible;
 
     @media (max-width: 768px) {
       padding: 15px 0 0 15px;
+      width: 280px;
+    }
+
+    @media (max-width: 480px) {
+      width: 240px;
     }
   }
 
