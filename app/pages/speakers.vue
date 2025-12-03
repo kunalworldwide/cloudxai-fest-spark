@@ -79,7 +79,7 @@ useHead({
   ogDescription:
     "CloudxAI 2026 Bengaluru: The meeting ground for DevOps & AI engineers building the future of intelligent infrastructure.",
   ogImage:
-    "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg",
+    "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaixcover.jpg",
   ogUrl: "https://cloudconf.ai/",
   ogType: "website",
   ogLocale: "en_US",
@@ -110,7 +110,7 @@ useHead({
     {
       property: "og:image",
       content:
-        "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg",
+        "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaixcover.jpg",
     },
     { property: "og:image:width", content: "1920" },
     { property: "og:image:height", content: "1080" },
@@ -133,7 +133,7 @@ useHead({
     {
       name: "twitter:image",
       content:
-        "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg",
+        "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaixcover.jpg",
     },
     {
       name: "twitter:image:alt",
@@ -145,7 +145,7 @@ useHead({
     {
       property: "og:image:secure_url",
       content:
-        "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg",
+        "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaixcover.jpg",
     },
   ],
   link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
