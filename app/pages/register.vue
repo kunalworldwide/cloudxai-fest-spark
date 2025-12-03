@@ -33,8 +33,14 @@
         </v-col>
       </v-row>
 
+      <v-row>
+        <v-col md="11" lg="10" xl="8" style="margin: 0 auto;">
+          <iframe src="https://konfhub.com/widget/cloudxai?desc=true&secondaryBg=F7F7F7&ticketBg=F7F7F7&borderCl=F7F7F7&bg=FFFFFF&fontColor=1e1f24&ticketCl=1e1f24&btnColor=002E6E&fontFamily=Prompt&borderRadius=NaN&widget_type=standard&tickets=67431%2C67432%2C67433%2C67434%2C67435&ticketId=67431%7C%3B67432%7C%3B67433%7C%3B67434%7C%3B67435%7C" id="konfhub-widget" title="Register for CLOUDxAI" width="100%" height="500" style="border: none;"></iframe>
+        </v-col>
+      </v-row>
+
       <!-- Ticket Cards -->
-      <v-row
+      <!-- <v-row
         class="justify-center"
         v-if="ticketsData && ticketsData.length > 0"
       >
@@ -48,12 +54,9 @@
               :key="ticket._id"
             >
               <div class="ticket-card">
-                <!-- Price Header with Gradient -->
                 <div class="ticket-price-header" :class="`tier-${ticket.tier}`">
                   <div class="price">₹{{ ticket.price }}</div>
                 </div>
-
-                <!-- Card Content -->
                 <div class="ticket-card-body-container">
                   <div class="ticket-card-body">
                     <h3 class="ticket-tier" v-if="ticket.name">
@@ -64,7 +67,6 @@
                       {{ ticket.description }}
                     </p>
 
-                    <!-- Perks List -->
                     <div
                       class="ticket-perks"
                       v-if="ticket.perks && ticket.perks.length > 0"
@@ -81,7 +83,6 @@
                       </div>
                     </div>
 
-                    <!-- Additional Features -->
                     <div class="ticket-features">
                       <div class="feature-item">
                         <v-icon size="16">mdi-ticket-confirmation</v-icon>
@@ -97,13 +98,11 @@
                       </div>
                     </div>
 
-                    <!-- Quantity Info -->
                     <div class="ticket-quantity">
                       <v-icon size="14" class="mr-1">mdi-ticket</v-icon>
                       <span>{{ ticket.quantity }} tickets available</span>
                     </div>
                   </div>
-                  <!-- CTA Button -->
                   <v-btn
                     class="ticket-cta-btn"
                     size="large"
@@ -119,9 +118,9 @@
             </v-col>
           </v-row>
         </v-col>
-      </v-row>
+      </v-row> -->
       <!-- Show s till tickets are loaded -->
-      <v-row
+      <!-- <v-row
         style="max-width: 1200px; margin: 0 auto"
         v-if="!ticketsData || ticketsData.length === 0"
       >
@@ -132,7 +131,7 @@
             indeterminate
           ></v-progress-circular>
         </v-col>
-      </v-row>
+      </v-row> -->
       
     </v-container>
     
