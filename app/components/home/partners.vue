@@ -1,5 +1,5 @@
 <template>
-  <section class="partners-section" id="partners">
+  <!-- <section class="partners-section" id="partners">
     <div class="partners-container" >
 
       <h2 class="partners-title mb-2">OUR <span>Sponsors</span></h2>
@@ -22,26 +22,26 @@
       <div class="partners-grid-2 text-center" style="max-width: 700px; margin: 0 auto;">
         <div v-for="partner in partners" :key="partner.id" class="partner-card">
           <div class="partner-logo">
-            <!-- <p class="text-medium font-weight-bold custom-text">{{ partner.name }}</p> -->
+            <p class="text-medium font-weight-bold custom-text">{{ partner.name }}</p>
             <p class="text-medium font-weight-bold custom-text">Coming <br> Soon</p>
-            <!-- <img :src="partner.logo" :alt="partner.name" /> -->
+            <img :src="partner.logo" :alt="partner.name" />
           </div>
-          <!-- <div
+          <div
             class="partner-tier"
             :class="`tier-${partner.tier.toLowerCase()}`"
           >
             {{ partner.tier }}
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
 
     
-  </section>
+  </section> -->
   <section class="partners-section partners-section-2">
     <div class="partners-container partners-container-2 text-center">
       
-      <h2 class="partners-title mb-12" style="color: #050537;">OUR <span>Partners</span></h2>
+      <h2 class="partners-title mb-12" >OUR <span>Partners</span></h2>
 
       <div class="partners-grid-2">
         <div
@@ -120,7 +120,9 @@ const partners = [
 }
 
 .partners-section-2 {
-  background: white;
+  // background: white;
+  background: linear-gradient(135deg, #0a1628 0%, #1a2f4f 50%, #0a1628 100%);
+
   border-bottom: 1px solid #dedede;
 
 }

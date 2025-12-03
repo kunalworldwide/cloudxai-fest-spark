@@ -4,14 +4,14 @@
       <v-container class="countdown-container">
         <v-row align="center" justify="space-between" class="countdown-main-row">
           <!-- Title Section -->
-          <v-col cols="12" md="6" lg="5" class="countdown-title-col">
+          <v-col cols="12" md="5" lg="5" class="countdown-title-col">
             <h1 class="countdown-title">
               Event Countdown
             </h1>
           </v-col>
 
           <!-- Countdown Timer Section -->
-          <v-col cols="12" md="6" lg="7" class="countdown-timer-col">
+          <v-col cols="12" md="7" lg="7" class="countdown-timer-col">
             <div class="countdown-boxes">
               <!-- Days -->
               <div class="countdown-box">
@@ -113,7 +113,8 @@ onUnmounted(() => {
   justify-content: center;
   width: 100%;
   padding: 2rem 1rem !important;
-  position: relative;
+  position: absolute;
+  bottom:0
 }
 
 .countdown-section {
@@ -121,8 +122,7 @@ onUnmounted(() => {
   background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
   border-radius: 32px;
   overflow: hidden;
-  width: 100%;
-  max-width: 1300px;
+  max-width: 800px;
 }
 
 .countdown-section::before {
@@ -153,6 +153,7 @@ onUnmounted(() => {
 }
 
 .countdown-title-col {
+  /* align-items: center !important; */
   padding: 0 1rem !important;
 }
 
@@ -224,7 +225,7 @@ onUnmounted(() => {
   margin: 0 !important;
 }
 
-@media(min-width: 1440px){
+/* @media(min-width: 1440px){
   .countdown-wrapper{
     height: 200px;
     overflow: visible;
@@ -234,10 +235,10 @@ onUnmounted(() => {
     bottom: -120px;
     z-index: 1;
   }
-}
+} */
 
 /* Large Desktop to Tablet: 1280px - 961px */
-@media (max-width: 1280px) and (min-width: 961px) {
+/* @media (max-width: 1280px) and (min-width: 961px) {
   .countdown-container {
     padding: 2.5rem 1.25rem !important;
     margin: 0 !important;
@@ -277,10 +278,10 @@ onUnmounted(() => {
   }
 
 
-}
+} */
 
 /* Tablet: 960px - 769px */
-@media (max-width: 960px) and (min-width: 769px) {
+/* @media (max-width: 960px) and (min-width: 769px) {
   .countdown-wrapper {
     padding: 2rem 1rem !important;
   }
@@ -325,10 +326,10 @@ onUnmounted(() => {
   }
 
 
-}
+} */
 
 /* Tablet Small: 768px - 501px */
-@media (max-width: 768px) and (min-width: 501px) {
+/* @media (max-width: 768px) and (min-width: 501px) {
   .countdown-wrapper {
     padding: 1.5rem 1rem !important;
   }
@@ -371,10 +372,10 @@ onUnmounted(() => {
   }
 
 
-}
+} */
 
 /* Mobile: 500px and below */
-@media (max-width: 500px) {
+@media (max-width: 2400px) {
   .countdown-wrapper {
     padding: 1rem 0.5rem !important;
   }
@@ -388,10 +389,10 @@ onUnmounted(() => {
   }
 
   .countdown-title {
-    font-size: 1.75rem !important;
+    font-size: 1.55rem !important;
     text-align: left !important;
     margin: 0 !important;
-    padding: 0 0 1rem 0 !important;
+    padding: 0 !important;
   }
 
   .countdown-title-col {
@@ -426,6 +427,12 @@ onUnmounted(() => {
     padding: 0 !important;
   }
 
+}
+
+@media(max-width: 960px){
+  .countdown-title {
+    padding: 0 0 0.5rem 0 !important;
+  }
 }
 
 

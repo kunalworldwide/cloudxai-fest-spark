@@ -43,18 +43,28 @@
             Contact Us
           </v-btn> -->
 
-      <!-- <div class="d-flex " style="gap: 14px;">
+      <div class="d-flex " style="gap: 0px;">
             
+        <v-btn
+              icon
+              size="small"
+              :color="props.socialLogoColor"
+              href="https://www.linkedin.com/company/cloud-x-ai/"
+              target="_blank"
+            >
+              <v-icon>mdi-linkedin</v-icon>
+            </v-btn>
+
             <v-btn
               icon
               size="small"
               :color="props.socialLogoColor"
-              href="https://twitter.com"
+              href="https://x.com/cloudxaiconf"
               target="_blank"
             >
-              <v-icon>mdi-twitter</v-icon>
+              <img src="/images/icon/x.svg" alt="Twitter" class="icon-img" style="width: 12px; height: 12px;">
             </v-btn>
-            <v-btn
+            <!-- <v-btn
               icon
               size="small"
               :color="props.socialLogoColor"
@@ -62,18 +72,10 @@
               target="_blank"
             >
               <v-icon>mdi-instagram</v-icon>
-            </v-btn>
-            <v-btn
-              icon
-              size="small"
-              :color="props.socialLogoColor"
-              href="https://linkedin.com"
-              target="_blank"
-            >
-              <v-icon>mdi-linkedin</v-icon>
-            </v-btn>
+            </v-btn> -->
             
-          </div> -->
+            
+          </div>
     </div>
 
     <!-- Mobile Hamburger Menu (visible below 768px) -->
@@ -146,40 +148,31 @@
             About Us
           </v-btn> -->
 
-          <!-- <div class="d-flex justify-center mt-4" style="gap: 24px;">
+          <div class="d-flex justify-center mt-4" style="gap: 24px;">
             
             <v-btn
             variant="outlined"
               icon
               size="small"
               color="white"
-              href="https://twitter.com"
+              href="https://x.com/cloudxaiconf"
               target="_blank"
             >
-              <v-icon>mdi-twitter</v-icon>
+              <img src="/images/icon/x.svg" alt="Twitter" class="icon-img" style="width: 12px; height: 12px;">
             </v-btn>
+            
             <v-btn
               variant="outlined"
               icon
               size="small"
               color="white"
-              href="https://instagram.com"
-              target="_blank"
-            >
-              <v-icon>mdi-instagram</v-icon>
-            </v-btn>
-            <v-btn
-              variant="outlined"
-              icon
-              size="small"
-              color="white"
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/cloud-x-ai/"
               target="_blank"
             >
               <v-icon>mdi-linkedin</v-icon>
             </v-btn>
             
-          </div> -->
+          </div>
         </div>
       </v-navigation-drawer>
     </Teleport>

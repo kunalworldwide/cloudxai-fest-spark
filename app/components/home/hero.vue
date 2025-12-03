@@ -1,6 +1,6 @@
 <template>
   <div class=" hero-main-conatiner" style="position: relative; overflow: hidden; height:100svh">
-    <NavBar socialLogoColor="black" />
+    <NavBar />
     <div class="hero-background">
       <v-carousel
 
@@ -75,18 +75,21 @@
               </div>
             </div>
             <div class="text-center pa-0 hero-image-conatiner">
-              <video
-                autoplay
-                loop
-                muted
-                playsinline
-                class="pa-0"
-                 poster="/images/default-video.png"
-                style="width: 100%; height: 100%; object-fit: cover;"
-              >
-                <source src="@/assets/videos/hero.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <ClientOnly>
+                <video
+                  autoplay
+                  loop
+                  muted
+                  playsinline
+                  class="pa-0"
+                  poster="/images/default-video.png"
+                  style="width: 100%; height: 100%; object-fit: cover;"
+                >
+                  <source src="@/assets/videos/hero.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </ClientOnly>
+              <HomeCountDownCopy/>
             </div>
           </div>
         </v-container>
@@ -166,11 +169,12 @@ import NavBar from './NavBar.vue';
   }
 
   .hero-image-conatiner {
-    width: 55%;
-    height: 100%;
+    width: 55% ;
+    height: 100% ;
     border-top-right-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
     overflow: hidden;
+    position: relative;
   }
 }
 
