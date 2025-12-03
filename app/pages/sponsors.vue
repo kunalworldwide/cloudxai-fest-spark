@@ -14,7 +14,7 @@
           </v-col>
         </v-row> -->
 
-        <v-row class="justify-center desktop-table-view mt-10">
+        <!-- <v-row class="justify-center desktop-table-view mt-10">
           <v-col cols="12" style="max-width: 1400px;">
             <div class="sponsor-table-wrapper">
               <table class="sponsor-table">
@@ -48,9 +48,9 @@
             </div>
           </v-col>
           
-        </v-row>
+        </v-row> -->
 
-        <v-row class="justify-center mobile-card-view">
+        <!-- <v-row class="justify-center mobile-card-view">
           <v-col cols="12" sm="10" md="8" lg="6" v-for="pkg in packages" :key="pkg.id">
             <div class="sponsor-card" :class="pkg.class">
               <div class="card-header">
@@ -71,13 +71,13 @@
               </div>
             </div>
           </v-col>
-        </v-row>
+        </v-row> -->
 
         <v-row class="justify-center flex-column text-center">
-          <div>
+          <!-- <div>
             <p class="text-small text-center">*The sponsor speaking talk should have technical content.</p>
             <p class="text-small text-center">**All taxes are included to the price.</p>
-          </div>
+          </div> -->
           
           <!-- <div class="additional-pkg mt-10">
             <div class="additional-pkg-item">
