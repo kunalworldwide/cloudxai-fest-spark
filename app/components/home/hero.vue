@@ -33,7 +33,7 @@
                     color="white"
                     variant="flat"
                     size="x-large"
-                    class="text-none rounded-xl"
+                    class="text-none rounded-xl register-btn"
                     append-icon="mdi-arrow-top-right"
                     width="max-content"
                     to="/register"
@@ -99,31 +99,34 @@
         </v-container>
       </v-container>
 
-      <div class=" social-icons-container">
-            
-            <v-btn
-                  icon
-                  size="small"
-                  color="transparent"
-                  variant="text"
-                  
-                  href="https://www.linkedin.com/company/cloud-x-ai/"
-                  target="_blank"
-                >
-                  <v-icon size="32" color="white">mdi-linkedin</v-icon>
-                </v-btn>
-    
-                <v-btn
-                  icon
-                  size="small"
-                  variant="text"
-                  color="transparent"
-                  href="https://x.com/cloudxaiconf"
-                  target="_blank"
-                >
-                  <img src="/images/icon/x.svg" alt="Twitter" class="icon-img" style="width: 24px; height: 24px;">
-                </v-btn>
-                <!-- <v-btn
+      <div class="social-icons-container">
+        <v-btn
+          icon
+          size="small"
+          color="transparent"
+          variant="text"
+          href="https://www.linkedin.com/company/cloud-x-ai/"
+          target="_blank"
+        >
+          <v-icon size="32" color="white">mdi-linkedin</v-icon>
+        </v-btn>
+
+        <v-btn
+          icon
+          size="small"
+          variant="text"
+          color="transparent"
+          href="https://x.com/cloudxaiconf"
+          target="_blank"
+        >
+          <img
+            src="/images/icon/x.svg"
+            alt="Twitter"
+            class="icon-img"
+            style="width: 24px; height: 24px"
+          />
+        </v-btn>
+        <!-- <v-btn
                   icon
                   size="small"
                   :color="props.socialLogoColor"
@@ -132,15 +135,13 @@
                 >
                   <v-icon>mdi-instagram</v-icon>
                 </v-btn> -->
-                
-                
-              </div>
-        </div>
-      <!-- <div class="d-flex align-end pa-0 background-svg" style="width: 320px; height:120%; background-color: #1e3a8a; position:absolute; right:-100px; bottom:-40px">
+      </div>
+    </div>
+    <!-- <div class="d-flex align-end pa-0 background-svg" style="width: 320px; height:120%; background-color: #1e3a8a; position:absolute; right:-100px; bottom:-40px">
        
 
       </div> -->
-    </div>
+  </div>
 </template>
 
 <script setup>
@@ -159,18 +160,17 @@ import NavBar from "./NavBar.vue";
   padding-top: 0px;
 }
 
-.social-icons-container{
+.social-icons-container {
   background-color: rgb(52, 106, 255);
   position: absolute;
-  right:0;
-  top:120px;
+  right: 0;
+  top: 140px;
   padding: 24px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:24px;
+  gap: 24px;
   width: 60px;
-
 }
 
 .hero-carousel {
@@ -290,7 +290,7 @@ import NavBar from "./NavBar.vue";
     padding-top: 0px;
   }
 
-  .social-icons-container{
+  .social-icons-container {
     display: none;
   }
 
@@ -329,5 +329,33 @@ import NavBar from "./NavBar.vue";
 
 .hero-carousel .v-carousel__controls {
   bottom: 24px;
+}
+
+.register-btn {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6),
+      0 0 40px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.2);
+    animation: bounce 0.6s ease;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1.08);
+  }
+  30% {
+    transform: scale(1.15);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(1.1);
+  }
 }
 </style>
