@@ -7,14 +7,14 @@
           </div>
       <v-container fluid class="py-10">
       
-        <v-row class="justify-center text-center ">
+        <!-- <v-row class="justify-center text-center ">
          
           <v-col cols="12" md="10">
             <h1 class="main-title">Main Sponsorship Packages</h1>
           </v-col>
-        </v-row>
+        </v-row> -->
 
-        <v-row class="justify-center desktop-table-view">
+        <v-row class="justify-center desktop-table-view mt-10">
           <v-col cols="12" style="max-width: 1400px;">
             <div class="sponsor-table-wrapper">
               <table class="sponsor-table">
@@ -79,7 +79,7 @@
             <p class="text-small text-center">**All taxes are included to the price.</p>
           </div>
           
-          <div class="additional-pkg mt-10">
+          <!-- <div class="additional-pkg mt-10">
             <div class="additional-pkg-item">
               <h2>Additional Packages</h2>
               <p class="text-small text-gray mb-2">(request details via email below)</p>
@@ -102,7 +102,7 @@
                
               </ul>
             </div>
-          </div>
+          </div> -->
         </v-row>
 
         <v-row class="justify-center text-center mt-10">

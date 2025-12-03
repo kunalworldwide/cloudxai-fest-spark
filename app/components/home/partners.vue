@@ -20,7 +20,7 @@
       </div>
 
       <div
-        class="partners-grid-2 text-center"
+        class="partners-grid text-center"
         style="max-width: 700px; margin: 0 auto"
       >
         <div v-for="partner in partners" :key="partner.id" class="partner-card">
@@ -52,7 +52,7 @@
   </section>
   <section class="partners-section partners-section-2">
     <div class="partners-container partners-container-2 text-center">
-      <h2 class="partners-title mb-12">OUR <span>Partners</span></h2>
+      <h2 class="partners-title mb-12" style="color: #1a2f4f;">OUR <span>Partners</span></h2>
 
       <div class="partners-grid-2">
         <div
@@ -118,8 +118,8 @@ const partners = [
 }
 
 .partners-section-2 {
-  // background: white;
-  background: linear-gradient(135deg, #0a1628 0%, #1a2f4f 50%, #0a1628 100%);
+  background: white;
+  // background: linear-gradient(135deg, #0a1628 0%, #1a2f4f 50%, #0a1628 100%);
 
   border-bottom: 1px solid #dedede;
 }
@@ -164,6 +164,31 @@ const partners = [
 }
 
 .partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  @media (max-width: 480px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.partners-grid-2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
@@ -180,20 +205,11 @@ const partners = [
   }
 }
 
-.partners-grid-2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 30px;
-  padding: 0 20px;
+.partner-card {
+  max-width: 200px;
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
-
-  @media (max-width: 480px) {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  @media(max-width:480px){
+    max-width: 100%;
   }
 }
 
@@ -367,8 +383,8 @@ const partners = [
     margin-bottom: 40px;
   }
 
-  .partner-card {
-    padding: 30px 20px 55px;
+  .partner-card-2 {
+    // padding: 30px 20px 55px;
     min-height: 150px;
   }
 
