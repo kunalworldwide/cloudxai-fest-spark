@@ -459,10 +459,19 @@ onUnmounted(() => {
   }
 
   .countdown-label {
-    font-size: 0.55rem !important;
+    font-size: 0.75rem !important;
     margin: 0 !important;
     padding: 0 !important;
   }
+}
+
+@media(max-width: 500px){
+
+  .countdown-label {
+    font-size: 0.55rem !important;
+  }
+
+  
 }
 
 

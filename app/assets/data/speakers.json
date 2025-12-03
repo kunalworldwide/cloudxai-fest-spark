@@ -49,7 +49,7 @@
     "role": "DevOps Expert | Udemy Instructor | YouTuber",
     "bio": "Ravi Shankar has 15 years of experience in IT and DevOps and specializes in building scalable cloud and automation solutions across AWS and Azure. He is also a Udemy instructor and YouTuber, sharing DevOps knowledge with a community of over 100,000 learners. Ravi is passionate about simplifying complex technologies and helping professionals grow in their careers.",
     "image": "ravi.webp",
-    "isFeatured": false,
+    "isFeatured": true,
     "visible": true,
     "socials": [
       {
@@ -109,7 +109,7 @@
     "role": "Technology Influencer | 🐳 Developer Advocate at Docker | Author at Collabnix.com | Distinguished Arm Ambassador",
     "bio": "Ajeet Singh Raina is a Technology Influencer, Developer Advocate at Docker, and the author of Collabnix.com. He is also a Distinguished Arm Ambassador, sharing insights on containerization, cloud-native technologies, and DevOps practices.",
     "image": "ajeet.png",
-    "isFeatured": false,
+    "isFeatured": true,
     "visible": true,
     "socials": [
       {
@@ -138,7 +138,7 @@
     "role": "Senior Engineering Manager @Digital Ocean",
     "bio": "Aparna leads the storage and platform teams at DigitalOcean, where she and her teams build dependable, easy-to-use cloud infrastructure. She enjoys applying AI thoughtfully to improve how teams build and operate cloud systems. Most importantly, she always focuses on getting the fundamentals right - performance, efficiency, scale, and automation.",
     "image": "aparna.webp",
-    "isFeatured": false,
+    "isFeatured": true,
     "visible": true,
     "socials": [
       {
