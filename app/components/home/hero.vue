@@ -89,8 +89,9 @@
                   Your browser does not support the video tag.
                 </video>
               </ClientOnly>
-              <HomeCountDownCopy/>
+              
             </div>
+            <HomeCountDownCopy/>
           </div>
         </v-container>
       </v-carousel>

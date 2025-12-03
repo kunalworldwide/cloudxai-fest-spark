@@ -4,14 +4,14 @@
       <v-container class="countdown-container">
         <v-row align="center" justify="space-between" class="countdown-main-row">
           <!-- Title Section -->
-          <v-col cols="12" md="5" lg="5" class="countdown-title-col">
+          <v-col cols="12" md="4" lg="4" class="countdown-title-col">
             <h1 class="countdown-title">
               Event Countdown
             </h1>
           </v-col>
 
           <!-- Countdown Timer Section -->
-          <v-col cols="12" md="7" lg="7" class="countdown-timer-col">
+          <v-col cols="12" md="8" lg="8" class="countdown-timer-col">
             <div class="countdown-boxes">
               <!-- Days -->
               <div class="countdown-box">
@@ -122,7 +122,7 @@ onUnmounted(() => {
   background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
   border-radius: 32px;
   overflow: hidden;
-  max-width: 800px;
+  max-width: 700px;
 }
 
 .countdown-section::before {
@@ -389,7 +389,7 @@ onUnmounted(() => {
   }
 
   .countdown-title {
-    font-size: 1.55rem !important;
+    font-size: 2.25rem !important;
     text-align: left !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -401,7 +401,7 @@ onUnmounted(() => {
   }
 
   .countdown-timer-col {
-    padding: 0 0.5rem !important;
+    /* padding: 0 0.5rem !important; */
     margin: 0 !important;
   }
 
@@ -411,18 +411,18 @@ onUnmounted(() => {
   }
 
   .countdown-box {
-    width: 68px !important;
+    width: 100px !important;
     margin: 0 !important;
   }
 
   .countdown-value {
-    font-size: 1.5rem !important;
+    font-size: 3rem !important;
     margin: 0 !important;
     padding-bottom: 0.25rem !important;
   }
 
   .countdown-label {
-    font-size: 0.55rem !important;
+    font-size: 0.85rem !important;
     margin: 0 !important;
     padding: 0 !important;
   }
@@ -431,7 +431,37 @@ onUnmounted(() => {
 
 @media(max-width: 960px){
   .countdown-title {
+    font-size: 1.5rem !important;
+    text-align: center !important;
     padding: 0 0 0.5rem 0 !important;
+  }
+
+  .countdown-timer-col {
+    padding: 0 8px  !important;
+  }
+
+  .countdown-box {
+    width: 68px !important;
+    margin: 0 !important;
+
+  }
+
+  .countdown-boxes {
+    /* gap: 0.35rem !important; */
+    justify-content: center !important;
+  }
+
+
+  .countdown-value {
+    font-size: 1.75rem !important;
+    margin: 0 !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  .countdown-label {
+    font-size: 0.55rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
 
