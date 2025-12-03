@@ -1,47 +1,58 @@
 <template>
-  <!-- <section class="partners-section" id="partners">
-    <div class="partners-container" >
-
+  <section class="partners-section" id="partners">
+    <div class="partners-container">
       <h2 class="partners-title mb-2">OUR <span>Sponsors</span></h2>
       <div class="partners-title-content">
-      <p>Partner with us to showcase your innovation and connect with industry leaders at CLOUDxAI, Bengaluru 2026</p>
-      <v-btn
-        to="/sponsors"
-        size="large"
-        rounded="xl"
-        variant="tonal"
-        append-icon="mdi-arrow-right"
-        color="white"
-        class="mb-7 mt-5"
-        >Become a Sponsor</v-btn
+        <p>
+          Partner with us to showcase your innovation and connect with industry
+          leaders at CLOUDxAI, Bengaluru 2026
+        </p>
+        <v-btn
+          to="/sponsors"
+          size="large"
+          rounded="xl"
+          variant="tonal"
+          append-icon="mdi-arrow-right"
+          color="white"
+          class="mb-7 mt-5"
+          >Become a Sponsor</v-btn
+        >
+      </div>
+
+      <div
+        class="partners-grid-2 text-center"
+        style="max-width: 700px; margin: 0 auto"
       >
-    </div>
-
-
-
-      <div class="partners-grid-2 text-center" style="max-width: 700px; margin: 0 auto;">
         <div v-for="partner in partners" :key="partner.id" class="partner-card">
-          <div class="partner-logo">
-            <p class="text-medium font-weight-bold custom-text">{{ partner.name }}</p>
-            <p class="text-medium font-weight-bold custom-text">Coming <br> Soon</p>
-            <img :src="partner.logo" :alt="partner.name" />
-          </div>
-          <div
+          <v-tooltip :text="`${partner.name}`" location="bottom">
+            <template v-slot:activator="{ props }">
+              <div class="partner-logo" v-bind="props">
+                <a
+                  :href="partner.link"
+                  target="_blank"
+                  class="text-center d-flex align-center justify-center"
+                >
+                  <img
+                    :src="`/images/partners/${partner.image}`"
+                    :alt="partner.name"
+                  />
+                </a>
+              </div>
+            </template>
+          </v-tooltip>
+          <!-- <div
             class="partner-tier"
             :class="`tier-${partner.tier.toLowerCase()}`"
           >
             {{ partner.tier }}
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
-
-    
-  </section> -->
+  </section>
   <section class="partners-section partners-section-2">
     <div class="partners-container partners-container-2 text-center">
-      
-      <h2 class="partners-title mb-12" >OUR <span>Partners</span></h2>
+      <h2 class="partners-title mb-12">OUR <span>Partners</span></h2>
 
       <div class="partners-grid-2">
         <div
@@ -77,24 +88,11 @@ const communityPartnersData = ref(communityPartners);
 const partners = [
   {
     id: 1,
-    name: "Coming Soon",
-    // logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-3-1.svg",
-    tier: "General",
+    name: "KodeKloud",
+    image: "kodekloud.png",
+    link: "https://kodekloud.com/",
+    // tier: "General",
   },
-  {
-    id: 2,
-    name: "Coming Soon",
-    // logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-3-1.svg",
-    tier: "Graphene",
-  },
-  {
-    id: 3,
-    name: "Coming Soon",
-    // logo: "https://demo.bravisthemes.com/festiva/wp-content/uploads/2024/08/home-4-svg-4-1.svg",
-    tier: "Platinum",
-  },
-  
-  
 ];
 </script>
 
@@ -124,7 +122,6 @@ const partners = [
   background: linear-gradient(135deg, #0a1628 0%, #1a2f4f 50%, #0a1628 100%);
 
   border-bottom: 1px solid #dedede;
-
 }
 
 .partners-container {
@@ -133,8 +130,6 @@ const partners = [
   position: relative;
   z-index: 1;
 }
-
-
 
 .partners-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -149,18 +144,18 @@ const partners = [
   }
 }
 
-.partners-title-content{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-gap: 20px;
-&>p{
-  color: white;
-}
+.partners-title-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  & > p {
+    color: white;
+  }
 }
 
-.custom-text{
+.custom-text {
   color: #bdbdbd;
   font-size: 20px;
   font-style: italic;
@@ -219,7 +214,6 @@ gap: 20px;
   overflow: hidden;
   min-height: 100px;
 
-
   // &::before {
   //   content: "";
   //   position: absolute;
@@ -244,7 +238,6 @@ gap: 20px;
     }
   }
 }
-
 
 .partner-logo {
   width: 100%;
