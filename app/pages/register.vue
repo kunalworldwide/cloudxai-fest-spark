@@ -327,7 +327,7 @@ useHead({
   .selector-divider {
     width: 2px;
     height: 60px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(74, 74, 74, 0.3);
   }
 }
 

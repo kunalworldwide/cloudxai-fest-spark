@@ -338,7 +338,7 @@ import NavBar from "./NavBar.vue";
   &:hover {
     transform: scale(1.08);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6),
-      0 0 40px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.2);
+      0 0 20px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
     animation: bounce 0.6s ease;
   }
 }

@@ -214,7 +214,7 @@ const featureSpeakers = speakersData.filter(speaker => speaker.isFeatured);
 
     @media (max-width: 480px) {
       gap: 20px;
-      animation: marqueeScroll 20s linear infinite;
+      animation: marqueeScroll 30s linear infinite;
       padding-right: 20px;
     }
   }
