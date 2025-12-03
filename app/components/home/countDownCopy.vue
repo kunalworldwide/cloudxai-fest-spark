@@ -375,7 +375,7 @@ onUnmounted(() => {
 } */
 
 /* Mobile: 500px and below */
-@media (max-width: 2400px) {
+@media (max-width: 6000px) {
   .countdown-wrapper {
     padding: 1rem 0.5rem !important;
   }
