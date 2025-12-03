@@ -64,35 +64,91 @@ definePageMeta({
 });
 
 useHead({
-  title: "Speakers - CLOUDxAI Conference",
+  title: "Speakers - CLOUDxAI Conference 2026 Bengaluru",
+  titleTemplate: "Speakers - CLOUDxAI Conference 2026 Bengaluru",
+  description:
+    "CloudxAI 2026 Bengaluru: The meeting ground for DevOps & AI engineers building the future of intelligent infrastructure.",
+  keywords:
+    "conference, event, CLOUDxAI, bengaluru, Developers, AI, Agents, India, Conference",
+  author: "TechFerment",
+  robots: "index, follow",
+  googlebot: "index, follow",
+  bingbot: "index, follow",
+  yandexbot: "index, follow",
+  ogTitle: "Speakers - CLOUDxAI Conference 2026 Bengaluru",
+  ogDescription:
+    "CloudxAI 2026 Bengaluru: The meeting ground for DevOps & AI engineers building the future of intelligent infrastructure.",
+  ogImage:
+    "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg",
+  ogUrl: "https://cloudconf.ai/",
+  ogType: "website",
+  ogLocale: "en_US",
+  ogSiteName: "Speakers - CLOUDxAI Conference 2026 Bengaluru",
   meta: [
     {
       name: "description",
-      content: "Meet the brilliant minds speaking at the conference!",
+      content:
+        "CloudxAI 2026 Bengaluru: The meeting ground for DevOps & AI engineers building the future of intelligent infrastructure.",
     },
-    { name: "keywords", content: "conference, ticket, booking, event" },
-    { name: "author", content: "TechMilap" },
+    {
+      name: "keywords",
+      content:
+        "conference, event, CLOUDxAI, bengaluru, Developers, AI, Agents, India, Conference",
+    },
+    { name: "author", content: "TechFerment" },
     { name: "robots", content: "index, follow" },
     { name: "googlebot", content: "index, follow" },
     { name: "bingbot", content: "index, follow" },
     { name: "yandexbot", content: "index, follow" },
+    // Open Graph tags
+    { property: "og:title", content: "Speakers - CLOUDxAI Conference 2026 Bengaluru" },
     {
-      name: "og:image",
+      property: "og:description",
+      content:
+        "CloudxAI 2026 Bengaluru: The meeting ground for DevOps & AI engineers building the future of intelligent infrastructure.",
+    },
+    {
+      property: "og:image",
       content:
         "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg",
     },
-    { name: "og:title", content: "Book a Conference Ticket" },
+    { property: "og:image:width", content: "1920" },
+    { property: "og:image:height", content: "1080" },
     {
-      name: "og:description",
-      content: "Meet the brilliant minds speaking at the conference!",
+      property: "og:image:alt",
+      content: "Speakers - CLOUDxAI Conference 2026 Bengaluru Banner",
     },
-    { name: "og:url", content: "https://cloudconf.ai/" },
-    { name: "og:type", content: "website" },
-    { name: "og:locale", content: "en_US" },
-    { name: "og:site_name", content: "Speakers - CLOUDxAI Conference" },
-    { name: "og:image:width", content: "1200" },
-    { name: "og:image:height", content: "630" },
+    { property: "og:url", content: "https://cloudconf.ai/" },
+    { property: "og:type", content: "website" },
+    { property: "og:locale", content: "en_US" },
+    { property: "og:site_name", content: "Speakers - CLOUDxAI Conference 2026 Bengaluru" },
+    // Twitter Card tags
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Speakers - CLOUDxAI Conference 2026 Bengaluru" },
+    {
+      name: "twitter:description",
+      content:
+        "CloudxAI 2026 Bengaluru: The meeting ground for DevOps & AI engineers building the future of intelligent infrastructure.",
+    },
+    {
+      name: "twitter:image",
+      content:
+        "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg",
+    },
+    {
+      name: "twitter:image:alt",
+      content: "Speakers - CLOUDxAI Conference 2026 Bengaluru Banner",
+    },
+    { name: "twitter:site", content: "@cloudxaiconf" },
+    { name: "twitter:creator", content: "@cloudxaiconf" },
+    // LinkedIn specific
+    {
+      property: "og:image:secure_url",
+      content:
+        "https://raw.githubusercontent.com/TechFerment/images/refs/heads/main/cxaix.jpg",
+    },
   ],
+  link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 });
 </script>
 
