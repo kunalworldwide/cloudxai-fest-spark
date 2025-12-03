@@ -162,6 +162,35 @@
         "url": "https://www.linkedin.com/in/dheerajnayal/"
       }
     ]
+  },
+  {
+    "name": "Rahul Jadhav",
+    "role": "Co-founder and CTO, AccuKnox",
+    "bio": "",
+    "image": "rahul.webp",
+    "isFeatured": false,
+    "visible": true,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/rahul-jadhav-a0485310/"
+      }
+    ]
+  },
+  {
+    "name": "Shubham Londhe",
+    "role": "Developer Advocate at AWS",
+    "bio": "",
+    "image": "shubham.webp",
+    "isFeatured": false,
+    "visible": true,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/shubhamlondhe1996/"
+      }
+    ]
   }
 ]
-
