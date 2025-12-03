@@ -1,7 +1,6 @@
 <template>
   <v-app-bar
     v-if="showToolbar"
-    scroll-behavior="hide"
     color="#002163"
     elevation="4"
     class="text-white app-nav-bar"

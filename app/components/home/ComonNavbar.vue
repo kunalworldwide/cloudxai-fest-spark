@@ -1,6 +1,5 @@
 <template>
   <v-app-bar
-    scroll-behavior="hide"
     color="#002163"
     elevation="0"
     class="text-white app-nav-bar"
