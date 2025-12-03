@@ -48,6 +48,7 @@
         <v-btn
               icon
               size="small"
+              v-if="props.showSocialIcons"
               :color="props.socialLogoColor"
               href="https://www.linkedin.com/company/cloud-x-ai/"
               target="_blank"
@@ -58,6 +59,7 @@
             <v-btn
               icon
               size="small"
+              v-if="props.showSocialIcons"
               :color="props.socialLogoColor"
               href="https://x.com/cloudxaiconf"
               target="_blank"

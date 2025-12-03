@@ -114,7 +114,7 @@ onUnmounted(() => {
   width: 100%;
   padding: 2rem 1rem !important;
   position: absolute;
-  bottom:0
+  bottom:0;
 }
 
 .countdown-section {

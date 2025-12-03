@@ -56,7 +56,7 @@
       <v-spacer></v-spacer>
 
       <!-- Three Dropdowns on Right -->
-      <NavBarContent :socialLogoColor="props.socialLogoColor" />
+      <NavBarContent :socialLogoColor="props.socialLogoColor" :showSocialIcons="false" />
     </v-toolbar>
   </div>
 </template>

@@ -1,17 +1,16 @@
 <template>
-  <div class=" hero-main-conatiner" style="position: relative; overflow: hidden; height:100svh">
+  <div
+    class="hero-main-conatiner"
+    style="position: relative; overflow: hidden; height: 100svh"
+  >
     <NavBar />
     <div class="hero-background">
-      <v-carousel
-
-        height="100%"
-        :show-arrows="false"
-        hide-delimiters
+      <v-container
+        fluid
         class="hero-carousel pa-0"
-        style="z-index: 10;"
-        crossfade
+        style="z-index: 10; height: 100%; width: 100%"
       >
-        <v-container class="pa-0" fluid  style="height:100%">
+        <v-container class="pa-0" fluid style="height: 100%">
           <div
             class="d-flex text-white justify-center ma-0 pa-0 hero-slide-container"
             style="height: 100%"
@@ -27,29 +26,30 @@
                   <v-icon start size="20">mdi-calendar-blank-outline</v-icon>
                   March 14, 2026
                 </v-chip>
-                <h1 class=" ">
-                  CLOUDxAI Conference
-                </h1>
+                <h1 class=" ">CLOUDxAI Conference</h1>
 
                 <div class="hero-slide-actions">
                   <v-btn
                     color="white"
                     variant="flat"
                     size="x-large"
-
                     class="text-none rounded-xl"
                     append-icon="mdi-arrow-top-right"
                     width="max-content"
                     to="/register"
                   >
-                  Register
+                    Register
                   </v-btn>
                   <div class="hero-location d-flex align-center">
                     <v-icon size="20" class="mr-2"
                       >mdi-map-marker-outline</v-icon
                     >
-                    <span class="text-body-1" >
-                      <a target="_blank" href="https://maps.app.goo.gl/sKCE49noeMskaWmW7" style="color:white; text-decoration: none;">Nimhans Convention Center, Bengaluru
+                    <span class="text-body-1">
+                      <a
+                        target="_blank"
+                        href="https://maps.app.goo.gl/sKCE49noeMskaWmW7"
+                        style="color: white; text-decoration: none"
+                        >Nimhans Convention Center, Bengaluru
                         <v-icon size="20" class="ml-2">mdi-open-in-new</v-icon>
                       </a>
                     </span>
@@ -59,7 +59,11 @@
                   <p class="text-body-2 text-uppercase opacity-70 mb-2">
                     Powered by
                   </p>
-                  <a href="https://cast.ai/" target="_blank" class="footer-value">
+                  <a
+                    href="https://cast.ai/"
+                    target="_blank"
+                    class="footer-value"
+                  >
                     <v-img
                       src="/images/cast-ai.svg"
                       alt="Cast AI"
@@ -83,33 +87,67 @@
                   playsinline
                   class="pa-0"
                   poster="/images/default-video.png"
-                  style="width: 100%; height: 100%; object-fit: cover;"
+                  style="width: 100%; height: 100%; object-fit: cover"
                 >
                   <source src="@/assets/videos/hero.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </ClientOnly>
-              
             </div>
-            <HomeCountDownCopy/>
+            <HomeCountDownCopy />
           </div>
         </v-container>
-      </v-carousel>
+      </v-container>
+
+      <div class=" social-icons-container">
+            
+            <v-btn
+                  icon
+                  size="small"
+                  color="transparent"
+                  variant="text"
+                  
+                  href="https://www.linkedin.com/company/cloud-x-ai/"
+                  target="_blank"
+                >
+                  <v-icon size="32" color="white">mdi-linkedin</v-icon>
+                </v-btn>
+    
+                <v-btn
+                  icon
+                  size="small"
+                  variant="text"
+                  color="transparent"
+                  href="https://x.com/cloudxaiconf"
+                  target="_blank"
+                >
+                  <img src="/images/icon/x.svg" alt="Twitter" class="icon-img" style="width: 24px; height: 24px;">
+                </v-btn>
+                <!-- <v-btn
+                  icon
+                  size="small"
+                  :color="props.socialLogoColor"
+                  href="https://instagram.com"
+                  target="_blank"
+                >
+                  <v-icon>mdi-instagram</v-icon>
+                </v-btn> -->
+                
+                
+              </div>
+        </div>
       <!-- <div class="d-flex align-end pa-0 background-svg" style="width: 320px; height:120%; background-color: #1e3a8a; position:absolute; right:-100px; bottom:-40px">
        
 
       </div> -->
     </div>
-  </div>
 </template>
 
 <script setup>
-import NavBar from './NavBar.vue';
-
+import NavBar from "./NavBar.vue";
 </script>
 
 <style scoped lang="scss">
-
 .hero-main-conatiner {
   background-image: url("../../assets/images/bgg-hero.webp");
   background-size: cover;
@@ -117,8 +155,26 @@ import NavBar from './NavBar.vue';
 }
 .hero-background {
   height: calc(100svh - 64px);
-  padding:60px;
+  padding: 60px;
   padding-top: 0px;
+}
+
+.social-icons-container{
+  background-color: rgb(52, 106, 255);
+  position: absolute;
+  right:0;
+  top:120px;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:24px;
+  width: 60px;
+
+}
+
+.hero-carousel {
+  position: relative;
 }
 
 .hero-slide-container {
@@ -135,7 +191,7 @@ import NavBar from './NavBar.vue';
     height: 100%;
     width: 45%;
     padding: 16px;
-    padding-left:85px;
+    padding-left: 85px;
 
     .hero-slide-content {
       // padding-left: calc(100% - 650px);
@@ -170,8 +226,8 @@ import NavBar from './NavBar.vue';
   }
 
   .hero-image-conatiner {
-    width: 55% ;
-    height: 100% ;
+    width: 55%;
+    height: 100%;
     border-top-right-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
     overflow: hidden;
@@ -219,47 +275,49 @@ import NavBar from './NavBar.vue';
       width: 100%;
       height: 50%;
       border-top-right-radius: 0px !important;
-    border-bottom-right-radius: 10px !important;
-    border-bottom-left-radius: 10px !important;
+      border-bottom-right-radius: 10px !important;
+      border-bottom-left-radius: 10px !important;
     }
   }
 }
 
-
 @media (max-width: 768px) {
-  .background-svg{
-display: none !important;
+  .background-svg {
+    display: none !important;
   }
   .hero-background {
-    padding:16px;
+    padding: 16px;
     padding-top: 0px;
   }
 
-  .hero-slide-content{
-    &>h1{
+  .social-icons-container{
+    display: none;
+  }
+
+  .hero-slide-content {
+    & > h1 {
       font-size: 2.5rem !important;
     }
 
-    .footer-value{
+    .footer-value {
       font-size: 1.5rem !important;
     }
   }
-
 }
 
 @media (max-width: 480px) {
-  .hero-slide-content{
-    &>h1{
+  .hero-slide-content {
+    & > h1 {
       font-size: 2.25rem !important;
     }
 
-    .footer-value{
+    .footer-value {
       font-size: 1.25rem !important;
     }
   }
 }
 
-@media(max-height: 852px) {
+@media (max-height: 852px) {
   .hero-background {
     height: 820px;
   }
