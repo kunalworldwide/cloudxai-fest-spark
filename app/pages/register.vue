@@ -35,7 +35,7 @@
 
       <v-row>
         <v-col md="11" lg="10" xl="8" style="margin: 0 auto;">
-          <iframe src="https://konfhub.com/widget/cloudxai?desc=true&secondaryBg=F7F7F7&ticketBg=F7F7F7&borderCl=F7F7F7&bg=FFFFFF&fontColor=1e1f24&ticketCl=1e1f24&btnColor=002E6E&fontFamily=Prompt&borderRadius=NaN&widget_type=standard&tickets=67431%2C67432%2C67433%2C67434%2C67435&ticketId=67431%7C%3B67432%7C%3B67433%7C%3B67434%7C%3B67435%7C" id="konfhub-widget" title="Register for CLOUDxAI" width="100%" height="500" style="border: none;"></iframe>
+          <iframe src="https://konfhub.com/widget/cloudxai?desc=true&secondaryBg=F7F7F7&ticketBg=F7F7F7&borderCl=F7F7F7&bg=FFFFFF&fontColor=1e1f24&ticketCl=1e1f24&btnColor=002E6E&fontFamily=Prompt&borderRadius=NaN&widget_type=standard&tickets=67431%2C67432%2C67433%2C67434%2C67435&ticketId=67431%7C%3B67432%7C%3B67433%7C%3B67434%7C%3B67435%7C" id="konfhub-widget" title="Register for CLOUDxAI" width="100%" height="550" style="border: 1px solid #d4d4d4;border-radius: 16px;"></iframe>
         </v-col>
       </v-row>
 
