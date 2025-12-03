@@ -44,7 +44,7 @@
                     <v-icon size="20" class="mr-2"
                       >mdi-map-marker-outline</v-icon
                     >
-                    <span class="text-body-1">
+                    <span class="text-body-2">
                       <a
                         target="_blank"
                         href="https://maps.app.goo.gl/sKCE49noeMskaWmW7"
