@@ -53,5 +53,15 @@
         "name": "Innovation Tech Community",
         "link": "https://www.linkedin.com/company/innovation-tech-community",
         "image": "itc.png"
+    },
+    {
+        "name": "Certdirectory",
+        "link": "https://certdirectory.io/",
+        "image": "certdir.png"
+    },
+    {
+        "name": "KCD Bengaluru",
+        "link": "https://kcdblr.in/",
+        "image": "kcdblr.png"
     }
 ]

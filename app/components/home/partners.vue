@@ -244,8 +244,8 @@ const partners = [
 
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4),
-      0 0 20px rgba(198, 198, 198, 0.776);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4),
+      0 0 10px rgba(198, 198, 198, 0.776);
     // &::before {
     //   opacity: 1;
     // }
