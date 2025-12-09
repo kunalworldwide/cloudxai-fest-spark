@@ -21,7 +21,6 @@
         Speakers
       </v-btn>
 
-
       <v-btn
         variant="text"
         class="text-none nav-btn"
@@ -31,7 +30,6 @@
       >
         Sponsorship
       </v-btn>
-      
 
       <!-- <v-btn
             v-bind="props"
@@ -43,30 +41,34 @@
             Contact Us
           </v-btn> -->
 
-      <div class="d-flex " style="gap: 0px;">
-            
+      <div class="d-flex" style="gap: 0px">
         <v-btn
-              icon
-              size="small"
-              v-if="props.showSocialIcons"
-              :color="props.socialLogoColor"
-              href="https://www.linkedin.com/company/cloud-x-ai/"
-              target="_blank"
-            >
-              <v-icon>mdi-linkedin</v-icon>
-            </v-btn>
+          icon
+          size="small"
+          v-if="props.showSocialIcons"
+          :color="props.socialLogoColor"
+          href="https://www.linkedin.com/company/cloud-x-ai/"
+          target="_blank"
+        >
+          <v-icon>mdi-linkedin</v-icon>
+        </v-btn>
 
-            <v-btn
-              icon
-              size="small"
-              v-if="props.showSocialIcons"
-              :color="props.socialLogoColor"
-              href="https://x.com/cloudxaiconf"
-              target="_blank"
-            >
-              <img src="/images/icon/x.svg" alt="Twitter" class="icon-img" style="width: 12px; height: 12px;">
-            </v-btn>
-            <!-- <v-btn
+        <v-btn
+          icon
+          size="small"
+          v-if="props.showSocialIcons"
+          :color="props.socialLogoColor"
+          href="https://x.com/cloudxaiconf"
+          target="_blank"
+        >
+          <img
+            src="/images/icon/x.svg"
+            alt="Twitter"
+            class="icon-img"
+            style="width: 12px; height: 12px"
+          />
+        </v-btn>
+        <!-- <v-btn
               icon
               size="small"
               :color="props.socialLogoColor"
@@ -75,9 +77,7 @@
             >
               <v-icon>mdi-instagram</v-icon>
             </v-btn> -->
-            
-            
-          </div>
+      </div>
     </div>
 
     <!-- Mobile Hamburger Menu (visible below 768px) -->
@@ -120,49 +120,48 @@
             Register
           </v-btn>
 
-          <v-btn
-            variant="text"
-            color="white"
-            class="text-none"
-            to="/speakers"
-          >
+          <v-btn variant="text" color="white" class="text-none" to="/speakers">
             Speakers
           </v-btn>
 
+          <v-btn variant="text" color="white" class="text-none" to="/sponsors">
+            Sponsors
+          </v-btn>
+
           <v-btn
             variant="text"
             color="white"
             class="text-none"
-            to="/sponsors"
+            target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScNjTHO5UeHCI5pcDEMD-FXBHa7PG8auuOS63x6Tmkx7konaQ/viewform?pli=1"
           >
-            Sponsors
+            Call For Papers
           </v-btn>
-
-          <v-btn disabled variant="text" color="white" class="text-none" to="/">
+          <!-- <v-btn disabled variant="text" color="white" class="text-none" to="/">
             Agenda (Coming Soon)
-          </v-btn>
-
-          <v-btn disabled variant="text" color="white" class="text-none" to="/">
-            Call For Papers (Coming Soon)
-          </v-btn>
+          </v-btn> -->
 
           <!-- <v-btn variant="text" color="white" class="text-none" to="/">
             About Us
           </v-btn> -->
 
-          <div class="d-flex justify-center mt-4" style="gap: 24px;">
-            
+          <div class="d-flex justify-center mt-4" style="gap: 24px">
             <v-btn
-            variant="outlined"
+              variant="outlined"
               icon
               size="small"
               color="white"
               href="https://x.com/cloudxaiconf"
               target="_blank"
             >
-              <img src="/images/icon/x.svg" alt="Twitter" class="icon-img" style="width: 12px; height: 12px;">
+              <img
+                src="/images/icon/x.svg"
+                alt="Twitter"
+                class="icon-img"
+                style="width: 12px; height: 12px"
+              />
             </v-btn>
-            
+
             <v-btn
               variant="outlined"
               icon
@@ -173,7 +172,6 @@
             >
               <v-icon>mdi-linkedin</v-icon>
             </v-btn>
-            
           </div>
         </div>
       </v-navigation-drawer>
@@ -181,7 +179,7 @@
   </div>
 </template>
 
-<script setup >
+<script setup>
 import { ref } from "vue";
 const props = defineProps({
   socialLogoColor: {
@@ -199,8 +197,8 @@ const route = useRoute();
 
 const scrollToSection = (sectionId) => {
   drawer.value = false;
-  if (route.path !== '/' && route.name !== 'index') {
-    navigateTo('/');
+  if (route.path !== "/" && route.name !== "index") {
+    navigateTo("/");
   }
 
   setTimeout(() => {
