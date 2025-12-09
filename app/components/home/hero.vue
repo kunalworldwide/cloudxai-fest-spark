@@ -40,6 +40,18 @@
                   >
                     Register
                   </v-btn>
+                  <v-btn
+                    color="white"
+                    variant="outlined"
+                    size="x-large"
+                    class="text-none rounded-xl register-btn"
+                    append-icon="mdi-arrow-top-right"
+                    width="max-content"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScNjTHO5UeHCI5pcDEMD-FXBHa7PG8auuOS63x6Tmkx7konaQ/viewform"
+                    target="_blank"
+                  >
+                    Call For Papers
+                  </v-btn>
                   <div class="hero-location d-flex align-center">
                     <v-icon size="20" class="mr-2"
                       >mdi-map-marker-outline</v-icon
