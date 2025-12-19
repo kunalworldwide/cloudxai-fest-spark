@@ -1,4 +1,3 @@
-
 # CloudXAI Conference Website
 
 A modern, responsive website for the CloudXAI Conference built with Nuxt.js and Vuetify.
