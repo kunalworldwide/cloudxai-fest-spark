@@ -192,5 +192,20 @@
         "url": "https://www.linkedin.com/in/shubhamlondhe1996/"
       }
     ]
+  },
+  {
+    "name": "Shashank Karpal",
+    "role": "Director of Business Growth at KodeKloud",
+    "bio": "Shashank Karpal is Director of Education & Government Programs at KodeKloud, the hands-on platform for AI-native DevOps and Cloud used by 1.3M+ learners. He partners with CIOs, platform, and L&D leaders across IMEA, APAC, and CIS to launch zero-setup AI labs, agents and RAG practice, and job-simulated projects, and he measures adoption and productivity impact with analytics. At KodeKloud he steers AI playgrounds and agentic workflows such as MCP and LangChain, a multilingual AI tutor, and outcome dashboards aligned to certifications and roles. A regular at leading AI, cloud, and developer conferences, he shares practical, non-commercial playbooks that favor real labs over slides for safe, rapid adoption at scale.",
+    "image": "shashank.webp",
+    "isFeatured": false,
+    "visible": true,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/shashankkarpal/"
+      }
+    ]
   }
 ]
