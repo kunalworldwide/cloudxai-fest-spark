@@ -106,7 +106,7 @@
                   muted
                   playsinline
                   class="pa-0"
-                  poster="/images/default-video.png"
+                  poster="/images/default-video.webp"
                   style="width: 100%; height: 100%; object-fit: cover"
                 >
                   <source src="@/assets/videos/hero.mp4" type="video/mp4" />
