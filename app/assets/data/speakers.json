@@ -2,7 +2,7 @@
   {
     "name": "Kunal Kushwaha",
     "role": "Founder WeMakeDevs",
-    "image": "kunal.png",
+    "image": "kunal.webp",
     "bio": "Kunal Kushwaha presently operates a YouTube channel with 3.58 lakh subscribers, making it one of the fastest-growing educational coding channels. On his channel, he produces podcasts, hosts community events, and shares engaging content on coding, tools, and various other topics.",
     "isFeatured": true,
     "visible": true,
@@ -18,7 +18,7 @@
     "name": "Abhishek Veeramalla",
     "role": "CTO at AKVA",
     "bio": "Abhishek Veeramalla is a Principal Engineer at Red Hat and a popular YouTuber known for his educational content on DevOps and cloud computing. He is a prolific creator, with a YouTube channel that has over 550,000 subscribers and offers courses on platforms like Udemy that have helped over 1000 students land jobs",
-    "image": "abhishek.png",
+    "image": "abhishek.webp",
     "isFeatured": true,
     "visible": true,
     "socials": [
@@ -33,7 +33,7 @@
     "name": "Laurent Gil",
     "role": "Cloud Expert, Forbes Council, Finops Foundation Governing Board Member, Co-founder at Cast AI",
     "bio": "Laurent is Co-founder and President at Cast Ai, leading product and business development. Previously, he co-founded Zenedge (acquired by Oracle in 2018) and Viewdle (acquired by Google in 2012). He is also a FinOps Governing Board Member, recognized cloud expert, and Forbes Council member.",
-    "image": "laurent.png",
+    "image": "laurent.webp",
     "isFeatured": true,
     "visible": true,
     "socials": [
@@ -108,7 +108,7 @@
     "name": "Ajeet Singh Raina",
     "role": "Technology Influencer | 🐳 Developer Advocate at Docker | Author at Collabnix.com | Distinguished Arm Ambassador",
     "bio": "Ajeet Singh Raina is a Technology Influencer, Developer Advocate at Docker, and the author of Collabnix.com. He is also a Distinguished Arm Ambassador, sharing insights on containerization, cloud-native technologies, and DevOps practices.",
-    "image": "ajeet.png",
+    "image": "ajeet.webp",
     "isFeatured": true,
     "visible": true,
     "socials": [
