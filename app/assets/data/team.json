@@ -1,0 +1,43 @@
+[
+    {
+        "name": "John Doe",
+        "role": "CEO",
+        "image": "",
+        "socials": [
+            {
+                "name": "linkedin",
+                "icon": "mdi-linkedin",
+                "url": "https://www.linkedin.com/in/john-doe"
+            },
+            {
+                "name": "github",
+                "icon": "mdi-github",
+                "url": "https://www.github.com/john-doe"
+            }
+        ]
+    },
+    {
+        "name": "Jane Doe",
+        "role": "CTO",
+        "image": "",
+        "socials": [
+            {
+                "name": "linkedin",
+                "icon": "mdi-linkedin",
+                "url": "https://www.linkedin.com/in/jane-doe"
+            }
+        ]
+    },
+    {
+        "name": "Jim Beam",
+        "role": "CFO",
+        "image": "",
+        "socials": [
+            {
+                "name": "linkedin",
+                "icon": "mdi-linkedin",
+                "url": "https://www.linkedin.com/in/jim-beam"
+            }
+        ]
+    }
+]
