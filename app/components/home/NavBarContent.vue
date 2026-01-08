@@ -2,32 +2,18 @@
   <div>
     <!-- Desktop Navigation (visible above 768px) -->
     <div class="d-none d-md-flex align-center ga-2">
-      <v-btn
-        variant="text"
-        class="text-none nav-btn"
-        to="/"
-        rounded="xl"
-        color="white"
-      >
+      <v-btn variant="text" class="text-none nav-btn" to="/" rounded="xl" color="white">
         Home
       </v-btn>
-      <v-btn
-        variant="text"
-        class="text-none nav-btn"
-        to="/speakers"
-        rounded="xl"
-        color="white"
-      >
+      <v-btn variant="text" class="text-none nav-btn" to="/speakers" rounded="xl" color="white">
         Speakers
       </v-btn>
 
-      <v-btn
-        variant="text"
-        class="text-none nav-btn"
-        to="/sponsors"
-        rounded="xl"
-        color="white"
-      >
+      <v-btn variant="text" class="text-none nav-btn" to="/badge" rounded="xl" color="white">
+        Badge
+      </v-btn>
+
+      <v-btn variant="text" class="text-none nav-btn" to="/sponsors" rounded="xl" color="white">
         Sponsorship
       </v-btn>
 
@@ -42,31 +28,14 @@
           </v-btn> -->
 
       <div class="d-flex" style="gap: 0px">
-        <v-btn
-          icon
-          size="small"
-          v-if="props.showSocialIcons"
-          :color="props.socialLogoColor"
-          href="https://www.linkedin.com/company/cloud-x-ai/"
-          target="_blank"
-        >
+        <v-btn icon size="small" v-if="props.showSocialIcons" :color="props.socialLogoColor"
+          href="https://www.linkedin.com/company/cloud-x-ai/" target="_blank">
           <v-icon>mdi-linkedin</v-icon>
         </v-btn>
 
-        <v-btn
-          icon
-          size="small"
-          v-if="props.showSocialIcons"
-          :color="props.socialLogoColor"
-          href="https://x.com/cloudxaiconf"
-          target="_blank"
-        >
-          <img
-            src="/images/icon/x.svg"
-            alt="Twitter"
-            class="icon-img"
-            style="width: 12px; height: 12px"
-          />
+        <v-btn icon size="small" v-if="props.showSocialIcons" :color="props.socialLogoColor"
+          href="https://x.com/cloudxaiconf" target="_blank">
+          <img src="/images/icon/x.svg" alt="Twitter" class="icon-img" style="width: 12px; height: 12px" />
         </v-btn>
         <!-- <v-btn
               icon
@@ -89,23 +58,14 @@
 
     <!-- Mobile Sidebar Navigation - Teleported to body to avoid container constraints -->
     <Teleport to="body">
-      <v-navigation-drawer
-        v-model="drawer"
-        temporary
-        location="right"
-        class="mobile-sidebar"
-        width="280"
-        style="background-color: #1a1d3a !important; z-index: 9999 !important"
-      >
-        <div
-          class="sidebar-header"
-          style="
+      <v-navigation-drawer v-model="drawer" temporary location="right" class="mobile-sidebar" width="280"
+        style="background-color: #1a1d3a !important; z-index: 9999 !important">
+        <div class="sidebar-header" style="
             display: flex;
             justify-content: flex-end;
             padding: 16px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-          "
-        >
+          ">
           <v-btn icon variant="text" color="white" @click="drawer = false">
             <v-icon>mdi-close</v-icon>
           </v-btn>
@@ -128,13 +88,8 @@
             Sponsors
           </v-btn>
 
-          <v-btn
-            variant="text"
-            color="white"
-            class="text-none"
-            target="_blank"
-            href="https://docs.google.com/forms/d/e/1FAIpQLScNjTHO5UeHCI5pcDEMD-FXBHa7PG8auuOS63x6Tmkx7konaQ/viewform?pli=1"
-          >
+          <v-btn variant="text" color="white" class="text-none" target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScNjTHO5UeHCI5pcDEMD-FXBHa7PG8auuOS63x6Tmkx7konaQ/viewform?pli=1">
             Call For Papers
           </v-btn>
           <!-- <v-btn disabled variant="text" color="white" class="text-none" to="/">
@@ -146,30 +101,12 @@
           </v-btn> -->
 
           <div class="d-flex justify-center mt-4" style="gap: 24px">
-            <v-btn
-              variant="outlined"
-              icon
-              size="small"
-              color="white"
-              href="https://x.com/cloudxaiconf"
-              target="_blank"
-            >
-              <img
-                src="/images/icon/x.svg"
-                alt="Twitter"
-                class="icon-img"
-                style="width: 12px; height: 12px"
-              />
+            <v-btn variant="outlined" icon size="small" color="white" href="https://x.com/cloudxaiconf" target="_blank">
+              <img src="/images/icon/x.svg" alt="Twitter" class="icon-img" style="width: 12px; height: 12px" />
             </v-btn>
 
-            <v-btn
-              variant="outlined"
-              icon
-              size="small"
-              color="white"
-              href="https://www.linkedin.com/company/cloud-x-ai/"
-              target="_blank"
-            >
+            <v-btn variant="outlined" icon size="small" color="white"
+              href="https://www.linkedin.com/company/cloud-x-ai/" target="_blank">
               <v-icon>mdi-linkedin</v-icon>
             </v-btn>
           </div>
@@ -278,6 +215,7 @@ const handleNavigation = () => {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
+
 .sidebar-buttons {
   display: flex;
   flex-direction: column;

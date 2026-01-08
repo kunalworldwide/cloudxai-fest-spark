@@ -1,12 +1,13 @@
 <template>
   <v-main>
     <div class="sponsor-package-container">
-      <div  class="top-section">
-            <h1 class="main-title text-white text-center">Sponsorship Opportunities</h1>
-            <p class="subtitle text-white text-center" style="max-width: 800px;">Partner with us to showcase your innovation and connect with industry leaders at CLOUDxAI, Bengaluru 2026</p>
-          </div>
+      <div class="top-section">
+        <h1 class="main-title text-white text-center">Sponsorship Opportunities</h1>
+        <p class="subtitle text-white text-center" style="max-width: 800px;">Partner with us to showcase your innovation
+          and connect with industry leaders at CLOUDxAI, Bengaluru 2026</p>
+      </div>
       <v-container fluid class="py-10">
-      
+
         <!-- <v-row class="justify-center text-center ">
          
           <v-col cols="12" md="10">
@@ -78,7 +79,7 @@
             <p class="text-small text-center">*The sponsor speaking talk should have technical content.</p>
             <p class="text-small text-center">**All taxes are included to the price.</p>
           </div> -->
-          
+
           <!-- <div class="additional-pkg mt-10">
             <div class="additional-pkg-item">
               <h2>Additional Packages</h2>
@@ -108,8 +109,10 @@
         <v-row class="justify-center text-center mt-10">
           <v-col cols="12" md="8">
             <p class="contact-text">Ready to become a sponsor?</p>
-            <p class="text-small font-weight-light mb-8">Contact us to discuss sponsorship opportunities contact@cloudconf.ai</p>
-            <v-btn rounded elevation="0" size="large" color="#339CFF" href="https://forms.gle/Fva2b3wmocRkiw4PA" target="_blank" class="contact-btn">
+            <p class="text-small font-weight-light mb-8">Contact us to discuss sponsorship opportunities
+              contact@cloudconf.ai</p>
+            <v-btn rounded elevation="0" size="large" color="#339CFF" href="https://forms.gle/Fva2b3wmocRkiw4PA"
+              target="_blank" class="contact-btn">
               Contact Us
             </v-btn>
           </v-col>
@@ -232,7 +235,7 @@ useHead({
 }
 
 .top-section {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -280,7 +283,7 @@ useHead({
   font-size: 15px;
 
   thead {
-    
+
 
     th {
       padding: 24px 16px;
@@ -419,7 +422,7 @@ useHead({
   .card-body {
     padding: 24px;
 
-    
+
     .feature-item {
       display: flex;
       justify-content: space-between;
@@ -452,26 +455,27 @@ useHead({
 }
 
 
-.additional-pkg{
+.additional-pkg {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #f8f9fa;
-  padding:64px 0;
+  padding: 64px 0;
 }
 
-.additional-pkg-item{
-background: white;  
-border-radius: 16px;
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-border: 1px solid #e0e0e0;
- min-width: 700px;
-padding: 24px;
+.additional-pkg-item {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  min-width: 700px;
+  padding: 24px;
 
-@media(max-width: 768px){
-  min-width: calc(100% - 32px);
+  @media(max-width: 768px) {
+    min-width: calc(100% - 32px);
+  }
 }
-} 
+
 .additional-pkg-list {
   list-style: none;
   padding: 0;
@@ -482,7 +486,7 @@ padding: 24px;
   align-items: center;
   gap: 8px;
 
-  & > li {
+  &>li {
     position: relative;
     padding-left: 18px;
     text-align: left;
@@ -519,26 +523,26 @@ padding: 24px;
   letter-spacing: 0.5px;
 }
 
-@media(max-width: 500px){
+@media(max-width: 500px) {
   .sponsor-card {
 
     .card-header {
-    padding: 24px;
+      padding: 24px;
 
-    .package-name {
-      font-size: 24px;
-    }
+      .package-name {
+        font-size: 24px;
+      }
 
-    .package-slots {
-      font-size: 16px;
-      margin-bottom: 16px;
-      opacity: 0.9;
-    }
+      .package-slots {
+        font-size: 16px;
+        margin-bottom: 16px;
+        opacity: 0.9;
+      }
 
-    .package-price {
-      font-size: 24px;
+      .package-price {
+        font-size: 24px;
+      }
     }
-  }
 
     .card-body {
       padding: 16px;
@@ -547,12 +551,13 @@ padding: 24px;
         .feature-label {
           font-size: 14px;
         }
+
         .feature-value {
           font-size: 14px;
         }
       }
     }
   }
-  
+
 }
 </style>
