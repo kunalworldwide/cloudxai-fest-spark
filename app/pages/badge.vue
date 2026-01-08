@@ -274,8 +274,12 @@
           </div>
         </v-col>
       </v-row>
+      
     </v-container>
+    
   </v-main>
+
+  <HomeCountDown />
 </template>
 
 <script setup>
