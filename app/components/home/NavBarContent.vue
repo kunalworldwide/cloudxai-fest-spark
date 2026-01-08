@@ -84,6 +84,10 @@
             Speakers
           </v-btn>
 
+          <v-btn variant="text" color="white" class="text-none" to="/badge">
+            Badge
+          </v-btn>
+
           <v-btn variant="text" color="white" class="text-none" to="/sponsors">
             Sponsors
           </v-btn>

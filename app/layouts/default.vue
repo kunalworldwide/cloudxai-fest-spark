@@ -2,8 +2,8 @@
   <v-app>
     <NuxtLoadingIndicator />
     <!--  ONLY SHOW ON HOME PAGE -->
-      <CoreAppToolbar v-if="route.path === '/' && route.name === 'index'" />
-    
+    <CoreAppToolbar v-if="route.path === '/' && route.name === 'index'" />
+
     <!-- <HomeComonNavbar v-if="route.path === '/' && route.name === 'index'" /> -->
     <HomeComonNavbar v-if="route.path !== '/' && route.name !== 'index'" />
     <!-- <HomeComonNavbar v-if="!isHomePage" /> -->
