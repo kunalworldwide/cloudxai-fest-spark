@@ -203,6 +203,31 @@
               </div>
             </div>
 
+            <div class="pa-6" v-if="image">
+              <v-btn
+                prepend-icon="mdi-download"
+                color="#002163"
+                variant="flat"
+                rounded="xl"
+                size="large"
+                @click="download"
+                class="text-capitalize px-6 mr-2 mb-2"
+              >
+                Export Badge
+              </v-btn>
+              <v-btn
+                prepend-icon="mdi-share-variant"
+                color="#002163"
+                variant="outlined"
+                rounded="xl"
+                size="large"
+                @click="showShareDialog = true"
+                class="text-capitalize px-6 mb-2"
+              >
+                Share
+              </v-btn>
+            </div>
+
             <!-- Footer -->
             <div class="pa-4 border-t bg-white text-center">
               <span class="text-caption text-medium-emphasis">
@@ -220,30 +245,12 @@
           class="preview-stage position-relative bg-slatish"
         >
           <!-- Toolbar -->
-          <div
-            class="stage-toolbar position-absolute top-0 left-0 right-0 pa-4 d-flex justify-end align-center gap-2"
-          >
-            <v-btn
-              prepend-icon="mdi-download"
-              color="#002163"
-              variant="flat"
-              rounded="xl"
-              size="large"
-              :disabled="!image"
-              @click="download"
-              class="text-capitalize px-6"
-            >
-              Export Badge
-            </v-btn>
-          </div>
 
           <!-- Centered Canvas Stage -->
           <div
             class="d-flex align-center justify-center h-100 pa-8 overflow-hidden"
           >
-            <div
-              class="canvas-wrapper elevation-0 rounded-lg overflow-hidden"
-            >
+            <div class="canvas-wrapper elevation-0 rounded-lg overflow-hidden">
               <canvas
                 ref="canvasRef"
                 :class="[
@@ -274,9 +281,80 @@
           </div>
         </v-col>
       </v-row>
-      
     </v-container>
-    
+
+    <!-- Share Dialog -->
+    <v-dialog v-model="showShareDialog" max-width="600" persistent>
+      <v-card rounded="xl">
+        <v-card-title class="d-flex align-center justify-space-between">
+          <span class="text-h6">Share Badge on Social Media</span>
+          <v-btn icon variant="text" @click="showShareDialog = false">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </v-card-title>
+        <v-divider></v-divider>
+        <v-card-text class="pa-6">
+          <div class="mb-4">
+            <label
+              class="text-caption font-weight-bold text-uppercase text-medium-emphasis mb-2 d-block"
+            >
+              Post Content
+            </label>
+            <v-textarea
+              v-model="shareText"
+              placeholder="I just created my CLOUDxAI Conference 2026 badge! 🎉 Join me at the meeting ground for DevOps & AI engineers building the future of intelligent infrastructure. #CLOUDxAI #DevOps #AI #Conference"
+              rows="4"
+              variant="outlined"
+              density="comfortable"
+              auto-grow
+            ></v-textarea>
+          </div>
+          <div class="text-caption text-medium-emphasis mb-4">
+            <v-icon size="16" class="mr-1">mdi-information-outline</v-icon>
+            For LinkedIn & Twitter: Share text only. Download the badge first to
+            add the image to your post. Web Share supports direct image sharing
+            on supported devices.
+          </div>
+          <div class="d-flex gap-3">
+            <v-btn
+              prepend-icon="mdi-linkedin"
+              color="#0077b5"
+              variant="flat"
+              rounded="xl"
+              :disabled="!image"
+              @click="shareOnLinkedIn"
+              class="text-capitalize mr-2 mb-2"
+            >
+              LinkedIn
+            </v-btn>
+            <v-btn
+              prepend-icon="mdi-twitter"
+              color="#1DA1F2"
+              variant="flat"
+              rounded="xl"
+              :disabled="!image"
+              @click="shareOnTwitter"
+              class="text-capitalize mr-2 mb-2"
+            >
+              Twitter / X
+            </v-btn>
+            <v-btn
+              v-if="supportsWebShare"
+              prepend-icon="mdi-share-variant"
+              color="grey-darken-1"
+              variant="outlined"
+              rounded="xl"
+              :loading="isSharing"
+              :disabled="!image || isSharing"
+              @click="shareViaWebAPI"
+              class="text-capitalize mr-2 mb-2"
+            >
+              Share via Web Share
+            </v-btn>
+          </div>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
   </v-main>
 
   <HomeCountDown />
@@ -294,6 +372,17 @@ const image = ref(null);
 const banner = ref(null);
 const ctx = ref(null);
 const isInitialized = ref(false);
+const showShareDialog = ref(false);
+const isSharing = ref(false);
+const shareText = ref(
+  "I just created my CLOUDxAI Conference 2026 badge! 🎉 Join me at the meeting ground for DevOps & AI engineers building the future of intelligent infrastructure. #CLOUDxAI #DevOps #AI #Conference @cloud-x-ai"
+);
+
+// Check if Web Share API is supported
+const supportsWebShare = computed(() => {
+  if (typeof window === "undefined") return false;
+  return typeof navigator !== "undefined" && "share" in navigator;
+});
 
 const imageSettings = ref({
   zoom: 1,
@@ -431,6 +520,97 @@ const download = () => {
     a.click();
   } catch (error) {
     console.error("Download failed:", error);
+  }
+};
+
+// Convert canvas to blob
+const canvasToBlob = () => {
+  return new Promise((resolve, reject) => {
+    if (!canvasRef.value) {
+      reject(new Error("Canvas not available"));
+      return;
+    }
+    canvasRef.value.toBlob(
+      (blob) => {
+        if (blob) {
+          resolve(blob);
+        } else {
+          reject(new Error("Failed to convert canvas to blob"));
+        }
+      },
+      "image/png",
+      1.0
+    );
+  });
+};
+
+// Share on LinkedIn
+const shareOnLinkedIn = () => {
+  if (!image.value || !canvasRef.value) return;
+
+  // Encode the text
+  const encodedText = encodeURIComponent(shareText.value);
+  // Use LinkedIn feed share URL format
+  const linkedInUrl = `https://www.linkedin.com/feed/?shareActive=true&text=${encodedText}`;
+
+  // Open in new tab
+  window.open(linkedInUrl, "_blank");
+  showShareDialog.value = false;
+};
+
+// Share on Twitter/X
+const shareOnTwitter = () => {
+  if (!image.value || !canvasRef.value) return;
+
+  // Encode the text
+  const encodedText = encodeURIComponent(shareText.value);
+  // Twitter Web Intent
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedText}`;
+
+  // Open in new tab
+  window.open(twitterUrl, "_blank");
+  showShareDialog.value = false;
+};
+
+// Share via Web Share API (supports native sharing with images)
+const shareViaWebAPI = async () => {
+  if (!image.value || !canvasRef.value) return;
+
+  if (!navigator.share) {
+    alert("Web Share API is not supported in your browser.");
+    return;
+  }
+
+  isSharing.value = true;
+  try {
+    const blob = await canvasToBlob();
+    const file = new File([blob], "cloudxaiconf-badge.png", {
+      type: "image/png",
+    });
+
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({
+        title: "CLOUDxAI Conference 2026 Badge",
+        text: shareText.value,
+        files: [file],
+      });
+      showShareDialog.value = false;
+    } else {
+      // Fallback: share without file
+      await navigator.share({
+        title: "CLOUDxAI Conference 2026 Badge",
+        text: shareText.value,
+        url: window.location.href,
+      });
+      showShareDialog.value = false;
+    }
+  } catch (error) {
+    if (error.name !== "AbortError") {
+      console.error("Web Share failed:", error);
+      alert("Failed to share. Please try again.");
+    }
+  } finally {
+    isSharing.value = false;
   }
 };
 
@@ -575,6 +755,7 @@ useHead({
 .canvas-wrapper {
   /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06) !important; */
+  position: relative;
 }
 
 .empty-stage-overlay {
