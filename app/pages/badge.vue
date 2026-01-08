@@ -375,7 +375,7 @@ const isInitialized = ref(false);
 const showShareDialog = ref(false);
 const isSharing = ref(false);
 const shareText = ref(
-  "I just created my CLOUDxAI Conference 2026 badge! 🎉 Join me at the meeting ground for DevOps & AI engineers building the future of intelligent infrastructure. #CLOUDxAI #DevOps #AI #Conference @cloud-x-ai"
+  "I just created my CLOUDxAI Conference 2026 badge! 🎉\n\nJoin me at the meeting ground for DevOps & AI engineers building the future of intelligent infrastructure.\n\nMore info: https://cloudconf.ai\n\n#CLOUDxAI #DevOps #AI #Conference\n\n@cloud-x-ai"
 );
 
 // Check if Web Share API is supported
