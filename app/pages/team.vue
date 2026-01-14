@@ -3,21 +3,24 @@
     <v-container fluid class="pb-0" style="max-width: 1800px">
       <v-row class="my-10">
         <v-col cols="12" class="text-center">
-          <h1 class="text-h2">Team</h1>
+          <h1 class="text-h2">TEAM</h1>
+          <p>Meet the people behind the event</p>
 
-          <v-container fluid>
-            <v-row>
-              <v-col md="4" v-for="member in team" :key="member.name">
+          <v-container fluid class="mt-8">
+            <v-row justify="center" align="center">
+              <v-col md="3" sm="6" cols="12" xl="2" xxl="2" v-for="member in team" :key="member.name">
                 <v-card variant="flat" rounded="lg">
-                  <img
+                  <v-avatar :size="width>600?200:150">
+                    <img
                     :src="
                       member.image
                         ? `/images/team/${member.image}`
                         : '/images/defaultAvatar.png'
                     "
-                    width="100%"
                     :alt="member.name"
+                    width="100%"
                   />
+                  </v-avatar>
                   <h2 class="mt-4">{{ member.name }}</h2>
                   <p>{{ member.role }}</p>
 
@@ -43,10 +46,11 @@
 </template>
 
 <script setup>
+const {width} = useDisplay()
 import teamData from "~/assets/data/team.json";
 
 const team = ref(teamData);
 </script>
 
-<style>
+<style scoped>
 </style>

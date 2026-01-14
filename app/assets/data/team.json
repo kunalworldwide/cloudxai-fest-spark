@@ -1,42 +1,37 @@
 [
     {
-        "name": "John Doe",
-        "role": "CEO",
-        "image": "",
+        "name": "Kunal Das",
+        "role": "Developer Advocate-APAC @ CastAI",
+        "image": "kunal.png",
         "socials": [
             {
                 "name": "linkedin",
                 "icon": "mdi-linkedin",
-                "url": "https://www.linkedin.com/in/john-doe"
-            },
-            {
-                "name": "github",
-                "icon": "mdi-github",
-                "url": "https://www.github.com/john-doe"
+                "url": "https://www.linkedin.com/in/kunaldaskd/"
             }
         ]
     },
     {
-        "name": "Jane Doe",
-        "role": "CTO",
-        "image": "",
+        "name": "Prem Goswami",
+        "role": "Community Manager@GeekyAnts",
+        "image": "prem.png",
         "socials": [
             {
                 "name": "linkedin",
                 "icon": "mdi-linkedin",
-                "url": "https://www.linkedin.com/in/jane-doe"
+                "url": "https://www.linkedin.com/in/premgoswami/"
             }
         ]
     },
     {
-        "name": "Jim Beam",
-        "role": "CFO",
-        "image": "",
+        "name": "Siddhant Agarwal",
+        "role": "Developer Relations Lead - APAC",
+        "image": "sid.png",
         "socials": [
             {
                 "name": "linkedin",
                 "icon": "mdi-linkedin",
-                "url": "https://www.linkedin.com/in/jim-beam"
+                "url": "https://www.linkedin.com/in/sidagarwal04/"
             }
         ]
     }
