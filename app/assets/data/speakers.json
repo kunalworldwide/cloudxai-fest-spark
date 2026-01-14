@@ -95,7 +95,7 @@
     "bio": "Ram Iyengar is the Chief Evangelist at Cloud Foundry Foundation, driving community engagement and platform advocacy.",
     "image": "ram.png",
     "isFeatured": false,
-    "visible": false,
+    "visible": true,
     "socials": [
       {
         "name": "linkedin",
@@ -205,6 +205,21 @@
         "name": "linkedin",
         "icon": "mdi-linkedin",
         "url": "https://www.linkedin.com/in/shashankkarpal/"
+      }
+    ]
+  },
+  {
+    "name": "Kaushik Deb",
+    "role": "Associate Director, AI Engineering at Piramal Finance",
+    "bio": "Kaushik Deb is an accomplished Associate Director of AI Engineering with over 12 years of experience delivering advanced technological solutions. His professional focus centers on Generative AI and Agentic Systems within the Financial Services domain.Kaushik specializes in architecting strategic, enterprise - grade AI platforms designed to address complex business challenges and drive substantial operational efficiency. Throughout his career, he has successfully led the development and scaling of award-winning Gen AI products. A key pillar of Kaushik's work involves driving technological maturity. He has modernized various AI platform architectures, elevating them to an advanced level to ensure the reliability and scalability of dozens of mission-critical AI and Machine Learning models. As a leader, Kaushik manages large engineering teams and oversees the entire product lifecycle - from strategic vision and budget management to final execution - to deliver innovative, high-ROI AI solutions across the organization.",
+    "image": "kaushik.webp",
+    "isFeatured": false,
+    "visible": true,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/kaushikdebb/"
       }
     ]
   }
