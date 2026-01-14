@@ -93,6 +93,13 @@ const partners = [
     link: "https://kodekloud.com/",
     // tier: "General",
   },
+  {
+    id: 2,
+    name: "AWS",
+    image: "aws.png",
+    link: "https://aws.amazon.com/",
+    // tier: "General",
+  }
 ];
 </script>
 
