@@ -3,23 +3,31 @@
     <v-container fluid class="pb-0" style="max-width: 1800px">
       <v-row class="my-10">
         <v-col cols="12" class="text-center">
-          <h1 class="text-h2">TEAM</h1>
+          <h1 class="text-h2">ORGANISER</h1>
           <p>Meet the people behind the event</p>
 
           <v-container fluid class="mt-8">
             <v-row justify="center" align="center">
-              <v-col md="3" sm="6" cols="12" xl="2" xxl="2" v-for="member in team" :key="member.name">
+              <v-col
+                md="3"
+                sm="6"
+                cols="12"
+                xl="2"
+                xxl="2"
+                v-for="member in team"
+                :key="member.name"
+              >
                 <v-card variant="flat" rounded="lg">
-                  <v-avatar :size="width>600?200:150">
+                  <v-avatar :size="width > 600 ? 200 : 150">
                     <img
-                    :src="
-                      member.image
-                        ? `/images/team/${member.image}`
-                        : '/images/defaultAvatar.png'
-                    "
-                    :alt="member.name"
-                    width="100%"
-                  />
+                      :src="
+                        member.image
+                          ? `/images/team/${member.image}`
+                          : '/images/defaultAvatar.png'
+                      "
+                      :alt="member.name"
+                      width="100%"
+                    />
                   </v-avatar>
                   <h2 class="mt-4">{{ member.name }}</h2>
                   <p>{{ member.role }}</p>
@@ -46,15 +54,17 @@
 </template>
 
 <script setup>
-const {width} = useDisplay()
+const { width } = useDisplay();
 import teamData from "~/assets/data/team.json";
 
 const team = ref(teamData);
 
+// ORGANISER
+// Organisr
 // SEO
 useHead({
-  title: "Team - CLOUDxAI Conference 2026 Bengaluru",
-  titleTemplate: "Team - CLOUDxAI Conference 2026 Bengaluru",
+  title: "Organisr - CLOUDxAI Conference 2026 Bengaluru",
+  titleTemplate: "Organisr - CLOUDxAI Conference 2026 Bengaluru",
   description:
     "CloudxAI 2026 Bengaluru: The meeting ground for DevOps & AI engineers building the future of intelligent infrastructure.",
   keywords:
@@ -64,7 +74,7 @@ useHead({
   googlebot: "index, follow",
   bingbot: "index, follow",
   yandexbot: "index, follow",
-  ogTitle: "Team - CLOUDxAI Conference 2026 Bengaluru",
+  ogTitle: "Organisr - CLOUDxAI Conference 2026 Bengaluru",
   ogDescription:
     "CloudxAI 2026 Bengaluru: The meeting ground for DevOps & AI engineers building the future of intelligent infrastructure.",
   ogImage:
@@ -72,7 +82,7 @@ useHead({
   ogUrl: "https://cloudconf.ai/",
   ogType: "website",
   ogLocale: "en_US",
-  ogSiteName: "Team - CLOUDxAI Conference 2026 Bengaluru",
+  ogSiteName: "Organisr - CLOUDxAI Conference 2026 Bengaluru",
   meta: [
     {
       name: "description",
@@ -90,7 +100,10 @@ useHead({
     { name: "bingbot", content: "index, follow" },
     { name: "yandexbot", content: "index, follow" },
     // Open Graph tags
-    { property: "og:title", content: "Team - CLOUDxAI Conference 2026 Bengaluru" },
+    {
+      property: "og:title",
+      content: "Organisr - CLOUDxAI Conference 2026 Bengaluru",
+    },
     {
       property: "og:description",
       content:
@@ -105,15 +118,21 @@ useHead({
     { property: "og:image:height", content: "1080" },
     {
       property: "og:image:alt",
-      content: "Team - CLOUDxAI Conference 2026 Bengaluru Banner",
+      content: "Organisr - CLOUDxAI Conference 2026 Bengaluru Banner",
     },
     { property: "og:url", content: "https://cloudconf.ai/" },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: "en_US" },
-    { property: "og:site_name", content: "Team - CLOUDxAI Conference 2026 Bengaluru" },
+    {
+      property: "og:site_name",
+      content: "Organisr - CLOUDxAI Conference 2026 Bengaluru",
+    },
     // Twitter Card tags
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: "Team - CLOUDxAI Conference 2026 Bengaluru" },
+    {
+      name: "twitter:title",
+      content: "Organisr - CLOUDxAI Conference 2026 Bengaluru",
+    },
     {
       name: "twitter:description",
       content:
@@ -126,7 +145,7 @@ useHead({
     },
     {
       name: "twitter:image:alt",
-      content: "Team - CLOUDxAI Conference 2026 Bengaluru Banner",
+      content: "Organisr - CLOUDxAI Conference 2026 Bengaluru Banner",
     },
     { name: "twitter:site", content: "@cloudxaiconf" },
     { name: "twitter:creator", content: "@cloudxaiconf" },

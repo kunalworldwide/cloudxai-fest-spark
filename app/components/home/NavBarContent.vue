@@ -13,8 +13,8 @@
         Badge
       </v-btn>
 
-      <v-btn variant="text" class="text-none nav-btn" to="/team" rounded="xl" color="white">
-        Team
+      <v-btn variant="text" class="text-none nav-btn" to="/organisr" rounded="xl" color="white">
+        Organisr
       </v-btn>
 
       <v-btn variant="text" class="text-none nav-btn" to="/sponsors" rounded="xl" color="white">
@@ -96,8 +96,8 @@
             Sponsors
           </v-btn>
 
-          <v-btn variant="text" color="white" class="text-none" to="/team">
-            Team
+          <v-btn variant="text" color="white" class="text-none" to="/organisr">
+            Organisr
           </v-btn>
 
           <v-btn variant="text" color="white" class="text-none" target="_blank"
