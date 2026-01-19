@@ -79,5 +79,10 @@
         "name": "Women Who Go Bangalore",
         "link": "https://www.linkedin.com/company/wwg-blr/",
         "image": "wwgb.png"
+    },
+    {
+        "name": "Bangalore HashiCorp User Group",
+        "link": "https://www.meetup.com/hug-bangalore/",
+        "image": "hugblr.png"
     }
 ]
