@@ -106,6 +106,47 @@
           </div> -->
         </v-row>
 
+        <!-- Current Sponsors Section -->
+        <v-row class="justify-center mt-10 mb-10">
+          <v-col cols="12" md="10">
+            <div class="current-sponsors-section">
+              <h2 class="sponsors-section-title">Our Current Sponsors</h2>
+              
+              <!-- Title Sponsor -->
+              <div class="sponsor-tier-section">
+                <h3 class="tier-label title-tier">Title Sponsor</h3>
+                <div class="sponsors-grid title-sponsor-grid">
+                  <div class="sponsor-item title-sponsor">
+                    <a href="https://cast.ai" target="_blank" class="sponsor-link">
+                      <img src="/images/partners/castaidark.png" alt="Cast AI" class="sponsor-logo" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Diamond Sponsors -->
+              <div class="sponsor-tier-section">
+                <h3 class="tier-label diamond-tier">Diamond Sponsors</h3>
+                <div class="sponsors-grid diamond-sponsors-grid">
+                  <div 
+                    v-for="sponsor in diamondSponsors" 
+                    :key="sponsor.id" 
+                    class="sponsor-item diamond-sponsor"
+                  >
+                    <a :href="sponsor.link" target="_blank" class="sponsor-link">
+                      <img 
+                        :src="`/images/partners/${sponsor.image}`" 
+                        :alt="sponsor.name" 
+                        class="sponsor-logo" 
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </v-col>
+        </v-row>
+
         <v-row class="justify-center text-center mt-10">
           <v-col cols="12" md="8">
             <p class="contact-text">Ready to become a sponsor?</p>
@@ -139,6 +180,22 @@ const featureRows = {
   welcomeBag: { label: 'Welcome bag' },
   price: { label: 'Investments**' }
 };
+
+// Diamond sponsors data
+const diamondSponsors = [
+  {
+    id: 1,
+    name: "KodeKloud",
+    image: "kodekloud.png",
+    link: "https://kodekloud.com/",
+  },
+  {
+    id: 2,
+    name: "AWS",
+    image: "aws.png",
+    link: "https://aws.amazon.com/",
+  }
+];
 
 useHead({
   title: "Sponsorship Opportunities - CLOUDxAI Conference 2026 Bengaluru",
@@ -521,6 +578,174 @@ useHead({
   font-weight: 600;
   text-transform: none;
   letter-spacing: 0.5px;
+}
+
+// Current Sponsors Section
+.current-sponsors-section {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 48px 32px;
+  margin: 40px 0;
+
+  @media (max-width: 768px) {
+    padding: 32px 20px;
+  }
+}
+
+.sponsors-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 48px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+}
+
+.sponsor-tier-section {
+  margin-bottom: 48px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+
+.tier-label {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: inline-block;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 24px;
+    padding: 10px 20px;
+  }
+
+  &.title-tier {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  }
+
+  &.diamond-tier {
+    background: linear-gradient(135deg, #B9F2FF 0%, #87CEEB 100%);
+    color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(185, 242, 255, 0.3);
+  }
+}
+
+.sponsors-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    gap: 24px;
+  }
+}
+
+.title-sponsor-grid {
+  justify-content: center;
+}
+
+.diamond-sponsors-grid {
+  justify-content: center;
+}
+
+.sponsor-item {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 2px solid #e0e0e0;
+  min-height: 180px;
+  min-width: 250px;
+
+  @media (max-width: 768px) {
+    min-width: 200px;
+    padding: 24px;
+    min-height: 150px;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-color: #339CFF;
+  }
+
+  &.title-sponsor {
+    min-width: 300px;
+    padding: 40px;
+
+    @media (max-width: 768px) {
+      min-width: 250px;
+      padding: 32px;
+    }
+  }
+
+  &.diamond-sponsor {
+    min-width: 250px;
+
+    @media (max-width: 768px) {
+      min-width: 200px;
+    }
+  }
+}
+
+.sponsor-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.sponsor-logo {
+  max-width: 100%;
+  max-height: 120px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(1) contrast(1);
+  transition: transform 0.3s ease;
+
+  .sponsor-item:hover & {
+    transform: scale(1.05);
+  }
+
+  .title-sponsor & {
+    max-height: 140px;
+
+    @media (max-width: 768px) {
+      max-height: 100px;
+    }
+  }
+
+  .diamond-sponsor & {
+    max-height: 100px;
+
+    @media (max-width: 768px) {
+      max-height: 80px;
+    }
+  }
 }
 
 @media(max-width: 500px) {
