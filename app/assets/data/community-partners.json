@@ -84,5 +84,10 @@
         "name": "Bangalore HashiCorp User Group",
         "link": "https://www.meetup.com/hug-bangalore/",
         "image": "hugblr.png"
+    },
+    {
+        "name": "Ubuntu India",
+        "link": "https://www.linkedin.com/company/ubuntu-in/",
+        "image": "ubuntuindia.png"
     }
 ]
