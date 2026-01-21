@@ -89,5 +89,15 @@
         "name": "Ubuntu India",
         "link": "https://www.linkedin.com/company/ubuntu-in/",
         "image": "ubuntuindia.png"
+    },
+    {
+        "name": "Cloud COmputing Circle",
+        "link": "https://c3meetup.taplink.bio/",
+        "image": "ccc.png"
+    },
+    {
+        "name": "AI XCHANGE - Meetup Group",
+        "link": "https://www.meetup.com/ai-xchange/",
+        "image": "aiex.png"
     }
 ]
