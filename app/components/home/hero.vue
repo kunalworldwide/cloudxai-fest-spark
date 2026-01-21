@@ -23,7 +23,7 @@
                   <v-icon start size="20">mdi-calendar-blank-outline</v-icon>
                   March 14, 2026
                 </v-chip>
-                <h1 class="hero-title">CLOUDxAI Conference</h1>
+                <h1 class="hero-title">CLOUDxAI <span>Conference</span></h1>
 
                 <div class="hero-slide-actions">
                   <div
@@ -99,7 +99,28 @@
               </div>
             </div>
             <div class="text-center pa-0 hero-image-conatiner">
-              <ClientOnly>
+              <div class="hero-speakers-grid">
+                <div
+                  v-for="speaker in speakers"
+                  :key="speaker.name"
+                  class="hero-speaker-card"
+                >
+                  <div class="hero-speaker-image-container">
+                    <img
+                      :src="speaker.image
+                        ? `/images/speakers/${speaker.image}`
+                        : '/images/defaultAvatar.png'
+                      "
+                      :alt="speaker.name"
+                      class="hero-speaker-image"
+                    />
+                  </div>
+                  <h3 class="hero-speaker-name">{{ speaker.name }}</h3>
+                  <p class="hero-speaker-role">{{ speaker.role }}</p>
+                </div>
+              </div>
+              
+              <!-- <ClientOnly>
                 <video
                   autoplay
                   loop
@@ -112,7 +133,7 @@
                   <source src="@/assets/videos/hero.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-              </ClientOnly>
+              </ClientOnly> -->
             </div>
             <HomeCountDownCopy />
           </div>
@@ -166,11 +187,14 @@
 
 <script setup>
 import NavBar from "./NavBar.vue";
+import speakersData from "~/assets/data/speakers.json";
+
+const speakers = ref(speakersData.filter(speaker => speaker.visible).slice(0, 4));
 </script>
 
 <style scoped lang="scss">
 .hero-main-conatiner {
-  background-image: url("../../assets/images/bgg-hero.webp");
+  background-image: url("../../assets/images/bgg-hero2.0.png");
   background-size: cover;
   background-position: center;
   height: 100svh;
@@ -199,18 +223,18 @@ import NavBar from "./NavBar.vue";
 }
 
 .hero-slide-container {
+  border: 1px solid #296fb9;
+  border-radius: 12px !important;
+
   .hero-slide-content-main {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 1px solid #296fb9;
-    // border-radius: 10px;
-    border-top-left-radius: 10px !important;
-    border-bottom-left-radius: 10px !important;
-    border-right: none;
+    
+    
     height: 100%;
-    width: 45%;
+    width: 50%;
     padding: 16px;
     padding-left: 60px;
 
@@ -242,17 +266,89 @@ import NavBar from "./NavBar.vue";
         font-family: "Roboto", sans-serif;
         text-transform: none;
         font-weight: 500;
+        &>span{
+          color:rgb(65, 114, 249)
+        }
       }
     }
   }
 
   .hero-image-conatiner {
-    width: 55%;
+    width: 50%;
     height: 100%;
-    border-top-right-radius: 10px !important;
-    border-bottom-right-radius: 10px !important;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
     position: relative;
+  }
+
+  .hero-speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 24px;
+    align-content: center;
+
+   
+  }
+
+  .hero-speaker-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+    max-width:274px;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+
+  .hero-speaker-image-container {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    position: relative;
+
+    @media (max-width: 1080px) {
+      margin-bottom: 8px;
+    }
+  }
+
+  .hero-speaker-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-speaker-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 4px;
+    letter-spacing: 0.3px;
+
+    @media (max-width: 1080px) {
+      font-size: 12px;
+    }
+  }
+
+  .hero-speaker-role {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.3;
+
+    @media (max-width: 1080px) {
+      font-size: 10px;
+    }
   }
 }
 
@@ -270,20 +366,22 @@ import NavBar from "./NavBar.vue";
 }
 
 @media (max-width: 1080px) {
+  .hero-main-conatiner {
+    height: max-content;
+  }
+  .hero-background {
+    height: max-content;
+  }
   .hero-slide-container {
     flex-direction: column;
     align-items: center;
 
     .hero-slide-content-main {
-      border-right: 1px solid #296fb9;
       justify-content: flex-start;
 
-      border-bottom: none;
-      border-bottom-left-radius: 0px !important;
-      border-top-right-radius: 10px !important;
+     
       width: 100%;
-      height: 50%;
-      padding: 24px;
+      padding:128px 24px;
 
       .hero-slide-content {
         padding-left: 0;
@@ -307,10 +405,11 @@ import NavBar from "./NavBar.vue";
     }
     .hero-image-conatiner {
       width: 100%;
-      height: 50%;
-      border-top-right-radius: 0px !important;
-      border-bottom-right-radius: 10px !important;
-      border-bottom-left-radius: 10px !important;
+     .hero-speakers-grid {
+      padding-bottom :180px;
+      gap: 16px;
+     }
+      
     }
   }
 }
@@ -340,6 +439,11 @@ import NavBar from "./NavBar.vue";
 }
 
 @media (max-width: 480px) {
+  .hero-slide-container{
+    .hero-slide-content-main{
+      padding:64px 24px;
+    }
+  }
   .hero-slide-content {
     & > h1 {
       font-size: 2.25rem !important;
@@ -351,14 +455,14 @@ import NavBar from "./NavBar.vue";
   }
 }
 
-@media (max-height: 852px) {
-  .hero-main-conatiner {
-    height: 900px !important;
-  }
-  .hero-background {
-    height: 820px;
-  }
-}
+// @media (max-height: 852px) {
+//   .hero-main-conatiner {
+//     height: 900px !important;
+//   }
+//   .hero-background {
+//     height: 820px;
+//   }
+// }
 
 .hero-location {
   color: rgba(255, 255, 255, 0.9);
