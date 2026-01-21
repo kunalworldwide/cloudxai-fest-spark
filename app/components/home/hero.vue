@@ -114,9 +114,13 @@
                       :alt="speaker.name"
                       class="hero-speaker-image"
                     />
+                    <div class="linear-gradient-background"></div>
+                    <div class="hero-speaker-info">
+
+                      <h3 class="hero-speaker-name">{{ speaker.name }}</h3>
+                      <p class="hero-speaker-role">{{ speaker.role }}</p>
+                    </div>
                   </div>
-                  <h3 class="hero-speaker-name">{{ speaker.name }}</h3>
-                  <p class="hero-speaker-role">{{ speaker.role }}</p>
                 </div>
               </div>
               
@@ -189,7 +193,7 @@
 import NavBar from "./NavBar.vue";
 import speakersData from "~/assets/data/speakers.json";
 
-const speakers = ref(speakersData.filter(speaker => speaker.visible).slice(0, 4));
+const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
 </script>
 
 <style scoped lang="scss">
@@ -197,10 +201,8 @@ const speakers = ref(speakersData.filter(speaker => speaker.visible).slice(0, 4)
   background-image: url("../../assets/images/bgg-hero2.0.png");
   background-size: cover;
   background-position: center;
-  height: 100svh;
 }
 .hero-background {
-  height: calc(100svh - 64px);
   padding: 60px;
   padding-top: 0px;
 }
@@ -225,6 +227,7 @@ const speakers = ref(speakersData.filter(speaker => speaker.visible).slice(0, 4)
 .hero-slide-container {
   border: 1px solid #296fb9;
   border-radius: 12px !important;
+  padding: 180px 0 !important;
 
   .hero-slide-content-main {
     display: flex;
@@ -299,25 +302,25 @@ const speakers = ref(speakersData.filter(speaker => speaker.visible).slice(0, 4)
     align-items: center;
     text-align: center;
     transition: transform 0.3s ease;
-    max-width:274px;
+    max-width:264px;
+    position: relative;
 
-    &:hover {
-      transform: translateY(-4px);
-    }
+    // &:hover {
+    //   .linear-gradient-background, .hero-speaker-info{
+    //     opacity: 1;
+    //   }
+    // }
+   
   }
 
   .hero-speaker-image-container {
     width: 100%;
     aspect-ratio: 1;
     overflow: hidden;
-    margin-bottom: 12px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     position: relative;
 
-    @media (max-width: 1080px) {
-      margin-bottom: 8px;
-    }
   }
 
   .hero-speaker-image {
@@ -327,16 +330,27 @@ const speakers = ref(speakersData.filter(speaker => speaker.visible).slice(0, 4)
     display: block;
   }
 
+  .hero-speaker-info{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.3), transparent);
+    opacity: 1;
+    position :absolute;
+    bottom: 0;
+    left:0;
+    text-align: left;
+    width:100%;
+    height:100%;
+    padding: 15px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
   .hero-speaker-name {
-    font-size: 14px;
+   
+    font-size: 16px;
     font-weight: 600;
-    color: white;
-    margin-bottom: 4px;
+    color: rgb(59, 159, 253);
     letter-spacing: 0.3px;
 
-    @media (max-width: 1080px) {
-      font-size: 12px;
-    }
   }
 
   .hero-speaker-role {
@@ -346,9 +360,6 @@ const speakers = ref(speakersData.filter(speaker => speaker.visible).slice(0, 4)
     margin: 0;
     line-height: 1.3;
 
-    @media (max-width: 1080px) {
-      font-size: 10px;
-    }
   }
 }
 
@@ -375,6 +386,7 @@ const speakers = ref(speakersData.filter(speaker => speaker.visible).slice(0, 4)
   .hero-slide-container {
     flex-direction: column;
     align-items: center;
+    padding:0 !important;
 
     .hero-slide-content-main {
       justify-content: flex-start;
@@ -408,6 +420,12 @@ const speakers = ref(speakersData.filter(speaker => speaker.visible).slice(0, 4)
      .hero-speakers-grid {
       padding-bottom :180px;
       gap: 16px;
+     }
+.hero-speaker-name{
+  font-size: 12px;
+}
+     .hero-speaker-role{
+      font-size: 10px;
      }
       
     }
@@ -443,7 +461,11 @@ const speakers = ref(speakersData.filter(speaker => speaker.visible).slice(0, 4)
     .hero-slide-content-main{
       padding:64px 24px;
     }
+    .hero-speaker-info{
+    padding: 8px;
   }
+  }
+  
   .hero-slide-content {
     & > h1 {
       font-size: 2.25rem !important;

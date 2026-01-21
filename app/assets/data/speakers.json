@@ -6,6 +6,7 @@
     "bio": "Kunal Kushwaha presently operates a YouTube channel with 3.58 lakh subscribers, making it one of the fastest-growing educational coding channels. On his channel, he produces podcasts, hosts community events, and shares engaging content on coding, tools, and various other topics.",
     "isFeatured": true,
     "visible": true,
+    "isHeroFeature": true,
     "socials": [
       {
         "name": "linkedin",
@@ -21,6 +22,7 @@
     "image": "abhishek.webp",
     "isFeatured": true,
     "visible": true,
+    "isHeroFeature": true,
     "socials": [
       {
         "name": "linkedin",
@@ -36,6 +38,7 @@
     "image": "laurent.webp",
     "isFeatured": true,
     "visible": true,
+    "isHeroFeature": false,
     "socials": [
       {
         "name": "linkedin",
@@ -51,6 +54,7 @@
     "image": "ravi.webp",
     "isFeatured": true,
     "visible": true,
+    "isHeroFeature": false,
     "socials": [
       {
         "name": "linkedin",
@@ -66,6 +70,7 @@
     "image": "chandika.webp",
     "isFeatured": false,
     "visible": true,
+    "isHeroFeature": false,
     "socials": [
       {
         "name": "linkedin",
@@ -81,6 +86,7 @@
     "image": "ranjini.webp",
     "isFeatured": false,
     "visible": true,
+    "isHeroFeature": false,
     "socials": [
       {
         "name": "linkedin",
@@ -96,6 +102,7 @@
     "image": "ram.png",
     "isFeatured": false,
     "visible": true,
+    "isHeroFeature": true,
     "socials": [
       {
         "name": "linkedin",
@@ -111,6 +118,7 @@
     "image": "ajeet.webp",
     "isFeatured": true,
     "visible": true,
+    "isHeroFeature": false,
     "socials": [
       {
         "name": "linkedin",
@@ -125,6 +133,7 @@
     "bio": "Rahul Jadhav is the Co-founder and CTO at AccuKnox, leading technology strategy and innovation.",
     "image": "rahul.png",
     "isFeatured": false,
+    "isHeroFeature": false,
     "socials": [
       {
         "name": "linkedin",
@@ -140,6 +149,7 @@
     "image": "aparna.webp",
     "isFeatured": true,
     "visible": true,
+    "isHeroFeature": false,
     "socials": [
       {
         "name": "linkedin",
@@ -155,6 +165,7 @@
     "image": "dheeraj.webp",
     "isFeatured": false,
     "visible": true,
+    "isHeroFeature": false,
     "socials": [
       {
         "name": "linkedin",
@@ -170,6 +181,7 @@
     "image": "rahul.webp",
     "isFeatured": false,
     "visible": true,
+    "isHeroFeature": false,
     "socials": [
       {
         "name": "linkedin",
@@ -185,6 +197,7 @@
     "image": "shubham.webp",
     "isFeatured": false,
     "visible": true,
+    "isHeroFeature": true,
     "socials": [
       {
         "name": "linkedin",
@@ -200,6 +213,8 @@
     "image": "shashank.webp",
     "isFeatured": false,
     "visible": true,
+    "isHeroFeature": false,
+
     "socials": [
       {
         "name": "linkedin",
@@ -215,6 +230,7 @@
     "image": "kaushik.webp",
     "isFeatured": false,
     "visible": true,
+    "isHeroFeature": false,
     "socials": [
       {
         "name": "linkedin",
