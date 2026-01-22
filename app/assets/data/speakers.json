@@ -16,6 +16,22 @@
     ]
   },
   {
+    "name": "Hitesh Choudhary",
+    "role": "Teacher",
+    "bio": "Hitesh Choudhary is passionate about education. He serves around 22 million users via Learnyst and teaches cutting-edge technology to over 2 million subscribers on YouTube. Previously, Hitesh served as a CTO and most recently as a Senior Director at PW. Currently, he is fully dedicated to his passion for teaching and building content for the developer community on YouTube.",
+    "image": "hitesh.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": true,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/hiteshchoudhary/"
+      }
+    ]
+  },
+  {
     "name": "Abhishek Veeramalla",
     "role": "CTO at AKVA",
     "bio": "Abhishek Veeramalla is a Principal Engineer at Red Hat and a popular YouTuber known for his educational content on DevOps and cloud computing. He is a prolific creator, with a YouTube channel that has over 550,000 subscribers and offers courses on platforms like Udemy that have helped over 1000 students land jobs",
@@ -236,22 +252,6 @@
         "name": "linkedin",
         "icon": "mdi-linkedin",
         "url": "https://www.linkedin.com/in/kaushikdebb/"
-      }
-    ]
-  },
-  {
-    "name": "Hitesh Choudhary",
-    "role": "Teacher",
-    "bio": "Hitesh Choudhary is passionate about education. He serves around 22 million users via Learnyst and teaches cutting-edge technology to over 2 million subscribers on YouTube. Previously, Hitesh served as a CTO and most recently as a Senior Director at PW. Currently, he is fully dedicated to his passion for teaching and building content for the developer community on YouTube.",
-    "image": "hitesh.webp",
-    "isFeatured": false,
-    "visible": true,
-    "isHeroFeature": true,
-    "socials": [
-      {
-        "name": "linkedin",
-        "icon": "mdi-linkedin",
-        "url": "https://www.linkedin.com/in/hiteshchoudhary/"
       }
     ]
   }
