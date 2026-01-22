@@ -99,5 +99,10 @@
         "name": "AI XCHANGE - Meetup Group",
         "link": "https://www.meetup.com/ai-xchange/",
         "image": "aiex.png"
+    },
+    {
+        "name": "Indian Data Club",
+        "link": "https://www.linkedin.com/company/indian-data-club/",
+        "image": "idc.png"
     }
 ]
