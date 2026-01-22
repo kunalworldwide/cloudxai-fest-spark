@@ -198,7 +198,7 @@ const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
 
 <style scoped lang="scss">
 .hero-main-conatiner {
-  background-image: url("../../assets/images/bgg-hero2.0.png");
+  background-image: url("../../assets/images/bgg-hero2.0.webp");
   background-size: cover;
   background-position: center;
 }
