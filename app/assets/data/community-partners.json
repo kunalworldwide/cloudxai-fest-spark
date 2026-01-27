@@ -104,5 +104,15 @@
         "name": "Indian Data Club",
         "link": "https://www.linkedin.com/company/indian-data-club/",
         "image": "idc2.png"
+    },
+    {
+        "name": "AI Collective",
+        "link": "https://www.aicollective.com/",
+        "image": "aci.png"
+    },
+    {
+        "name": "New Relic India",
+        "link": "https://www.linkedin.com/showcase/new-relic-india/",
+        "image": "nr.png"
     }
 ]
