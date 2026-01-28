@@ -16,6 +16,13 @@
 </template>
 
 <script setup>
+const { proxy } = useScriptRedditPixel();
+
+onMounted(() => {
+  proxy.rdt("track", "PageVisit");
+  proxy.rdt("track", "ViewContent");
+});
+
 import { useRoute } from "vue-router";
 
 const route = useRoute(); // Get the current route

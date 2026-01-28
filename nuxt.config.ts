@@ -7,4 +7,12 @@ export default defineNuxtConfig({
   gtag: {
     id: "G-BV563RW7PJ",
   },
+  scripts: {
+    registry: {
+      redditPixel: {
+        id: "a2_if15i9gjp2ht",
+        enable_auto_events: true,
+      },
+    },
+  },
 });

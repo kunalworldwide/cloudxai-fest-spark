@@ -46,12 +46,16 @@
                     >
                       Register
                     </v-btn> -->
-                    <div style="" ref="konfhubWidget"></div>
+                    <div
+                      style=""
+                      ref="konfhubWidget"
+                      @click="trackRedditClick"
+                    ></div>
                     <v-btn
                       color="white"
                       variant="outlined"
                       size="large"
-                      height="48px" 
+                      height="48px"
                       class="text-none"
                       append-icon="mdi-arrow-top-right"
                       width="max-content"
@@ -198,6 +202,12 @@ import speakersData from "~/assets/data/speakers.json";
 const speakers = ref(speakersData.filter((speaker) => speaker.isHeroFeature));
 
 const konfhubWidget = ref(null);
+
+const { proxy } = useScriptRedditPixel();
+
+const trackRedditClick = () => {
+  proxy.rdt("track", "Purchase");
+};
 
 onMounted(() => {
   const script = document.createElement("script");
@@ -529,5 +539,4 @@ onMounted(() => {
     transform: scale(1.1);
   }
 }
-
 </style>
