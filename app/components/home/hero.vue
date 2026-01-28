@@ -35,7 +35,7 @@
                       flex-wrap: wrap;
                     "
                   >
-                    <v-btn
+                    <!-- <v-btn
                       color="white"
                       variant="flat"
                       size="x-large"
@@ -45,12 +45,14 @@
                       to="/register"
                     >
                       Register
-                    </v-btn>
+                    </v-btn> -->
+                    <div style="" ref="konfhubWidget"></div>
                     <v-btn
                       color="white"
                       variant="outlined"
-                      size="x-large"
-                      class="text-none rounded-xl register-btn"
+                      size="large"
+                      height="48px" 
+                      class="text-none"
                       append-icon="mdi-arrow-top-right"
                       width="max-content"
                       href="https://docs.google.com/forms/d/e/1FAIpQLScNjTHO5UeHCI5pcDEMD-FXBHa7PG8auuOS63x6Tmkx7konaQ/viewform"
@@ -107,23 +109,23 @@
                 >
                   <div class="hero-speaker-image-container">
                     <img
-                      :src="speaker.image
-                        ? `/images/speakers/${speaker.image}`
-                        : '/images/defaultAvatar.png'
+                      :src="
+                        speaker.image
+                          ? `/images/speakers/${speaker.image}`
+                          : '/images/defaultAvatar.png'
                       "
                       :alt="speaker.name"
                       class="hero-speaker-image"
                     />
                     <div class="linear-gradient-background"></div>
                     <div class="hero-speaker-info">
-
                       <h3 class="hero-speaker-name">{{ speaker.name }}</h3>
                       <p class="hero-speaker-role">{{ speaker.role }}</p>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               <!-- <ClientOnly>
                 <video
                   autoplay
@@ -193,7 +195,18 @@
 import NavBar from "./NavBar.vue";
 import speakersData from "~/assets/data/speakers.json";
 
-const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
+const speakers = ref(speakersData.filter((speaker) => speaker.isHeroFeature));
+
+const konfhubWidget = ref(null);
+
+onMounted(() => {
+  const script = document.createElement("script");
+  script.src = "https://widget.konfhub.com/widget.js";
+  script.setAttribute("button_id", "btn_10d3bdf3179f");
+  if (konfhubWidget.value) {
+    konfhubWidget.value.appendChild(script);
+  }
+});
 </script>
 
 <style scoped lang="scss">
@@ -234,8 +247,7 @@ const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
-    
+
     height: 100%;
     width: 50%;
     padding: 16px;
@@ -269,8 +281,8 @@ const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
         font-family: "Roboto", sans-serif;
         text-transform: none;
         font-weight: 500;
-        &>span{
-          color:rgb(65, 114, 249)
+        & > span {
+          color: rgb(65, 114, 249);
         }
       }
     }
@@ -282,7 +294,7 @@ const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
     display: flex;
     align-items: center;
     justify-content: center;
-   
+
     position: relative;
   }
 
@@ -292,8 +304,6 @@ const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
     gap: 24px;
     padding: 24px;
     align-content: center;
-
-   
   }
 
   .hero-speaker-card {
@@ -302,7 +312,7 @@ const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
     align-items: center;
     text-align: center;
     transition: transform 0.3s ease;
-    max-width:264px;
+    max-width: 264px;
     position: relative;
 
     // &:hover {
@@ -310,7 +320,6 @@ const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
     //     opacity: 1;
     //   }
     // }
-   
   }
 
   .hero-speaker-image-container {
@@ -320,7 +329,6 @@ const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     position: relative;
-
   }
 
   .hero-speaker-image {
@@ -330,27 +338,30 @@ const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
     display: block;
   }
 
-  .hero-speaker-info{
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.3), transparent);
+  .hero-speaker-info {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.3),
+      transparent
+    );
     opacity: 1;
-    position :absolute;
+    position: absolute;
     bottom: 0;
-    left:0;
+    left: 0;
     text-align: left;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     padding: 15px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: flex-end;
   }
   .hero-speaker-name {
-   
     font-size: 16px;
     font-weight: 600;
     color: rgb(59, 159, 253);
     letter-spacing: 0.3px;
-
   }
 
   .hero-speaker-role {
@@ -359,7 +370,6 @@ const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
     font-weight: 400;
     margin: 0;
     line-height: 1.3;
-
   }
 }
 
@@ -386,14 +396,13 @@ const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
   .hero-slide-container {
     flex-direction: column;
     align-items: center;
-    padding:0 !important;
+    padding: 0 !important;
 
     .hero-slide-content-main {
       justify-content: flex-start;
 
-     
       width: 100%;
-      padding:128px 24px;
+      padding: 128px 24px;
 
       .hero-slide-content {
         padding-left: 0;
@@ -417,17 +426,16 @@ const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
     }
     .hero-image-conatiner {
       width: 100%;
-     .hero-speakers-grid {
-      padding-bottom :180px;
-      gap: 16px;
-     }
-.hero-speaker-name{
-  font-size: 12px;
-}
-     .hero-speaker-role{
-      font-size: 10px;
-     }
-      
+      .hero-speakers-grid {
+        padding-bottom: 180px;
+        gap: 16px;
+      }
+      .hero-speaker-name {
+        font-size: 12px;
+      }
+      .hero-speaker-role {
+        font-size: 10px;
+      }
     }
   }
 }
@@ -457,15 +465,15 @@ const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
 }
 
 @media (max-width: 480px) {
-  .hero-slide-container{
-    .hero-slide-content-main{
-      padding:64px 24px;
+  .hero-slide-container {
+    .hero-slide-content-main {
+      padding: 64px 24px;
     }
-    .hero-speaker-info{
-    padding: 8px;
+    .hero-speaker-info {
+      padding: 8px;
+    }
   }
-  }
-  
+
   .hero-slide-content {
     & > h1 {
       font-size: 2.25rem !important;
@@ -521,4 +529,5 @@ const speakers = ref(speakersData.filter(speaker => speaker.isHeroFeature));
     transform: scale(1.1);
   }
 }
+
 </style>
