@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   scripts: {
     registry: {
       redditPixel: {
-        id: "a2_if15i9gjp2ht",
+        id: "a2_ieumjfgctifv",
         enable_auto_events: true,
       },
     },
