@@ -206,7 +206,11 @@ const konfhubWidget = ref(null);
 const { proxy } = useScriptRedditPixel();
 
 const trackRedditClick = () => {
-  proxy.rdt("track", "Purchase");
+  proxy.rdt("track", "Purchase", {
+    currency: "INR",
+    value: 0.0,
+    item_count: 1,
+  });
 };
 
 onMounted(() => {
