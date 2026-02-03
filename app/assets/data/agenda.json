@@ -1,0 +1,182 @@
+[
+  {
+    "time": "08:00 - 09:00",
+    "title": "Registration & Breakfast",
+    "speaker": null,
+    "track": null,
+    "hall": null,
+    "description": "Check-in, networking, and light refreshments.",
+    "type": "break"
+  },
+  {
+    "time": "09:00 - 09:30",
+    "title": "Opening & Welcome",
+    "speaker": null,
+    "track": "Main Stage",
+    "hall": "Main Hall",
+    "description": "Conference kickoff and welcome address.",
+    "type": "keynote"
+  },
+  {
+    "time": "09:30 - 10:15",
+    "title": "Keynote: The Future of DevOps & AI",
+    "speaker": "Laurent Gil",
+    "track": "Main Stage",
+    "hall": "Main Hall",
+    "description": "Intelligent infrastructure, FinOps, and AI-driven cloud operations from a Forbes Council member and Cast AI co-founder.",
+    "type": "keynote"
+  },
+  {
+    "time": "10:15 - 10:45",
+    "title": "Coffee Break & Networking",
+    "speaker": null,
+    "track": null,
+    "hall": null,
+    "description": "Break and networking opportunity.",
+    "type": "break"
+  },
+  {
+    "time": "10:45 - 11:30",
+    "title": "Containers & Cloud-Native: From Dev to Production",
+    "speaker": "Ajeet Singh Raina",
+    "track": "Cloud & DevOps",
+    "hall": "Hall 1",
+    "description": "Docker, Kubernetes, and cloud-native practices for building and shipping applications at scale.",
+    "type": "session"
+  },
+  {
+    "time": "10:45 - 11:30",
+    "title": "Gen AI & Agentic Systems in the Enterprise",
+    "speaker": "Kaushik Deb",
+    "track": "AI & Agents",
+    "hall": "Hall 2",
+    "description": "Architecting enterprise-grade Gen AI platforms and agentic systems for real business impact.",
+    "type": "session"
+  },
+  {
+    "time": "10:45 - 11:30",
+    "title": "Platform Engineering & Developer Experience",
+    "speaker": "Ram Iyengar",
+    "track": "Platform",
+    "hall": "Hall 3",
+    "description": "Cloud Foundry and platform advocacy: empowering developers and accelerating innovation.",
+    "type": "session"
+  },
+  {
+    "time": "11:30 - 12:15",
+    "title": "DevOps at Scale: Automation & Multi-Cloud",
+    "speaker": "Chandika S",
+    "track": "Cloud & DevOps",
+    "hall": "Hall 1",
+    "description": "Linux, multi-cloud platforms, containerization, and automation for reliable, scalable platforms.",
+    "type": "session"
+  },
+  {
+    "time": "11:30 - 12:15",
+    "title": "Kubernetes, Observability & Cost on AWS",
+    "speaker": "Ranjini Ganeshan",
+    "track": "AI & Agents",
+    "hall": "Hall 2",
+    "description": "Building resilient, observable systems and optimizing cost on AWS with Kubernetes and SRE practices.",
+    "type": "session"
+  },
+  {
+    "time": "11:30 - 12:15",
+    "title": "Building Scalable Cloud & Automation Solutions",
+    "speaker": "Ravi Shankar",
+    "track": "Cloud & DevOps",
+    "hall": "Hall 3",
+    "description": "AWS, Azure, and automation for scalable DevOps – practical insights from 15+ years in the field.",
+    "type": "session"
+  },
+  {
+    "time": "12:15 - 13:30",
+    "title": "Lunch Break",
+    "speaker": null,
+    "track": null,
+    "hall": null,
+    "description": "Lunch and networking.",
+    "type": "break"
+  },
+  {
+    "time": "13:30 - 14:15",
+    "title": "AI-Native DevOps: Labs, Agents & MCP",
+    "speaker": "Shashank Karpal",
+    "track": "Cloud & DevOps",
+    "hall": "Hall 1",
+    "description": "Hands-on AI playgrounds, agentic workflows, MCP, LangChain, and outcome-driven DevOps upskilling.",
+    "type": "session"
+  },
+  {
+    "time": "13:30 - 14:15",
+    "title": "AI in Cloud: Building & Operating Smarter Systems",
+    "speaker": "Aparna Prabhu",
+    "track": "AI & Agents",
+    "hall": "Hall 2",
+    "description": "Applying AI thoughtfully to improve how teams build and operate cloud infrastructure at DigitalOcean.",
+    "type": "session"
+  },
+  {
+    "time": "13:30 - 14:15",
+    "title": "Security & DevSecOps in the Cloud",
+    "speaker": "Rahul Jadhav",
+    "track": "Platform",
+    "hall": "Hall 3",
+    "description": "Cloud-native security and DevSecOps practices for modern infrastructure.",
+    "type": "session"
+  },
+  {
+    "time": "14:15 - 14:45",
+    "title": "Coffee Break",
+    "speaker": null,
+    "track": null,
+    "hall": null,
+    "description": "Short break.",
+    "type": "break"
+  },
+  {
+    "time": "14:45 - 15:30",
+    "title": "Hands-on DevOps: From Zero to Production",
+    "speaker": "Abhishek Veeramalla",
+    "track": "Cloud & DevOps",
+    "hall": "Hall 1",
+    "description": "Practical DevOps and cloud skills – tools, pipelines, and real-world workflows.",
+    "type": "session"
+  },
+  {
+    "time": "14:45 - 15:30",
+    "title": "Open Source & Community-Driven Innovation",
+    "speaker": "Kunal Kushwaha",
+    "track": "AI & Agents",
+    "hall": "Hall 2",
+    "description": "Building in the open: community, content, and career in open source.",
+    "type": "session"
+  },
+  {
+    "time": "14:45 - 15:30",
+    "title": "AWS & Cloud-Native Developer Experience",
+    "speaker": "Shubham Londhe",
+    "track": "Platform",
+    "hall": "Hall 3",
+    "description": "Developer advocacy and cloud-native tooling for modern applications.",
+    "type": "session"
+  },
+  {
+    "time": "15:30 - 16:15",
+    "title": "Closing Keynote: Learning & Building in the Open",
+    "speaker": "Hitesh Choudhary",
+    "track": "Main Stage",
+    "hall": "Main Hall",
+    "description": "Teaching at scale, building for the developer community, and the future of open learning.",
+    "type": "keynote"
+  },
+  {
+    "time": "16:15 - 17:00",
+    "title": "Networking & Wrap-up",
+    "speaker": null,
+    "track": null,
+    "hall": null,
+    "description": "Informal networking and end of conference.",
+    "type": "break"
+  }
+]
