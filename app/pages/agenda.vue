@@ -49,7 +49,7 @@
           <!-- Parallel sessions -->
           <div v-else class="agenda-row agenda-row--sessions">
             <div class="agenda-row__time">
-              <span class="agenda-row__time-text">{{ time }}</span>
+              <span class="agenda-row__time-text">{{ time }}</span>              
             </div>
             <div class="agenda-row__cells">
               <div
@@ -89,7 +89,7 @@
                     </p>
                   </article>
                 </template>
-                <div v-else class="agenda-row__empty" />
+                <!-- <div v-else class="agenda-row__empty" /> -->
               </div>
             </div>
           </div>
@@ -350,6 +350,7 @@ $shadow-hover: 0 4px 12px rgba(30, 58, 138, 0.08);
   padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   @media (min-width: 960px) {
     padding: 0.875rem 1rem;
@@ -362,6 +363,7 @@ $shadow-hover: 0 4px 12px rgba(30, 58, 138, 0.08);
   font-size: 0.8125rem;
   font-weight: 600;
   color: $primary;
+  font-style: italic;
   white-space: nowrap;
 }
 
@@ -407,6 +409,7 @@ $shadow-hover: 0 4px 12px rgba(30, 58, 138, 0.08);
   @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
     padding: 0.875rem 1rem;
+    padding-left:0px;
   }
 
   @media (min-width: 960px) {
@@ -478,10 +481,6 @@ $shadow-hover: 0 4px 12px rgba(30, 58, 138, 0.08);
 
   &--hall-3::before {
     background: #c2410c;
-  }
-
-  &--session::before {
-    background: $text-muted;
   }
 
   @media (hover: hover) {
