@@ -1,177 +1,268 @@
 [
   {
-    "time": "08:00 - 09:00",
-    "title": "Registration & Breakfast",
+    "time": "08:50 - 09:20",
+    "title": "Registration and welcome coffee",
     "speaker": null,
-    "track": null,
     "hall": null,
     "description": "Check-in, networking, and light refreshments.",
     "type": "break"
   },
   {
-    "time": "09:00 - 09:30",
-    "title": "Opening & Welcome",
+    "time": "09:20 - 09:30",
+    "title": "Opening",
     "speaker": null,
-    "track": "Main Stage",
-    "hall": "Main Hall",
+    "hall": "Hall A",
     "description": "Conference kickoff and welcome address.",
     "type": "keynote"
   },
   {
-    "time": "09:30 - 10:15",
-    "title": "Keynote: The Future of DevOps & AI",
-    "speaker": "Laurent Gil",
-    "track": "Main Stage",
-    "hall": "Main Hall",
-    "description": "Intelligent infrastructure, FinOps, and AI-driven cloud operations from a Forbes Council member and Cast AI co-founder.",
+    "time": "09:30 - 10:00",
+    "title": "Keynote: Session",
+    "speaker": ["abhishek-veeramalla"],
+    "hall": "Hall A",
+    "description": "",
     "type": "keynote"
   },
   {
-    "time": "10:15 - 10:45",
-    "title": "Coffee Break & Networking",
+    "time": "10:00 - 10:30",
+    "title": "Keynote: Session",
+    "speaker": ["hitesh-choudhary"],
+    "description": "",
+    "hall": "Hall A",
+    "type": "keynote"
+  },
+  {
+    "time": "10:30 - 11:00",
+    "title": "Keynote: Application Performance Automation.",
+    "speaker": ["laurent-gil"],
+    "hall": "Hall A",
+    "description": "",
+    "type": "session"
+  },
+  {
+    "time": "11:00 - 11:10",
+    "title": "Group Photo",
     "speaker": null,
-    "track": null,
-    "hall": null,
-    "description": "Break and networking opportunity.",
+    "hall":null,
+    "description": "",
     "type": "break"
   },
-  {
-    "time": "10:45 - 11:30",
-    "title": "Containers & Cloud-Native: From Dev to Production",
-    "speaker": "Ajeet Singh Raina",
-    "track": "Cloud & DevOps",
-    "hall": "Hall 1",
-    "description": "Docker, Kubernetes, and cloud-native practices for building and shipping applications at scale.",
-    "type": "session"
-  },
-  {
-    "time": "10:45 - 11:30",
-    "title": "Gen AI & Agentic Systems in the Enterprise",
-    "speaker": "Kaushik Deb",
-    "track": "AI & Agents",
-    "hall": "Hall 2",
-    "description": "Architecting enterprise-grade Gen AI platforms and agentic systems for real business impact.",
-    "type": "session"
-  },
-  {
-    "time": "10:45 - 11:30",
-    "title": "Platform Engineering & Developer Experience",
-    "speaker": "Ram Iyengar",
-    "track": "Platform",
-    "hall": "Hall 3",
-    "description": "Cloud Foundry and platform advocacy: empowering developers and accelerating innovation.",
-    "type": "session"
-  },
-  {
-    "time": "11:30 - 12:15",
-    "title": "DevOps at Scale: Automation & Multi-Cloud",
-    "speaker": "Chandika S",
-    "track": "Cloud & DevOps",
-    "hall": "Hall 1",
-    "description": "Linux, multi-cloud platforms, containerization, and automation for reliable, scalable platforms.",
-    "type": "session"
-  },
-  {
-    "time": "11:30 - 12:15",
-    "title": "Kubernetes, Observability & Cost on AWS",
-    "speaker": "Ranjini Ganeshan",
-    "track": "AI & Agents",
-    "hall": "Hall 2",
-    "description": "Building resilient, observable systems and optimizing cost on AWS with Kubernetes and SRE practices.",
-    "type": "session"
-  },
-  {
-    "time": "11:30 - 12:15",
-    "title": "Building Scalable Cloud & Automation Solutions",
-    "speaker": "Ravi Shankar",
-    "track": "Cloud & DevOps",
-    "hall": "Hall 3",
-    "description": "AWS, Azure, and automation for scalable DevOps – practical insights from 15+ years in the field.",
-    "type": "session"
-  },
-  {
-    "time": "12:15 - 13:30",
-    "title": "Lunch Break",
-    "speaker": null,
-    "track": null,
-    "hall": null,
-    "description": "Lunch and networking.",
-    "type": "break"
-  },
-  {
-    "time": "13:30 - 14:15",
-    "title": "AI-Native DevOps: Labs, Agents & MCP",
-    "speaker": "Shashank Karpal",
-    "track": "Cloud & DevOps",
-    "hall": "Hall 1",
-    "description": "Hands-on AI playgrounds, agentic workflows, MCP, LangChain, and outcome-driven DevOps upskilling.",
-    "type": "session"
-  },
-  {
-    "time": "13:30 - 14:15",
-    "title": "AI in Cloud: Building & Operating Smarter Systems",
-    "speaker": "Aparna Prabhu",
-    "track": "AI & Agents",
-    "hall": "Hall 2",
-    "description": "Applying AI thoughtfully to improve how teams build and operate cloud infrastructure at DigitalOcean.",
-    "type": "session"
-  },
-  {
-    "time": "13:30 - 14:15",
-    "title": "Security & DevSecOps in the Cloud",
-    "speaker": "Rahul Jadhav",
-    "track": "Platform",
-    "hall": "Hall 3",
-    "description": "Cloud-native security and DevSecOps practices for modern infrastructure.",
-    "type": "session"
-  },
-  {
-    "time": "14:15 - 14:45",
+   {
+    "time": "11:10 - 11:30",
     "title": "Coffee Break",
     "speaker": null,
-    "track": null,
     "hall": null,
-    "description": "Short break.",
     "type": "break"
   },
   {
-    "time": "14:45 - 15:30",
-    "title": "Hands-on DevOps: From Zero to Production",
-    "speaker": "Abhishek Veeramalla",
-    "track": "Cloud & DevOps",
-    "hall": "Hall 1",
-    "description": "Practical DevOps and cloud skills – tools, pipelines, and real-world workflows.",
+    "time": "11:30 - 12:00",
+    "title": "Keynote: Session",
+    "speaker": ["sushant-gulati"],
+    "hall": "Hall A",
+    "description": "",
     "type": "session"
   },
   {
-    "time": "14:45 - 15:30",
-    "title": "Open Source & Community-Driven Innovation",
-    "speaker": "Kunal Kushwaha",
-    "track": "AI & Agents",
-    "hall": "Hall 2",
-    "description": "Building in the open: community, content, and career in open source.",
+    "time": "11:30 - 12:00",
+    "title": "From Alerts to Autonomous: Building AI agents for self healing cloud systems.",
+    "speaker": ["ranjini-ganeshan", "chandika-s"],
+    "hall": "Hall B",
     "type": "session"
   },
   {
-    "time": "14:45 - 15:30",
-    "title": "AWS & Cloud-Native Developer Experience",
-    "speaker": "Shubham Londhe",
-    "track": "Platform",
-    "hall": "Hall 3",
-    "description": "Developer advocacy and cloud-native tooling for modern applications.",
+    "time": "11:30 - 12:00",
+    "title": "Architecting Autonomous Systems on Google Cloud Run. ",
+    "speaker": ["shuva-jyoti-kar", "shruti-mantri"],
+    "hall": "Hall C",
     "type": "session"
   },
   {
-    "time": "15:30 - 16:15",
-    "title": "Closing Keynote: Learning & Building in the Open",
-    "speaker": "Hitesh Choudhary",
-    "track": "Main Stage",
-    "hall": "Main Hall",
-    "description": "Teaching at scale, building for the developer community, and the future of open learning.",
-    "type": "keynote"
+    "time": "11:30 - 13:00",
+    "title": "Workshop. From Zero to MCP: Building Kubernetes AI Integrations.",
+    "speaker": ["matas-kaminskas", "narunas-kapocius"],
+    "hall": "Board Room",
+    "type": "session"
   },
   {
-    "time": "16:15 - 17:00",
+    "time": "12:00 - 12:30",
+    "title": "Autonomous Cloud Optimization Agent: Self-Optimizing Cloud Infrastructure Using AI Agents.",
+    "speaker": ["ravi-shankar"],
+    "hall": "Hall B",
+    "type": "session"
+  },
+  {
+    "time": "12:00 - 12:30",
+    "title": "Messaging at Scale: How We Built a Secure, Serverless Notification Platform on AWS. ",
+    "speaker": ["naresh-waswani"],
+    "hall": "Hall C",
+    "type": "session"
+  },
+  {
+    "time": "12:00 - 13:00",
+    "title": "Panel discussion: Agents in Production: What Actually Works (and What Breaks).",
+    "speaker": ["kaushik-deb", "shashank-karpal", "pramod-singh"],
+    "hall": "Hall A",
+    "description": "",
+    "type": "session"
+  },
+   {
+    "time": "12:30 - 13:00",
+    "title": "Building Durable AI Agents for DevOps ",
+    "speaker": ["shubham-londhe"],
+    "hall": "Hall B",
+    "type": "session"
+  },
+  {
+    "time": "12:30 - 13:00",
+    "title": "From Idle to Invisible: Eliminating GPU Waste with Kubernetes-Native Scale-to-Zero.",
+    "speaker": ["abhishek-choudhary"],
+    "hall": "Hall C",
+    "type": "session"
+  },
+  {
+    "time": "13:00 - 14:00",
+    "title": "Lunch Break",
+    "speaker": null,
+    "hall": null,
+    "type": "break"
+  },
+  {
+    "time": "14:00 - 14:40",
+    "title": "Comming Soon",
+    "speaker": "",
+    "hall": "Hall A",
+    "type": "session"
+  },
+  {
+    "time": "14:00 - 15:00",
+    "title": "Comming Soon",
+    "speaker": "",
+    "hall": "Hall B",
+    "type": "session"
+  },
+  {
+    "time": "14:00 - 14:30",
+    "title": "Developing xApps for Cloud-based Cellular Networks.",
+    "speaker": ["arpit-tripathi"],
+    "hall": "Hall C",
+    "type": "session"
+  },
+  {
+    "time": "14:00 - 15:30",
+    "title": "Workshop",
+    "speaker": null,
+    "hall": "Board Room",
+    "description": "Comming Soon",
+    "type": "session"
+  },
+  {
+    "time": "14:30 - 15:00",
+    "title": "From Spend Intelligence to Savings: Procurement Cost Management with the Cost360 Agentic AI Assistant. ",
+    "speaker": ["utkarsh-tripathi"],
+    "hall": "Hall C",
+    "type": "session"
+  },
+  {
+    "time": "14:40 - 15:30",
+    "title": "Panel discussion: Cloud is starting to think.",
+    "speaker": ["rahul-jadhav", "kunal-kushwaha", "ram-iyengar"],
+    "hall": "Hall A",
+    "type": "session"
+  },
+  {
+    "time": "15:00 - 15:30",
+    "title": "Will Kubernetes Vanish Because of AI?",
+    "speaker": ["ram-iyengar"],
+    "hall": "Hall B",
+    "type": "session"
+  },
+  {
+    "time": "15:00 - 15:30",
+    "title": "Who Authorized That Agent? Accountability and Identity in Agent-Native Kubernetes. ",
+    "speaker": ["atulpriya-sharma"],
+    "hall": "Hall C",
+    "type": "session"
+  },
+  {
+    "time": "15:30 - 16:00",
+    "title": "Coffee Break",
+    "speaker": null,
+    "hall": null,
+    "type": "break"
+  },
+  {
+    "time": "16:00 - 16:30",
+    "title": "The Illusion of Safety with Prompt-Based Guardrails in LLMs.",
+    "speaker": ["rahul-jadhav"],
+    "hall": "Hall A",
+    "type": "session"
+  },
+  {
+    "time": "16:00 - 16:30",
+    "title": "Building Durable AI Agents for DevOps ",
+    "speaker": ["ajeet-singh-raina"],
+    "hall": "Hall B",
+    "type": "session"
+  },
+  {
+    "time": "16:00 - 16:30",
+    "title": "From Fragmented to Unified: Why Modern Backends Need a Core Primitive.",
+    "speaker": ["rohit-ghumare"],
+    "hall": "Hall C",
+    "type": "session"
+  },
+  {
+    "time": "16:00 - 17:30",
+    "title": "Workshop",
+    "speaker": null,
+    "hall": "Board Room",
+    "description": "Comming Soon",
+    "type": "session"
+  },
+  {
+    "time": "16:30 - 17:00",
+    "title": "Open Source Is How AI Scales, Modern Skills Decide If It Works.",
+    "speaker": ["dheeraj-nayal"],
+    "hall": "Hall A",
+    "type": "session"
+  },
+  {
+    "time": "16:30 - 17:00",
+    "title": "High Availability, Zero Drama: Building Resilient Storage in the Cloud. ",
+    "speaker": ["aparna-prabhu"],
+    "hall": "Hall B",
+    "type": "session"
+  },
+  {
+    "time": "16:30 - 17:00",
+    "title": "Comming Soon",
+    "speaker": null,
+    "hall": "Hall C",
+    "type": "session"
+  },
+  {
+    "time": "17:00 - 17:40",
+    "title": "Comming Soon",
+    "speaker": null,
+    "hall": "Hall A",
+    "type": "session"
+  },
+  {
+    "time": "17:00 - 17:30",
+    "title": "From Chaos to Cosmos: MLOps Deployments Powered by Buildpacks. ",
+    "speaker": ["suman-chakraborty"],
+    "hall": "Hall C",
+    "type": "session"
+  },
+  {
+    "time": "17:40 - 17:50",
+    "title": "Closing Note, Raffle",
+    "speaker": null,
+    "hall": "Hall A",
+    "type": "session"
+  },
+  {
+    "time": "17:40 - 17:50",
     "title": "Networking & Wrap-up",
     "speaker": null,
     "track": null,
