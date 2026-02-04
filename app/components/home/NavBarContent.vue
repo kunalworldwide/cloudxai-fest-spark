@@ -9,9 +9,9 @@
         Speakers
       </v-btn>
 
-      <v-btn variant="text" class="text-none nav-btn" to="/agenda" rounded="xl" color="white">
+      <!-- <v-btn variant="text" class="text-none nav-btn" to="/agenda" rounded="xl" color="white">
         Agenda
-      </v-btn>
+      </v-btn> -->
 
       <v-btn variant="text" class="text-none nav-btn" to="/badge" rounded="xl" color="white">
         Badge
@@ -92,9 +92,9 @@
             Speakers
           </v-btn>
 
-          <v-btn variant="text" color="white" class="text-none" to="/agenda">
+          <!-- <v-btn variant="text" color="white" class="text-none" to="/agenda">
             Agenda
-          </v-btn>
+          </v-btn> -->
 
           <v-btn variant="text" color="white" class="text-none" to="/badge">
             Badge

@@ -10,12 +10,12 @@
           March 14, 2026 · Bengaluru
         </p>
         <p class="agenda-header__subtitle">
-          Parallel sessions across Main Hall, Hall 1, Hall 2 & Hall 3
+          Parallel sessions across Hall A, Hall B, Hall C and Board Room
         </p>
       </header>
 
       <!-- Schedule -->
-      <section class="agenda-schedule">
+      <section class="agenda-schedule" v-if="false">
         <!-- Desktop: column headers -->
         <div class="agenda-schedule__header">
           <div class="agenda-schedule__header-time">Time</div>
