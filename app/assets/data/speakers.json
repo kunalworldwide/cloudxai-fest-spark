@@ -19,7 +19,7 @@
   {
     "id": "hitesh-choudhary",
     "name": "Hitesh Choudhary",
-    "role": "Teacher",
+    "role": "Tech video creator, Co-Founder at Learnyst",
     "bio": "Hitesh Choudhary is passionate about education. He serves around 22 million users via Learnyst and teaches cutting-edge technology to over 2 million subscribers on YouTube. Previously, Hitesh served as a CTO and most recently as a Senior Director at PW. Currently, he is fully dedicated to his passion for teaching and building content for the developer community on YouTube.",
     "image": "hitesh.webp",
     "isFeatured": false,
@@ -53,7 +53,7 @@
   {
     "id": "kunal-kushwaha",
     "name": "Kunal Kushwaha",
-    "role": "Founder WeMakeDevs",
+    "role": "Founder WeMakeDevs, Cast AI",
     "image": "kunal.webp",
     "bio": "Kunal Kushwaha presently operates a YouTube channel with 3.58 lakh subscribers, making it one of the fastest-growing educational coding channels. On his channel, he produces podcasts, hosts community events, and shares engaging content on coding, tools, and various other topics.",
     "isFeatured": true,
@@ -174,7 +174,7 @@
   {
     "id": "aparna-prabhu",
     "name": "Aparna Prabhu",
-    "role": "Senior Engineering Manager @Digital Ocean",
+    "role": "Senior Engineering Manager at Digital Ocean",
     "bio": "Aparna leads the storage and platform teams at DigitalOcean, where she and her teams build dependable, easy-to-use cloud infrastructure. She enjoys applying AI thoughtfully to improve how teams build and operate cloud systems. Most importantly, she always focuses on getting the fundamentals right - performance, efficiency, scale, and automation.",
     "image": "aparna.webp",
     "isFeatured": true,
@@ -277,7 +277,7 @@
   {
     "id": "sushant-gulati",
     "name": "Sushant Gulati",
-    "role": "",
+    "role": "Senior Engineer Manager at BigBasket",
     "bio":"",
     "image": "",
     "isFeatured": false,
@@ -294,7 +294,7 @@
   {
     "id": "pramod-singh",
     "name": "Pramod Singh",
-    "role": "",
+    "role": "Brain & Company",
     "bio":"",
     "image": "",
     "isFeatured": false,
@@ -311,7 +311,7 @@
   {
     "id": "shuva-jyoti-kar",
     "name": "Shuva Jyoti Kar",
-    "role": "",
+    "role": "Senior Technical Leader at Cisco System (India) Pvt Ltd ",
     "bio":"",
     "image": "",
     "isFeatured": false,
@@ -328,7 +328,7 @@
   {
     "id": "shruti-mantri",
     "name": "Shruti Mantri",
-    "role": "",
+    "role": "Staff Engineer at Google",
     "bio":"",
     "image": "",
     "isFeatured": false,
@@ -346,7 +346,7 @@
   {
     "id": "naresh-waswani",
     "name": "Naresh Waswani",
-    "role": "",
+    "role": "Senior Architect at Simpplr Inc.",
     "bio":"",
     "image": "",
     "isFeatured": false,
@@ -364,7 +364,7 @@
   {
     "id": "abhishek-choudhary",
     "name": "Abhishek Choudhary",
-    "role": "",
+    "role": "Founder at TrueFoundry",
     "bio":"",
     "image": "",
     "isFeatured": false,
@@ -382,7 +382,7 @@
   {
     "id": "arpit-tripathi",
     "name": "Arpit Tripathi",
-    "role": "",
+    "role": "Technical Director at TelcoLearn",
     "bio":"",
     "image": "",
     "isFeatured": false,
@@ -400,7 +400,7 @@
   {
     "id": "utkarsh-tripathi",
     "name": "Utkarsh Tripathi",
-    "role": "",
+    "role": "Principal Data Scientist at Micron Technology",
     "bio":"",
     "image": "",
     "isFeatured": false,
@@ -418,7 +418,7 @@
   {
     "id": "atulpriya-sharma",
     "name": "Atulpriya Sharma",
-    "role": "",
+    "role": "Senior Developer Advocate at Improving",
     "bio":"",
     "image": "",
     "isFeatured": false,
@@ -435,7 +435,7 @@
   {
     "id": "rohit-ghumare",
     "name": "Rohit Ghumare",
-    "role": "",
+    "role": "Head of Developer Relations at Motia",
     "bio":"",
     "image": "",
     "isFeatured": false,
@@ -452,7 +452,7 @@
   {
     "id": "suman-chakraborty",
     "name": "Suman Chakraborty",
-    "role": "",
+    "role": "Solution Architect at Platfrom9 Systems",
     "bio":"",
     "image": "",
     "isFeatured": false,

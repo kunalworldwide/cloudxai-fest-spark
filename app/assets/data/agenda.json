@@ -1,20 +1,13 @@
 [
   {
-    "time": "08:50 - 09:20",
+    "time": "08:50 - 09:30",
     "title": "Registration and welcome coffee",
     "speaker": null,
     "hall": null,
     "description": "Check-in, networking, and light refreshments.",
     "type": "break"
   },
-  {
-    "time": "09:20 - 09:30",
-    "title": "Opening",
-    "speaker": null,
-    "hall": "Hall A",
-    "description": "Conference kickoff and welcome address.",
-    "type": "keynote"
-  },
+  
   {
     "time": "09:30 - 10:00",
     "title": "Keynote: Session",
@@ -199,7 +192,7 @@
   },
   {
     "time": "16:00 - 16:30",
-    "title": "Building Durable AI Agents for DevOps ",
+    "title": "The Rise of the Augmented Developer: How AI Agents Are Creating a New Breed of 10x Engineers.",
     "speaker": ["ajeet-singh-raina"],
     "hall": "Hall B",
     "type": "session"
@@ -245,6 +238,13 @@
     "title": "Comming Soon",
     "speaker": null,
     "hall": "Hall A",
+    "type": "session"
+  },
+   {
+    "time": "17:00 - 17:30",
+    "title": "Comming Soon",
+    "speaker": null,
+    "hall": "Hall B",
     "type": "session"
   },
   {
