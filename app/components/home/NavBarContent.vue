@@ -88,6 +88,10 @@
             Register
           </v-btn>
 
+           <v-btn variant="text" color="white" class="text-none" to="/agenda">
+            Agenda
+          </v-btn>
+
           <v-btn variant="text" color="white" class="text-none" to="/speakers">
             Speakers
           </v-btn>
@@ -247,7 +251,7 @@ const handleNavigation = () => {
 }
 
 // Responsive breakpoint
-@media (max-width: 768px) {
+@media (max-width: 940px) {
   .d-md-flex {
     display: none !important;
   }
@@ -257,7 +261,7 @@ const handleNavigation = () => {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 940px) {
   .d-md-flex {
     display: flex !important;
   }

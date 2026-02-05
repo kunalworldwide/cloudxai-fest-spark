@@ -76,7 +76,7 @@
                             />
                             <div class="session-card__speaker-info">
                               <p class="session-card__speaker-name">{{ getSpeakerDetails(speakerId).name }}</p>
-                              <p class="session-card__speaker-role">{{ getSpeakerDetails(speakerId).role }}</p>
+                              <p class="session-card__speaker-role">{{ getSpeakerDetails(speakerId).agendaRole?getSpeakerDetails(speakerId).agendaRole:getSpeakerDetails(speakerId).role }}</p>
                             </div>
                          </template>
                          <template v-else>

@@ -105,6 +105,15 @@ const scrollToTop = () => {
   //   padding-right: 32px !important;
   padding-left: 64px;
   padding-right: 64px;
+
+  @media (max-width: 1020px) {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  @media (max-width: 940px) {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
 }
 // }
 .scroll-top-btn {
@@ -114,11 +123,6 @@ const scrollToTop = () => {
   z-index: 1000;
 }
 
-@media (max-width: 768px) {
-  .app-nav-bar {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-}
+
 // Styles handled by Vuetify's scroll-behavior="hide"
 </style>

@@ -72,7 +72,7 @@
   {
     "time": "11:30 - 13:00",
     "title": "Workshop. From Zero to MCP: Building Kubernetes AI Integrations.",
-    "speaker": ["matas-kaminskas", "narunas-kapocius"],
+    "speaker": null,
     "hall": "Board Room",
     "type": "session"
   },
