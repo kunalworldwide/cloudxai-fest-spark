@@ -88,10 +88,6 @@
             Register
           </v-btn>
 
-           <v-btn variant="text" color="white" class="text-none" to="/agenda">
-            Agenda
-          </v-btn>
-
           <v-btn variant="text" color="white" class="text-none" to="/speakers">
             Speakers
           </v-btn>

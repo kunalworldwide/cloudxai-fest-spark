@@ -114,5 +114,10 @@
         "name": "New Relic India",
         "link": "https://www.linkedin.com/showcase/new-relic-india/",
         "image": "nr.png"
+    },
+    {
+        "name": "TechNexus Community",
+        "link": "https://www.meetup.com/technexus-community/",
+        "image": "technexus.png"
     }
 ]
