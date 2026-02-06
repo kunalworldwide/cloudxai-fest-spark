@@ -12,91 +12,184 @@
         </p>
       </header>
 
-      <!-- Hall Tabs -->
-      <div class="hall-tabs">
-        <button
-          v-for="hall in hallOrder"
-          :key="hall"
-          class="hall-tab"
-          :class="{ 'hall-tab--active': selectedHall === hall }"
-          @click="selectHall(hall)"
-        >
-          {{ hall }}
-        </button>
-      </div>
-
-      <!-- Schedule -->
-      <section class="agenda-schedule">
-        <template v-for="(items, time) in filteredAgendaByTime" :key="time">
-          <!-- Venue-wide break -->
-          <div v-if="isVenueWide(items)" class="agenda-row agenda-row--break">
-            <div class="agenda-row__time">
-              <span class="agenda-row__time-text">{{ time }}</span>
-            </div>
-            <div class="agenda-row__break">
-              <span class="agenda-row__break-title">{{ items[0].title }}</span>
-              <span v-if="items[0].description" class="agenda-row__break-desc">
-                {{ items[0].description }}
-              </span>
+      <!-- Timeline Schedule -->
+      <section class="timeline-schedule">
+        <template v-for="(group, index) in timelineGroups" :key="index">
+          <!-- Venue-wide break or single hall session -->
+          <div v-if="group.type === 'single'" class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-time">{{ group.time }}</div>
+              
+              <!-- Break card -->
+              <div v-if="group.isBreak" class="break-card">
+                <h3 class="break-card__title">{{ group.sessions[0].title }}</h3>
+                <p v-if="group.sessions[0].description" class="break-card__desc">
+                  {{ group.sessions[0].description }}
+                </p>
+              </div>
+              
+              <!-- Single hall session -->
+              <article v-else class="session-card">
+                <span class="session-card__hall" :class="`hall-badge--${getHallIndex(group.sessions[0].hall)}`">
+                  {{ group.sessions[0].hall }}
+                </span>
+                <h3 class="session-card__title">{{ group.sessions[0].title }}</h3>
+                
+                <!-- Speakers -->
+                <div v-if="group.sessions[0].speaker && group.sessions[0].speaker.length > 0" class="session-card__speakers">
+                  <div 
+                    v-for="speakerId in group.sessions[0].speaker" 
+                    :key="speakerId"
+                    class="session-card__speaker-item"
+                  >
+                    <template v-if="getSpeakerDetails(speakerId)">
+                      <div class="speaker-avatar">
+                        <img 
+                          v-if="getSpeakerDetails(speakerId).image"
+                          :src="`/images/speakers/${getSpeakerDetails(speakerId).image}`" 
+                          :alt="getSpeakerDetails(speakerId).name"
+                          class="speaker-avatar__img"
+                        />
+                        <span v-else class="speaker-avatar__initials">
+                          {{ getInitials(getSpeakerDetails(speakerId).name) }}
+                        </span>
+                      </div>
+                      <div class="session-card__speaker-info">
+                        <p class="session-card__speaker-name">{{ getSpeakerDetails(speakerId).name }}</p>
+                        <p class="session-card__speaker-role">
+                          {{ getSpeakerDetails(speakerId).agendaRole || getSpeakerDetails(speakerId).role }}
+                        </p>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+                
+                <p v-if="group.sessions[0].description" class="session-card__desc">
+                  {{ group.sessions[0].description }}
+                </p>
+              </article>
             </div>
           </div>
 
-          <!-- Session -->
-          <div v-else class="agenda-row agenda-row--sessions">
-            <div class="agenda-row__time">
-              <span class="agenda-row__time-text">{{ time }}</span>
-            </div>
-            <div class="agenda-row__cells">
-              <div class="agenda-row__cell">
-                <template v-if="items.length > 0">
-                  <article
-                    class="session-card"
-                    :class="[
-                      `session-card--${items[0].type}`,
-                      `session-card--${getHallClass(items[0].hall)}`,
-                    ]"
-                  >
-                    <span class="session-card__hall">{{ items[0].hall }}</span>
-                    <h3 class="session-card__title">
-                      {{ items[0].title }}
-                    </h3>
-                    
-                    <!-- Speakers section -->
-                   <div v-if="items[0].speaker && items[0].speaker.length > 0" class="session-card__speakers">
-                      <div 
-                        v-for="speakerId in items[0].speaker" 
-                        :key="speakerId"
-                        class="session-card__speaker-item"
-                      >
-                         <template v-if="getSpeakerDetails(speakerId)">
-                            <img 
-                              :src="getSpeakerDetails(speakerId).image ? `/images/speakers/${getSpeakerDetails(speakerId).image}` : '/images/defaultAvatar.png'" 
-                              :alt="getSpeakerDetails(speakerId).name"
-                              class="session-card__speaker-img"
-                            />
-                            <div class="session-card__speaker-info">
-                              <p class="session-card__speaker-name">{{ getSpeakerDetails(speakerId).name }}</p>
-                              <p class="session-card__speaker-role">{{ getSpeakerDetails(speakerId).agendaRole?getSpeakerDetails(speakerId).agendaRole:getSpeakerDetails(speakerId).role }}</p>
+          <!-- Parallel sessions -->
+          <div v-else-if="group.type === 'parallel'" class="timeline-item timeline-item--parallel">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content timeline-content--full">
+              <!-- Parallel sessions indicator -->
+              <div class="parallel-indicator">
+                <div class="parallel-indicator__badge">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 2L14 8L8 14M8 2L2 8L8 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Parallel Sessions Begin — {{ group.hallCount }} Halls
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 2L14 8L8 14M8 2L2 8L8 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <svg class="parallel-indicator__lines" viewBox="0 0 800 60" preserveAspectRatio="none">
+                  <path v-for="(hall, idx) in group.halls" :key="idx"
+                    :d="getParallelPath(idx, group.halls.length)"
+                    :stroke="getHallColor(idx)"
+                    stroke-width="3"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+
+              <!-- Hall headers -->
+              <div class="hall-grid-header">
+                <div 
+                  v-for="(hall, idx) in group.halls" 
+                  :key="hall"
+                  class="hall-header"
+                  :class="`hall-header--${idx}`"
+                >
+                  {{ hall }}
+                </div>
+              </div>
+
+              <!-- Time slots in parallel -->
+              <div v-for="timeSlot in group.timeSlots" :key="timeSlot.time" class="parallel-time-slot">
+                <!-- Break within parallel sessions -->
+                <template v-if="timeSlot.isBreak">
+                  <div class="parallel-break">
+                    <div class="parallel-break__time">{{ timeSlot.time }}</div>
+                    <div class="parallel-break__content">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="parallel-break__icon">
+                        <path d="M10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M10 6V10L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                      </svg>
+                      <span class="parallel-break__title">{{ timeSlot.breakData.title }}</span>
+                    </div>
+                  </div>
+                </template>
+                
+                <!-- Regular sessions -->
+                <template v-else>
+                  <div class="parallel-time-slot__time">{{ timeSlot.time }}</div>
+                  <div class="hall-grid">
+                    <div 
+                      v-for="(hall, idx) in group.halls" 
+                      :key="hall"
+                      class="hall-grid__cell"
+                    >
+                      <template v-if="timeSlot.sessions[hall]">
+                        <article class="session-card session-card--compact">
+                          <span class="session-card__hall session-card__hall--mobile" :class="`hall-badge--${HALL_ORDER.indexOf(hall)}`">
+                            {{ hall }}
+                          </span>
+                          <h3 class="session-card__title">{{ timeSlot.sessions[hall].title }}</h3>
+                          
+                          <!-- Speakers -->
+                          <div v-if="timeSlot.sessions[hall].speaker && timeSlot.sessions[hall].speaker.length > 0" class="session-card__speakers">
+                            <div 
+                              v-for="speakerId in timeSlot.sessions[hall].speaker" 
+                              :key="speakerId"
+                              class="session-card__speaker-item"
+                            >
+                              <template v-if="getSpeakerDetails(speakerId)">
+                                <div class="speaker-avatar speaker-avatar--small">
+                                  <img 
+                                    v-if="getSpeakerDetails(speakerId).image"
+                                    :src="`/images/speakers/${getSpeakerDetails(speakerId).image}`" 
+                                    :alt="getSpeakerDetails(speakerId).name"
+                                    class="speaker-avatar__img"
+                                  />
+                                  <span v-else class="speaker-avatar__initials">
+                                    {{ getInitials(getSpeakerDetails(speakerId).name) }}
+                                  </span>
+                                </div>
+                                <div class="session-card__speaker-info">
+                                  <p class="session-card__speaker-name">{{ getSpeakerDetails(speakerId).name }}</p>
+                                  <p class="session-card__speaker-role">
+                                    {{ getSpeakerDetails(speakerId).agendaRole || getSpeakerDetails(speakerId).role }}
+                                  </p>
+                                </div>
+                              </template>
                             </div>
-                         </template>
-                         <template v-else>
-                             <p class="session-card__speaker-name"> {{ speakerId }}</p>
-                         </template>
+                          </div>
+                        </article>
+                      </template>
+                      <div v-else class="session-card session-card--empty">
+                        <p class="session-card__empty-text">Coming Soon</p>
                       </div>
                     </div>
-
-
-                    <p v-if="items[0].track" class="session-card__track">
-                      {{ items[0].track }}
-                    </p>
-                    <p v-if="items[0].description" class="session-card__desc">
-                      {{ items[0].description }}
-                    </p>
-                  </article>
+                  </div>
                 </template>
-                <div v-else class="agenda-row__empty">
-                    <p class="text-sm text-gray-500 italic">No session in {{ selectedHall }} at this time.</p>
-                </div>
+              </div>
+
+              <!-- Reconvene indicator -->
+              <div v-if="group.reconvenes" class="reconvene-indicator">
+                <svg class="reconvene-indicator__lines" viewBox="0 0 800 60" preserveAspectRatio="none">
+                  <path v-for="(hall, idx) in group.halls" :key="idx"
+                    :d="getReconvenePath(idx, group.halls.length)"
+                    :stroke="getHallColor(idx)"
+                    stroke-width="3"
+                    fill="none"
+                  />
+                </svg>
+                <div class="reconvene-indicator__label">All Halls Reconvene</div>
               </div>
             </div>
           </div>
@@ -112,65 +205,161 @@
 import agendaData from "~/assets/data/agenda.json";
 import speakersData from "~/assets/data/speakers.json";
 
-const route = useRoute();
-const router = useRouter();
+const HALL_ORDER = ["Hall A", "Hall B", "Hall C", "Board Room"];
 
-const HALL_ORDER = [ "Hall A", "Hall B", "Hall C","Board Room",];
-const hallOrder = ref(HALL_ORDER);
-const selectedHall = ref("Hall A");
-
-const getSlug = (name) => name.toLowerCase().replace(/\s+/g, '-');
-
-// Helper to find Hall Name from slug
-const getHallFromSlug = (slug) => {
-  if (!slug) return null;
-  return HALL_ORDER.find(hall => getSlug(hall) === slug);
-};
-
-onMounted(() => {
-  const hallFromUrl = getHallFromSlug(route.query.hall);
-  if (hallFromUrl) {
-    selectedHall.value = hallFromUrl;
-  }
-});
-
-watch(() => route.query.hall, (newSlug) => {
-  const hall = getHallFromSlug(newSlug);
-  if (hall) {
-    selectedHall.value = hall;
-  }
-});
-
-const selectHall = (hall) => {
-  selectedHall.value = hall;
-  router.push({ query: { ...route.query, hall: getSlug(hall) } });
-};
-
-const filteredAgendaByTime = computed(() => {
-  const byTime = {};
-  for (const item of agendaData) {
-    if (item.hall === null || item.hall === selectedHall.value) {
-        if (!byTime[item.time]) byTime[item.time] = [];
-        byTime[item.time].push(item);
+// Group agenda items into timeline groups
+const timelineGroups = computed(() => {
+  const groups = [];
+  const timeMap = {};
+  
+  // Group by time
+  agendaData.forEach(item => {
+    if (!timeMap[item.time]) {
+      timeMap[item.time] = [];
     }
+    timeMap[item.time].push(item);
+  });
+  
+  // Convert to timeline groups
+  const times = Object.keys(timeMap).sort();
+  let inParallelMode = false;
+  let currentParallelGroup = null;
+  
+  times.forEach((time, index) => {
+    const items = timeMap[time];
+    
+    // Check if this is a venue-wide event (break or single hall)
+    const isBreak = items.length === 1 && items[0].hall === null;
+    const isSingleHall = items.length === 1 && items[0].hall !== null;
+    
+    if (isBreak || isSingleHall) {
+      // If we're in parallel mode and this is a break, add it to the parallel group
+      if (inParallelMode && isBreak) {
+        currentParallelGroup.timeSlots.push({
+          time: time,
+          isBreak: true,
+          breakData: items[0]
+        });
+        return; // Continue in parallel mode
+      }
+      
+      // End parallel mode if active
+      if (inParallelMode && currentParallelGroup) {
+        currentParallelGroup.reconvenes = true;
+        groups.push(currentParallelGroup);
+        currentParallelGroup = null;
+        inParallelMode = false;
+      }
+      
+      // Add single item group
+      groups.push({
+        type: 'single',
+        time: time,
+        isBreak: isBreak,
+        sessions: items
+      });
+    } else {
+      // Multiple halls - parallel sessions
+      if (!inParallelMode) {
+        // Start new parallel group
+        const halls = [...new Set(items.map(i => i.hall))].filter(h => h !== null).sort((a, b) => {
+          return HALL_ORDER.indexOf(a) - HALL_ORDER.indexOf(b);
+        });
+        
+        currentParallelGroup = {
+          type: 'parallel',
+          halls: halls,
+          hallCount: halls.length,
+          timeSlots: [],
+          reconvenes: false
+        };
+        inParallelMode = true;
+      }
+      
+      // Add time slot to current parallel group
+      const sessionsByHall = {};
+      items.forEach(item => {
+        if (item.hall) {
+          sessionsByHall[item.hall] = item;
+        }
+      });
+      
+      currentParallelGroup.timeSlots.push({
+        time: time,
+        sessions: sessionsByHall,
+        isBreak: false
+      });
+      
+      // Check if next time slot ends parallel mode
+      const nextTime = times[index + 1];
+      if (nextTime) {
+        const nextItems = timeMap[nextTime];
+        const nextIsBreak = nextItems.length === 1 && nextItems[0].hall === null;
+        const nextIsSingle = nextItems.length === 1 && nextItems[0].hall !== null;
+        
+        // Only end parallel mode if it's a single hall session (not a break)
+        if (nextIsSingle) {
+          currentParallelGroup.reconvenes = true;
+          groups.push(currentParallelGroup);
+          currentParallelGroup = null;
+          inParallelMode = false;
+        }
+      }
+    }
+  });
+  
+  // Add any remaining parallel group
+  if (currentParallelGroup) {
+    groups.push(currentParallelGroup);
   }
-  return byTime;
+  
+  return groups;
 });
 
-function isVenueWide(items) {
-  if (!items || items.length === 0) return false;
-  return items[0].hall === null;
-}
-
-function getHallClass(hallName) {
-    if (!hallName) return '';
-    const index = HALL_ORDER.indexOf(hallName);
-    return index !== -1 ? `hall-${index}` : '';
-}
-
+// Helper functions
 function getSpeakerDetails(id) {
-    if (!id) return null;
-    return speakersData.find(s => s.id === id) || null;
+  if (!id) return null;
+  return speakersData.find(s => s.id === id) || null;
+}
+
+function getInitials(name) {
+  if (!name) return '';
+  return name
+    .split(' ')
+    .map(n => n[0])
+    .join('')
+    .toUpperCase()
+    .slice(0, 2);
+}
+
+function getHallIndex(hallName) {
+  if (!hallName) return -1;
+  return HALL_ORDER.indexOf(hallName);
+}
+
+function getHallColor(index) {
+  const colors = ['#3b82f6', '#10b981', '#f59e0b', '#a855f7'];
+  return colors[index] || '#64748b';
+}
+
+function getParallelPath(index, total) {
+  const startY = 30;
+  const endY = 60;
+  const width = 800;
+  const spacing = width / (total + 1);
+  const x = spacing * (index + 1);
+  
+  return `M 400 ${startY} Q ${(400 + x) / 2} ${(startY + endY) / 2} ${x} ${endY}`;
+}
+
+function getReconvenePath(index, total) {
+  const startY = 0;
+  const endY = 30;
+  const width = 800;
+  const spacing = width / (total + 1);
+  const x = spacing * (index + 1);
+  
+  return `M ${x} ${startY} Q ${(400 + x) / 2} ${(startY + endY) / 2} 400 ${endY}`;
 }
 
 definePageMeta({
@@ -272,44 +461,41 @@ $text: #1e293b;
 $text-muted: #64748b;
 $border: #e2e8f0;
 $bg-subtle: #f8fafc;
-$break-bg: #f0fdfa;
-$break-border: #99f6e4;
-$radius: 10px;
-$shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-$shadow-hover: 0 4px 12px rgba(30, 58, 138, 0.08);
+$bg-page: #f1f5f9;
+$break-bg: #ecfdf5;
+$break-border: #6ee7b7;
+$radius: 12px;
+$shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+$shadow-hover: 0 4px 12px rgba(30, 58, 138, 0.12);
+$timeline-color: #14b8a6;
 
 .agenda-page {
-  background: #fafbfc;
+  background: $bg-page;
+  min-height: 100vh;
 }
 
 .agenda-page__container {
-  max-width: 1280px; 
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem 1rem 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-  @media (min-width: 600px) {
-    padding: 2.5rem 1.5rem 4rem;
+  @media (min-width: 768px) {
+    padding: 3rem 2rem 4rem;
   }
 }
 
 /* Header */
 .agenda-header {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  margin-bottom: 2rem;
-  padding: 0 0.5rem;
+  margin-bottom: 3rem;
 }
 
 .agenda-header__title {
-  font-size: clamp(1.625rem, 4.5vw, 2.5rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   line-height: 1.2;
   color: $text;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.75rem;
   letter-spacing: -0.02em;
 }
 
@@ -318,284 +504,551 @@ $shadow-hover: 0 4px 12px rgba(30, 58, 138, 0.08);
 }
 
 .agenda-header__meta {
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: $text-muted;
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.5rem;
   font-weight: 500;
 }
 
 .agenda-header__subtitle {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: $text-muted;
   margin: 0;
-  opacity: 0.9;
 }
 
-/* Tabs */
-.hall-tabs {
-    max-width: 800px;
+/* Timeline Schedule */
+.timeline-schedule {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.timeline-item {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
+  gap: 1.5rem;
   margin-bottom: 2rem;
-}
 
-.hall-tab {
-  padding: 0.6rem 1.2rem;
-  border-radius: 9999px;
-  background: #fff;
-  border: 1px solid $border;
-  color: $text-muted;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  
-  &:hover {
-    border-color: $primary-light;
-    color: $primary;
+  @media (min-width: 768px) {
+    gap: 2.5rem;
   }
 
-  &--active {
-    background: $primary;
-    color: #fff;
-    border-color: $primary;
-    box-shadow: 0 2px 6px rgba($primary, 0.25);
-    
-    &:hover {
-        background: $primary; // keep color on hover
-        color: #fff;
-    }
-  }
-}
-
-/* Schedule wrapper */
-.agenda-schedule {
-    max-width: 800px;
-
-  background: #fff;
-  border-radius: $radius;
-  border: 1px solid $border;
-  overflow: hidden;
-  box-shadow: $shadow;
-}
-
-/* Row: break */
-.agenda-row {
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid $border;
-  min-height: 52px;
-
-  @media (min-width: 600px) {
-      flex-direction: row;
-      align-items: stretch;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 24px;
+    bottom: -2rem;
+    width: 3px;
+    background: linear-gradient(to bottom, $timeline-color 0%, rgba($timeline-color, 0.3) 100%);
   }
 
-  &:last-child {
-    border-bottom: none;
-  }
+  // &:last-child::before {
+  //   display: none;
+  // }
 }
 
-.agenda-row__time {
-  padding: 0.5rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background: $bg-subtle;
-  min-width: 130px;
-
-  @media (min-width: 600px) {
-    padding: 0.75rem 1rem;
-    justify-content: center;
-    border-right: 1px solid $border;
-  }
+.timeline-marker {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: $timeline-color;
+  border: 4px solid $bg-page;
+  box-shadow: 0 0 0 3px rgba($timeline-color, 0.2);
+  position: relative;
+  z-index: 2;
+  margin-top: 2px;
 }
 
-.agenda-row__time-text {
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: $primary;
-  font-style: italic;
-  white-space: nowrap;
-}
-
-.agenda-row--break .agenda-row__time-text {
-  color: #0d9488;
-}
-
-/* Break cell */
-.agenda-row__break {
-  padding: 0.875rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.25rem;
-  background: $break-bg;
+.timeline-content {
   flex: 1;
-  // border-top: 1px dashed $break-border; /* mobile separator if needed */
-  
-  @media (min-width: 600px) {
-      border-top: none;
-  }
+  min-width: 0;
 }
 
-.agenda-row__break-title {
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: #0f766e;
-}
-
-.agenda-row__break-desc {
-  font-size: 0.8125rem;
-  color: $text-muted;
-  line-height: 1.4;
-}
-
-/* Sessions row */
-.agenda-row--sessions .agenda-row__cells {
-  flex: 1;
-  padding: 1rem;
-}
-
-.agenda-row__cell {
+.timeline-content--full {
   width: 100%;
 }
 
-.agenda-row__empty {
-  padding: 1.5rem;
-  text-align: center;
-  background: $bg-subtle;
-  border: 1px dashed $border;
-  border-radius: 6px;
-}
-
-/* Session card */
-.session-card {
-  padding: 0;
-  border-radius: 0;
-  border: none;
-  background: transparent;
-  // height: 100%;
-  position: relative;
-  // box-shadow: none; 
-  
-}
-
-
-.session-card {
-    padding: 1rem;
-    border-radius: 8px;
-    border: 1px solid $border;
-    background: #fff;
-    transition: box-shadow 0.2s ease;
-    
-    @media (hover: hover) {
-        &:hover {
-        box-shadow: $shadow-hover;
-        border-color: rgba($primary, 0.2);
-        }
-    }
-}
-
-
-.session-card__hall {
-  display: inline-block;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: $primary;
-  margin-bottom: 0.375rem;
-  background: rgba($primary, 0.05);
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-
-.session-card--hall-1 .session-card__hall { color: #0d9488; background: rgba(#0d9488, 0.05); }
-.session-card--hall-2 .session-card__hall { color: #7c3aed; background: rgba(#7c3aed, 0.05); }
-.session-card--hall-3 .session-card__hall { color: #c2410c; background: rgba(#c2410c, 0.05); }
-
-
-.session-card__title {
-  font-size: 1.1rem;
+.timeline-time {
+  font-size: 0.9375rem;
   font-weight: 600;
-  color: $text;
-  line-height: 1.35;
+  color: $timeline-color;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+/* Break Card */
+.break-card {
+  background: $break-bg;
+  border: 2px solid $break-border;
+  border-radius: $radius;
+  padding: 1.25rem 1.5rem;
+}
+
+.break-card__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #059669;
   margin: 0 0 0.5rem;
 }
 
-.session-card--keynote .session-card__title {
-  color: $primary;
+.break-card__desc {
+  font-size: 0.9375rem;
+  color: #047857;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Session Card */
+.session-card {
+  background: #fff;
+  border: 1px solid $border;
+  border-radius: $radius;
+  padding: 1.5rem;
+  box-shadow: $shadow;
+  transition: all 0.2s ease;
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: $shadow-hover;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.session-card--compact {
+  padding: 1.25rem;
+}
+
+.session-card--empty {
+  background: $bg-subtle;
+  border-style: dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.session-card__empty-text {
+  color: $text-muted;
+  font-style: italic;
+  margin: 0;
+}
+
+.session-card__hall {
+  display: inline-block;
+  font-size: 0.75rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+// Color-coded hall badges
+.hall-badge--0 {
+  background: rgba(59, 130, 246, 0.15);
+  color: #1e40af;
+}
+
+.hall-badge--1 {
+  background: rgba(16, 185, 129, 0.15);
+  color: #047857;
+}
+
+.hall-badge--2 {
+  background: rgba(245, 158, 11, 0.15);
+  color: #b45309;
+}
+
+.hall-badge--3 {
+  background: rgba(168, 85, 247, 0.15);
+  color: #6b21a8;
+}
+
+.session-card__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: $text;
+  line-height: 1.4;
+  margin: 0 0 1rem;
+}
+
+.session-card--compact .session-card__title {
+  font-size: 1rem;
+  margin-bottom: 0.875rem;
 }
 
 /* Speakers */
 .session-card__speakers {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin-bottom: 1rem;
 }
 
 .session-card__speaker-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
 }
 
-.session-card__speaker-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid $bg-subtle;
-    flex-shrink: 0;
+.speaker-avatar {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: $bg-subtle;
+  border: 2px solid $border;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speaker-avatar--small {
+  width: 40px;
+  height: 40px;
+}
+
+.speaker-avatar__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.speaker-avatar__initials {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $text-muted;
+}
+
+.speaker-avatar--small .speaker-avatar__initials {
+  font-size: 0.75rem;
 }
 
 .session-card__speaker-info {
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  min-width: 0;
 }
 
 .session-card__speaker-name {
-  font-size: 0.9rem;
-  color: $text;
+  font-size: 0.9375rem;
   font-weight: 600;
-  margin: 0;
-  line-height: 1.2;
+  color: $text;
+  margin: 0 0 2px;
+  line-height: 1.3;
+}
+
+.session-card--compact .session-card__speaker-name {
+  font-size: 0.875rem;
 }
 
 .session-card__speaker-role {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   color: $text-muted;
   margin: 0;
-  line-height: 1.2;
-  margin-top: 2px;
+  line-height: 1.3;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-.session-card__track {
-  display: inline-block;
+.session-card--compact .session-card__speaker-role {
   font-size: 0.75rem;
-  color: $text-muted;
-  background: $bg-subtle;
-  padding: 2px 6px;
-  border-radius: 4px;
-  margin: 0 0 0.5rem;
-  border: 1px solid $border;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
 }
 
 .session-card__desc {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   color: $text-muted;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0;
+}
+
+/* Parallel Sessions */
+.timeline-item--parallel {
+  &::before {
+    display: none;
+  }
+}
+
+.parallel-indicator {
+  margin-bottom: 1.5rem;
+}
+
+.parallel-indicator__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #1e293b;
+  color: #fff;
+  padding: 0.625rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 auto 1rem;
+  display: flex;
+  justify-content: center;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.parallel-indicator__lines {
+  width: 100%;
+  height: 60px;
+  display: block;
+}
+
+/* Hall Grid */
+.hall-grid-header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 60px;
+  z-index: 10;
+  background: $bg-page;
+  padding-top: 0.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hall-header {
+  padding: 0.75rem 1rem;
+  border-radius: 8px 8px 0 0;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hall-header--0 {
+  background: #3b82f6;
+}
+
+.hall-header--1 {
+  background: #10b981;
+}
+
+.hall-header--2 {
+  background: #f59e0b;
+}
+
+.hall-header--3 {
+  background: #a855f7;
+}
+
+.parallel-time-slot {
+  margin-bottom: 1.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.parallel-time-slot__time {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $timeline-color;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+/* Parallel Break */
+.parallel-break {
+  margin-bottom: 1.5rem;
+}
+
+.parallel-break__time {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $timeline-color;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.parallel-break__content {
+  background: $break-bg;
+  border: 2px solid $break-border;
+  border-radius: $radius;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.parallel-break__icon {
+  flex-shrink: 0;
+  color: #10b981;
+}
+
+.parallel-break__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #059669;
+  text-align: center;
+}
+
+.hall-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hall-grid__cell {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+
+  
+  // Add light background colors for each hall
+  &:nth-child(1) {
+    background: rgba(59, 130, 246, 0.05); // Light blue for Hall A
+  }
+  
+  &:nth-child(2) {
+    background: rgba(16, 185, 129, 0.05); // Light green for Hall B
+  }
+  
+  &:nth-child(3) {
+    background: rgba(245, 158, 11, 0.05); // Light orange for Hall C
+  }
+  
+  &:nth-child(4) {
+    background: rgba(168, 85, 247, 0.05); // Light purple for Board Room
+  }
+  
+  // Ensure all cards have equal height
+  .session-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05); 
+    
+    &--compact {
+      padding: 1rem;
+    }
+    
+    &--empty {
+      min-height: 150px;
+    }
+  }
+}
+
+/* Reconvene Indicator */
+.reconvene-indicator {
+  margin-top: 2rem;
+  position: relative;
+}
+
+.reconvene-indicator__lines {
+  width: 100%;
+  height: 60px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.reconvene-indicator__label {
+  text-align: center;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: $text;
+  padding: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 939px) {
+  .timeline-item {
+    gap: 1rem;
+  }
+
+  .timeline-marker {
+    width: 20px;
+    height: 20px;
+  }
+
+  .timeline-item::before {
+    left: 8px;
+  }
+
+  // Hide hall headers on mobile
+  .hall-grid-header {
+    display: none;
+  }
+
+  // Hide parallel indicator arrows on mobile
+  .parallel-indicator__lines {
+    display: none;
+  }
+
+  // Hide reconvene indicator arrows on mobile
+  .reconvene-indicator__lines {
+    display: none;
+  }
+
+  // Single column layout for mobile
+  .hall-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  // Remove column background colors on mobile
+  .hall-grid__cell {
+    background: transparent !important;
+    padding: 0;
+    border-radius: 0;
+    
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  // Show hall badge on mobile
+  .session-card__hall--mobile {
+    display: inline-block !important;
+    margin-bottom: 0.75rem;
+  }
+
+  .parallel-indicator__badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .session-card {
+    padding: 1.25rem;
+  }
+  
+  .session-card--compact {
+    margin-bottom: 1rem;
+  }
+}
+
+// Hide mobile hall badge on desktop
+@media (min-width: 940px) {
+  .session-card__hall--mobile {
+    display: none;
+  }
 }
 </style>

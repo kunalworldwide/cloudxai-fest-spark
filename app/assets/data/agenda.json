@@ -70,7 +70,7 @@
     "type": "session"
   },
   {
-    "time": "11:30 - 13:00",
+    "time": "11:30 - 12:00",
     "title": "Workshop. From Zero to MCP: Building Kubernetes AI Integrations.",
     "speaker": null,
     "hall": "Board Room",
@@ -91,7 +91,7 @@
     "type": "session"
   },
   {
-    "time": "12:00 - 13:00",
+    "time": "12:00 - 12:30",
     "title": "Panel discussion: Agents in Production: What Actually Works (and What Breaks).",
     "speaker": ["kaushik-deb", "shashank-karpal", "pramod-singh"],
     "hall": "Hall A",
@@ -120,14 +120,14 @@
     "type": "break"
   },
   {
-    "time": "14:00 - 14:40",
+    "time": "14:00 - 14:30",
     "title": "Comming Soon",
     "speaker": "",
     "hall": "Hall A",
     "type": "session"
   },
   {
-    "time": "14:00 - 15:00",
+    "time": "14:00 - 14:30",
     "title": "Comming Soon",
     "speaker": "",
     "hall": "Hall B",
@@ -141,7 +141,7 @@
     "type": "session"
   },
   {
-    "time": "14:00 - 15:30",
+    "time": "14:00 - 14:30",
     "title": "Workshop",
     "speaker": null,
     "hall": "Board Room",
@@ -156,7 +156,7 @@
     "type": "session"
   },
   {
-    "time": "14:40 - 15:30",
+    "time": "14:30 - 15:00",
     "title": "Panel discussion: Cloud is starting to think.",
     "speaker": ["rahul-jadhav", "kunal-kushwaha", "ram-iyengar"],
     "hall": "Hall A",
@@ -205,7 +205,7 @@
     "type": "session"
   },
   {
-    "time": "16:00 - 17:30",
+    "time": "16:00 - 16:30",
     "title": "Workshop",
     "speaker": null,
     "hall": "Board Room",
@@ -234,7 +234,7 @@
     "type": "session"
   },
   {
-    "time": "17:00 - 17:40",
+    "time": "17:00 - 17:30",
     "title": "Comming Soon",
     "speaker": null,
     "hall": "Hall A",
@@ -255,18 +255,10 @@
     "type": "session"
   },
   {
-    "time": "17:40 - 17:50",
+    "time": "17:30 - 17:50",
     "title": "Closing Note, Raffle",
     "speaker": null,
     "hall": "Hall A",
     "type": "session"
-  },
-  {
-    "time": "17:40 - 17:50",
-    "title": "Networking & Wrap-up",
-    "speaker": null,
-    "hall": null,
-    "description": "Informal networking and end of conference.",
-    "type": "break"
   }
 ]
