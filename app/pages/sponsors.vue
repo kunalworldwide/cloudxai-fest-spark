@@ -117,7 +117,7 @@
                 <h3 class="tier-label title-tier">Title Sponsor</h3>
                 <div class="sponsors-grid title-sponsor-grid">
                   <div class="sponsor-item title-sponsor">
-                    <a href="https://cast.ai" target="_blank" class="sponsor-link">
+                    <a href="https://cast.ai" target="_blank" style="display: flex !important;" class="sponsor-link">
                       <img src="/images/partners/castaidark.png" alt="Cast AI" class="sponsor-logo" />
                     </a>
                   </div>
@@ -133,7 +133,7 @@
                     :key="sponsor.id" 
                     class="sponsor-item diamond-sponsor"
                   >
-                    <a :href="sponsor.link" target="_blank" class="sponsor-link">
+                    <a :href="sponsor.link" target="_blank" style="display: flex !important;" class="sponsor-link">
                       <img 
                         :src="`/images/partners/${sponsor.image}`" 
                         :alt="sponsor.name" 
