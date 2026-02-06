@@ -135,7 +135,7 @@
                       class="hall-grid__cell"
                     >
                       <template v-if="timeSlot.sessions[hall]">
-                        <article class="session-card session-card--compact">
+                        <article class="session-card session-card--compact " :class="`hall-bg--${HALL_ORDER.indexOf(hall)}`">
                           <span class="session-card__hall session-card__hall--mobile" :class="`hall-badge--${HALL_ORDER.indexOf(hall)}`">
                             {{ hall }}
                           </span>
@@ -668,6 +668,22 @@ $timeline-color: #14b8a6;
   color: #6b21a8;
 }
 
+  .hall-bg--0{
+    background: rgba(59, 130, 246, 0.05); // Light blue for Hall A
+  }
+  
+  .hall-bg--1 {
+    background: rgba(16, 185, 129, 0.05); // Light green for Hall B
+  }
+  
+  .hall-bg--2 {
+    background: rgba(245, 158, 11, 0.05); // Light orange for Hall C
+  }
+  
+.hall-bg--3{
+    background: rgba(168, 85, 247, 0.05); // Light purple for Board Room
+  }
+
 .session-card__title {
   font-size: 1.125rem;
   font-weight: 600;
@@ -921,31 +937,13 @@ $timeline-color: #14b8a6;
   flex-direction: column;
   border-radius: 8px;
 
-  
-  // Add light background colors for each hall
-  &:nth-child(1) {
-    background: rgba(59, 130, 246, 0.05); // Light blue for Hall A
-  }
-  
-  &:nth-child(2) {
-    background: rgba(16, 185, 129, 0.05); // Light green for Hall B
-  }
-  
-  &:nth-child(3) {
-    background: rgba(245, 158, 11, 0.05); // Light orange for Hall C
-  }
-  
-  &:nth-child(4) {
-    background: rgba(168, 85, 247, 0.05); // Light purple for Board Room
-  }
+ 
   
   // Ensure all cards have equal height
   .session-card {
     flex: 1;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.05); 
     
     &--compact {
       padding: 1rem;
