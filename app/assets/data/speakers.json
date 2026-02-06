@@ -288,7 +288,7 @@
       {
         "name": "linkedin",
         "icon": "mdi-linkedin",
-        "url": ""
+        "url": "https://ca.linkedin.com/in/sushantgulati/"
       }
     ]
   },
@@ -305,7 +305,7 @@
       {
         "name": "linkedin",
         "icon": "mdi-linkedin",
-        "url": ""
+        "url": "https://www.linkedin.com/in/pramodchahar/"
       }
     ]
   },
@@ -322,14 +322,14 @@
       {
         "name": "linkedin",
         "icon": "mdi-linkedin",
-        "url": ""
+        "url": "https://www.linkedin.com/in/shuva-jyoti-kar/"
       }
     ]
   },
   {
     "id": "shruti-mantri",
     "name": "Shruti Mantri",
-    "role": "Staff Engineer at Google",
+    "role": "Architect at Google",
     "bio":"",
     "image": "",
     "isFeatured": false,
@@ -339,7 +339,7 @@
       {
         "name": "linkedin",
         "icon": "mdi-linkedin",
-        "url": ""
+        "url": "https://www.linkedin.com/in/shruti-mantri/"
       }
     ]
   }
@@ -349,7 +349,7 @@
     "name": "Naresh Waswani",
     "role": "Senior Architect at Simpplr Inc.",
     "bio":"",
-    "image": "",
+    "image": "naresh-waswani.webp",
     "isFeatured": false,
     "visible": false,
     "isHeroFeature": false,
@@ -357,7 +357,7 @@
       {
         "name": "linkedin",
         "icon": "mdi-linkedin",
-        "url": ""
+        "url": "https://www.linkedin.com/in/nwaswani/"
       }
     ]
   }
@@ -375,7 +375,7 @@
       {
         "name": "linkedin",
         "icon": "mdi-linkedin",
-        "url": ""
+        "url": "https://www.linkedin.com/in/abhishekch123/"
       }
     ]
   }
@@ -393,7 +393,7 @@
       {
         "name": "linkedin",
         "icon": "mdi-linkedin",
-        "url": ""
+        "url": "https://www.linkedin.com/in/tripathiarpit/"
       }
     ]
   }
@@ -403,7 +403,7 @@
     "name": "Utkarsh Tripathi",
     "role": "Principal Data Scientist at Micron Technology",
     "bio":"",
-    "image": "",
+    "image": "utkarsh-tripathi.webp",
     "isFeatured": false,
     "visible": false,
     "isHeroFeature": false,
@@ -411,7 +411,7 @@
       {
         "name": "linkedin",
         "icon": "mdi-linkedin",
-        "url": ""
+        "url": "https://www.linkedin.com/in/utkarsh-tripathi/"
       }
     ]
   }
@@ -429,7 +429,7 @@
       {
         "name": "linkedin",
         "icon": "mdi-linkedin",
-        "url": ""
+        "url": "https://www.linkedin.com/in/atulpriyasharma/"
       }
     ]
   },
@@ -446,7 +446,7 @@
       {
         "name": "linkedin",
         "icon": "mdi-linkedin",
-        "url": ""
+        "url": "https://uk.linkedin.com/in/rohit-ghumare"
       }
     ]
   },
@@ -463,7 +463,7 @@
       {
         "name": "linkedin",
         "icon": "mdi-linkedin",
-        "url": ""
+        "url": "https://www.linkedin.com/in/schakraborty007/"
       }
     ]
   }
