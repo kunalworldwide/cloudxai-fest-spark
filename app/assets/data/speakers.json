@@ -282,7 +282,7 @@
     "bio":"",
     "image": "",
     "isFeatured": false,
-    "visible": false,
+    "visible": true,
     "isHeroFeature": false,
     "socials": [
       {
@@ -299,7 +299,7 @@
     "bio":"",
     "image": "",
     "isFeatured": false,
-    "visible": false,
+    "visible": true,
     "isHeroFeature": false,
     "socials": [
       {
@@ -316,7 +316,7 @@
     "bio":"",
     "image": "",
     "isFeatured": false,
-    "visible": false,
+    "visible": true,
     "isHeroFeature": false,
     "socials": [
       {
@@ -333,7 +333,7 @@
     "bio":"",
     "image": "",
     "isFeatured": false,
-    "visible": false,
+    "visible": true,
     "isHeroFeature": false,
     "socials": [
       {
@@ -351,7 +351,7 @@
     "bio":"",
     "image": "naresh-waswani.webp",
     "isFeatured": false,
-    "visible": false,
+    "visible": true,
     "isHeroFeature": false,
     "socials": [
       {
@@ -369,7 +369,7 @@
     "bio":"",
     "image": "",
     "isFeatured": false,
-    "visible": false,
+    "visible": true,
     "isHeroFeature": false,
     "socials": [
       {
@@ -387,7 +387,7 @@
     "bio":"",
     "image": "",
     "isFeatured": false,
-    "visible": false,
+    "visible": true,
     "isHeroFeature": false,
     "socials": [
       {
@@ -405,7 +405,7 @@
     "bio":"",
     "image": "utkarsh-tripathi.webp",
     "isFeatured": false,
-    "visible": false,
+    "visible": true,
     "isHeroFeature": false,
     "socials": [
       {
@@ -423,7 +423,7 @@
     "bio":"",
     "image": "",
     "isFeatured": false,
-    "visible": false,
+    "visible": true,
     "isHeroFeature": false,
     "socials": [
       {
@@ -440,7 +440,7 @@
     "bio":"",
     "image": "",
     "isFeatured": false,
-    "visible": false,
+    "visible": true,
     "isHeroFeature": false,
     "socials": [
       {
@@ -457,7 +457,7 @@
     "bio":"",
     "image": "",
     "isFeatured": false,
-    "visible": false,
+    "visible": true,
     "isHeroFeature": false,
     "socials": [
       {
