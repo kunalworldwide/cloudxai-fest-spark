@@ -466,5 +466,22 @@
         "url": "https://www.linkedin.com/in/schakraborty007/"
       }
     ]
+  },
+  {
+    "id": "arsh-goyal",
+    "name": "Arsh Goyal",
+    "role": "Senior Software Engineer at Samsung",
+    "bio":"",
+    "image": "arsh-goyal.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/arshgoyal/"
+      }
+    ]
   }
 ]
