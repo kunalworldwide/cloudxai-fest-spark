@@ -19,10 +19,9 @@
           <div v-if="group.type === 'single'" class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <div class="timeline-time">{{ group.time }}</div>
-              
               <!-- Break card -->
-              <div v-if="group.isBreak" class="break-card">
+              <div v-if="group.isBreak" class="break-card" :class="{ 'break-card--long': isLongSession(group.time) }">
+                <div class="card-time">{{ group.time }}</div>
                 <h3 class="break-card__title">{{ group.sessions[0].title }}</h3>
                 <p v-if="group.sessions[0].description" class="break-card__desc">
                   {{ group.sessions[0].description }}
@@ -30,7 +29,15 @@
               </div>
               
               <!-- Single hall session -->
-              <article v-else class="session-card">
+              <article 
+                v-else 
+                class="session-card" 
+                :class="[
+                  { 'session-card--long': isLongSession(group.time) },
+                  `hall-border--${getHallIndex(group.sessions[0].hall)}`
+                ]"
+              >
+                <div class="card-time">{{ group.time }}</div>
                 <span class="session-card__hall" :class="`hall-badge--${getHallIndex(group.sessions[0].hall)}`">
                   {{ group.sessions[0].hall }}
                 </span>
@@ -109,71 +116,84 @@
                 </div>
               </div>
 
-              <!-- Time slots in parallel -->
-              <div v-for="timeSlot in group.timeSlots" :key="timeSlot.time" class="parallel-time-slot">
-                <!-- Break within parallel sessions -->
-                <template v-if="timeSlot.isBreak">
-                  <div class="parallel-break">
-                    <div class="parallel-break__time">{{ timeSlot.time }}</div>
+              <div class="hall-grid hall-grid--parallel">
+                <template v-for="(item, itemIdx) in group.gridItems" :key="itemIdx">
+                  <!-- Break within parallel sessions -->
+                  <div v-if="item.type === 'break'" 
+                    class="parallel-break"
+                    :style="{ '--row-start': item.rowStart, '--col-span': HALL_ORDER.length }"
+                  >
                     <div class="parallel-break__content">
+                      <div class="card-time card-time--inline">{{ item.data.time }}</div>
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="parallel-break__icon">
                         <path d="M10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2Z" stroke="currentColor" stroke-width="2"/>
                         <path d="M10 6V10L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                       </svg>
-                      <span class="parallel-break__title">{{ timeSlot.breakData.title }}</span>
+                      <span class="parallel-break__title">{{ item.data.title }}</span>
                     </div>
                   </div>
-                </template>
-                
-                <!-- Regular sessions -->
-                <template v-else>
-                  <div class="parallel-time-slot__time">{{ timeSlot.time }}</div>
-                  <div class="hall-grid">
-                    <div 
-                      v-for="(hall, idx) in group.halls" 
-                      :key="hall"
-                      class="hall-grid__cell"
+
+                  <!-- Regular sessions -->
+                  <div v-else-if="item.type === 'session'" 
+                    class="hall-grid__cell"
+                    :style="{ 
+                      '--row-start': item.rowStart, 
+                      '--row-span': item.rowSpan, 
+                      '--col-start': item.hallIndex + 1 
+                    }"
+                  >
+                    <article 
+                      class="session-card session-card--compact" 
+                      :class="[
+                        `hall-bg--${item.hallIndex}`,
+                        `hall-border--${item.hallIndex}`,
+                        { 'session-card--long': isLongSession(item.data.time) }
+                      ]"
                     >
-                      <template v-if="timeSlot.sessions[hall]">
-                        <article class="session-card session-card--compact " :class="`hall-bg--${HALL_ORDER.indexOf(hall)}`">
-                          <span class="session-card__hall session-card__hall--mobile" :class="`hall-badge--${HALL_ORDER.indexOf(hall)}`">
-                            {{ hall }}
-                          </span>
-                          <h3 class="session-card__title">{{ timeSlot.sessions[hall].title }}</h3>
-                          
-                          <!-- Speakers -->
-                          <div v-if="timeSlot.sessions[hall].speaker && timeSlot.sessions[hall].speaker.length > 0" class="session-card__speakers">
-                            <div 
-                              v-for="speakerId in timeSlot.sessions[hall].speaker" 
-                              :key="speakerId"
-                              class="session-card__speaker-item"
-                            >
-                              <template v-if="getSpeakerDetails(speakerId)">
-                                <div class="speaker-avatar speaker-avatar--small">
-                                  <img 
-                                    v-if="getSpeakerDetails(speakerId).image"
-                                    :src="`/images/speakers/${getSpeakerDetails(speakerId).image}`" 
-                                    :alt="getSpeakerDetails(speakerId).name"
-                                    class="speaker-avatar__img"
-                                  />
-                                  <span v-else class="speaker-avatar__initials">
-                                    {{ getInitials(getSpeakerDetails(speakerId).name) }}
-                                  </span>
-                                </div>
-                                <div class="session-card__speaker-info">
-                                  <p class="session-card__speaker-name">{{ getSpeakerDetails(speakerId).name }}</p>
-                                  <p class="session-card__speaker-role">
-                                    {{ getSpeakerDetails(speakerId).agendaRole || getSpeakerDetails(speakerId).role }}
-                                  </p>
-                                </div>
-                              </template>
+                      <div class="card-time">{{ item.data.time }}</div>
+                      <span class="session-card__hall session-card__hall--mobile" :class="`hall-badge--${item.hallIndex}`">
+                        {{ HALL_ORDER[item.hallIndex] }}
+                      </span>
+                      <h3 class="session-card__title">{{ item.data.title }}</h3>
+                      
+                      <!-- Speakers -->
+                      <div v-if="item.data.speaker && item.data.speaker.length > 0" class="session-card__speakers">
+                        <div 
+                          v-for="speakerId in item.data.speaker" 
+                          :key="speakerId"
+                          class="session-card__speaker-item"
+                        >
+                          <template v-if="getSpeakerDetails(speakerId)">
+                            <div class="speaker-avatar speaker-avatar--small">
+                              <img 
+                                v-if="getSpeakerDetails(speakerId).image"
+                                :src="`/images/speakers/${getSpeakerDetails(speakerId).image}`" 
+                                :alt="getSpeakerDetails(speakerId).name"
+                                class="speaker-avatar__img"
+                              />
+                              <span v-else class="speaker-avatar__initials">
+                                {{ getInitials(getSpeakerDetails(speakerId).name) }}
+                              </span>
                             </div>
-                          </div>
-                        </article>
-                      </template>
-                      <div v-else class="session-card session-card--empty">
-                        <p class="session-card__empty-text">Coming Soon</p>
+                            <div class="session-card__speaker-info">
+                              <p class="session-card__speaker-name">{{ getSpeakerDetails(speakerId).name }}</p>
+                              <p class="session-card__speaker-role">
+                                {{ getSpeakerDetails(speakerId).agendaRole || getSpeakerDetails(speakerId).role }}
+                              </p>
+                            </div>
+                          </template>
+                        </div>
                       </div>
+                    </article>
+                  </div>
+
+                  <!-- Placeholder -->
+                  <div v-else-if="item.type === 'placeholder'" 
+                    class="hall-grid__cell hall-grid__cell--placeholder"
+                    :style="{ '--row-start': item.rowStart, '--col-start': item.hallIndex + 1 }"
+                  >
+                    <div class="session-card session-card--empty">
+                      <p class="session-card__empty-text">Coming Soon</p>
                     </div>
                   </div>
                 </template>
@@ -212,109 +232,171 @@ const timelineGroups = computed(() => {
   const groups = [];
   const timeMap = {};
   
-  // Group by time
+  // Group by start time
   agendaData.forEach(item => {
-    if (!timeMap[item.time]) {
-      timeMap[item.time] = [];
+    const startTime = item.time.split(' - ')[0];
+    if (!timeMap[startTime]) {
+      timeMap[startTime] = [];
     }
-    timeMap[item.time].push(item);
+    timeMap[startTime].push(item);
   });
   
-  // Convert to timeline groups
-  const times = Object.keys(timeMap).sort();
+  const times = Object.keys(timeMap).sort((a, b) => a.localeCompare(b));
+  
   let inParallelMode = false;
   let currentParallelGroup = null;
   
   times.forEach((time, index) => {
     const items = timeMap[time];
-    
-    // Check if this is a venue-wide event (break or single hall)
     const isBreak = items.length === 1 && items[0].hall === null;
     const isSingleHall = items.length === 1 && items[0].hall !== null;
     
     if (isBreak || isSingleHall) {
-      // If we're in parallel mode and this is a break, add it to the parallel group
       if (inParallelMode && isBreak) {
-        currentParallelGroup.timeSlots.push({
+        currentParallelGroup.scheduledItems.push({
+          type: 'break',
           time: time,
-          isBreak: true,
-          breakData: items[0]
+          data: items[0]
         });
-        return; // Continue in parallel mode
+        return;
       }
       
-      // End parallel mode if active
       if (inParallelMode && currentParallelGroup) {
-        currentParallelGroup.reconvenes = true;
+        finalizeParallelGroup(currentParallelGroup);
         groups.push(currentParallelGroup);
         currentParallelGroup = null;
         inParallelMode = false;
       }
       
-      // Add single item group
       groups.push({
         type: 'single',
-        time: time,
+        time: items[0].time,
         isBreak: isBreak,
         sessions: items
       });
     } else {
-      // Multiple halls - parallel sessions
       if (!inParallelMode) {
-        // Start new parallel group
-        const halls = [...new Set(items.map(i => i.hall))].filter(h => h !== null).sort((a, b) => {
-          return HALL_ORDER.indexOf(a) - HALL_ORDER.indexOf(b);
-        });
-        
         currentParallelGroup = {
           type: 'parallel',
-          halls: halls,
-          hallCount: halls.length,
-          timeSlots: [],
+          halls: HALL_ORDER,
+          hallCount: HALL_ORDER.length,
+          scheduledItems: [], // Raw items to be processed into grid
           reconvenes: false
         };
         inParallelMode = true;
       }
       
-      // Add time slot to current parallel group
-      const sessionsByHall = {};
       items.forEach(item => {
-        if (item.hall) {
-          sessionsByHall[item.hall] = item;
-        }
+        currentParallelGroup.scheduledItems.push({
+          type: 'session',
+          time: time,
+          data: item
+        });
       });
       
-      currentParallelGroup.timeSlots.push({
-        time: time,
-        sessions: sessionsByHall,
-        isBreak: false
-      });
-      
-      // Check if next time slot ends parallel mode
       const nextTime = times[index + 1];
-      if (nextTime) {
-        const nextItems = timeMap[nextTime];
-        const nextIsBreak = nextItems.length === 1 && nextItems[0].hall === null;
-        const nextIsSingle = nextItems.length === 1 && nextItems[0].hall !== null;
-        
-        // Only end parallel mode if it's a single hall session (not a break)
-        if (nextIsSingle) {
-          currentParallelGroup.reconvenes = true;
-          groups.push(currentParallelGroup);
-          currentParallelGroup = null;
-          inParallelMode = false;
-        }
+      if (nextTime && timeMap[nextTime].length === 1 && timeMap[nextTime][0].hall !== null) {
+        finalizeParallelGroup(currentParallelGroup);
+        groups.push(currentParallelGroup);
+        currentParallelGroup = null;
+        inParallelMode = false;
       }
     }
   });
   
-  // Add any remaining parallel group
   if (currentParallelGroup) {
+    finalizeParallelGroup(currentParallelGroup);
     groups.push(currentParallelGroup);
   }
   
   return groups;
 });
+
+function finalizeParallelGroup(group) {
+  // 1. Identify all row boundary times
+  const boundaryTimes = new Set();
+  group.scheduledItems.forEach(item => {
+    if (item.type === 'session') {
+      boundaryTimes.add(item.time); // start
+      const endTime = getEndTime(item.data.time);
+      if (endTime) boundaryTimes.add(endTime);
+    } else {
+      boundaryTimes.add(item.time);
+    }
+  });
+  
+  const sortedBoundaries = [...boundaryTimes].sort((a, b) => a.localeCompare(b));
+  const rowIntervals = [];
+  for (let i = 0; i < sortedBoundaries.length - 1; i++) {
+    rowIntervals.push({
+      start: sortedBoundaries[i],
+      end: sortedBoundaries[i+1]
+    });
+  }
+  
+  group.rows = rowIntervals;
+  
+  // 2. Map sessions and breaks to grid positions
+  const gridPositions = []; // { hallIndex, rowStart, rowSpan, type, data }
+  const occupied = Array.from({ length: rowIntervals.length }, () => Array(HALL_ORDER.length).fill(false));
+  
+  group.scheduledItems.forEach(item => {
+    if (item.type === 'session') {
+      const hallIndex = HALL_ORDER.indexOf(item.data.hall);
+      if (hallIndex === -1) return;
+      
+      const rowStart = rowIntervals.findIndex(r => r.start === item.time);
+      const sessionEnd = getEndTime(item.data.time);
+      const rowEndIndex = rowIntervals.findIndex(r => r.end === sessionEnd);
+      const rowSpan = (rowEndIndex === -1 ? 1 : rowEndIndex - rowStart + 1);
+      
+      gridPositions.push({
+        hallIndex,
+        rowStart: rowStart + 1, // 1-indexed for CSS grid
+        rowSpan,
+        type: 'session',
+        data: item.data
+      });
+      
+      for (let r = rowStart; r < rowStart + rowSpan; r++) {
+        if (occupied[r]) occupied[r][hallIndex] = true;
+      }
+    } else {
+      // Break spans all halls
+      const rowStart = rowIntervals.findIndex(r => r.start === item.time);
+      gridPositions.push({
+        hallIndex: 1, // Start at 1
+        colSpan: HALL_ORDER.length,
+        rowStart: rowStart + 1,
+        rowSpan: 1,
+        type: 'break',
+        data: item.data
+      });
+      
+      if (occupied[rowStart]) {
+        for (let c = 0; c < HALL_ORDER.length; c++) occupied[rowStart][c] = true;
+      }
+    }
+  });
+  
+  // 3. Add placeholders
+  for (let r = 0; r < rowIntervals.length; r++) {
+    for (let c = 0; c < HALL_ORDER.length; c++) {
+      if (!occupied[r][c]) {
+        gridPositions.push({
+          hallIndex: c,
+          rowStart: r + 1,
+          rowSpan: 1,
+          type: 'placeholder'
+        });
+        occupied[r][c] = true;
+      }
+    }
+  }
+  
+  group.gridItems = gridPositions;
+  group.reconvenes = true;
+}
 
 // Helper functions
 function getSpeakerDetails(id) {
@@ -360,6 +442,23 @@ function getReconvenePath(index, total) {
   const x = spacing * (index + 1);
   
   return `M ${x} ${startY} Q ${(400 + x) / 2} ${(startY + endY) / 2} 400 ${endY}`;
+}
+
+function getDuration(time) {
+  if (!time || !time.includes(' - ')) return 0;
+  const [start, end] = time.split(' - ');
+  const [startH, startM] = start.split(':').map(Number);
+  const [endH, endM] = end.split(':').map(Number);
+  return (endH * 60 + endM) - (startH * 60 + startM);
+}
+
+function getEndTime(time) {
+  if (!time || !time.includes(' - ')) return '';
+  return time.split(' - ')[1];
+}
+
+function isLongSession(time) {
+  return getDuration(time) > 30;
 }
 
 definePageMeta({
@@ -570,12 +669,17 @@ $timeline-color: #14b8a6;
   width: 100%;
 }
 
-.timeline-time {
-  font-size: 0.9375rem;
+.card-time {
+  font-size: 0.8125rem;
   font-weight: 600;
   color: $timeline-color;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   font-style: italic;
+  display: block;
+
+  &--inline {
+    margin-bottom: 0;
+  }
 }
 
 /* Break Card */
@@ -584,6 +688,12 @@ $timeline-color: #14b8a6;
   border: 2px solid $break-border;
   border-radius: $radius;
   padding: 1.25rem 1.5rem;
+  transition: all 0.2s ease;
+
+  &--long {
+    border-width: 3px;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+  }
 }
 
 .break-card__title {
@@ -614,6 +724,21 @@ $timeline-color: #14b8a6;
       box-shadow: $shadow-hover;
       transform: translateY(-2px);
     }
+  }
+
+  &--long {
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+    
+    .card-time {
+      font-weight: 700;
+    }
+
+    &.hall-border--0 { border-color: #3b82f6; .card-time { color: #3b82f6; } }
+    &.hall-border--1 { border-color: #10b981; .card-time { color: #10b981; } }
+    &.hall-border--2 { border-color: #f59e0b; .card-time { color: #f59e0b; } }
+    &.hall-border--3 { border-color: #a855f7; .card-time { color: #a855f7; } }
   }
 }
 
@@ -878,43 +1003,9 @@ $timeline-color: #14b8a6;
   }
 }
 
-.parallel-time-slot__time {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: $timeline-color;
-  margin-bottom: 0.75rem;
-  font-style: italic;
-
-  @media (max-width: 768px) {
-    position: sticky;
-    top: 60px; 
-    z-index: 9;
-    background: $bg-page;
-    padding: 0.5rem 0;
-    margin-top: -0.5rem;
-  }
-}
-
 /* Parallel Break */
 .parallel-break {
   margin-bottom: 1.5rem;
-}
-
-.parallel-break__time {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: $timeline-color;
-  margin-bottom: 0.75rem;
-  font-style: italic;
-
-  @media (max-width: 768px) {
-    position: sticky;
-    top: 60px;
-    z-index: 9;
-    background: $bg-page;
-    padding: 0.5rem 0;
-    margin-top: -0.5rem;
-  }
 }
 
 .parallel-break__content {
@@ -950,13 +1041,36 @@ $timeline-color: #14b8a6;
   }
 }
 
+.hall-grid--parallel {
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense;
+
+    .hall-grid__cell {
+      grid-row: var(--row-start) / span var(--row-span, 1);
+      grid-column: var(--col-start);
+    }
+
+    .parallel-break {
+      grid-row: var(--row-start);
+      grid-column: 1 / span var(--col-span);
+      margin-bottom: 0;
+    }
+  }
+}
+
 .hall-grid__cell {
   display: flex;
   flex-direction: column;
   border-radius: 8px;
+  height: 100%;
 
- 
-  
+  &--placeholder {
+    @media (max-width: 939px) {
+      display: none;
+    }
+  }
+
   // Ensure all cards have equal height
   .session-card {
     flex: 1;

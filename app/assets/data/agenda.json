@@ -70,7 +70,7 @@
     "type": "session"
   },
   {
-    "time": "11:30 - 12:00",
+    "time": "11:30 - 13:00",
     "title": "Workshop. From Zero to MCP: Building Kubernetes AI Integrations.",
     "speaker": null,
     "hall": "Board Room",
@@ -91,7 +91,7 @@
     "type": "session"
   },
   {
-    "time": "12:00 - 12:30",
+    "time": "12:00 - 13:00",
     "title": "Panel discussion: Agents in Production: What Actually Works (and What Breaks).",
     "speaker": ["kaushik-deb", "shashank-karpal", "pramod-singh"],
     "hall": "Hall A",
@@ -121,13 +121,13 @@
   },
   {
     "time": "14:00 - 14:30",
-    "title": "Coming Soon",
-    "speaker": "",
+    "title": "The Illusion of Safety with Prompt-Based Guardrails in LLMs.",
+    "speaker": ["rahul-jadhav"],
     "hall": "Hall A",
     "type": "session"
   },
   {
-    "time": "14:00 - 14:30",
+    "time": "14:00 - 15:00",
     "title": "Coming Soon",
     "speaker": "",
     "hall": "Hall B",
@@ -141,7 +141,7 @@
     "type": "session"
   },
   {
-    "time": "14:00 - 14:30",
+    "time": "14:00 - 15:30",
     "title": "Workshop",
     "speaker": null,
     "hall": "Board Room",
@@ -156,7 +156,7 @@
     "type": "session"
   },
   {
-    "time": "14:30 - 15:00",
+    "time": "14:30 - 15:30",
     "title": "Panel discussion: Cloud is starting to think.",
     "speaker": ["rahul-jadhav", "kunal-kushwaha", "ram-iyengar", "arsh-goyal"],
     "hall": "Hall A",
@@ -185,8 +185,8 @@
   },
   {
     "time": "16:00 - 16:30",
-    "title": "The Illusion of Safety with Prompt-Based Guardrails in LLMs.",
-    "speaker": ["rahul-jadhav"],
+    "title": "Open Source Is How AI Scales, Modern Skills Decide If It Works.",
+    "speaker": ["dheeraj-nayal"],
     "hall": "Hall A",
     "type": "session"
   },
@@ -205,20 +205,14 @@
     "type": "session"
   },
   {
-    "time": "16:00 - 16:30",
+    "time": "16:00 - 17:30",
     "title": "Workshop",
     "speaker": null,
     "hall": "Board Room",
     "description": "Coming Soon",
     "type": "session"
   },
-  {
-    "time": "16:30 - 17:00",
-    "title": "Open Source Is How AI Scales, Modern Skills Decide If It Works.",
-    "speaker": ["dheeraj-nayal"],
-    "hall": "Hall A",
-    "type": "session"
-  },
+  
   {
     "time": "16:30 - 17:00",
     "title": "High Availability, Zero Drama: Building Resilient Storage in the Cloud. ",
@@ -228,13 +222,13 @@
   },
   {
     "time": "16:30 - 17:00",
-    "title": "Coming Soon",
-    "speaker": null,
+    "title": "From Chaos to Cosmos: MLOps Deployments Powered by Buildpacks. ",
+    "speaker": ["suman-chakraborty"],
     "hall": "Hall C",
     "type": "session"
   },
   {
-    "time": "17:00 - 17:30",
+    "time": "16:30 - 17:00",
     "title": "Coming Soon",
     "speaker": null,
     "hall": "Hall A",
@@ -249,16 +243,25 @@
   },
   {
     "time": "17:00 - 17:30",
-    "title": "From Chaos to Cosmos: MLOps Deployments Powered by Buildpacks. ",
-    "speaker": ["suman-chakraborty"],
+    "title": "Coming Soon",
+    "speaker": null,
     "hall": "Hall C",
     "type": "session"
   },
   {
-    "time": "17:30 - 17:50",
-    "title": "Closing Note, Raffle",
+    "time": "17:00 - 17:30",
+    "title": "Coming Soon",
     "speaker": null,
     "hall": "Hall A",
     "type": "session"
+  },
+  {
+    "time": "17:30 - 17:40",
+    "title": "Networking & Wrap-up",
+    "speaker": null,
+    "track": null,
+    "hall": null,
+    "description": "Informal networking and end of conference.",
+    "type": "break"
   }
 ]
