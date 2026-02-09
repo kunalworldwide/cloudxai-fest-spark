@@ -884,6 +884,15 @@ $timeline-color: #14b8a6;
   color: $timeline-color;
   margin-bottom: 0.75rem;
   font-style: italic;
+
+  @media (max-width: 768px) {
+    position: sticky;
+    top: 60px; 
+    z-index: 9;
+    background: $bg-page;
+    padding: 0.5rem 0;
+    margin-top: -0.5rem;
+  }
 }
 
 /* Parallel Break */
@@ -897,6 +906,15 @@ $timeline-color: #14b8a6;
   color: $timeline-color;
   margin-bottom: 0.75rem;
   font-style: italic;
+
+  @media (max-width: 768px) {
+    position: sticky;
+    top: 60px;
+    z-index: 9;
+    background: $bg-page;
+    padding: 0.5rem 0;
+    margin-top: -0.5rem;
+  }
 }
 
 .parallel-break__content {
