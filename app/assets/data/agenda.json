@@ -127,7 +127,7 @@
     "type": "session"
   },
   {
-    "time": "14:00 - 15:00",
+    "time": "14:30 - 15:30",
     "title": "Coming Soon",
     "speaker": "",
     "hall": "Hall B",
@@ -163,7 +163,7 @@
     "type": "session"
   },
   {
-    "time": "15:00 - 15:30",
+    "time": "14:00 - 14:30",
     "title": "Will Kubernetes Vanish Because of AI?",
     "speaker": ["ram-iyengar"],
     "hall": "Hall B",
