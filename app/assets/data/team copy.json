@@ -22,5 +22,17 @@
                 "url": "https://www.linkedin.com/in/premgoswami/"
             }
         ]
+    },
+    {
+        "name": "Siddhant Agarwal",
+        "role": "Developer Relations Lead - APAC",
+        "image": "sid.png",
+        "socials": [
+            {
+                "name": "linkedin",
+                "icon": "mdi-linkedin",
+                "url": "https://www.linkedin.com/in/sidagarwal04/"
+            }
+        ]
     }
 ]
