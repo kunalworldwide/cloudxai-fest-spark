@@ -119,5 +119,10 @@
         "name": "TechNexus Community",
         "link": "https://www.meetup.com/technexus-community/",
         "image": "technexus.png"
+    },
+    {
+        "name": "Open Search Bengaluru",
+        "link": "https://www.meetup.com/opensearch-project-bengaluru/",
+        "image": "opensearch.png"
     }
 ]
