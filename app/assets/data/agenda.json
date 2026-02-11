@@ -108,7 +108,7 @@
   {
     "time": "12:30 - 13:00",
     "title": "From Idle to Invisible: Eliminating GPU Waste with Kubernetes-Native Scale-to-Zero.",
-    "speaker": ["abhishek-choudhary"],
+    "speaker": ["abhishek-choudhary","shubham-rai"],
     "hall": "Hall C",
     "type": "session"
   },
