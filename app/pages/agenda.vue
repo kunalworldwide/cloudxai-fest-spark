@@ -227,6 +227,13 @@ import speakersData from "~/assets/data/speakers.json";
 
 const HALL_ORDER = ["Hall A", "Hall B", "Hall C", "Board Room"];
 
+// Helper to get end time from a time range string (e.g., "09:00 - 10:00")
+function getEndTime(timeRange) {
+  if (!timeRange || typeof timeRange !== 'string') return null;
+  const parts = timeRange.split(' - ');
+  return parts.length > 1 ? parts[1] : parts[0]; // If no range, assume start is end for comparison
+}
+
 // Group agenda items into timeline groups
 const timelineGroups = computed(() => {
   const groups = [];
@@ -243,47 +250,49 @@ const timelineGroups = computed(() => {
   
   const times = Object.keys(timeMap).sort((a, b) => a.localeCompare(b));
   
-  let inParallelMode = false;
   let currentParallelGroup = null;
+  let activeMaxEndTime = '00:00';
   
+  const pushCurrentParallel = () => {
+    if (currentParallelGroup) {
+      finalizeParallelGroup(currentParallelGroup);
+      groups.push(currentParallelGroup);
+      currentParallelGroup = null;
+      activeMaxEndTime = '00:00';
+    }
+  };
+
   times.forEach((time, index) => {
     const items = timeMap[time];
     const isBreak = items.length === 1 && items[0].hall === null;
-    const isSingleHall = items.length === 1 && items[0].hall !== null;
+    const isMultiple = items.length > 1;
     
-    if (isBreak || isSingleHall) {
-      if (inParallelMode && isBreak) {
-        currentParallelGroup.scheduledItems.push({
-          type: 'break',
-          time: time,
-          data: items[0]
-        });
-        return;
-      }
-      
-      if (inParallelMode && currentParallelGroup) {
-        finalizeParallelGroup(currentParallelGroup);
-        groups.push(currentParallelGroup);
-        currentParallelGroup = null;
-        inParallelMode = false;
-      }
-      
+    if (isBreak) {
+      pushCurrentParallel();
       groups.push({
         type: 'single',
         time: items[0].time,
-        isBreak: isBreak,
+        isBreak: true,
         sessions: items
       });
-    } else {
-      if (!inParallelMode) {
+      return;
+    }
+
+    // Determine if we should be in/continue parallel mode
+    // We stay in parallel if:
+    // 1. Multiple sessions start at this time
+    // 2. We are already in parallel mode AND this session starts before the previous ones end
+    const shouldBeParallel = isMultiple || (currentParallelGroup && time < activeMaxEndTime);
+
+    if (shouldBeParallel) {
+      if (!currentParallelGroup) {
         currentParallelGroup = {
           type: 'parallel',
           halls: HALL_ORDER,
           hallCount: HALL_ORDER.length,
-          scheduledItems: [], // Raw items to be processed into grid
+          scheduledItems: [],
           reconvenes: false
         };
-        inParallelMode = true;
       }
       
       items.forEach(item => {
@@ -292,22 +301,24 @@ const timelineGroups = computed(() => {
           time: time,
           data: item
         });
+        const endTime = getEndTime(item.time);
+        if (endTime > activeMaxEndTime) activeMaxEndTime = endTime;
       });
-      
-      const nextTime = times[index + 1];
-      if (nextTime && timeMap[nextTime].length === 1 && timeMap[nextTime][0].hall !== null) {
-        finalizeParallelGroup(currentParallelGroup);
-        groups.push(currentParallelGroup);
-        currentParallelGroup = null;
-        inParallelMode = false;
-      }
+    } else {
+      pushCurrentParallel();
+      groups.push({
+        type: 'single',
+        time: items[0].time,
+        isBreak: false,
+        sessions: items
+      });
+      // Track end time even for single sessions to potentially start a parallel block if something overlaps
+      const endTime = getEndTime(items[0].time);
+      activeMaxEndTime = endTime;
     }
   });
   
-  if (currentParallelGroup) {
-    finalizeParallelGroup(currentParallelGroup);
-    groups.push(currentParallelGroup);
-  }
+  pushCurrentParallel();
   
   return groups;
 });
@@ -452,10 +463,7 @@ function getDuration(time) {
   return (endH * 60 + endM) - (startH * 60 + startM);
 }
 
-function getEndTime(time) {
-  if (!time || !time.includes(' - ')) return '';
-  return time.split(' - ')[1];
-}
+
 
 function isLongSession(time) {
   return getDuration(time) > 30;
