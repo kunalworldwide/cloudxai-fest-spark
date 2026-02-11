@@ -126,13 +126,7 @@
     "hall": "Hall A",
     "type": "session"
   },
-  {
-    "time": "14:30 - 15:30",
-    "title": "Coming Soon",
-    "speaker": "",
-    "hall": "Hall B",
-    "type": "session"
-  },
+  
   {
     "time": "14:00 - 14:30",
     "title": "Developing xApps for Cloud-based Cellular Networks.",
@@ -146,6 +140,19 @@
     "speaker": null,
     "hall": "Board Room",
     "description": "Coming Soon",
+    "type": "session"
+  },{
+    "time": "14:00 - 14:30",
+    "title": "Will Kubernetes Vanish Because of AI?",
+    "speaker": ["ram-iyengar"],
+    "hall": "Hall B",
+    "type": "session"
+  },
+  {
+    "time": "14:30 - 15:30",
+    "title": "Coming Soon",
+    "speaker": "",
+    "hall": "Hall B",
     "type": "session"
   },
   {
@@ -162,13 +169,7 @@
     "hall": "Hall A",
     "type": "session"
   },
-  {
-    "time": "14:00 - 14:30",
-    "title": "Will Kubernetes Vanish Because of AI?",
-    "speaker": ["ram-iyengar"],
-    "hall": "Hall B",
-    "type": "session"
-  },
+  
   {
     "time": "15:00 - 15:30",
     "title": "Who Authorized That Agent? Accountability and Identity in Agent-Native Kubernetes. ",
