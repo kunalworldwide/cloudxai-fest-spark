@@ -14,38 +14,42 @@
           variant="tonal"
           append-icon="mdi-arrow-right"
           color="white"
-          class="mb-7 mt-5"
+          class="mb-10 mt-2"
           >Become a Sponsor</v-btn
         >
       </div>
 
-      <div
-        class="partners-grid text-center"
-        style="max-width: 700px; margin: 0 auto"
-      >
-        <div v-for="partner in partners" :key="partner.id" class="partner-card">
-          <v-tooltip :text="`${partner.name}`" location="bottom">
-            <template v-slot:activator="{ props }">
-              <div class="partner-logo" v-bind="props">
-                <a
-                  :href="partner.link"
-                  target="_blank"
-                  class="text-center d-flex align-center justify-center"
-                >
-                  <img
-                    :src="`/images/partners/${partner.image}`"
-                    :alt="partner.name"
-                  />
-                </a>
-              </div>
-            </template>
-          </v-tooltip>
-          <!-- <div
-            class="partner-tier"
-            :class="`tier-${partner.tier.toLowerCase()}`"
-          >
-            {{ partner.tier }}
-          </div> -->
+      <div class="partners-by-category" style="max-width: 700px; margin: 0 auto">
+        <div
+          v-for="(partnersInTier, tier) in partnersByTier"
+          :key="tier"
+          class="partner-category text-center"
+        >
+          <h3 class="partner-category-title">{{ tier }} Sponsors</h3>
+          <div class="partners-grid text-center">
+            <div
+              v-for="(partner, idx) in partnersInTier"
+              :key="`${tier}-${partner.name}-${idx}`"
+              class="partner-card"
+            >
+              <v-tooltip :text="`${partner.name}`" location="bottom">
+                <template v-slot:activator="{ props }">
+                  <div class="partner-logo" v-bind="props">
+                    <a
+                      :href="partner.link"
+                      target="_blank"
+                      class="text-center d-flex align-center justify-center"
+                    >
+                      <img
+                        :src="`/images/partners/${partner.image}`"
+                        :alt="partner.name"
+                      />
+                    </a>
+                  </div>
+                </template>
+              </v-tooltip>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -85,22 +89,48 @@
 <script setup>
 import communityPartners from "@/assets/data/community-partners.json";
 const communityPartnersData = ref(communityPartners);
+const tierOrder = ["Diamond", "Platinum", "Gold", "Silver", "General"];
+
 const partners = [
   {
     id: 1,
-    name: "KodeKloud",
-    image: "kodekloud.png",
-    link: "https://kodekloud.com/",
-    // tier: "General",
+    name: "Cast AI",
+    image: "castaidark.png",
+    link: "https://cast.ai/",
+    tier: "Diamond",
   },
   {
     id: 2,
+    name: "KodeKloud",
+    image: "kodekloud.png",
+    link: "https://kodekloud.com/",
+    tier: "Platinum",
+  },
+  {
+    id: 3,
     name: "AWS",
     image: "aws.png",
     link: "https://aws.amazon.com/",
-    // tier: "General",
-  }
+    tier: "Platinum",
+  },
 ];
+
+const partnersByTier = computed(() => {
+  const grouped = {};
+  for (const partner of partners) {
+    const tier = partner.tier || "General";
+    if (!grouped[tier]) grouped[tier] = [];
+    grouped[tier].push(partner);
+  }
+  const ordered = {};
+  for (const tier of tierOrder) {
+    if (grouped[tier]) ordered[tier] = grouped[tier];
+  }
+  for (const tier of Object.keys(grouped)) {
+    if (!ordered[tier]) ordered[tier] = grouped[tier];
+  }
+  return ordered;
+});
 </script>
 
 <style scoped lang="scss">
@@ -168,6 +198,27 @@ const partners = [
   font-style: italic;
   line-height: 100%;
   transform: rotate(-10deg);
+}
+
+.partners-by-category {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.partner-category {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.partner-category-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
 }
 
 .partners-grid {

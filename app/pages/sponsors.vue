@@ -114,7 +114,7 @@
               
               <!-- Title Sponsor -->
               <div class="sponsor-tier-section">
-                <h3 class="tier-label title-tier">Title Sponsor</h3>
+                <h3 class="tier-label title-tier">Diamond Sponsor</h3>
                 <div class="sponsors-grid title-sponsor-grid">
                   <div class="sponsor-item title-sponsor">
                     <a href="https://cast.ai" target="_blank" style="display: flex !important;" class="sponsor-link">
@@ -126,7 +126,7 @@
 
               <!-- Diamond Sponsors -->
               <div class="sponsor-tier-section">
-                <h3 class="tier-label diamond-tier">Diamond Sponsors</h3>
+                <h3 class="tier-label diamond-tier">Platinum Sponsors</h3>
                 <div class="sponsors-grid diamond-sponsors-grid">
                   <div 
                     v-for="sponsor in diamondSponsors" 
