@@ -586,7 +586,7 @@ $timeline-color: #14b8a6;
   margin: 0 auto;
   padding: 2rem 1rem 3rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 975px) {
     padding: 3rem 2rem 4rem;
   }
 }
@@ -636,7 +636,7 @@ $timeline-color: #14b8a6;
   gap: 1.5rem;
   margin-bottom: 2rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 975px) {
     gap: 2.5rem;
   }
 
@@ -901,16 +901,13 @@ $timeline-color: #14b8a6;
   margin: 0;
   line-height: 1.3;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 .session-card--compact .session-card__speaker-role {
   font-size: 0.75rem;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
+  
 }
 
 .session-card__desc {
@@ -971,7 +968,7 @@ $timeline-color: #14b8a6;
   background: $bg-page;
   padding-top: 0.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 975px) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -1044,13 +1041,13 @@ $timeline-color: #14b8a6;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 0.5rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 975px) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .hall-grid--parallel {
-  @media (min-width: 768px) {
+  @media (min-width: 975px) {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-flow: dense;
 
