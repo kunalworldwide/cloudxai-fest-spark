@@ -114,7 +114,7 @@
               
               <!-- Title Sponsor -->
               <div class="sponsor-tier-section">
-                <h3 class="tier-label title-tier">Diamond Sponsor</h3>
+                <h3 class="tier-label diamond-tier">Diamond Sponsor</h3>
                 <div class="sponsors-grid title-sponsor-grid">
                   <div class="sponsor-item title-sponsor">
                     <a href="https://cast.ai" target="_blank" style="display: flex !important;" class="sponsor-link">
@@ -126,10 +126,29 @@
 
               <!-- Diamond Sponsors -->
               <div class="sponsor-tier-section">
-                <h3 class="tier-label diamond-tier">Platinum Sponsors</h3>
+                <h3 class="tier-label platinum-tier">Platinum Sponsors</h3>
                 <div class="sponsors-grid diamond-sponsors-grid">
                   <div 
                     v-for="sponsor in diamondSponsors" 
+                    :key="sponsor.id" 
+                    class="sponsor-item diamond-sponsor"
+                  >
+                    <a :href="sponsor.link" target="_blank" style="display: flex !important;" class="sponsor-link">
+                      <img 
+                        :src="`/images/partners/${sponsor.image}`" 
+                        :alt="sponsor.name" 
+                        class="sponsor-logo" 
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Gold Sponsors -->
+              <div class="sponsor-tier-section">
+                <h3 class="tier-label gold-tier">Gold Sponsors</h3>
+                <div class="sponsors-grid diamond-sponsors-grid">
+                  <div 
+                    v-for="sponsor in goldSponsors" 
                     :key="sponsor.id" 
                     class="sponsor-item diamond-sponsor"
                   >
@@ -194,6 +213,14 @@ const diamondSponsors = [
     name: "AWS",
     image: "aws.png",
     link: "https://aws.amazon.com/",
+  }
+];
+const goldSponsors = [
+  {
+    id: 1,
+    name: "CognitivTrust",
+    image: "cognitivtrust.svg",
+    link: "https://app.cognitivtrust.com/",
   }
 ];
 
@@ -634,16 +661,22 @@ useHead({
     padding: 10px 20px;
   }
 
-  &.title-tier {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-    color: #1a1a1a;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-  }
-
   &.diamond-tier {
     background: linear-gradient(135deg, #B9F2FF 0%, #87CEEB 100%);
     color: #1a1a1a;
     box-shadow: 0 4px 15px rgba(185, 242, 255, 0.3);
+  }
+
+  &.platinum-tier {
+    background: linear-gradient(135deg, #E5E9F0 0%, #BCC6D9 100%);
+    color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(188, 198, 217, 0.3);
+  }
+
+  &.gold-tier {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
   }
 }
 

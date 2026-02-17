@@ -11,14 +11,14 @@
       </h1>
 
       <div class="event-agendas__marquee-wrapper">
-        <div class="event-agendas__marquee">
-          <div class="event-agendas__marquee-content">
+        <div class="event-agendas__marquee" >
+          <div class="event-agendas__marquee-content" :style="{animationPlayState: showSpeakerDialog ? 'paused !important' : 'running'}">
             <div
               v-for="speaker in featureSpeakers"
               :key="speaker.name"
               class="event-agendas__card"
             >
-              <div class="event-agendas__card-inner">
+              <div class="event-agendas__card-inner" @click="openSpeakerDialog(speaker)">
                 <div class="event-agendas__image-container">
                   <img
                     :src="speaker.image ? `/images/speakers/${speaker.image}` : '/images/defaultAvatar.png'"
@@ -46,13 +46,13 @@
               </div>
             </div>
           </div>
-          <div class="event-agendas__marquee-content" aria-hidden="true">
+          <div class="event-agendas__marquee-content" :style="{animationPlayState: showSpeakerDialog ? 'paused !important' : 'running'}" aria-hidden="true">
             <div
               v-for="speaker in featureSpeakers"
               :key="`duplicate-${speaker.name}`"
               class="event-agendas__card"
             >
-              <div class="event-agendas__card-inner">
+              <div class="event-agendas__card-inner" @click="openSpeakerDialog(speaker)">
                 <div class="event-agendas__image-container">
                   <img
                     :src="speaker.image ? `/images/speakers/${speaker.image}` : '/images/defaultAvatar.png'"
@@ -85,13 +85,23 @@
         <v-btn rounded="xl" variant="text" append-icon="mdi-arrow-right" color="primary" to="/speakers">View All Speakers</v-btn>
       </div>
     </div>
+    <SpeakerInfo v-model="showSpeakerDialog" :speaker="selectedSpeaker" />
   </section>
 </template>
 
 <script setup>
 import speakersData from '~/assets/data/speakers.json';
+import SpeakerInfo from '~/components/shared/SpeakerInfo.vue';
 // Only show feature speakers on home page
 const featureSpeakers = speakersData.filter(speaker => speaker.isFeatured);
+
+const showSpeakerDialog = ref(false);
+const selectedSpeaker = ref({});
+
+const openSpeakerDialog = (speaker) => {
+  selectedSpeaker.value = speaker;
+  showSpeakerDialog.value = true;
+};
 
 </script>
 
@@ -194,7 +204,7 @@ const featureSpeakers = speakersData.filter(speaker => speaker.isFeatured);
     width: 100%;
 
     &:hover .event-agendas__marquee-content {
-      animation-play-state: paused;
+      animation-play-state: paused !important;
     }
   }
 
@@ -257,6 +267,7 @@ const featureSpeakers = speakersData.filter(speaker => speaker.isFeatured);
     width: 100%;
     transition: all 0.4s ease;
     position: relative;
+    cursor: pointer;
 
     .event-agendas__card:hover & {
       transform: translateY(-8px);

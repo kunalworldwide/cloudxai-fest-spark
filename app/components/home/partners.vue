@@ -25,7 +25,7 @@
           :key="tier"
           class="partner-category text-center"
         >
-          <h3 class="partner-category-title">{{ tier }} Sponsors</h3>
+          <h3 class="partner-category-title">{{ tier }} {{tier === "Diamond"?"Sponser":"Sponsors"}}</h3>
           <div class="partners-grid text-center">
             <div
               v-for="(partner, idx) in partnersInTier"
@@ -113,6 +113,13 @@ const partners = [
     link: "https://aws.amazon.com/",
     tier: "Platinum",
   },
+   {
+    id: 4,
+    name: "CognitivTrust",
+    image: "cognitivtrust.svg",
+    link: "https://app.cognitivtrust.com/",
+    tier: "Gold"
+  }
 ];
 
 const partnersByTier = computed(() => {

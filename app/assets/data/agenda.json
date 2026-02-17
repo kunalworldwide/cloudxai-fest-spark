@@ -49,7 +49,7 @@
   },
   {
     "time": "11:30 - 12:00",
-    "title": "Keynote: Session",
+    "title": "How BigBasket Uses Kubernetes to Handle Unpredictable Traffic Surges While Optimizing Cost",
     "speaker": ["sushant-gulati"],
     "hall": "Hall A",
     "description": "",

@@ -10,7 +10,8 @@
             conference! More speakers to be added shortly.
           </p>
           <div class="event-agendas__grid pa-0">
-            <div v-for="speaker in speakers" :key="speaker.name" class="event-agendas__card">
+            <div v-for="speaker in speakers" :key="speaker.name" class="event-agendas__card"
+              @click="openSpeakerDialog(speaker)">
               <div class="event-agendas__card-inner">
                 <div class="event-agendas__image-container">
                   <img :src="speaker.image
@@ -34,6 +35,7 @@
           </div>
         </v-col>
       </v-row>
+      <SpeakerInfo v-model="showSpeakerDialog" :speaker="selectedSpeaker" />
       <HomeCountDown />
     </v-container>
   </v-main>
@@ -41,8 +43,16 @@
 
 <script setup>
 import speakersData from "~/assets/data/speakers.json";
+import SpeakerInfo from "~/components/shared/SpeakerInfo.vue";
 
 const speakers = ref(speakersData.filter(speaker => speaker.visible));
+const showSpeakerDialog = ref(false);
+const selectedSpeaker = ref({});
+
+const openSpeakerDialog = (speaker) => {
+  selectedSpeaker.value = speaker;
+  showSpeakerDialog.value = true;
+};
 
 definePageMeta({
   layout: "default",
@@ -264,6 +274,7 @@ useHead({
     @media (max-width: 768px) {
       padding: 15px 0 0 15px;
     }
+    cursor: pointer;
   }
 
   &__card-inner {
