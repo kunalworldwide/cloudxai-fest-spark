@@ -71,8 +71,8 @@
   },
   {
     "time": "11:30 - 13:00",
-    "title": "Workshop. From Zero to MCP: Building Kubernetes AI Integrations.",
-    "speaker": null,
+    "title": "From Zero to MCP: Building Kubernetes AI Integrations.",
+    "speaker": ["matas-kaminskas", "narunas-kapocius"],
     "hall": "Board Room",
     "type": "session"
   },
@@ -137,7 +137,7 @@
   {
     "time": "14:00 - 15:30",
     "title": "How to operate AI-Assisted Development without compromising security and resiliency: From Policy to Enforcement.",
-    "speaker": null,
+    "speaker": ["yogesh-trived"],
     "hall": "Board Room",
     "type": "session"
   },{
