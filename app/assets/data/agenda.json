@@ -98,13 +98,13 @@
     "description": "",
     "type": "session"
   },
-   {
+  {
     "time": "12:30 - 13:00",
-    "title": "Building Durable AI Agents for DevOps ",
-    "speaker": ["shubham-londhe"],
+    "title": "Will Kubernetes Vanish Because of AI?",
+    "speaker": ["ram-iyengar"],
     "hall": "Hall B",
     "type": "session"
-  },
+  },  
   {
     "time": "12:30 - 13:00",
     "title": "From Idle to Invisible: Eliminating GPU Waste with Kubernetes-Native Scale-to-Zero.",
@@ -142,8 +142,8 @@
     "type": "session"
   },{
     "time": "14:00 - 14:30",
-    "title": "Will Kubernetes Vanish Because of AI?",
-    "speaker": ["ram-iyengar"],
+    "title": "Building Durable AI Agents for DevOps ",
+    "speaker": ["shubham-londhe"],
     "hall": "Hall B",
     "type": "session"
   },
