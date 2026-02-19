@@ -185,8 +185,8 @@
   },
   {
     "time": "16:00 - 16:30",
-    "title": "Open Source Is How AI Scales, Modern Skills Decide If It Works.",
-    "speaker": ["dheeraj-nayal"],
+    "title": "Coming Soon",
+    "speaker": null,
     "hall": "Hall A",
     "type": "session"
   },
@@ -243,8 +243,8 @@
   },
   {
     "time": "17:00 - 17:30",
-    "title": "Coming Soon",
-    "speaker": null,
+    "title": "Your Inner Stack > Your Tech Stack: What 100x Cloud Native Engineers Do Differently.",
+    "speaker": ["savinder-puri"],
     "hall": "Hall C",
     "type": "session"
   },

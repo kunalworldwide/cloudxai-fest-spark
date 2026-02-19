@@ -2,8 +2,8 @@
   {
     "id": "abhishek-veeramalla",
     "name": "Abhishek Veeramalla",
-    "role": "CTO at AKVA",
-    "bio": "Abhishek Veeramalla is a Principal Engineer at Red Hat and a popular YouTuber known for his educational content on DevOps and cloud computing. He is a prolific creator, with a YouTube channel that has over 550,000 subscribers and offers courses on platforms like Udemy that have helped over 1000 students land jobs",
+    "role": "CTO at AKVA, Content Creator & Educator, Former RedHat Principal Engineer",
+    "bio": "Abhishek Veeramalla is the CTO at AKVA and a former Principal Engineer at Red Hat. He runs a widely followed YouTube channel focused on DevOps, AI, and cloud computing, and his educational courses on platforms like Udemy have helped over 1,000 students launch their careers.",
     "image": "abhishek.webp",
     "isFeatured": true,
     "visible": true,
@@ -53,10 +53,9 @@
   {
     "id": "kunal-kushwaha",
     "name": "Kunal Kushwaha",
-    "role": "Founder WeMakeDevs, Cast AI",
-    "agendaRole":"Cast AI",
+    "role": "Senior Developer Advocate at Cast AI",
     "image": "kunal.webp",
-    "bio": "Kunal Kushwaha presently operates a YouTube channel with 3.58 lakh subscribers, making it one of the fastest-growing educational coding channels. On his channel, he produces podcasts, hosts community events, and shares engaging content on coding, tools, and various other topics.",
+    "bio": "Kunal Kushwaha, Founder of WeMakeDevs and Senior Developer Advocate at Cast Ai, runs one of the fastest-growing educational coding channels on YouTube with over 800,000 subscribers. He produces podcasts, hosts community events, and creates engaging content on coding, tools, and various developer topics.",
     "isFeatured": true,
     "visible": true,
     "isHeroFeature": false,
@@ -159,7 +158,7 @@
   {
     "id": "rahul-jadhav",
     "name": "Rahul Jadhav",
-    "role": "Co-founder and CTO, AccuKnox",
+    "role": "Co-founder and CTO at AccuKnox",
     "bio": "Rahul Jadhav is the Co-founder and CTO at AccuKnox, leading technology strategy and innovation.",
     "image": "rahul.webp",
     "isFeatured": false,
@@ -186,23 +185,6 @@
         "name": "linkedin",
         "icon": "mdi-linkedin",
         "url": "https://www.linkedin.com/in/aparna-prabhu-a5a1868/"
-      }
-    ]
-  },
-  {
-    "id": "dheeraj-nayal",
-    "name": "Dheeraj Nayal",
-    "role": "Director of Strategic Partnerships at KodeKloud",
-    "bio": "Dheeraj Nayal is Globally recognized Techno-Business Leader and Influencer currently working as the Director of Partnerships at KodeKloud, which is world’s most loved EdTech platform for AI-native DevOps, Cloud, Open Source Software &amp; emerging technologies. As a Chief Evangelist and strategic partner, Dheeraj supports a global community of Enterprises, Channel Partners, Vendors, and professionals in their AI-native digital transformation and Upskilling, Reskilling journey encompassing emerging Technologies, and standards. He was the first officially announced CDF Ambassador and was part of the original core founding leadership team at DevOps Institute and conceptualized, developed and launched the global DevOps Ambassador program. He holds distinguished credentials, including the title of MLE℠ – Member of Leaders Excellence along with Business Relationship Management Professional (BRMP®) and a certified DevOps Enterprise Coach™, DevOps Leader (DOL)®, SRE Practitioner℠, DevSecOps Practitioner℠, Certified Chaos Engineering Practitioner and many more. He possesses an MBA in International Marketing and a Bachelor of Technology in Computer Science. He has been a frequent keynote speaker in various international events.",
-    "image": "dheeraj.webp",
-    "isFeatured": false,
-    "visible": true,
-    "isHeroFeature": false,
-    "socials": [
-      {
-        "name": "linkedin",
-        "icon": "mdi-linkedin",
-        "url": "https://www.linkedin.com/in/dheerajnayal/"
       }
     ]
   },
@@ -295,7 +277,7 @@
   {
     "id": "pramod-singh",
     "name": "Pramod Singh",
-    "role": "Brain & Company",
+    "role": "Expert Associate Partner, Data Science at Bain & Company",
     "bio":"Pramod Singh is a Senior Consultant at Bain & Company with expertise in business strategy and digital transformation.",
     "image": "pramod-singh.webp",
     "isFeatured": false,
@@ -470,7 +452,7 @@
   {
     "id": "arsh-goyal",
     "name": "Arsh Goyal",
-    "role": "Senior Software Engineer at Samsung",
+    "role": "Senior Software Engineer at ThoughtSpot",
     "bio":"Arsh Goyal is a Senior Software Engineer at ThoughtSpot specializing in cloud technologies and distributed systems.",
     "image": "arsh-goyal.webp",
     "isFeatured": false,
