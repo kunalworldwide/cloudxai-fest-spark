@@ -28,7 +28,7 @@
             {{ speaker.bio }}
           </div>
           
-          <div v-if="speakerTalks.length > 0" class="text-body-2 text-left w-100 mb-6 speaker-bio">
+          <div v-if="speakerTalks.length > 0" class="text-body-2 text-left w-100 speaker-bio">
             <h3 class="text-h6 font-weight-bold mb-2">{{ speakerTalks.length > 1 ? 'Talks' : 'Talk' }}</h3>
             <div v-for="(talk, index) in speakerTalks" :key="index" class="mb-3">
               <div class="font-weight-bold text-subtitle-1">{{ talk.title }}</div>
@@ -36,11 +36,12 @@
                 
                 <v-chip size="small" color="primary" variant="tonal"><v-icon size="small" class="mr-1">mdi-clock-outline</v-icon> {{ talk.time }}</v-chip> <v-chip v-if="talk.hall" size="small" color="primary" variant="tonal"> {{ talk.hall }}</v-chip>
               </div>
-              <div v-if="talk.description" class="text-body-2 ">{{ talk.description }}</div>
             </div>
           </div>
+          <div v-if="speaker.description" class="text-body-2 speaker-description ">{{ speaker.description }}</div>
+
           
-          <div class="d-flex gap-4">
+          <div class="d-flex gap-4 mt-6">
             <a
               v-for="social in speaker.socials"
               :key="social.name"
@@ -96,9 +97,13 @@ const speakerTalks = computed(() => {
   }
 }
 
-.speaker-bio {
-  line-height: 1.6;
+.speaker-bio, .speaker-description {
+  line-height: 1.3;
   opacity: 0.9;
+}
+
+.speaker-description {
+  white-space: pre-wrap;
 }
 
 .social-link {

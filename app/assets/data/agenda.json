@@ -71,8 +71,8 @@
   },
   {
     "time": "11:30 - 13:00",
-    "title": "Workshop. From Zero to MCP: Building Kubernetes AI Integrations.",
-    "speaker": null,
+    "title": "From Zero to MCP: Building Kubernetes AI Integrations.",
+    "speaker": ["matas-kaminskas", "narunas-kapocius"],
     "hall": "Board Room",
     "type": "session"
   },
@@ -98,13 +98,13 @@
     "description": "",
     "type": "session"
   },
-   {
+  {
     "time": "12:30 - 13:00",
-    "title": "Building Durable AI Agents for DevOps ",
-    "speaker": ["shubham-londhe"],
+    "title": "Will Kubernetes Vanish Because of AI?",
+    "speaker": ["ram-iyengar"],
     "hall": "Hall B",
     "type": "session"
-  },
+  },  
   {
     "time": "12:30 - 13:00",
     "title": "From Idle to Invisible: Eliminating GPU Waste with Kubernetes-Native Scale-to-Zero.",
@@ -137,13 +137,13 @@
   {
     "time": "14:00 - 15:30",
     "title": "How to operate AI-Assisted Development without compromising security and resiliency: From Policy to Enforcement.",
-    "speaker": null,
+    "speaker": ["yogesh-trived"],
     "hall": "Board Room",
     "type": "session"
   },{
     "time": "14:00 - 14:30",
-    "title": "Will Kubernetes Vanish Because of AI?",
-    "speaker": ["ram-iyengar"],
+    "title": "Building Durable AI Agents for DevOps ",
+    "speaker": ["shubham-londhe"],
     "hall": "Hall B",
     "type": "session"
   },
@@ -185,8 +185,8 @@
   },
   {
     "time": "16:00 - 16:30",
-    "title": "Open Source Is How AI Scales, Modern Skills Decide If It Works.",
-    "speaker": ["dheeraj-nayal"],
+    "title": "Coming Soon",
+    "speaker": null,
     "hall": "Hall A",
     "type": "session"
   },
@@ -243,8 +243,8 @@
   },
   {
     "time": "17:00 - 17:30",
-    "title": "Coming Soon",
-    "speaker": null,
+    "title": "Your Inner Stack > Your Tech Stack: What 100x Cloud Native Engineers Do Differently.",
+    "speaker": ["savinder-puri"],
     "hall": "Hall C",
     "type": "session"
   },
