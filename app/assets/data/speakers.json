@@ -446,7 +446,7 @@
   {
     "id": "arsh-goyal",
     "name": "Arsh Goyal",
-    "role": "Senior Software Engineer at ThoughtSpot",
+    "role": "Engineering and AI Creator at ThoughtSpot",
     "bio":"Arsh Goyal is a Senior Software Engineer at ThoughtSpot specializing in cloud technologies and distributed systems.",
     "image": "arsh-goyal.webp",
     "isFeatured": false,
@@ -502,7 +502,7 @@
     "id": "yogesh-trivedi",
     "name": "Yogesh Trivedi",
     "role": "CEO at CognitivTrust",
-    "bio":"",
+    "bio":"Yogesh Trivedi is the Founder & CEO of CognitivTrust, where he's building the security and governance layer for the agentic development era. He brings 15+ years of enterprise security experience from Google Cloud, Meta, the Federal Reserve, and GE Digital. He founded CognitivTrust to solve what he believes is the defining infrastructure problem of the AI coding era: autonomous development systems that are secure by default, not as an afterthought. Yogesh holds an MS in Management of Technology from NYU.",
     "image": "yogesh-trivedi.webp",
     "isFeatured": false,
     "visible": true,
@@ -551,6 +551,23 @@
         "url": "https://www.linkedin.com/in/nar%C5%ABnas-kapo%C4%8Dius/"
       }
     ]
-  }
+  },
+  {
+  "id": "yash-shah",
+  "name": "Yash Shah",
+  "role": "AI Solution Engineer at CognitivTrust",
+  "bio":"Yash Shah is an AI Solution Engineer at CognitivTrust building the security context layer for agentic systems. Works across LLM-powered agents, multi-agent architectures, and RAG pipelines. Focused on enabling enterprises to deploy autonomous AI systems with built-in trust, governance, and real-time security context.",
+  "image": "yash-shah.webp",
+  "isFeatured": false,
+  "visible": true,
+  "isHeroFeature": false,
+  "socials": [
+    {
+      "name": "linkedin",
+      "icon": "mdi-linkedin",
+      "url": "https://www.linkedin.com/in/yashshah5489/"
+    }
+  ]
+}
 ]
 
