@@ -92,7 +92,7 @@
     "name": "Chandika S",
     "role": "Cloud & DevOps Architect at Autodesk",
     "bio": "Chandika is a seasoned DevOps and cloud engineering professional with over 10 years of experience in Linux systems, multi-cloud platforms, DevOps, containerization, and automation. She has worked across diverse environments, helping teams build reliable, scalable, and efficient platforms. She enjoys mentoring peers, contributing to discussions, and creating learning content that supports the broader tech community. Outside of her core work, Chandika is enthusiastic about staying current with evolving technologies and sharing practical, real-world insights through social media platforms.",
-    "image": "chandika.webp",
+    "image": "chandika-as.webp",
     "isFeatured": false,
     "visible": true,
     "isHeroFeature": false,
@@ -336,7 +336,7 @@
     "id": "abhishek-choudhary",
     "name": "Abhishek Choudhary",
     "role": "Founder at TrueFoundry",
-    "bio":"",
+    "bio":"Abhishek Choudhary, IIT Kharagpur CS grad, is co-founder & CTO of TrueFoundry, an AI+MCP Gateway used by F500 enterprises. Former Senior Staff Engineer at Meta leading the Videos org where he was one of the fastest growing engineers. Recognized speaker at top AI conferences including Agentic AI Summit, CIVO Navigate, GenAI Summit, DataHack Summit & Cypher.\n\nThrough his speaking engagements spanning from San Francisco's technical meetups to India's premier AI summits, combined with his hands-on experience scaling systems for billions of users at Meta and entrepreneurial success with TrueFoundry, Abhishek has established himself as one of the most influential voices bridging cutting-edge research with practical enterprise AI implementation.",
     "image": "abhishek-choudhary.webp",
     "description":"GPUs are among the most expensive resources in Kubernetes clusters, and many developers forget to shut it down after use or they remain idle when no traffic in development environments. One GPU left on by mistake can drain $6000 a month. We wanted to automatically shut down GPUs when not in use. While tools like Knative and KEDA support scale-to-zero, we found their tradeoffs unacceptable for our use-case. Knative requires adopting a different application model, and KEDA's HTTP-Addon stay in the request path, increasing operational coupling and risk. In contrast, our approach required no infrastructure rewrites—just a single CRD—and completely removes itself from the traffic path once workloads are active.In this talk, we share how we reduced GPU waste by designing an out-of-path, Kubernetes-native scale-to-zero system called KubeElasti. KubeElasti is now open-source and can be used to scale any application to 0 when there is no traffic. We break down the architectural decisions behind it, compare them explicitly with existing scale-to-zero models, and how you can use KubeElasti in your own Kubernetes clusters to scale applications to 0 specially in dev environments. ",
     "isFeatured": false,
@@ -465,7 +465,7 @@
     "id": "shubham-rai",
     "name": "Shubham Rai",
     "role": "Engineering at Truefoundry",
-    "bio":"",
+    "bio":"Shubham Rai is a Staff Software Engineer at TrueFoundry focused on Kubernetes and distributed systems. A KubeElasti contributor, he spends his time debugging autoscalers, improving reliability at scale, and making cloud costs predictable for operators.",
     "image": "shubham-rai.webp",
     "description":"GPUs are among the most expensive resources in Kubernetes clusters, and many developers forget to shut it down after use or they remain idle when no traffic in development environments. One GPU left on by mistake can drain $6000 a month. We wanted to automatically shut down GPUs when not in use. While tools like Knative and KEDA support scale-to-zero, we found their tradeoffs unacceptable for our use-case. Knative requires adopting a different application model, and KEDA's HTTP-Addon stay in the request path, increasing operational coupling and risk. In contrast, our approach required no infrastructure rewrites—just a single CRD—and completely removes itself from the traffic path once workloads are active.In this talk, we share how we reduced GPU waste by designing an out-of-path, Kubernetes-native scale-to-zero system called KubeElasti. KubeElasti is now open-source and can be used to scale any application to 0 when there is no traffic. We break down the architectural decisions behind it, compare them explicitly with existing scale-to-zero models, and how you can use KubeElasti in your own Kubernetes clusters to scale applications to 0 specially in dev environments. ",
     "isFeatured": false,
@@ -499,11 +499,11 @@
     ]
   },
   {
-    "id": "yogesh-trived",
-    "name": "Yogesh Trived",
+    "id": "yogesh-trivedi",
+    "name": "Yogesh Trivedi",
     "role": "CEO at CognitivTrust",
     "bio":"",
-    "image": "",
+    "image": "yogesh-trivedi.webp",
     "isFeatured": false,
     "visible": true,
     "isHeroFeature": false,
@@ -511,7 +511,7 @@
       {
         "name": "linkedin",
         "icon": "mdi-linkedin",
-        "url": ""
+        "url": "https://www.linkedin.com/in/yogeshtrivedi/"
       }
     ]
   }
