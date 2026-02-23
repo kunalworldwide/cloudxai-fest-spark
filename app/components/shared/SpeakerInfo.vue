@@ -102,6 +102,10 @@ const speakerTalks = computed(() => {
   opacity: 0.9;
 }
 
+.speaker-bio{
+  white-space: pre-line;
+}
+
 .speaker-description {
   white-space: pre-wrap;
 }
