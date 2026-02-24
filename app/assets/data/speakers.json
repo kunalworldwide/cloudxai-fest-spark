@@ -144,6 +144,7 @@
     "role": "Technology Influencer | 🐳 Developer Advocate at Docker | Author at Collabnix.com | Distinguished Arm Ambassador",
     "bio": "Ajeet Singh Raina is a Technology Influencer, Developer Advocate at Docker, and the author of Collabnix.com. He is also a Distinguished Arm Ambassador, sharing insights on containerization, cloud-native technologies, and DevOps practices.",
     "image": "ajeet.webp",
+    "description":"Abstract: The developer landscape has fundamentally shifted. In 2025, 85% of developers started using AI tools daily—but the real transformation wasn't about writing code faster. It was about thinking bigger. This talk explores how AI coding agents are creating 'augmented developers' who architect systems while agents handle implementation, debug complex issues in minutes instead of hours, and ship features that once took weeks. We'll look at the practical workflows, the mindset shifts required, and why the most valuable developers in 2026 aren't those who type the fastest, but those who direct AI most effectively.I've been experimenting with combining AI coding agents and containers, and the results have been eye-opening. I'll show you how I set up my development environment—AI agents running locally, Docker keeping everything reproducible, and MCP servers connecting it all together. It's not perfect, and I'll be honest about the rough edges. But if you're curious about what a modern augmented developer workflow actually looks like, this should give you plenty of ideas to try.Whether you're skeptical or all-in, this session will reshape how you think about your role as a developer.",
     "isFeatured": true,
     "visible": true,
     "isHeroFeature": false,
@@ -162,6 +163,7 @@
     "role": "Senior Engineering Manager at Digital Ocean",
     "bio": "Aparna leads the storage and platform teams at DigitalOcean, where she and her teams build dependable, easy-to-use cloud infrastructure. She enjoys applying AI thoughtfully to improve how teams build and operate cloud systems. Most importantly, she always focuses on getting the fundamentals right - performance, efficiency, scale, and automation.",
     "image": "aparna-prabhu.webp",
+    "description":"Modern cloud native platforms demand storage systems that scale effortlessly across regions, survive failures gracefully and deliver consistent performance under unpredictable workloads. This talk explores how we have designed our managed storage platform to operate reliably across multiple DCs and regions without adding complexity for developers/end users.\nWe’ll walk through the architectural principles that enabled this evolution. This includes a declarative control plane, automated capacity management, region-aware placement and distributed failure-domain isolation. By separating data, metadata, and orchestration responsibilities, and layering in self-healing workflows, we built a storage system that remains stable even during infrastructure events or sudden traffic bursts.\nThe session will also talk about how we use observability-driven scaling, automated lifecycle operations, and multi-AZ design patterns to achieve high availability while optimizing for performance and cost (of course!).\nAttendees will leave with practical insights into applying cloud-native patterns to traditionally stateful systems and building storage platforms that are resilient, scalable, and operationally efficient.",
     "isFeatured": true,
     "visible": true,
     "isHeroFeature": false,
@@ -196,6 +198,7 @@
     "role": "Senior Developer Advocate at Temporal Technologies.",
     "bio": "This is Shubham Londhe, a Developer Advocate and an Educator, passionate about developing and deploying production-ready applications while building and working with teams of Software Developers, aspiring to become a Technical Architect.",
     "image": "shubham.webp",
+    "description":"What if your AI Agents never failed?\n\nAgents are everywhere, but they fail - a lot.\nAPI Timeouts,\nMemory issues,\nLLM connectivity issues\n\nBut what if you build AI agents that are durable, reliable, resilient and can recover from failures?\n\nIn this session Shubham Londhe helps you for the DevOps for your AI Agents.",
     "isFeatured": false,
     "visible": true,
     "isHeroFeature": true,
@@ -512,6 +515,23 @@
         "name": "linkedin",
         "icon": "mdi-linkedin",
         "url": "https://www.linkedin.com/in/yogeshtrivedi/"
+      }
+    ]
+  },
+  {
+    "id": "yash-shah",
+    "name": "yash-shah",
+    "role": "AI Solution Engineer at CognitivTrust",
+    "bio":"AI Solution Engineer at CognitivTrust building the security context layer for agentic systems. Works across LLM-powered agents, multi-agent architectures, and RAG pipelines. Focused on enabling enterprises to deploy autonomous AI systems with built-in trust, governance, and real-time security context.",
+    "image": "yash-shah.jpeg",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/yashshah5489/"
       }
     ]
   }
