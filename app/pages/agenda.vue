@@ -31,11 +31,14 @@
               <!-- Single hall session -->
               <article 
                 v-else 
-                class="session-card" 
+                class="session-card " 
                 :class="[
                   { 'session-card--long': isLongSession(group.time) },
-                  `hall-border--${getHallIndex(group.sessions[0].hall)}`
+                  `hall-border--${getHallIndex(group.sessions[0].hall)}`,
+                  { 'clickable-card': group.sessions[0].speaker }
                 ]"
+              
+                @click="group.sessions[0].speaker && openSessionDialog(group.sessions[0])"
               >
                 <div class="card-time">{{ group.time }}</div>
                 <span class="session-card__hall" :class="`hall-badge--${getHallIndex(group.sessions[0].hall)}`">
@@ -147,8 +150,11 @@
                       :class="[
                         `hall-bg--${item.hallIndex}`,
                         `hall-border--${item.hallIndex}`,
-                        { 'session-card--long': isLongSession(item.data.time) }
+                        { 'session-card--long': isLongSession(item.data.time) },
+                        { 'clickable-card': item.data.speaker }
                       ]"
+                      
+                      @click="item.data.speaker && openSessionDialog(item.data)"
                     >
                       <div class="card-time">{{ item.data.time }}</div>
                       <span class="session-card__hall session-card__hall--mobile" :class="`hall-badge--${item.hallIndex}`">
@@ -217,13 +223,24 @@
       </section>
 
       <HomeCountDown />
+      <SessionDialog v-model="isSessionDialogOpen" :session="selectedSession" />
     </v-container>
   </v-main>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import agendaData from "~/assets/data/agenda.json";
 import speakersData from "~/assets/data/speakers.json";
+import SessionDialog from "~/components/shared/SessionDialog.vue";
+
+const isSessionDialogOpen = ref(false);
+const selectedSession = ref({});
+
+const openSessionDialog = (session) => {
+  selectedSession.value = session;
+  isSessionDialogOpen.value = true;
+};
 
 const HALL_ORDER = ["Hall A", "Hall B", "Hall C", "Board Room"];
 
@@ -726,6 +743,10 @@ $timeline-color: #14b8a6;
   padding: 1.5rem;
   box-shadow: $shadow;
   transition: all 0.2s ease;
+
+  &.clickable-card {
+    cursor: pointer;
+  }
 
   @media (hover: hover) {
     &:hover {
