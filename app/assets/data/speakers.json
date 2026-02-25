@@ -523,8 +523,9 @@
     "id": "yash-shah",
     "name": "Yash Shah",
     "role": "AI Solution Engineer at CognitivTrust",
-    "bio":"AI Solution Engineer at CognitivTrust building the security context layer for agentic systems. Works across LLM-powered agents, multi-agent architectures, and RAG pipelines. Focused on enabling enterprises to deploy autonomous AI systems with built-in trust, governance, and real-time security context.",
-    "image": "yash-shah.jpeg",
+    "bio":"Yash Shah is an AI Solution Engineer at CognitivTrust building the security context layer for agentic systems. Works across LLM-powered agents, multi-agent architectures, and RAG pipelines. Focused on enabling enterprises to deploy autonomous AI systems with built-in trust, governance, and real-time security context.",
+    "image": "yash-shah.webp",
+    "description":"How to operate AI-Assisted Development without compromising security and resiliency: From Policy to Enforcement.",
     "isFeatured": false,
     "visible": true,
     "isHeroFeature": false,
@@ -572,24 +573,6 @@
         "url": "https://www.linkedin.com/in/nar%C5%ABnas-kapo%C4%8Dius/"
       }
     ]
-  },
-  {
-  "id": "yash-shah",
-  "name": "Yash Shah",
-  "role": "AI Solution Engineer at CognitivTrust",
-  "bio":"Yash Shah is an AI Solution Engineer at CognitivTrust building the security context layer for agentic systems. Works across LLM-powered agents, multi-agent architectures, and RAG pipelines. Focused on enabling enterprises to deploy autonomous AI systems with built-in trust, governance, and real-time security context.",
-  "image": "yash-shah.webp",
-  "description":"How to operate AI-Assisted Development without compromising security and resiliency: From Policy to Enforcement.",
-  "isFeatured": false,
-  "visible": true,
-  "isHeroFeature": false,
-  "socials": [
-    {
-      "name": "linkedin",
-      "icon": "mdi-linkedin",
-      "url": "https://www.linkedin.com/in/yashshah5489/"
-    }
-  ]
-}
+  }
 ]
 
