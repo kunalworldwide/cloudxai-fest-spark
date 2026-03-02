@@ -23,9 +23,9 @@
           <h2 class="text-h5 font-weight-bold mb-4">{{ session.title }}</h2>
           
          
-          <div v-if="sessionSpeakers[0].description" class="text-body-2 text-left w-100 mb-6 session-description">
+          <div v-if="session.description" class="text-body-2 text-left w-100 mb-6 session-description">
             <h3 class="text-h6 font-weight-bold mb-2">About the Session</h3>
-            {{ sessionSpeakers[0].description }}
+            {{ session.description }}
           </div>
           
        
