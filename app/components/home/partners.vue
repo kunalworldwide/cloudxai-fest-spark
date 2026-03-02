@@ -119,6 +119,13 @@ const partners = [
     image: "cognitivtrust.svg",
     link: "https://app.cognitivtrust.com/",
     tier: "Gold"
+  },
+   {
+    id: 5,
+    name: "Nudgebee",
+    image: "nudgebeeYellow.svg",
+    link: "https://nudgebee.com/",
+    tier: "Gold"
   }
 ];
 
@@ -334,7 +341,6 @@ const partnersByTier = computed(() => {
     max-height: 100px;
     height: auto;
     object-fit: contain;
-    filter: brightness(1.2) contrast(1.1);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
