@@ -561,7 +561,7 @@
     "name": "Shiv Pratap Singh",
     "role": "Co-founder and CTO at Nudgebee",
     "bio":"Shiv Pratap Singh is the Co-founder and CTO of Nudgebee, an agentic AI platform for SRE and cloud ops teams. With 13+ years of experience scaling infrastructure for startups and enterprises, Shiv leads product and engineering at Nudgebee, building context-aware AI agents that investigate production incidents and optimize cloud operations across multi-cloud environments.",
-    "image": "shiv-pratap-singh.jpg",
+    "image": "shiv-pratap-singh.webp",
     "isFeatured": false,
     "visible": true,
     "isHeroFeature": false,
@@ -572,6 +572,41 @@
         "url": "https://www.linkedin.com/in/xlshivpratapsingh/"
       }
     ]
+  },
+  {
+    "id": "shivay-lamba",
+    "name": "Shivay Lamba",
+    "role": "CNCF Ambassador",
+    "bio":"Shivay Lamba is a software engineer and open source contributor passionate about AI and edge computing. With experience across startups and enterprise tech, he focuses on simplifying complex technologies for developers. Shivay actively speaks at global conferences, organizes community events, and contributes to projects in cloud-native ecosystems, WebAssembly, and machine learning. He has also built and mentored educational programs to bridge gaps in emerging tech adoption. When not coding, he enjoys writing, traveling, and mentoring young technologists.",
+    "image": "shivay-lamba.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/shivaylamba/"
+      }
+    ]
+  },
+    {
+    "id": "zilvinas-urbonas",
+    "name": "Zilvinas Urbonas",
+    "role": "Senior Director of Engineering at Cast AI",
+    "bio":"Engineer with more than 10 years of full-stack experience in cloud & AI native systems, with a focus on cloud infrastructure automation and cost optimization.",
+    "image": "zilvinas-urbonas.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/zilvinasurbonas/"
+      }
+    ]
   }
 ]
+
 

@@ -156,9 +156,10 @@
     "type": "session"
   },
   {
-    "time": "14:30 - 15:30",
-    "title": "Coming Soon",
-    "speaker": "",
+    "time": "14:30 - 14:50",
+    "title": "Context Engineering for Infrastructure: Why the Smartest Model Still Can't Debug YOUR Cluster.",
+    "description":"Everyone is talking about context engineering for code. Nobody's talking about it for infrastructure, and that's why most AIOps tools still can't debug your specific environment.",
+    "speaker": ["shiv-pratap-singh"],
     "hall": "Hall B",
     "type": "session"
   },
@@ -171,19 +172,27 @@
     "type": "session"
   },
   {
-    "time": "14:30 - 15:30",
-    "title": "Panel discussion: Cloud is starting to think.",
-    "speaker": ["rahul-jadhav", "kunal-kushwaha", "ram-iyengar", "arsh-goyal"],
-    "hall": "Hall A",
+    "time": "14:50 - 15:10",
+    "title": "Agentic SDLC for the AI Coding Era.",
+    "description":"AI coding agents are no longer assistants — they're autonomous contributors. Cursor, Claude Code, and GitHub Copilot now generate the majority of code in active development environments, with multi-agent frameworks like LangChain and AutoGPT orchestrating everything from architecture decisions to autonomous CI/CD. The attack surface has fundamentally changed: it's no longer just repositories and pipelines, but prompts, context sources, and agent reasoning chains.",
+    "speaker": ["yogesh-trivedi"],
+    "hall": "Hall B",
     "type": "session"
   },
-  
   {
     "time": "15:00 - 15:30",
     "title": "Who Authorized That Agent? Accountability and Identity in Agent-Native Kubernetes. ",
     "description":"Your team deploys an agent for operations. It needs kubectl, cloud access, observability tools. You create a service account with broad permissions.\n\nNow the agent has more access than the engineers.\n\nService accounts were designed for predictable services. Agents decide actions dynamically - a fundamental mismatch.\n\nThree security gaps:\n- Identity Attribution: Audit logs show the service account, not which user triggered the agent or why.\n- Permission Scope: Agents need broad capability but should execute with task-specific permissions. Static RBAC can't express this.\n- Tool Chain Opacity: Agents invoke MCP servers dynamically. Each needs different permissions; Kubernetes sees one identity.\n\nYour agents have the keys. This talk shows you the patterns to track who authorized them, what they decided, and why - before it's too late.",
     "speaker": ["atulpriya-sharma"],
     "hall": "Hall C",
+    "type": "session"
+  },
+  {
+    "time": "15:00 - 15:30",
+    "title": "From $50K to $100K/month: The Hidden Cost Curve of AI-Assisted Engineering.",
+    "description":"AI coding tools are the fastest-growing line item in engineering budgets - and nobody's tracking them properly. At CAST AI, our Anthropic spend doubled in months as we scaled AI-assisted development across the org. When 50 engineers joined an internal hackathon using LLM-powered coding workflows, the math was brutal: 10 days of usage would have cost a full month of H100 compute - just on input tokens. We switched to open-source models on our own serverless GPU infrastructure and served the same workload at a fraction of the cost. This session covers the real numbers, the architecture, and why every company scaling AI-assisted development will face the same choice: keep renting AI, or start owning it.",
+    "speaker": ["zilvinas-urbonas"],
+    "hall": "Hall A",
     "type": "session"
   },
   {
@@ -194,9 +203,9 @@
     "type": "break"
   },
   {
-    "time": "16:00 - 16:30",
-    "title": "Coming Soon",
-    "speaker": null,
+    "time": "16:00 - 17:00",
+    "title": "Panel discussion: Cloud is starting to think.",
+    "speaker": ["shivay-lamba", "kunal-kushwaha", "ram-iyengar", "arsh-goyal"],
     "hall": "Hall A",
     "type": "session"
   },
@@ -241,13 +250,7 @@
     "hall": "Hall C",
     "type": "session"
   },
-  {
-    "time": "16:30 - 17:00",
-    "title": "Coming Soon",
-    "speaker": null,
-    "hall": "Hall A",
-    "type": "session"
-  },
+
    {
     "time": "17:00 - 17:30",
     "title": "Coming Soon",
