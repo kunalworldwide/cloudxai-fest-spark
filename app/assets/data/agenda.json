@@ -172,6 +172,14 @@
     "type": "session"
   },
   {
+   "time": "14:30 - 15:00",
+    "title": "Coming Soon",
+    "speaker": null,
+    "hall": "Hall A",
+    "type": "session"
+  },
+  
+  {
     "time": "14:50 - 15:10",
     "title": "Agentic SDLC for the AI Coding Era.",
     "description":"AI coding agents are no longer assistants — they're autonomous contributors. Cursor, Claude Code, and GitHub Copilot now generate the majority of code in active development environments, with multi-agent frameworks like LangChain and AutoGPT orchestrating everything from architecture decisions to autonomous CI/CD. The attack surface has fundamentally changed: it's no longer just repositories and pipelines, but prompts, context sources, and agent reasoning chains.",
