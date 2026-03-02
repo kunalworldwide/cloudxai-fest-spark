@@ -221,6 +221,12 @@ const goldSponsors = [
     name: "CognitivTrust",
     image: "cognitivtrust.svg",
     link: "https://app.cognitivtrust.com/",
+  },
+  {
+    id: 2,
+    name: "Nudgebee",
+    image: "nudgebeeYellow.svg",
+    link: "https://nudgebee.com/",
   }
 ];
 

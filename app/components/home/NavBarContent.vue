@@ -108,10 +108,10 @@
             Organiser
           </v-btn>
 
-          <v-btn variant="text" color="white" class="text-none" target="_blank"
+          <!-- <v-btn variant="text" color="white" class="text-none" target="_blank"
             href="https://docs.google.com/forms/d/e/1FAIpQLScNjTHO5UeHCI5pcDEMD-FXBHa7PG8auuOS63x6Tmkx7konaQ/viewform?pli=1">
             Call For Papers
-          </v-btn>
+          </v-btn> -->
           <!-- <v-btn disabled variant="text" color="white" class="text-none" to="/">
             Agenda (Coming Soon)
           </v-btn> -->

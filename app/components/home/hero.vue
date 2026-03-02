@@ -51,7 +51,7 @@
                       ref="konfhubWidget"
                       @click="trackRedditClick"
                     ></div>
-                    <v-btn
+                    <!-- <v-btn
                       color="white"
                       variant="outlined"
                       size="large"
@@ -63,7 +63,7 @@
                       target="_blank"
                     >
                       Call For Papers
-                    </v-btn>
+                    </v-btn> -->
                   </div>
 
                   <div class="hero-location d-flex align-center">
