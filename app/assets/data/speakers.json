@@ -345,6 +345,40 @@
         "url": "https://www.linkedin.com/in/abhishekch123/"
       }
     ]
+  },
+  {
+    "id": "jose-jayanandaraj",
+    "name": "Jose Jayanandaraj",
+    "role": "Senior Expert at Bosch Global Software Technologies",
+    "bio":"Jose Jayanandaraj is a seasoned technology professional currently working as a Senior Expert at Bosch Global Software Technologies (BGSW) in Tamil Nadu, India. ",
+    "image": "jose-jayanandaraj.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/jose-jayanandaraj/"
+      }
+    ]
+  },
+   {
+    "id": "hima-bindu",
+    "name": "Hima Bindu",
+    "role": "Associate Director, Strategy and Transformation at EY",
+    "bio": "Hima Bindu is a Technology Transformation and Strategy Leader , where she helps global enterprises redesign and modernize their Managed Services operating models for the cloud-native and AI era. With over 20+ years of experience across Application Management, Cloud Operations, and AI-enabled service delivery",
+    "image": "hima-bindu.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/hima-bindu-1204/"
+      }
+    ]
   }
   ,
   {
