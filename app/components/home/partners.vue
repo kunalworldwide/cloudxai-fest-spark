@@ -30,7 +30,7 @@
           class="partner-category text-center"
         >
           <h3 class="partner-category-title">
-            {{ tier }} {{ tier === "Diamond" ? "Sponser" : "Sponsors" }}
+            {{ tier }} {{ tier === "Diamond" ? "Sponsor" : "Sponsors" }}
           </h3>
           <div class="partners-grid text-center">
             <div
