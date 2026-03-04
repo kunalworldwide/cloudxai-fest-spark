@@ -19,13 +19,19 @@
         >
       </div>
 
-      <div class="partners-by-category" style="max-width: 700px; margin: 0 auto">
+      <div
+        class="partners-by-category"
+        style="max-width: 700px; margin: 0 auto"
+      >
+
         <div
           v-for="(partnersInTier, tier) in partnersByTier"
           :key="tier"
           class="partner-category text-center"
         >
-          <h3 class="partner-category-title">{{ tier }} {{tier === "Diamond"?"Sponser":"Sponsors"}}</h3>
+          <h3 class="partner-category-title">
+            {{ tier }} {{ tier === "Diamond" ? "Sponser" : "Sponsors" }}
+          </h3>
           <div class="partners-grid text-center">
             <div
               v-for="(partner, idx) in partnersInTier"
@@ -56,7 +62,9 @@
   </section>
   <section class="partners-section partners-section-2">
     <div class="partners-container partners-container-2 text-center">
-      <h2 class="partners-title mb-12" style="color: #1a2f4f;">OUR <span>Partners</span></h2>
+      <h2 class="partners-title mb-12" style="color: #1a2f4f">
+        OUR <span>Partners</span>
+      </h2>
 
       <div class="partners-grid-2">
         <div
@@ -101,32 +109,48 @@ const partners = [
   },
   {
     id: 2,
-    name: "KodeKloud",
-    image: "kodekloud.png",
-    link: "https://kodekloud.com/",
-    tier: "Platinum",
-  },
-  {
-    id: 3,
     name: "AWS",
     image: "aws.png",
     link: "https://aws.amazon.com/",
     tier: "Platinum",
   },
-   {
+  {
+    id: 3,
+    name: "DigitalOcean",
+    image: "do.png",
+    link: "https://digitalocean.com/",
+    tier: "Platinum",
+  },
+  {
     id: 4,
+    name: "KodeKloud",
+    image: "kodekloud.png",
+    link: "https://kodekloud.com/",
+    tier: "Platinum",
+  },
+
+  {
+    id: 5,
     name: "CognitivTrust",
     image: "cognitivtrust.svg",
     link: "https://app.cognitivtrust.com/",
-    tier: "Gold"
+    tier: "Gold",
   },
-   {
-    id: 5,
+  {
+    id: 6,
     name: "Nudgebee",
     image: "nudgebeeYellow.svg",
     link: "https://nudgebee.com/",
-    tier: "Gold"
-  }
+    tier: "Gold",
+  },
+  {
+    id: 7,
+    name: "groundcover",
+    image: "groundcover.svg",
+    link: "https://www.groundcover.com/",
+    tier: "Gold",
+  },
+
 ];
 
 const partnersByTier = computed(() => {
@@ -280,7 +304,7 @@ const partnersByTier = computed(() => {
 .partner-card {
   max-width: 200px;
 
-  @media(max-width:480px){
+  @media (max-width: 480px) {
     max-width: 100%;
   }
 }

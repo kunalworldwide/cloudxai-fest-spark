@@ -2,12 +2,15 @@
   <v-main>
     <div class="sponsor-package-container">
       <div class="top-section">
-        <h1 class="main-title text-white text-center">Sponsorship Opportunities</h1>
-        <p class="subtitle text-white text-center" style="max-width: 800px;">Partner with us to showcase your innovation
-          and connect with industry leaders at CLOUDxAI, Bengaluru 2026</p>
+        <h1 class="main-title text-white text-center">
+          Sponsorship Opportunities
+        </h1>
+        <p class="subtitle text-white text-center" style="max-width: 800px">
+          Partner with us to showcase your innovation and connect with industry
+          leaders at CLOUDxAI, Bengaluru 2026
+        </p>
       </div>
       <v-container fluid class="py-10">
-
         <!-- <v-row class="justify-center text-center ">
          
           <v-col cols="12" md="10">
@@ -111,14 +114,23 @@
           <v-col cols="12" md="10">
             <div class="current-sponsors-section">
               <h2 class="sponsors-section-title">Our Current Sponsors</h2>
-              
+
               <!-- Title Sponsor -->
               <div class="sponsor-tier-section">
                 <h3 class="tier-label diamond-tier">Diamond Sponsor</h3>
                 <div class="sponsors-grid title-sponsor-grid">
                   <div class="sponsor-item title-sponsor">
-                    <a href="https://cast.ai" target="_blank" style="display: flex !important;" class="sponsor-link">
-                      <img src="/images/partners/castaidark.png" alt="Cast AI" class="sponsor-logo" />
+                    <a
+                      href="https://cast.ai"
+                      target="_blank"
+                      style="display: flex !important"
+                      class="sponsor-link"
+                    >
+                      <img
+                        src="/images/partners/castaidark.png"
+                        alt="Cast AI"
+                        class="sponsor-logo"
+                      />
                     </a>
                   </div>
                 </div>
@@ -128,16 +140,21 @@
               <div class="sponsor-tier-section">
                 <h3 class="tier-label platinum-tier">Platinum Sponsors</h3>
                 <div class="sponsors-grid diamond-sponsors-grid">
-                  <div 
-                    v-for="sponsor in diamondSponsors" 
-                    :key="sponsor.id" 
+                  <div
+                    v-for="sponsor in diamondSponsors"
+                    :key="sponsor.id"
                     class="sponsor-item diamond-sponsor"
                   >
-                    <a :href="sponsor.link" target="_blank" style="display: flex !important;" class="sponsor-link">
-                      <img 
-                        :src="`/images/partners/${sponsor.image}`" 
-                        :alt="sponsor.name" 
-                        class="sponsor-logo" 
+                    <a
+                      :href="sponsor.link"
+                      target="_blank"
+                      style="display: flex !important"
+                      class="sponsor-link"
+                    >
+                      <img
+                        :src="`/images/partners/${sponsor.image}`"
+                        :alt="sponsor.name"
+                        class="sponsor-logo"
                       />
                     </a>
                   </div>
@@ -147,16 +164,21 @@
               <div class="sponsor-tier-section">
                 <h3 class="tier-label gold-tier">Gold Sponsors</h3>
                 <div class="sponsors-grid diamond-sponsors-grid">
-                  <div 
-                    v-for="sponsor in goldSponsors" 
-                    :key="sponsor.id" 
+                  <div
+                    v-for="sponsor in goldSponsors"
+                    :key="sponsor.id"
                     class="sponsor-item diamond-sponsor"
                   >
-                    <a :href="sponsor.link" target="_blank" style="display: flex !important;" class="sponsor-link">
-                      <img 
-                        :src="`/images/partners/${sponsor.image}`" 
-                        :alt="sponsor.name" 
-                        class="sponsor-logo" 
+                    <a
+                      :href="sponsor.link"
+                      target="_blank"
+                      style="display: flex !important"
+                      class="sponsor-link"
+                    >
+                      <img
+                        :src="`/images/partners/${sponsor.image}`"
+                        :alt="sponsor.name"
+                        class="sponsor-logo"
                       />
                     </a>
                   </div>
@@ -169,10 +191,19 @@
         <v-row class="justify-center text-center mt-10">
           <v-col cols="12" md="8">
             <p class="contact-text">Ready to become a sponsor?</p>
-            <p class="text-small font-weight-light mb-8">Contact us to discuss sponsorship opportunities
-              contact@cloudconf.ai</p>
-            <v-btn rounded elevation="0" size="large" color="#339CFF" href="https://forms.gle/Fva2b3wmocRkiw4PA"
-              target="_blank" class="contact-btn">
+            <p class="text-small font-weight-light mb-8">
+              Contact us to discuss sponsorship opportunities
+              contact@cloudconf.ai
+            </p>
+            <v-btn
+              rounded
+              elevation="0"
+              size="large"
+              color="#339CFF"
+              href="https://forms.gle/Fva2b3wmocRkiw4PA"
+              target="_blank"
+              class="contact-btn"
+            >
               Contact Us
             </v-btn>
           </v-col>
@@ -184,36 +215,42 @@
 </template>
 
 <script setup>
-import sponsorPackagesData from '~/assets/data/sponsor-packages.json';
+import sponsorPackagesData from "~/assets/data/sponsor-packages.json";
 
 const packages = sponsorPackagesData;
 
 const featureRows = {
-  speakingSlot: { label: 'Speaking slot' },
-  booth: { label: 'Booth' },
-  tickets: { label: 'Tickets' },
-  socialMedia: { label: 'Social media' },
-  website: { label: 'Website, brandwall onsite' },
-  logoStage: { label: 'Logo at the stage' },
-  slideDecks: { label: 'Slide decks' },
-  welcomeBag: { label: 'Welcome bag' },
-  price: { label: 'Investments**' }
+  speakingSlot: { label: "Speaking slot" },
+  booth: { label: "Booth" },
+  tickets: { label: "Tickets" },
+  socialMedia: { label: "Social media" },
+  website: { label: "Website, brandwall onsite" },
+  logoStage: { label: "Logo at the stage" },
+  slideDecks: { label: "Slide decks" },
+  welcomeBag: { label: "Welcome bag" },
+  price: { label: "Investments**" },
 };
 
 // Diamond sponsors data
 const diamondSponsors = [
   {
     id: 1,
+    name: "AWS",
+    image: "aws.png",
+    link: "https://aws.amazon.com/",
+  },
+  {
+    id: 2,
+    name: "DigitalOcean ",
+    image: "do.png",
+    link: "https://digitalocean.com/",
+  },
+  {
+    id: 3,
     name: "KodeKloud",
     image: "kodekloud.png",
     link: "https://kodekloud.com/",
   },
-  {
-    id: 2,
-    name: "AWS",
-    image: "aws.png",
-    link: "https://aws.amazon.com/",
-  }
 ];
 const goldSponsors = [
   {
@@ -227,12 +264,19 @@ const goldSponsors = [
     name: "Nudgebee",
     image: "nudgebeeYellow.svg",
     link: "https://nudgebee.com/",
+  },
+  {
+    id: 3,
+    name: "groundcover ",
+    image: "groundcover.svg",
+    link: "https://www.groundcover.com/",
   }
 ];
 
 useHead({
   title: "Sponsorship Opportunities - CLOUDxAI Conference 2026 Bengaluru",
-  titleTemplate: "Sponsorship Opportunities - CLOUDxAI Conference 2026 Bengaluru",
+  titleTemplate:
+    "Sponsorship Opportunities - CLOUDxAI Conference 2026 Bengaluru",
   description:
     "CloudxAI 2026 Bengaluru: The meeting ground for DevOps & AI engineers building the future of intelligent infrastructure.",
   keywords:
@@ -268,7 +312,10 @@ useHead({
     { name: "bingbot", content: "index, follow" },
     { name: "yandexbot", content: "index, follow" },
     // Open Graph tags
-    { property: "og:title", content: "Sponsorship Opportunities - CLOUDxAI Conference 2026 Bengaluru" },
+    {
+      property: "og:title",
+      content: "Sponsorship Opportunities - CLOUDxAI Conference 2026 Bengaluru",
+    },
     {
       property: "og:description",
       content:
@@ -283,15 +330,22 @@ useHead({
     { property: "og:image:height", content: "1080" },
     {
       property: "og:image:alt",
-      content: "Sponsorship Opportunities - CLOUDxAI Conference 2026 Bengaluru Banner",
+      content:
+        "Sponsorship Opportunities - CLOUDxAI Conference 2026 Bengaluru Banner",
     },
     { property: "og:url", content: "https://cloudconf.ai/" },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: "en_US" },
-    { property: "og:site_name", content: "Sponsorship Opportunities - CLOUDxAI Conference 2026 Bengaluru" },
+    {
+      property: "og:site_name",
+      content: "Sponsorship Opportunities - CLOUDxAI Conference 2026 Bengaluru",
+    },
     // Twitter Card tags
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: "Sponsorship Opportunities - CLOUDxAI Conference 2026 Bengaluru" },
+    {
+      name: "twitter:title",
+      content: "Sponsorship Opportunities - CLOUDxAI Conference 2026 Bengaluru",
+    },
     {
       name: "twitter:description",
       content:
@@ -304,7 +358,8 @@ useHead({
     },
     {
       name: "twitter:image:alt",
-      content: "Sponsorship Opportunities - CLOUDxAI Conference 2026 Bengaluru Banner",
+      content:
+        "Sponsorship Opportunities - CLOUDxAI Conference 2026 Bengaluru Banner",
     },
     { name: "twitter:site", content: "@cloudxaiconf" },
     { name: "twitter:creator", content: "@cloudxaiconf" },
@@ -373,13 +428,11 @@ useHead({
   font-size: 15px;
 
   thead {
-
-
     th {
       padding: 24px 16px;
       text-align: left;
       font-weight: 600;
-      background: #339CFF;
+      background: #339cff;
       color: white;
       border-right: 1px solid #d0d0d0;
 
@@ -431,7 +484,7 @@ useHead({
 
           &.price {
             font-size: 24px;
-            color: #4A90E2;
+            color: #4a90e2;
             text-align: center;
           }
         }
@@ -487,7 +540,7 @@ useHead({
   .card-header {
     padding: 32px 24px;
     text-align: center;
-    background: #339CFF;
+    background: #339cff;
     color: white;
 
     .package-name {
@@ -511,7 +564,6 @@ useHead({
 
   .card-body {
     padding: 24px;
-
 
     .feature-item {
       display: flex;
@@ -544,7 +596,6 @@ useHead({
   }
 }
 
-
 .additional-pkg {
   display: flex;
   justify-content: center;
@@ -561,7 +612,7 @@ useHead({
   min-width: 700px;
   padding: 24px;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     min-width: calc(100% - 32px);
   }
 }
@@ -576,13 +627,13 @@ useHead({
   align-items: center;
   gap: 8px;
 
-  &>li {
+  & > li {
     position: relative;
     padding-left: 18px;
     text-align: left;
 
     &::before {
-      content: '•';
+      content: "•";
       position: absolute;
       font-size: 32px;
       line-height: 75%;
@@ -668,19 +719,19 @@ useHead({
   }
 
   &.diamond-tier {
-    background: linear-gradient(135deg, #B9F2FF 0%, #87CEEB 100%);
+    background: linear-gradient(135deg, #b9f2ff 0%, #87ceeb 100%);
     color: #1a1a1a;
     box-shadow: 0 4px 15px rgba(185, 242, 255, 0.3);
   }
 
   &.platinum-tier {
-    background: linear-gradient(135deg, #E5E9F0 0%, #BCC6D9 100%);
+    background: linear-gradient(135deg, #e5e9f0 0%, #bcc6d9 100%);
     color: #1a1a1a;
     box-shadow: 0 4px 15px rgba(188, 198, 217, 0.3);
   }
 
   &.gold-tier {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    background: linear-gradient(135deg, #ffd700 0%, #ffa500 100%);
     color: #1a1a1a;
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
   }
@@ -727,7 +778,7 @@ useHead({
   &:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    border-color: #339CFF;
+    border-color: #339cff;
   }
 
   &.title-sponsor {
@@ -787,9 +838,8 @@ useHead({
   }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .sponsor-card {
-
     .card-header {
       padding: 24px;
 
@@ -822,6 +872,5 @@ useHead({
       }
     }
   }
-
 }
 </style>
