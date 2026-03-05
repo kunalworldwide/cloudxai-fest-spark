@@ -276,8 +276,9 @@
   },
   {
     "time": "17:00 - 17:30",
-    "title": "Coming Soon",
-    "speaker": null,
+    "title": "From Alert to Root Cause in 30 Seconds: Building an AI SRE Copilot.",
+    "description": "Every SRE knows the 2 AM alert scramble. The data exists across Kubernetes, APM, logs, and CI, but forming a hypothesis takes 15-20 minutes of context switching. We built DevAstra-AI, a tool-driven system that queries live infrastructure (Kubernetes, Elasticsearch/APM, Jenkins) and correlates the results to produce a structured root-cause hypothesis in under 30 seconds. This talk covers the architecture behind it - the Go-based tool interface, bounded agent loops, and the safeguards we put in place for safely integrating AI with production systems.",
+    "speaker": ["krish-srivastava"],
     "hall": "Hall A",
     "type": "session"
   },

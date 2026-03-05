@@ -640,6 +640,23 @@
         "url": "https://www.linkedin.com/in/zilvinasurbonas/"
       }
     ]
+  },
+  {
+    "id": "krish-srivastava",
+    "name": "Krish Srivastava",
+    "role": "SDE - I Platform at PhysicsWallah",
+    "bio": "Krish Srivastava is an SDE on the Platform team at PhysicsWallah. He built DevAstra-AI, a tool-driven system that queries live infrastructure (Kubernetes, Elasticsearch/APM, Jenkins) and correlates the results to produce structured root-cause hypotheses in under 30 seconds.",
+    "image": "krish-srivastava.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/krish-srivastava/"
+      }
+    ]
   }
 ]
 
