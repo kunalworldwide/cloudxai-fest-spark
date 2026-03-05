@@ -44,6 +44,7 @@
                 <span class="session-card__hall" :class="`hall-badge--${getHallIndex(group.sessions[0].hall)}`">
                   {{ group.sessions[0].hall }}
                 </span>
+                <span v-if="group.sessions[0].type === 'workshop'" class="workshop-badge">WORKSHOP</span>
                 <h3 class="session-card__title">{{ group.sessions[0].title }}</h3>
                 
                 <!-- Speakers -->
@@ -160,6 +161,7 @@
                       <span class="session-card__hall session-card__hall--mobile" :class="`hall-badge--${item.hallIndex}`">
                         {{ HALL_ORDER[item.hallIndex] }}
                       </span>
+                      <span v-if="item.data.type === 'workshop'" class="workshop-badge">WORKSHOP</span>
                       <h3 class="session-card__title">{{ item.data.title }}</h3>
                       
                       <!-- Speakers -->
@@ -837,6 +839,21 @@ $timeline-color: #14b8a6;
 .hall-bg--3{
     background: rgba(168, 85, 247, 0.05); // Light purple for Board Room
   }
+
+/* Workshop Badge */
+.workshop-badge {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.375rem 0.875rem;
+  border-radius: 4px;
+  background: rgba(168, 85, 247, 0.15);
+  color: #6b21a8;
+  border: 1.5px solid rgba(168, 85, 247, 0.4);
+  margin-bottom: 0.5rem;
+}
 
 .session-card__title {
   font-size: 1.125rem;

@@ -76,7 +76,7 @@
     "description":"Kubernetes clusters generate thousands of metrics, logs, and events daily. This workshop explores how AI agents can parse this complexity and take action on infrastructure.\n\nWe'll work through three practical scenarios. Each scenario includes hands-on experimentation.\n\nScenario 1: Cluster Debugging with AI – You'll receive a broken cluster and a problem to solve. Try traditional debugging approaches or use an AI agent equipped with Kubernetes API access. Compare how each method navigates pod statuses, resource constraints, and configuration issues.\n\nScenario 2: Workload Autoscaling – A service is experiencing OOM kills. You'll ask an AI agent to investigate and fix it. Watch it analyze workload patterns, identify that scaling policies need adjustment, make the necessary changes, and validate the fix.\n\nScenario 3: End-to-End Workload Optimization – AI agents can detect inefficient workloads, apply optimizations in production, and ensure those fixes become permanent by updating your deployment manifests and infrastructure-as-code. We'll demonstrate how agents handle the complete optimization loop—from identifying resource inefficiencies to synchronizing corrections across your entire deployment pipeline. We'll also explore how this extends to fixing security vulnerabilities, enforcing compliance policies, and tuning database performance.\n\nPrerequisites: Familiarity with Kubernetes concepts (pods, deployments, resources), laptop with terminal access, Claude free account.\n\nRelevant for anyone managing Kubernetes infrastructure or building platform tooling.",
     "speaker": ["matas-kaminskas", "narunas-kapocius"],
     "hall": "Board Room",
-    "type": "session"
+    "type": "workshop"
   },
   {
     "time": "12:00 - 12:30",
@@ -146,7 +146,7 @@
     "description":"Everyone is talking about context engineering for code. Nobody's talking about it for infrastructure, and that's why most AIOps tools still can't debug your specific environment.\nThe model isn't the bottleneck. The context is. A frontier LLM with a raw log dump gives you a generic answer. The same model with your service map, deployment history, trace data, and incident memory gives you the actual root cause.\n\nThis talk covers how to architect the context layers (topology, history, signals, and memory) that make AI agents actually useful for cloud operations. Includes a live side-by-side demo: the same incident and the same model, shown with and without infrastructure context.",
     "speaker": ["yogesh-trivedi","yash-shah"],
     "hall": "Board Room",
-    "type": "session"
+    "type": "workshop"
   },{
     "time": "14:00 - 14:30",
     "title": "Building Durable AI Agents for DevOps ",
@@ -239,7 +239,7 @@
     "speaker": null,
     "hall": "Board Room",
     "description": "Coming Soon",
-    "type": "session"
+    "type": "workshop"
   },
   
   {
