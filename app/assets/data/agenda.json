@@ -173,8 +173,8 @@
   },
   {
    "time": "14:30 - 15:00",
-    "title": "Coming Soon",
-    "speaker": null,
+    "title": "Serverless Inference in Production: How to Deploy Fast, Cost-Efficient AI Workloads with DigitalOcean's Gradient AI Platform.",
+    "speaker": ["akshit-pratiush"],
     "hall": "Hall A",
     "type": "session"
   },

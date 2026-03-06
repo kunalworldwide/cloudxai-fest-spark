@@ -643,6 +643,23 @@
     ]
   },
   {
+    "id": "akshit-pratiush",
+    "name": "Akshit Pratiush",
+    "role": "Senior Solutions Architect II at DigitalOcean",
+    "bio": "Akshit Pratiush is a Senior Solutions Architect II at DigitalOcean, specializing in serverless inference and cost-efficient AI workloads on the Gradient AI Platform.",
+    "image": "akshit-pratiush.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/akshit-pratiush/"
+      }
+    ]
+  },
+  {
     "id": "krish-srivastava",
     "name": "Krish Srivastava",
     "role": "SDE - I Platform at PhysicsWallah",
