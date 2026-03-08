@@ -261,8 +261,9 @@
 
    {
     "time": "17:00 - 17:30",
-    "title": "Coming Soon",
-    "speaker": null,
+    "title": "Scanning the Dark Web at Cloud Scale: Multi-Cloud Infrastructure for Near Real-Time Threat Intelligence.",
+    "description": "When your mission is to find a threat before an attacker can use it, your infrastructure becomes your greatest asset—or your biggest bottleneck. CloudSEK's platform perpetually crawls billions of pages across the surface and dark web to detect leaks and exposures in close to real-time. This requires solving a brutal engineering puzzle: orchestrating massively parallel crawlers across AWS and GCP, using Cast AI to autoscale Kubernetes clusters against unpredictable load spikes, and managing specialized detection services with vastly different failure modes. Varun KM breaks down CloudSEK's architecture, the multi-cloud trade-offs made for speed and resilience, and the lessons learned from operating where infrastructure lag can mean a client breach.",
+    "speaker": ["varun-km"],
     "hall": "Hall B",
     "type": "session"
   },

@@ -660,6 +660,23 @@
     ]
   },
   {
+    "id": "varun-km",
+    "name": "Varun KM",
+    "role": "Head - DevOps & IT at CloudSEK",
+    "bio": "Varun KM is the Head of DevOps & IT at CloudSEK, where he architects the multi-cloud infrastructure behind CloudSEK's threat intelligence platform. He specializes in orchestrating massively parallel crawlers across AWS and GCP, autoscaling Kubernetes clusters for unpredictable load spikes, and managing specialized detection services for near real-time threat detection.",
+    "image": "varun-km.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/varun-km/"
+      }
+    ]
+  },
+  {
     "id": "krish-srivastava",
     "name": "Krish Srivastava",
     "role": "SDE - I Platform at PhysicsWallah",
