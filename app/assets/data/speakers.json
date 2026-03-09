@@ -677,6 +677,23 @@
     ]
   },
   {
+    "id": "satish-dange",
+    "name": "Satish Dange",
+    "role": "Founder at Data Signals",
+    "bio": "Satish Dange is the Founder of Data Signals, helping organizations move from SaaS chaos to BYOC (Bring Your Own Cloud) freedom.",
+    "image": "satish-dange.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/satish-dange/"
+      }
+    ]
+  },
+  {
     "id": "krish-srivastava",
     "name": "Krish Srivastava",
     "role": "SDE - I Platform at PhysicsWallah",

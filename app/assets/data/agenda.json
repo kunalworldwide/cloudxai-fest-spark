@@ -10,17 +10,17 @@
   
   {
     "time": "09:30 - 10:00",
-    "title": "Keynote: Session",
+    "title": "Keynote: Predict and Prevent Incidents: The Rise of AIOps.",
     "speaker": ["abhishek-veeramalla"],
     "hall": "Hall A",
-    "description": "",
+    "description": "Modern IT systems generate massive volumes of operational data across logs, metrics, events, and traces. Traditional monitoring approaches struggle to keep up with the scale and complexity of cloud-native environments. AIOps (Artificial Intelligence for IT Operations) applies machine learning and analytics to operational data to detect anomalies, correlate events, and predict issues before they impact users. Some AIOps systems can predict infrastructure failures 20-30 days in advance with up to 90% accuracy, enabling organizations to move from reactive troubleshooting to proactive operations. This session introduces the fundamentals of AIOps, explores the current state of adoption, and discusses why it is becoming essential for modern IT operations.",
     "type": "keynote"
   },
   {
     "time": "10:00 - 10:30",
     "title": "Keynote: Personalised software and AI at scale for 24M users.",
     "speaker": ["hitesh-choudhary"],
-    "description": "",
+    "description": "Personalised AI track talks about making life easy with AI-powered software. AI at scale covers implementing AI for edtech SaaS — enabling low-cost AI access and use-case-based implementation so individual teachers can teach teams of 1,000 people.",
     "hall": "Hall A",
     "type": "keynote"
   },
@@ -30,7 +30,7 @@
     "speaker": ["laurent-gil"],
     "hall": "Hall A",
     "description": "",
-    "type": "session"
+    "type": "keynote"
   },
   {
     "time": "11:00 - 11:10",
@@ -184,6 +184,13 @@
     "title": "Agentic SDLC for the AI Coding Era.",
     "description":"AI coding agents are no longer assistants — they're autonomous contributors. Cursor, Claude Code, and GitHub Copilot now generate the majority of code in active development environments, with multi-agent frameworks like LangChain and AutoGPT orchestrating everything from architecture decisions to autonomous CI/CD. The attack surface has fundamentally changed: it's no longer just repositories and pipelines, but prompts, context sources, and agent reasoning chains.",
     "speaker": ["yogesh-trivedi"],
+    "hall": "Hall B",
+    "type": "session"
+  },
+  {
+    "time": "15:10 - 15:30",
+    "title": "From SaaS Chaos to BYOC Freedom.",
+    "speaker": ["satish-dange"],
     "hall": "Hall B",
     "type": "session"
   },
