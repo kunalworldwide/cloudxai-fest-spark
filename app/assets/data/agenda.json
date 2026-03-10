@@ -57,7 +57,8 @@
   },
   {
     "time": "11:30 - 12:00",
-    "title": "From Alerts to Autonomous: Building AI agents for self healing cloud systems.",
+    "title": "Event-Driven AI Agents for Autonomous Kubernetes Observability Using Amazon Bedrock AgentCore.",
+    "description": "Modern cloud-native applications running on Kubernetes frequently encounter runtime failures such as OOMKilled pods, CrashLoopBackOff errors, and resource exhaustion — often requiring immediate human intervention at any hour. Traditional on-call workflows demand that engineers manually investigate logs, identify root causes, and apply fixes, consuming valuable time and leading to alert fatigue.\n\nThis session demonstrates how to build an autonomous remediation agent using Amazon Bedrock AgentCore and the Strands Agents framework, powered by Claude, that eliminates this manual toil.\n\nThe agent integrates directly with Prometheus and Alertmanager to receive real-time Kubernetes alerts. Upon receiving an alert, it autonomously investigates the affected workload — listing pods, reading logs, describing pod state, and analyzing events — before taking targeted remediation actions such as doubling memory limits and triggering rollout restarts. When the root cause is beyond safe automated intervention, the agent escalates by creating a JIRA ticket and sending a Slack notification.\n\nKey outcome: A DevOps task that takes a human 15-30 minutes is handled autonomously in under 4 minutes, 24/7, with zero idle infrastructure cost.",
     "speaker": ["ranjini-ganeshan", "chandika-s"],
     "hall": "Hall B",
     "type": "session"
