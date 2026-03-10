@@ -64,9 +64,9 @@
   },
   {
     "time": "11:30 - 12:00",
-    "title": "Architecting Autonomous Systems on Google Cloud Run. ",
-    "description":"The era of static, chat-based AI is evolving into the age of 'Agentic AI'—autonomous systems that don't just answer questions but actively reason, execute multi-step workflows, and manipulate external tools to achieve complex goals. However, moving these agents from a local Python notebook to a scalable, secure enterprise environment presents unique infrastructure challenges. Agents are often bursty, state-dependent, and require long-running execution times that defy traditional request-response paradigms.\nIn this session, we will deep-dive into why Google Cloud Run has emerged as the premier substrate for hosting these autonomous workloads. We will move beyond basic deployment tutorials to explore the architectural patterns necessary for robust agentic systems. Attendees will learn how to leverage Cloud Run’s unique concurrency model to handle the 'waiting patterns' of agents (where they await tool output or human feedback) without incurring massive idle costs. We will rigorously compare Cloud Run against Kubernetes (GKE) and standard FaaS (Cloud Functions) to highlight trade-offs in complexity versus control. finally, we will address the critical security boundary required when giving AI agents the keys to your enterprise data and APIs.\n\nPrimary Takeaway: Google Cloud Run offers the optimal balance of serverless abstraction and containerized flexibility for Agentic AI, specifically solving the economic and technical challenges of long-running, bursty, and state-heavy autonomous workflows through its unique concurrency and scale-to-zero models.",
-    "speaker": ["shuva-jyoti-kar", "shruti-mantri"],
+    "title": "Architecting Autonomous Systems in Cloud-Native Environments.",
+    "description":"The era of static, chat-based AI is evolving into the age of \"Agentic AI\"—autonomous systems that actively reason, execute multi-step workflows, and manipulate external tools to achieve complex goals. However, moving these agents from a local Python notebook to a scalable, secure enterprise environment presents unique infrastructure challenges. Agents are often bursty, highly state-dependent, and require long-running execution times that defy traditional request-response paradigms.\n\nIn this session, we will deep-dive into why serverless containers have emerged as a premier substrate for hosting these autonomous workloads. Moving beyond basic deployment tutorials, we will explore the architectural patterns necessary to build robust, production-ready agentic systems. Attendees will learn how to leverage unique concurrency models to handle the \"waiting patterns\" of agents—such as awaiting external tool outputs or human-in-the-loop feedback—without incurring massive idle costs. Finally, we will address the critical security boundaries required when giving AI agents the keys to your enterprise data and APIs.",
+    "speaker": ["shuva-jyoti-kar"],
     "hall": "Hall C",
     "type": "session"
   },
@@ -174,6 +174,7 @@
   {
    "time": "14:30 - 15:00",
     "title": "Serverless Inference in Production: How to Deploy Fast, Cost-Efficient AI Workloads with DigitalOcean's Gradient AI Platform.",
+    "description": "AI adoption is exploding, but the challenge remains the same: how do you run inference at scale without managing GPUs or burning through budget? This session dives deep into serverless inference—a modern approach that lets teams deploy and scale AI workloads on-demand without provisioning or maintaining infrastructure. You will learn practical deployment patterns for LLMs, text-to-image models, and custom fine-tuned models, along with real-world examples and performance benchmarks. By the end of this talk, attendees will understand how to run production-grade AI workloads on DigitalOcean Gradient AI Platform with minimal operational overhead and significantly lower cost.",
     "speaker": ["akshit-pratiush"],
     "hall": "Hall A",
     "type": "session"

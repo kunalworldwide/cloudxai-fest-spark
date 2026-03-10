@@ -301,7 +301,7 @@
     "bio":"Shruti Mantri is an Architect at Google with expertise in cloud infrastructure and distributed systems design.",
     "image": "shruti-mantri.webp",
     "isFeatured": false,
-    "visible": true,
+    "visible": false,
     "isHeroFeature": false,
     "socials": [
       {

@@ -64,10 +64,10 @@
   <!-- Event Stats Section -->
   <div class="ma-0 event-stats">
     <div class="event-stats__background"></div>
-    <div class="event-stats__container">
+    <div class="event-stats__container" ref="statsContainer">
       <div
         class="event-stats__item"
-        v-for="stat in eventStats"
+        v-for="(stat, idx) in eventStats"
         :key="stat.title"
       >
         <v-card
@@ -76,7 +76,7 @@
           variant="flat"
           rounded="lg"
         >
-          <p class="text-h1 font-weight-bold">{{ stat.value }}</p>
+          <p class="text-h1 font-weight-bold">{{ animatedValues[idx] }}{{ stat.value.includes('+') ? '+' : '' }}</p>
           <h2 class="text-h5">{{ stat.title }}</h2>
         </v-card>
       </div>
@@ -86,7 +86,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import stats from "@/assets/data/stats.json";
 const eventDetails = ref([
   {
@@ -103,6 +103,60 @@ const eventDetails = ref([
 ]);
 
 const eventStats = ref(stats);
+const statsContainer = ref(null);
+const animatedValues = ref(stats.map(() => 0));
+let hasAnimated = false;
+let observer = null;
+
+function getNumericValue(val) {
+  return parseInt(val.replace(/[^0-9]/g, ''), 10) || 0;
+}
+
+function animateCountUp() {
+  if (hasAnimated) return;
+  hasAnimated = true;
+
+  const duration = 2000;
+  const frameRate = 16;
+  const totalFrames = Math.ceil(duration / frameRate);
+
+  const targets = stats.map(s => getNumericValue(s.value));
+  let frame = 0;
+
+  const timer = setInterval(() => {
+    frame++;
+    const progress = frame / totalFrames;
+    // Ease-out curve for a satisfying deceleration
+    const eased = 1 - Math.pow(1 - progress, 3);
+
+    animatedValues.value = targets.map(target =>
+      Math.round(eased * target)
+    );
+
+    if (frame >= totalFrames) {
+      animatedValues.value = targets;
+      clearInterval(timer);
+    }
+  }, frameRate);
+}
+
+onMounted(() => {
+  observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        animateCountUp();
+      }
+    },
+    { threshold: 0.3 }
+  );
+  if (statsContainer.value) {
+    observer.observe(statsContainer.value);
+  }
+});
+
+onUnmounted(() => {
+  if (observer) observer.disconnect();
+});
 </script>
 
 <style scoped lang="scss">
