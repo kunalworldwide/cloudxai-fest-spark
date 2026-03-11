@@ -286,9 +286,9 @@
   },
   {
     "time": "17:00 - 17:30",
-    "title": "From Alert to Root Cause in 30 Seconds: Building an AI SRE Copilot.",
-    "description": "Every SRE knows the 2 AM alert scramble. The data exists across Kubernetes, APM, logs, and CI, but forming a hypothesis takes 15-20 minutes of context switching. We built DevAstra-AI, a tool-driven system that queries live infrastructure (Kubernetes, Elasticsearch/APM, Jenkins) and correlates the results to produce a structured root-cause hypothesis in under 30 seconds. This talk covers the architecture behind it - the Go-based tool interface, bounded agent loops, and the safeguards we put in place for safely integrating AI with production systems.",
-    "speaker": ["krish-srivastava"],
+    "title": "Keeping Cloud Costs Low and Finance Teams Happy.",
+    "description": "As cloud systems grow, so does the cloud bill - sometimes faster than the system itself. If efficiency isn't built into the architecture with time, costs can quietly spiral out of control. At that point, cost optimization stops being a finance problem and becomes an engineering one. A huge and difficult one! In this talk, I'll talk about practical and battle-tested ways to build cost-efficient infrastructure at scale. From spotting common cost leaks, to improving cost visibility using tools like Cast AI, to applying strategies such as right-sizing resources and smart autoscaling. The goal is simple: help engineers design systems that stay reliable, scale smoothly, and don't give the finance team a headache!",
+    "speaker": ["shishir-khandelwal"],
     "hall": "Hall A",
     "type": "session"
   },

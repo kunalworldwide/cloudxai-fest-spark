@@ -700,13 +700,30 @@
     "bio": "Krish Srivastava is an SDE on the Platform team at PhysicsWallah. He built DevAstra-AI, a tool-driven system that queries live infrastructure (Kubernetes, Elasticsearch/APM, Jenkins) and correlates the results to produce structured root-cause hypotheses in under 30 seconds.",
     "image": "krish-srivastava.webp",
     "isFeatured": false,
-    "visible": true,
+    "visible": false,
     "isHeroFeature": false,
     "socials": [
       {
         "name": "linkedin",
         "icon": "mdi-linkedin",
         "url": "https://www.linkedin.com/in/krish-srivastava/"
+      }
+    ]
+  },
+  {
+    "id": "shishir-khandelwal",
+    "name": "Shishir Khandelwal",
+    "role": "Senior Platform Engineer",
+    "bio": "Shishir Khandelwal is a Senior Platform Engineer who builds scalable, secure, and cost-efficient infrastructure, helping teams run large systems reliably while keeping costs and operational complexity under control. He is also active in the tech community, regularly sharing his learnings and running a long-standing DevOps blog focused on real-world infrastructure and engineering practices.",
+    "image": "shishir-khandelwal.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/shishir-khandelwal/"
       }
     ]
   }
