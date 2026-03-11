@@ -1,0 +1,71 @@
+[
+  {
+    "id": "adyasha-mohanty",
+    "name": "Adyasha Mohanty",
+    "role": "",
+    "bio": "",
+    "image": "adyasha-mohanty.jpg",
+  
+    "visible": true,
+    
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/adyasha-mohanty/"
+      }
+    ]
+  },
+  {
+    "id": "pritesh-kiri",
+    "name": "Pritesh Kiri",
+    "role": "",
+    "bio": "",
+    "image": "pritesh-kiri.jpg",
+  
+    "visible": true,
+    
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/pritesh-kiri/"
+      }
+    ]
+  },
+  {
+    "id": "nishtha-saraswat",
+    "name": "Nishtha Saraswat",
+    "role": "",
+    "bio": "",
+    "image": "nishtha-saraswat.jpg",
+  
+    "visible": true,
+    
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/nishtha-saraswat/"
+      }
+    ]
+  },
+  {
+    "id": "ansh-satwani",
+    "name": "Ansh Satwani",
+    "role": "",
+    "bio": "",
+    "image": "ansh-satwani.jpg",
+  
+    "visible": true,
+    
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/anshwers/"
+      }
+    ]
+  }
+
+]

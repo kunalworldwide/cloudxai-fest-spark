@@ -3,33 +3,96 @@
     <v-container fluid class="pb-0" style="max-width: 1800px">
       <v-row class="mb-10">
         <v-col cols="12" class="text-center speaker-container">
-          <h1 class=" mt-5 cai-text-heading-2 " style="text-transform: uppercase">Our Amazing <span
-              style="color: #1e3a8a;">Speakers</span></h1>
+          <h1 class="mt-5 cai-text-heading-2" style="text-transform: uppercase">
+            Our Amazing <span style="color: #1e3a8a">Speakers</span>
+          </h1>
           <p class="text-body-1">
             Get ready to be inspired – meet the brilliant minds speaking at the
             conference! More speakers to be added shortly.
           </p>
           <div class="event-agendas__grid pa-0">
-            <div v-for="speaker in speakers" :key="speaker.name" class="event-agendas__card"
-              @click="openSpeakerDialog(speaker)">
+            <div
+              v-for="speaker in speakers"
+              :key="speaker.name"
+              class="event-agendas__card"
+              @click="openSpeakerDialog(speaker)"
+            >
               <div class="event-agendas__card-inner">
                 <div class="event-agendas__image-container">
-                  <img :src="speaker.image
-                      ? `/images/speakers/${speaker.image}`
-                      : '/images/defaultAvatar.png'
-                    " :alt="speaker.name" class="event-agendas__image" />
+                  <img
+                    :src="
+                      speaker.image
+                        ? `/images/speakers/${speaker.image}`
+                        : '/images/defaultAvatar.png'
+                    "
+                    :alt="speaker.name"
+                    class="event-agendas__image"
+                  />
                   <!-- Social Media Panel (visible on hover) -->
                   <div class="event-agendas__social-panel">
-                    <a v-for="social in speaker.socials" :key="social.name" :href="social.url"
-                      class="event-agendas__social-link" target="_blank" rel="noopener noreferrer">
+                    <a
+                      v-for="social in speaker.socials"
+                      :key="social.name"
+                      :href="social.url"
+                      class="event-agendas__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <v-icon size="20" :color="social.color || '#1e3a8a'">{{
                         social.icon
-                        }}</v-icon>
+                      }}</v-icon>
                     </a>
                   </div>
                 </div>
                 <h3 class="event-agendas__name">{{ speaker.name }}</h3>
                 <p class="event-agendas__role">{{ speaker.role }}</p>
+              </div>
+            </div>
+          </div>
+        </v-col>
+
+        <v-col cols="12" class="text-center speaker-container">
+          <h1 class="mt-5 cai-text-heading-2" style="text-transform: uppercase">
+            Our <span style="color: #1e3a8a">Emcees</span>
+          </h1>
+          <div class="event-agendas__grid pa-0">
+            <div
+              v-for="emcee in emcees"
+              :key="emcee.name"
+              class="event-agendas__card"
+              style="cursor: default"
+            >
+              <div class="event-agendas__card-inner">
+                <div class="event-agendas__image-container">
+                  <img
+                    :src="
+                      emcee.image
+                        ? `/images/emcees/${emcee.image}`
+                        : '/images/defaultAvatar.png'
+                    "
+                    :alt="emcee.name"
+                    class="event-agendas__image"
+                  />
+                  <!-- Social Media Panel (visible on hover) -->
+                  <div class="event-agendas__social-panel">
+                    <a
+                      v-for="social in emcee.socials"
+                      :key="social.name"
+                      :href="social.url"
+                      class="event-agendas__social-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <v-icon size="20" :color="social.color || '#1e3a8a'">{{
+                        social.icon
+                      }}</v-icon>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="event-agendas__name">{{ emcee.name }}</h3>
+                <p v-if="emcee.role" class="event-agendas__role">
+                  {{ emcee.role }}
+                </p>
               </div>
             </div>
           </div>
@@ -43,9 +106,11 @@
 
 <script setup>
 import speakersData from "~/assets/data/speakers.json";
+import emceesData from "~/assets/data/emcees.json";
 import SpeakerInfo from "~/components/shared/SpeakerInfo.vue";
 
-const speakers = ref(speakersData.filter(speaker => speaker.visible));
+const speakers = ref(speakersData.filter((speaker) => speaker.visible));
+const emcees = ref(emceesData.filter((emcee) => emcee.visible));
 const showSpeakerDialog = ref(false);
 const selectedSpeaker = ref({});
 
@@ -96,7 +161,10 @@ useHead({
     { name: "bingbot", content: "index, follow" },
     { name: "yandexbot", content: "index, follow" },
     // Open Graph tags
-    { property: "og:title", content: "Speakers - CLOUDxAI Conference 2026 Bengaluru" },
+    {
+      property: "og:title",
+      content: "Speakers - CLOUDxAI Conference 2026 Bengaluru",
+    },
     {
       property: "og:description",
       content:
@@ -116,10 +184,16 @@ useHead({
     { property: "og:url", content: "https://cloudconf.ai/" },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: "en_US" },
-    { property: "og:site_name", content: "Speakers - CLOUDxAI Conference 2026 Bengaluru" },
+    {
+      property: "og:site_name",
+      content: "Speakers - CLOUDxAI Conference 2026 Bengaluru",
+    },
     // Twitter Card tags
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: "Speakers - CLOUDxAI Conference 2026 Bengaluru" },
+    {
+      name: "twitter:title",
+      content: "Speakers - CLOUDxAI Conference 2026 Bengaluru",
+    },
     {
       name: "twitter:description",
       content:
