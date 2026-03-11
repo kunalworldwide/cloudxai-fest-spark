@@ -129,5 +129,10 @@
         "name": "Digital Dominators",
         "link": "https://linktr.ee/digital_dominators",
         "image": "digitalDominators.webp"
+    },
+    {
+        "name": "KubeSimplify",
+        "link": "https://kubesimplify.com/",
+        "image": "kubesimplify.png"
     }
 ]

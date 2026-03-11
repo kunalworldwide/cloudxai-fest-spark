@@ -279,8 +279,9 @@
   {
     "id": "shuva-jyoti-kar",
     "name": "Shuva Jyoti Kar",
-    "role": "Senior Technical Leader at Cisco Systems",
-    "bio":"Shuva is a Senior Technical Leader at Cisco Systems, where he leads the Data Platform for AI-driven Network Analytics. In this role, he focuses on the development and delivery of critical data processing and persistence components for scalable, serverless enterprise solutions. A serverless enthusiast and a specialist in distributed AI systems, Shuva has a background as a Opensource committer and maintainer for the OpenFlow Plugin (OpenDaylight). He is an active contributor to the technical community, frequently speaking at industry events such as Open Source Summits, OpenDaylight Conferences, GDG Developer Fests/Forums and IEEE Conferences.",
+    "role": "Principal Engineer at Palo Alto Networks",
+    "bio":"Shuva is a Principal Engineer at Palo Alto Networks. Previously, as a Senior Technical Leader at Cisco Systems, he led the Data Platform for AI-driven Network Analytics. A serverless enthusiast and active open-source contributor, Shuva has a strong background as an open-source committer. He is a frequent speaker at industry-leading events, including Open Source Summits, KubeCon, and GDG DevFests, sharing insights on building critical data processing components for the cloud-native era.",
+    "description":"With over a decade of experience in real-time network analytics at enterprise scale, Shuva joins the stage as a Principal Engineer at Palo Alto Networks—where his new mission is baking security directly into serverless AI.",
     "image": "shuva-jyoti-kar.webp",
     "isFeatured": false,
     "visible": true,
@@ -300,7 +301,7 @@
     "bio":"Shruti Mantri is an Architect at Google with expertise in cloud infrastructure and distributed systems design.",
     "image": "shruti-mantri.webp",
     "isFeatured": false,
-    "visible": true,
+    "visible": false,
     "isHeroFeature": false,
     "socials": [
       {
@@ -507,7 +508,7 @@
   {
     "id": "savinder-puri",
     "name": "Savinder Puri",
-    "role": "Associate VP at Zenser Technologies",
+    "role": "Associate VP at Zensar Technologies",
     "bio":"With over 24 years of experience, Savinder Puri partners with global CIOs and CTOs to design and scale DevOps, SRE, and AI-driven software delivery.\n\nA global speaker and author, Savinder translates complex technology into strategic insights while fostering an engaged professional community through his YouTube channel. He brings a unique perspective to the industry by integrating technical excellence with spiritual growth, guiding organizations toward resilience and purpose alongside digital transformation.",
     "image": "savinder-puri.webp",
     "isFeatured": false,
@@ -638,6 +639,74 @@
         "name": "linkedin",
         "icon": "mdi-linkedin",
         "url": "https://www.linkedin.com/in/zilvinasurbonas/"
+      }
+    ]
+  },
+  {
+    "id": "akshit-pratiush",
+    "name": "Akshit Pratiush",
+    "role": "Senior Solutions Architect II at DigitalOcean",
+    "bio": "Akshit Pratiush is a Senior Solutions Architect II at DigitalOcean, specializing in serverless inference and cost-efficient AI workloads on the Gradient AI Platform.",
+    "image": "akshit-pratiush.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/akshit-pratiush/"
+      }
+    ]
+  },
+  {
+    "id": "varun-km",
+    "name": "Varun KM",
+    "role": "Head - DevOps & IT at CloudSEK",
+    "bio": "Varun KM is the Head of DevOps & IT at CloudSEK, where he architects the multi-cloud infrastructure behind CloudSEK's threat intelligence platform. He specializes in orchestrating massively parallel crawlers across AWS and GCP, autoscaling Kubernetes clusters for unpredictable load spikes, and managing specialized detection services for near real-time threat detection.",
+    "image": "varun-km.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/varun-km/"
+      }
+    ]
+  },
+  {
+    "id": "satish-dange",
+    "name": "Satish Dange",
+    "role": "Founder at Data Signals",
+    "bio": "Satish Dange is the Founder of Data Signals, helping organizations move from SaaS chaos to BYOC (Bring Your Own Cloud) freedom.",
+    "image": "satish-dange.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/satish-dange/"
+      }
+    ]
+  },
+  {
+    "id": "krish-srivastava",
+    "name": "Krish Srivastava",
+    "role": "SDE - I Platform at PhysicsWallah",
+    "bio": "Krish Srivastava is an SDE on the Platform team at PhysicsWallah. He built DevAstra-AI, a tool-driven system that queries live infrastructure (Kubernetes, Elasticsearch/APM, Jenkins) and correlates the results to produce structured root-cause hypotheses in under 30 seconds.",
+    "image": "krish-srivastava.webp",
+    "isFeatured": false,
+    "visible": true,
+    "isHeroFeature": false,
+    "socials": [
+      {
+        "name": "linkedin",
+        "icon": "mdi-linkedin",
+        "url": "https://www.linkedin.com/in/krish-srivastava/"
       }
     ]
   }

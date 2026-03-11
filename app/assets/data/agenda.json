@@ -10,17 +10,17 @@
   
   {
     "time": "09:30 - 10:00",
-    "title": "Keynote: Session",
+    "title": "Keynote: Predict and Prevent Incidents: The Rise of AIOps.",
     "speaker": ["abhishek-veeramalla"],
     "hall": "Hall A",
-    "description": "",
+    "description": "Modern IT systems generate massive volumes of operational data across logs, metrics, events, and traces. Traditional monitoring approaches struggle to keep up with the scale and complexity of cloud-native environments. AIOps (Artificial Intelligence for IT Operations) applies machine learning and analytics to operational data to detect anomalies, correlate events, and predict issues before they impact users. Some AIOps systems can predict infrastructure failures 20-30 days in advance with up to 90% accuracy, enabling organizations to move from reactive troubleshooting to proactive operations. This session introduces the fundamentals of AIOps, explores the current state of adoption, and discusses why it is becoming essential for modern IT operations.",
     "type": "keynote"
   },
   {
     "time": "10:00 - 10:30",
-    "title": "Keynote: Session",
+    "title": "Keynote: Personalised software and AI at scale for 24M users.",
     "speaker": ["hitesh-choudhary"],
-    "description": "",
+    "description": "Personalised AI track talks about making life easy with AI-powered software. AI at scale covers implementing AI for edtech SaaS — enabling low-cost AI access and use-case-based implementation so individual teachers can teach teams of 1,000 people.",
     "hall": "Hall A",
     "type": "keynote"
   },
@@ -30,7 +30,7 @@
     "speaker": ["laurent-gil"],
     "hall": "Hall A",
     "description": "",
-    "type": "session"
+    "type": "keynote"
   },
   {
     "time": "11:00 - 11:10",
@@ -57,16 +57,17 @@
   },
   {
     "time": "11:30 - 12:00",
-    "title": "From Alerts to Autonomous: Building AI agents for self healing cloud systems.",
+    "title": "Event-Driven AI Agents for Autonomous Kubernetes Observability Using Amazon Bedrock AgentCore.",
+    "description": "Modern cloud-native applications running on Kubernetes frequently encounter runtime failures such as OOMKilled pods, CrashLoopBackOff errors, and resource exhaustion — often requiring immediate human intervention at any hour. Traditional on-call workflows demand that engineers manually investigate logs, identify root causes, and apply fixes, consuming valuable time and leading to alert fatigue.\n\nThis session demonstrates how to build an autonomous remediation agent using Amazon Bedrock AgentCore and the Strands Agents framework, powered by Claude, that eliminates this manual toil.\n\nThe agent integrates directly with Prometheus and Alertmanager to receive real-time Kubernetes alerts. Upon receiving an alert, it autonomously investigates the affected workload — listing pods, reading logs, describing pod state, and analyzing events — before taking targeted remediation actions such as doubling memory limits and triggering rollout restarts. When the root cause is beyond safe automated intervention, the agent escalates by creating a JIRA ticket and sending a Slack notification.\n\nKey outcome: A DevOps task that takes a human 15-30 minutes is handled autonomously in under 4 minutes, 24/7, with zero idle infrastructure cost.",
     "speaker": ["ranjini-ganeshan", "chandika-s"],
     "hall": "Hall B",
     "type": "session"
   },
   {
     "time": "11:30 - 12:00",
-    "title": "Architecting Autonomous Systems on Google Cloud Run. ",
-    "description":"The era of static, chat-based AI is evolving into the age of 'Agentic AI'—autonomous systems that don't just answer questions but actively reason, execute multi-step workflows, and manipulate external tools to achieve complex goals. However, moving these agents from a local Python notebook to a scalable, secure enterprise environment presents unique infrastructure challenges. Agents are often bursty, state-dependent, and require long-running execution times that defy traditional request-response paradigms.\nIn this session, we will deep-dive into why Google Cloud Run has emerged as the premier substrate for hosting these autonomous workloads. We will move beyond basic deployment tutorials to explore the architectural patterns necessary for robust agentic systems. Attendees will learn how to leverage Cloud Run’s unique concurrency model to handle the 'waiting patterns' of agents (where they await tool output or human feedback) without incurring massive idle costs. We will rigorously compare Cloud Run against Kubernetes (GKE) and standard FaaS (Cloud Functions) to highlight trade-offs in complexity versus control. finally, we will address the critical security boundary required when giving AI agents the keys to your enterprise data and APIs.\n\nPrimary Takeaway: Google Cloud Run offers the optimal balance of serverless abstraction and containerized flexibility for Agentic AI, specifically solving the economic and technical challenges of long-running, bursty, and state-heavy autonomous workflows through its unique concurrency and scale-to-zero models.",
-    "speaker": ["shuva-jyoti-kar", "shruti-mantri"],
+    "title": "Architecting Autonomous Systems in Cloud-Native Environments.",
+    "description":"The era of static, chat-based AI is evolving into the age of \"Agentic AI\"—autonomous systems that actively reason, execute multi-step workflows, and manipulate external tools to achieve complex goals. However, moving these agents from a local Python notebook to a scalable, secure enterprise environment presents unique infrastructure challenges. Agents are often bursty, highly state-dependent, and require long-running execution times that defy traditional request-response paradigms.\n\nIn this session, we will deep-dive into why serverless containers have emerged as a premier substrate for hosting these autonomous workloads. Moving beyond basic deployment tutorials, we will explore the architectural patterns necessary to build robust, production-ready agentic systems. Attendees will learn how to leverage unique concurrency models to handle the \"waiting patterns\" of agents—such as awaiting external tool outputs or human-in-the-loop feedback—without incurring massive idle costs. Finally, we will address the critical security boundaries required when giving AI agents the keys to your enterprise data and APIs.",
+    "speaker": ["shuva-jyoti-kar"],
     "hall": "Hall C",
     "type": "session"
   },
@@ -76,7 +77,7 @@
     "description":"Kubernetes clusters generate thousands of metrics, logs, and events daily. This workshop explores how AI agents can parse this complexity and take action on infrastructure.\n\nWe'll work through three practical scenarios. Each scenario includes hands-on experimentation.\n\nScenario 1: Cluster Debugging with AI – You'll receive a broken cluster and a problem to solve. Try traditional debugging approaches or use an AI agent equipped with Kubernetes API access. Compare how each method navigates pod statuses, resource constraints, and configuration issues.\n\nScenario 2: Workload Autoscaling – A service is experiencing OOM kills. You'll ask an AI agent to investigate and fix it. Watch it analyze workload patterns, identify that scaling policies need adjustment, make the necessary changes, and validate the fix.\n\nScenario 3: End-to-End Workload Optimization – AI agents can detect inefficient workloads, apply optimizations in production, and ensure those fixes become permanent by updating your deployment manifests and infrastructure-as-code. We'll demonstrate how agents handle the complete optimization loop—from identifying resource inefficiencies to synchronizing corrections across your entire deployment pipeline. We'll also explore how this extends to fixing security vulnerabilities, enforcing compliance policies, and tuning database performance.\n\nPrerequisites: Familiarity with Kubernetes concepts (pods, deployments, resources), laptop with terminal access, Claude free account.\n\nRelevant for anyone managing Kubernetes infrastructure or building platform tooling.",
     "speaker": ["matas-kaminskas", "narunas-kapocius"],
     "hall": "Board Room",
-    "type": "session"
+    "type": "workshop"
   },
   {
     "time": "12:00 - 12:30",
@@ -96,7 +97,7 @@
   {
     "time": "12:00 - 13:00",
     "title": "Panel discussion: Agents in Production: What Actually Works (and What Breaks).",
-    "speaker": ["kaushik-deb", "shashank-karpal", "pramod-singh","jose-jayanandaraj","hima-bindu"],
+    "speaker": ["kaushik-deb", "shashank-karpal", "pramod-singh","jose-jayanandaraj","hima-bindu","zilvinas-urbonas"],
     "hall": "Hall A",
     "description": "",
     "type": "session"
@@ -146,7 +147,7 @@
     "description":"Everyone is talking about context engineering for code. Nobody's talking about it for infrastructure, and that's why most AIOps tools still can't debug your specific environment.\nThe model isn't the bottleneck. The context is. A frontier LLM with a raw log dump gives you a generic answer. The same model with your service map, deployment history, trace data, and incident memory gives you the actual root cause.\n\nThis talk covers how to architect the context layers (topology, history, signals, and memory) that make AI agents actually useful for cloud operations. Includes a live side-by-side demo: the same incident and the same model, shown with and without infrastructure context.",
     "speaker": ["yogesh-trivedi","yash-shah"],
     "hall": "Board Room",
-    "type": "session"
+    "type": "workshop"
   },{
     "time": "14:00 - 14:30",
     "title": "Building Durable AI Agents for DevOps ",
@@ -173,8 +174,9 @@
   },
   {
    "time": "14:30 - 15:00",
-    "title": "Coming Soon",
-    "speaker": null,
+    "title": "Serverless Inference in Production: How to Deploy Fast, Cost-Efficient AI Workloads with DigitalOcean's Gradient AI Platform.",
+    "description": "AI adoption is exploding, but the challenge remains the same: how do you run inference at scale without managing GPUs or burning through budget? This session dives deep into serverless inference—a modern approach that lets teams deploy and scale AI workloads on-demand without provisioning or maintaining infrastructure. You will learn practical deployment patterns for LLMs, text-to-image models, and custom fine-tuned models, along with real-world examples and performance benchmarks. By the end of this talk, attendees will understand how to run production-grade AI workloads on DigitalOcean Gradient AI Platform with minimal operational overhead and significantly lower cost.",
+    "speaker": ["akshit-pratiush"],
     "hall": "Hall A",
     "type": "session"
   },
@@ -184,6 +186,13 @@
     "title": "Agentic SDLC for the AI Coding Era.",
     "description":"AI coding agents are no longer assistants — they're autonomous contributors. Cursor, Claude Code, and GitHub Copilot now generate the majority of code in active development environments, with multi-agent frameworks like LangChain and AutoGPT orchestrating everything from architecture decisions to autonomous CI/CD. The attack surface has fundamentally changed: it's no longer just repositories and pipelines, but prompts, context sources, and agent reasoning chains.",
     "speaker": ["yogesh-trivedi"],
+    "hall": "Hall B",
+    "type": "session"
+  },
+  {
+    "time": "15:10 - 15:30",
+    "title": "From SaaS Chaos to BYOC Freedom.",
+    "speaker": ["satish-dange"],
     "hall": "Hall B",
     "type": "session"
   },
@@ -239,7 +248,7 @@
     "speaker": null,
     "hall": "Board Room",
     "description": "Coming Soon",
-    "type": "session"
+    "type": "workshop"
   },
   
   {
@@ -261,8 +270,9 @@
 
    {
     "time": "17:00 - 17:30",
-    "title": "Coming Soon",
-    "speaker": null,
+    "title": "Scanning the Dark Web at Cloud Scale: Multi-Cloud Infrastructure for Near Real-Time Threat Intelligence.",
+    "description": "When your mission is to find a threat before an attacker can use it, your infrastructure becomes your greatest asset—or your biggest bottleneck. CloudSEK's platform perpetually crawls billions of pages across the surface and dark web to detect leaks and exposures in close to real-time. This requires solving a brutal engineering puzzle: orchestrating massively parallel crawlers across AWS and GCP, using Cast AI to autoscale Kubernetes clusters against unpredictable load spikes, and managing specialized detection services with vastly different failure modes. Varun KM breaks down CloudSEK's architecture, the multi-cloud trade-offs made for speed and resilience, and the lessons learned from operating where infrastructure lag can mean a client breach.",
+    "speaker": ["varun-km"],
     "hall": "Hall B",
     "type": "session"
   },
@@ -276,8 +286,9 @@
   },
   {
     "time": "17:00 - 17:30",
-    "title": "Coming Soon",
-    "speaker": null,
+    "title": "From Alert to Root Cause in 30 Seconds: Building an AI SRE Copilot.",
+    "description": "Every SRE knows the 2 AM alert scramble. The data exists across Kubernetes, APM, logs, and CI, but forming a hypothesis takes 15-20 minutes of context switching. We built DevAstra-AI, a tool-driven system that queries live infrastructure (Kubernetes, Elasticsearch/APM, Jenkins) and correlates the results to produce a structured root-cause hypothesis in under 30 seconds. This talk covers the architecture behind it - the Go-based tool interface, bounded agent loops, and the safeguards we put in place for safely integrating AI with production systems.",
+    "speaker": ["krish-srivastava"],
     "hall": "Hall A",
     "type": "session"
   },
