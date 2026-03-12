@@ -48,7 +48,7 @@
           </v-container>
         </v-col>
 
-        <v-col v-if="false" cols="12" class="text-center">
+        <v-col  cols="12" class="text-center">
           <h1 class="text-h2">Volunteers</h1>
           <p>
             Thank you to all the volunteers who helped make this event possible
@@ -62,7 +62,7 @@
                 cols="12"
                 xl="2"
                 xxl="2"
-                v-for="member in team"
+                v-for="member in volunteers"
                 :key="member.name"
               >
                 <v-card variant="flat" rounded="lg">
@@ -70,7 +70,7 @@
                     <img
                       :src="
                         member.image
-                          ? `/images/team/${member.image}`
+                          ? `/images/volunteers/${member.image}`
                           : '/images/defaultAvatar.png'
                       "
                       :alt="member.name"
@@ -78,7 +78,7 @@
                     />
                   </v-avatar>
                   <h2 class="mt-4">{{ member.name }}</h2>
-                  <p>{{ member.role }}</p>
+                  <p v-if="member.role">{{ member.role }}</p>
 
                   <!-- social media icons -->
                   <v-btn
@@ -104,8 +104,10 @@
 <script setup>
 const { width } = useDisplay();
 import teamData from "~/assets/data/team.json";
+import volunteersData from "~/assets/data/volunteers.json"
 
 const team = ref(teamData);
+const volunteers = ref(volunteersData);
 
 // ORGANISER
 // Organisr
