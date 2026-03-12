@@ -134,5 +134,10 @@
         "name": "KubeSimplify",
         "link": "https://kubesimplify.com/",
         "image": "kubesimplify.png"
+    },
+    {
+        "name": "GeekyAnts",
+        "link": "https://geekyants.com/",
+        "image": "geekyants.png"
     }
 ]
