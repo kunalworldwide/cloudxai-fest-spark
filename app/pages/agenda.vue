@@ -36,7 +36,8 @@
                   { 'session-card--long': isLongSession(group.time) },
                   `hall-border--${getHallIndex(group.sessions[0].hall)}`,
                   { 'clickable-card': group.sessions[0].speaker },
-                  { 'session-card--keynote': group.sessions[0].type === 'keynote' }
+                  { 'session-card--keynote': group.sessions[0].type === 'keynote' },
+                  { 'session-card--opening': group.sessions[0].type === 'opening' }
                 ]"
               
                 @click="group.sessions[0].speaker && openSessionDialog(group.sessions[0])"
@@ -47,6 +48,7 @@
                 </span>
                 <span v-if="group.sessions[0].type === 'workshop'" class="workshop-badge">WORKSHOP</span>
                 <span v-if="group.sessions[0].type === 'keynote'" class="keynote-badge">KEYNOTE</span>
+                <span v-if="group.sessions[0].type === 'opening'" class="opening-badge">OPENING</span>
                 <h3 class="session-card__title">{{ group.sessions[0].title }}</h3>
                 
                 <!-- Speakers -->
@@ -852,6 +854,35 @@ $timeline-color: #14b8a6;
   background: rgba(168, 85, 247, 0.15);
   color: #6b21a8;
   border: 1.5px solid rgba(168, 85, 247, 0.4);
+  margin-bottom: 0.5rem;
+}
+
+/* Opening Card */
+.session-card--opening {
+  background: rgba(20, 184, 166, 0.06);
+  border: 1px solid rgba(20, 184, 166, 0.25);
+  padding: 0.75rem 1.25rem;
+
+  .card-time { margin-bottom: 0.25rem; }
+  .session-card__hall { margin-bottom: 0.25rem; }
+  .session-card__title { font-size: 1rem; margin-bottom: 0.375rem; }
+  .session-card__speakers { margin-bottom: 0; }
+  .session-card__speaker-item { gap: 0.5rem; }
+  .speaker-avatar { width: 36px; height: 36px; }
+}
+
+/* Opening Badge */
+.opening-badge {
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  background: rgba(20, 184, 166, 0.12);
+  color: #0f766e;
+  border: 1px solid rgba(20, 184, 166, 0.3);
   margin-bottom: 0.5rem;
 }
 

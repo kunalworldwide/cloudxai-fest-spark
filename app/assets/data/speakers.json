@@ -214,7 +214,7 @@
     "bio": "Shashank Karpal is Director of Education & Government Programs at KodeKloud, the hands-on platform for AI-native DevOps and Cloud used by 1.3M+ learners. He partners with CIOs, platform, and L&D leaders across IMEA, APAC, and CIS to launch zero-setup AI labs, agents and RAG practice, and job-simulated projects, and he measures adoption and productivity impact with analytics. \nAt KodeKloud he steers AI playgrounds and agentic workflows such as MCP and LangChain, a multilingual AI tutor, and outcome dashboards aligned to certifications and roles. A regular at leading AI, cloud, and developer conferences, he shares practical, non-commercial playbooks that favor real labs over slides for safe, rapid adoption at scale.",
     "image": "shashank.webp",
     "isFeatured": false,
-    "visible": true,
+    "visible": false,
     "isHeroFeature": false,
 
     "socials": [
@@ -713,7 +713,7 @@
   {
     "id": "shishir-khandelwal",
     "name": "Shishir Khandelwal",
-    "role": "Senior Platform Engineer",
+    "role": "Senior Platform Engineer at PhysicsWallah",
     "bio": "Shishir Khandelwal is a Senior Platform Engineer who builds scalable, secure, and cost-efficient infrastructure, helping teams run large systems reliably while keeping costs and operational complexity under control. He is also active in the tech community, regularly sharing his learnings and running a long-standing DevOps blog focused on real-world infrastructure and engineering practices.",
     "image": "shishir-khandelwal.webp",
     "isFeatured": false,

@@ -9,11 +9,19 @@
   },
   
   {
-    "time": "09:30 - 10:00",
-    "title": "Keynote: Predict and Prevent Incidents: The Rise of AIOps.",
-    "speaker": ["abhishek-veeramalla"],
+    "time": "09:30 - 09:40",
+    "title": "Opening Address",
+    "speaker": ["kunal-kushwaha"],
     "hall": "Hall A",
-    "description": "Modern IT systems generate massive volumes of operational data across logs, metrics, events, and traces. Traditional monitoring approaches struggle to keep up with the scale and complexity of cloud-native environments. AIOps (Artificial Intelligence for IT Operations) applies machine learning and analytics to operational data to detect anomalies, correlate events, and predict issues before they impact users. Some AIOps systems can predict infrastructure failures 20-30 days in advance with up to 90% accuracy, enabling organizations to move from reactive troubleshooting to proactive operations. This session introduces the fundamentals of AIOps, explores the current state of adoption, and discusses why it is becoming essential for modern IT operations.",
+    "description": "",
+    "type": "opening"
+  },
+  {
+    "time": "09:40 - 10:00",
+    "title": "Keynote: Application Performance Automation.",
+    "speaker": ["laurent-gil"],
+    "hall": "Hall A",
+    "description": "",
     "type": "keynote"
   },
   {
@@ -26,10 +34,10 @@
   },
   {
     "time": "10:30 - 11:00",
-    "title": "Keynote: Application Performance Automation.",
-    "speaker": ["laurent-gil"],
+    "title": "Keynote: Predict and Prevent Incidents: The Rise of AIOps.",
+    "speaker": ["abhishek-veeramalla"],
     "hall": "Hall A",
-    "description": "",
+    "description": "Modern IT systems generate massive volumes of operational data across logs, metrics, events, and traces. Traditional monitoring approaches struggle to keep up with the scale and complexity of cloud-native environments. AIOps (Artificial Intelligence for IT Operations) applies machine learning and analytics to operational data to detect anomalies, correlate events, and predict issues before they impact users. Some AIOps systems can predict infrastructure failures 20-30 days in advance with up to 90% accuracy, enabling organizations to move from reactive troubleshooting to proactive operations. This session introduces the fundamentals of AIOps, explores the current state of adoption, and discusses why it is becoming essential for modern IT operations.",
     "type": "keynote"
   },
   {
@@ -97,7 +105,7 @@
   {
     "time": "12:00 - 13:00",
     "title": "Panel discussion: Agents in Production: What Actually Works (and What Breaks).",
-    "speaker": ["kaushik-deb", "shashank-karpal", "pramod-singh","jose-jayanandaraj","hima-bindu","zilvinas-urbonas"],
+    "speaker": ["kaushik-deb", "pramod-singh","jose-jayanandaraj","hima-bindu","zilvinas-urbonas"],
     "hall": "Hall A",
     "description": "",
     "type": "session"
