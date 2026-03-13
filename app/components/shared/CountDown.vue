@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="px-0">
+  <v-container fluid class="px-0" v-if="isVisible">
     <v-row justify="center" class="">
       <v-col cols="12" class="text-center">
         <h2 class="text-h5 mb-6 mt-n3">Let the countdown begin</h2>
@@ -67,12 +67,15 @@
     </v-row>
   </v-container>
 </template>
-  
-  <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+
+<script setup>
+import { ref, onMounted, onUnmounted, computed } from "vue";
 
 // Event date: September 27th, 2025 at 9 AM IST
 const eventDate = new Date("2026-03-14T09:00:00+05:30");
+
+const currentTime = ref(new Date());
+const isVisible = computed(() => currentTime.value < eventDate);
 
 const days = ref("00");
 const hours = ref("00");
@@ -82,16 +85,16 @@ const seconds = ref("00");
 let countdownInterval = null;
 
 const calculateTimeLeft = () => {
-  const now = new Date();
-  const difference = eventDate.getTime() - now.getTime();
+  currentTime.value = new Date();
+  const difference = eventDate.getTime() - currentTime.value.getTime();
 
   if (difference > 0) {
     const daysLeft = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hoursLeft = Math.floor(
-      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
     );
     const minutesLeft = Math.floor(
-      (difference % (1000 * 60 * 60)) / (1000 * 60)
+      (difference % (1000 * 60 * 60)) / (1000 * 60),
     );
     const secondsLeft = Math.floor((difference % (1000 * 60)) / 1000);
 
@@ -121,8 +124,8 @@ onUnmounted(() => {
   }
 });
 </script>
-  
-  <style scoped>
+
+<style scoped>
 .countdown-grid {
   gap: 0.5rem;
 }
@@ -159,4 +162,4 @@ onUnmounted(() => {
     margin-top: -0.5rem;
   }
 }
-</style> 
+</style>

@@ -1,13 +1,15 @@
 <template>
-  <div class="countdown-wrapper">
+  <div class="countdown-wrapper" v-if="isVisible">
     <div class="countdown-section">
       <v-container class="countdown-container">
-        <v-row align="center" justify="space-between" class="countdown-main-row">
+        <v-row
+          align="center"
+          justify="space-between"
+          class="countdown-main-row"
+        >
           <!-- Title Section -->
           <v-col cols="12" md="4" lg="4" class="countdown-title-col">
-            <h1 class="countdown-title">
-              Event Countdown
-            </h1>
+            <h1 class="countdown-title">Event Countdown</h1>
           </v-col>
 
           <!-- Countdown Timer Section -->
@@ -18,28 +20,28 @@
                 <div class="countdown-value">{{ days }}</div>
                 <div class="countdown-label">Days</div>
               </div>
-              
+
               <!-- Separator -->
               <!-- <div class="countdown-separator">:</div> -->
-              
+
               <!-- Hours -->
               <div class="countdown-box">
                 <div class="countdown-value">{{ hours }}</div>
                 <div class="countdown-label">Hours</div>
               </div>
-              
+
               <!-- Separator -->
               <!-- <div class="countdown-separator">:</div> -->
-              
+
               <!-- Minutes -->
               <div class="countdown-box">
                 <div class="countdown-value">{{ minutes }}</div>
                 <div class="countdown-label">Minutes</div>
               </div>
-              
+
               <!-- Separator -->
               <!-- <div class="countdown-separator">:</div> -->
-              
+
               <!-- Seconds -->
               <div class="countdown-box">
                 <div class="countdown-value">{{ seconds }}</div>
@@ -54,10 +56,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, computed } from "vue";
 
 // Event date: September 27th, 2025 at 9 AM IST
 const eventDate = new Date("2026-03-14T09:00:00+05:30");
+
+const currentTime = ref(new Date());
+const isVisible = computed(() => currentTime.value < eventDate);
 
 const days = ref("00");
 const hours = ref("00");
@@ -67,16 +72,16 @@ const seconds = ref("00");
 let countdownInterval = null;
 
 const calculateTimeLeft = () => {
-  const now = new Date();
-  const difference = eventDate.getTime() - now.getTime();
+  currentTime.value = new Date();
+  const difference = eventDate.getTime() - currentTime.value.getTime();
 
   if (difference > 0) {
     const daysLeft = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hoursLeft = Math.floor(
-      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
     );
     const minutesLeft = Math.floor(
-      (difference % (1000 * 60 * 60)) / (1000 * 60)
+      (difference % (1000 * 60 * 60)) / (1000 * 60),
     );
     const secondsLeft = Math.floor((difference % (1000 * 60)) / 1000);
 
@@ -106,15 +111,15 @@ onUnmounted(() => {
   }
 });
 </script>
-  
-  <style scoped>
+
+<style scoped>
 .countdown-wrapper {
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 2rem 1rem !important;
   position: absolute;
-  bottom:0;
+  bottom: 0;
 }
 
 .countdown-section {
@@ -126,13 +131,13 @@ onUnmounted(() => {
 }
 
 .countdown-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('@/assets/images/home-4-countdown-bg-2.png');
+  background-image: url("@/assets/images/home-4-countdown-bg-2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -426,10 +431,9 @@ onUnmounted(() => {
     margin: 0 !important;
     padding: 0 !important;
   }
-
 }
 
-@media(max-width: 960px){
+@media (max-width: 960px) {
   .countdown-title {
     font-size: 1.5rem !important;
     text-align: center !important;
@@ -437,20 +441,18 @@ onUnmounted(() => {
   }
 
   .countdown-timer-col {
-    padding: 0 8px  !important;
+    padding: 0 8px !important;
   }
 
   .countdown-box {
     width: 68px !important;
     margin: 0 !important;
-
   }
 
   .countdown-boxes {
     /* gap: 0.35rem !important; */
     justify-content: center !important;
   }
-
 
   .countdown-value {
     font-size: 1.75rem !important;
@@ -465,14 +467,9 @@ onUnmounted(() => {
   }
 }
 
-@media(max-width: 500px){
-
+@media (max-width: 500px) {
   .countdown-label {
     font-size: 0.55rem !important;
   }
-
-  
 }
-
-
-</style> 
+</style>
