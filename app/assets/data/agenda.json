@@ -89,7 +89,7 @@
   },
   {
     "time": "12:00 - 12:30",
-    "title": "Autonomous Cloud Optimization Agent: Self-Optimizing Cloud Infrastructure Using AI Agents.",
+    "title": "Using AI to Monitor AI: FinOps For The Agents Era.",
     "speaker": ["ravi-shankar"],
     "hall": "Hall B",
     "type": "session"
@@ -252,10 +252,10 @@
   },
   {
     "time": "16:00 - 17:30",
-    "title": "Workshop",
-    "speaker": null,
+    "title": "Autonomous Kubernetes: Building AI-Powered Operations",
+    "description":"Kubernetes clusters generate thousands of metrics, logs, and events daily. This workshop explores how AI agents can parse this complexity and take action on infrastructure.\n\nWe'll work through three practical scenarios. Each scenario includes hands-on experimentation.\n\nScenario 1: Cluster Debugging with AI – You'll receive a broken cluster and a problem to solve. Try traditional debugging approaches or use an AI agent equipped with Kubernetes API access. Compare how each method navigates pod statuses, resource constraints, and configuration issues.\n\nScenario 2: Workload Autoscaling – A service is experiencing OOM kills. You'll ask an AI agent to investigate and fix it. Watch it analyze workload patterns, identify that scaling policies need adjustment, make the necessary changes, and validate the fix.\n\nScenario 3: End-to-End Workload Optimization – AI agents can detect inefficient workloads, apply optimizations in production, and ensure those fixes become permanent by updating your deployment manifests and infrastructure-as-code. We'll demonstrate how agents handle the complete optimization loop—from identifying resource inefficiencies to synchronizing corrections across your entire deployment pipeline. We'll also explore how this extends to fixing security vulnerabilities, enforcing compliance policies, and tuning database performance.\n\nPrerequisites: Familiarity with Kubernetes concepts (pods, deployments, resources), laptop with terminal access, Claude free account.\n\nRelevant for anyone managing Kubernetes infrastructure or building platform tooling.",
+    "speaker": ["matas-kaminskas", "narunas-kapocius"],
     "hall": "Board Room",
-    "description": "Coming Soon",
     "type": "workshop"
   },
   
