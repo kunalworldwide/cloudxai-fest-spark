@@ -14,7 +14,8 @@
     "speaker": ["kunal-kushwaha"],
     "hall": "Hall A",
     "description": "",
-    "type": "opening"
+    "type": "opening",
+    "youtubeLink": "https://www.youtube.com"
   },
   {
     "time": "09:40 - 10:00",

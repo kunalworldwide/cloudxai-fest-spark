@@ -15,35 +15,40 @@
           >
         </v-col>
       </v-row> -->
-      <v-row class="text-white justify-space-between">
-        <!-- Contact Info Section -->
-        <v-col cols="12" md="12" lg="12">
-          
-          <div class="mb-6">
-            <h2 class="text-h5 font-weight-bold mb-4">CLOUDxAI Conference</h2>
-            <!-- <p class="text-body-2 mb-6" style="max-width: 400px">
+      <v-row class="justify-center">
+        <v-col cols="12" lg="11" xl="10">
+          <v-row class="text-white justify-space-between">
+            <!-- Contact Info Section -->
+            <v-col cols="12" md="12" lg="12" class="pa-0">
+              <div class="mb-6">
+                <h2 class="text-h5 font-weight-bold mb-4">
+                  CLOUDxAI Conference
+                </h2>
+                <!-- <p class="text-body-2 mb-6" style="max-width: 400px">
               CLOUDxAI Conference is the premier destination for technology
               leaders, innovators, and professionals to explore the convergence
               of cloud computing and artificial intelligence in the enterprise
               landscape.
             </p> -->
-          </div>
+              </div>
 
-          <div class="mb-4">
-            <h3 class="text-subtitle-1 font-weight-bold mb-3">Contact us:</h3>
-            <div class="d-flex align-center mb-2">
-              <v-icon size="small" class="mr-2">mdi-email-outline</v-icon>
-              <span class="text-body-2">contact@cloudconf.ai</span>
-            </div>
-            <!-- <div class="d-flex align-center">
+              <div class="mb-4">
+                <h3 class="text-subtitle-1 font-weight-bold mb-3">
+                  Contact us:
+                </h3>
+                <div class="d-flex align-center mb-2">
+                  <v-icon size="small" class="mr-2">mdi-email-outline</v-icon>
+                  <span class="text-body-2">contact@cloudconf.ai</span>
+                </div>
+                <!-- <div class="d-flex align-center">
               <v-icon size="small" class="mr-2">mdi-phone-outline</v-icon>
               <span class="text-body-2">+1 (555) 123-4567</span>
             </div> -->
-          </div>
-        </v-col>
+              </div>
+            </v-col>
 
-        <!-- Address Section -->
-        <!-- <v-col cols="12" md="6" lg="4">
+            <!-- Address Section -->
+            <!-- <v-col cols="12" md="6" lg="4">
           <h3 class="text-subtitle-1 font-weight-bold mb-3">Our address:</h3>
           <div class="d-flex">
             <v-icon size="small" class="mr-2 mt-1">mdi-map-marker-outline</v-icon>
@@ -55,8 +60,8 @@
           </div>
         </v-col> -->
 
-        <!-- Social Links Section -->
-        <!-- <v-col cols="12" lg="4">
+            <!-- Social Links Section -->
+            <!-- <v-col cols="12" lg="4">
           <h3 class="text-subtitle-1 font-weight-bold mb-4">Follow us:</h3>
           <div class="d-flex gap-3">
             <v-btn
@@ -111,9 +116,9 @@
             </v-btn>
           </div>
         </v-col> -->
-      </v-row>
+          </v-row>
 
-      <!-- <v-row class="mb-8" v-if="route.path !== '/register'">
+          <!-- <v-row class="mb-8" v-if="route.path !== '/register'">
         <v-col cols="12" md="12" class=" cta-btn ga-4" >
           <span class="" style="color: #fff">
             Secure your spot now at the CLOUDxAI conference and be a part of the
@@ -127,26 +132,26 @@
         </v-col>
       </v-row> -->
 
-      <!-- Divider -->
-      <v-divider class="border-opacity-25 mb-6"></v-divider>
+          <!-- Divider -->
+          <v-divider class="border-opacity-25 mb-6"></v-divider>
 
-      <!-- Bottom Footer -->
-      <v-row class="text-white align-center">
-        <v-col cols="12" md="6">
-          <p class="text-body-2 mb-0">
-            Design and Developed by
-            <span class="text-primary font-weight-medium"
-              ><a
-                href="https://techferment.com"
-                style="color: #3a99ff; text-decoration: none"
-                target="_blank"
-                >TechFerment</a
-              ></span
-            >
-            | All Right Reserved
-          </p>
-        </v-col>
-        <!-- <v-col cols="12" md="6" class="text-md-right">
+          <!-- Bottom Footer -->
+          <v-row class="text-white align-center">
+            <v-col cols="12" md="6" class="pa-0">
+              <p class="text-body-2 mb-0">
+                Design and Developed by
+                <span class="text-primary font-weight-medium"
+                  ><a
+                    href="https://techferment.com"
+                    style="color: #3a99ff; text-decoration: none"
+                    target="_blank"
+                    >TechFerment</a
+                  ></span
+                >
+                | All Right Reserved
+              </p>
+            </v-col>
+            <!-- <v-col cols="12" md="6" class="text-md-right">
           <div class="d-flex flex-wrap justify-md-end gap-4">
             <a
               href="#"
@@ -165,15 +170,17 @@
             >
           </div>
         </v-col> -->
+          </v-row>
+        </v-col>
       </v-row>
     </v-container>
   </v-footer>
 </template>
 
 <script lang="ts" setup>
-import { useRoute } from 'vue-router'
+import { useRoute } from "vue-router";
 
-const route = useRoute()
+const route = useRoute();
 </script>
 
 <style scoped>
@@ -202,10 +209,6 @@ const route = useRoute()
   z-index: 1;
 }
 
-.footer-container{
-  max-width: 1400px;
-}
-
 .hover-link {
   transition: opacity 0.2s ease;
 }
@@ -229,14 +232,13 @@ const route = useRoute()
   -webkit-backdrop-filter: blur(40px);
   border-radius: 16px;
   padding: 32px;
-  box-shadow: 
+  box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.3),
     0 0 0 1px rgba(255, 255, 255, 0.1) inset,
     0 0 40px rgba(255, 255, 255, 0.15);
   /* align-items: center;
   justify-content: space-between; */
 }
-
 
 @media (max-width: 768px) {
   .cta-btn {

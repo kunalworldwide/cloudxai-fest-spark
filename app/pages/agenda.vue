@@ -20,49 +20,87 @@
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <!-- Break card -->
-              <div v-if="group.isBreak" class="break-card" :class="{ 'break-card--long': isLongSession(group.time) }">
+              <div
+                v-if="group.isBreak"
+                class="break-card"
+                :class="{ 'break-card--long': isLongSession(group.time) }"
+              >
                 <div class="card-time">{{ group.time }}</div>
                 <h3 class="break-card__title">{{ group.sessions[0].title }}</h3>
-                <p v-if="group.sessions[0].description" class="break-card__desc">
+                <p
+                  v-if="group.sessions[0].description"
+                  class="break-card__desc"
+                >
                   {{ group.sessions[0].description }}
                 </p>
               </div>
-              
+
               <!-- Single hall session -->
-              <article 
-                v-else 
-                class="session-card " 
+              <article
+                v-else
+                class="session-card"
                 :class="[
                   { 'session-card--long': isLongSession(group.time) },
                   `hall-border--${getHallIndex(group.sessions[0].hall)}`,
                   { 'clickable-card': group.sessions[0].speaker },
-                  { 'session-card--keynote': group.sessions[0].type === 'keynote' },
-                  { 'session-card--opening': group.sessions[0].type === 'opening' }
+                  {
+                    'session-card--keynote':
+                      group.sessions[0].type === 'keynote',
+                  },
+                  {
+                    'session-card--opening':
+                      group.sessions[0].type === 'opening',
+                  },
                 ]"
-              
-                @click="group.sessions[0].speaker && openSessionDialog(group.sessions[0])"
+                @click="
+                  group.sessions[0].speaker &&
+                  openSessionDialog(group.sessions[0])
+                "
               >
                 <div class="card-time">{{ group.time }}</div>
-                <span class="session-card__hall" :class="`hall-badge--${getHallIndex(group.sessions[0].hall)}`">
+                <span
+                  class="session-card__hall mr-2"
+                  :class="`hall-badge--${getHallIndex(group.sessions[0].hall)}`"
+                >
                   {{ group.sessions[0].hall }}
                 </span>
-                <span v-if="group.sessions[0].type === 'workshop'" class="workshop-badge">WORKSHOP</span>
-                <span v-if="group.sessions[0].type === 'keynote'" class="keynote-badge">KEYNOTE</span>
-                <span v-if="group.sessions[0].type === 'opening'" class="opening-badge">OPENING</span>
-                <h3 class="session-card__title">{{ group.sessions[0].title }}</h3>
-                
+                <span
+                  v-if="group.sessions[0].type === 'workshop'"
+                  class="workshop-badge"
+                  >WORKSHOP</span
+                >
+                <span
+                  v-if="group.sessions[0].type === 'keynote'"
+                  class="keynote-badge"
+                  >KEYNOTE</span
+                >
+                <span
+                  v-if="group.sessions[0].type === 'opening'"
+                  class="opening-badge"
+                  >OPENING</span
+                >
+                <h3 class="session-card__title">
+                  {{ group.sessions[0].title }}
+                </h3>
+
                 <!-- Speakers -->
-                <div v-if="group.sessions[0].speaker && group.sessions[0].speaker.length > 0" class="session-card__speakers">
-                  <div 
-                    v-for="speakerId in group.sessions[0].speaker" 
+                <div
+                  v-if="
+                    group.sessions[0].speaker &&
+                    group.sessions[0].speaker.length > 0
+                  "
+                  class="session-card__speakers"
+                >
+                  <div
+                    v-for="speakerId in group.sessions[0].speaker"
                     :key="speakerId"
                     class="session-card__speaker-item"
                   >
                     <template v-if="getSpeakerDetails(speakerId)">
                       <div class="speaker-avatar">
-                        <img 
+                        <img
                           v-if="getSpeakerDetails(speakerId).image"
-                          :src="`/images/speakers/${getSpeakerDetails(speakerId).image}`" 
+                          :src="`/images/speakers/${getSpeakerDetails(speakerId).image}`"
                           :alt="getSpeakerDetails(speakerId).name"
                           class="speaker-avatar__img"
                         />
@@ -71,36 +109,61 @@
                         </span>
                       </div>
                       <div class="session-card__speaker-info">
-                        <p class="session-card__speaker-name">{{ getSpeakerDetails(speakerId).name }}</p>
+                        <p class="session-card__speaker-name">
+                          {{ getSpeakerDetails(speakerId).name }}
+                        </p>
                         <p class="session-card__speaker-role">
-                          {{ getSpeakerDetails(speakerId).agendaRole || getSpeakerDetails(speakerId).role }}
+                          {{
+                            getSpeakerDetails(speakerId).agendaRole ||
+                            getSpeakerDetails(speakerId).role
+                          }}
                         </p>
                       </div>
                     </template>
                   </div>
                 </div>
-                
               </article>
             </div>
           </div>
 
           <!-- Parallel sessions -->
-          <div v-else-if="group.type === 'parallel'" class="timeline-item timeline-item--parallel">
+          <div
+            v-else-if="group.type === 'parallel'"
+            class="timeline-item timeline-item--parallel"
+          >
             <div class="timeline-marker"></div>
             <div class="timeline-content timeline-content--full">
               <!-- Parallel sessions indicator -->
               <div class="parallel-indicator">
                 <div class="parallel-indicator__badge">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M8 2L14 8L8 14M8 2L2 8L8 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path
+                      d="M8 2L14 8L8 14M8 2L2 8L8 14"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                   Parallel Sessions Begin — {{ group.hallCount }} Halls
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M8 2L14 8L8 14M8 2L2 8L8 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path
+                      d="M8 2L14 8L8 14M8 2L2 8L8 14"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
                   </svg>
                 </div>
-                <svg class="parallel-indicator__lines" viewBox="0 0 800 60" preserveAspectRatio="none">
-                  <path v-for="(hall, idx) in group.halls" :key="idx"
+                <svg
+                  class="parallel-indicator__lines"
+                  viewBox="0 0 800 60"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    v-for="(hall, idx) in group.halls"
+                    :key="idx"
                     :d="getParallelPath(idx, group.halls.length)"
                     :stroke="getHallColor(idx)"
                     stroke-width="3"
@@ -111,8 +174,8 @@
 
               <!-- Hall headers -->
               <div class="hall-grid-header">
-                <div 
-                  v-for="(hall, idx) in group.halls" 
+                <div
+                  v-for="(hall, idx) in group.halls"
                   :key="hall"
                   class="hall-header"
                   :class="`hall-header--${idx}`"
@@ -122,73 +185,120 @@
               </div>
 
               <div class="hall-grid hall-grid--parallel">
-                <template v-for="(item, itemIdx) in group.gridItems" :key="itemIdx">
+                <template
+                  v-for="(item, itemIdx) in group.gridItems"
+                  :key="itemIdx"
+                >
                   <!-- Break within parallel sessions -->
-                  <div v-if="item.type === 'break'" 
+                  <div
+                    v-if="item.type === 'break'"
                     class="parallel-break"
-                    :style="{ '--row-start': item.rowStart, '--col-span': HALL_ORDER.length }"
+                    :style="{
+                      '--row-start': item.rowStart,
+                      '--col-span': HALL_ORDER.length,
+                    }"
                   >
                     <div class="parallel-break__content">
-                      <div class="card-time card-time--inline">{{ item.data.time }}</div>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="parallel-break__icon">
-                        <path d="M10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2Z" stroke="currentColor" stroke-width="2"/>
-                        <path d="M10 6V10L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                      <div class="card-time card-time--inline">
+                        {{ item.data.time }}
+                      </div>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        class="parallel-break__icon"
+                      >
+                        <path
+                          d="M10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2Z"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M10 6V10L13 13"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
                       </svg>
-                      <span class="parallel-break__title">{{ item.data.title }}</span>
+                      <span class="parallel-break__title">{{
+                        item.data.title
+                      }}</span>
                     </div>
                   </div>
 
                   <!-- Regular sessions -->
-                  <div v-else-if="item.type === 'session'" 
+                  <div
+                    v-else-if="item.type === 'session'"
                     class="hall-grid__cell"
-                    :style="{ 
-                      '--row-start': item.rowStart, 
-                      '--row-span': item.rowSpan, 
-                      '--col-start': item.hallIndex + 1 
+                    :style="{
+                      '--row-start': item.rowStart,
+                      '--row-span': item.rowSpan,
+                      '--col-start': item.hallIndex + 1,
                     }"
                   >
-                    <article 
-                      class="session-card session-card--compact" 
+                    <article
+                      class="session-card session-card--compact"
                       :class="[
                         `hall-bg--${item.hallIndex}`,
                         `hall-border--${item.hallIndex}`,
                         { 'session-card--long': isLongSession(item.data.time) },
-                        { 'clickable-card': item.data.speaker }
+                        { 'clickable-card': item.data.speaker },
                       ]"
-                      
                       @click="item.data.speaker && openSessionDialog(item.data)"
                     >
                       <div class="card-time">{{ item.data.time }}</div>
-                      <span class="session-card__hall session-card__hall--mobile" :class="`hall-badge--${item.hallIndex}`">
+                      <span
+                        class="session-card__hall session-card__hall--mobile"
+                        :class="`hall-badge--${item.hallIndex}`"
+                      >
                         {{ HALL_ORDER[item.hallIndex] }}
                       </span>
-                      <span v-if="item.data.type === 'workshop'" class="workshop-badge">WORKSHOP</span>
-                      <span v-if="item.data.type === 'keynote'" class="keynote-badge">KEYNOTE</span>
+                      <span
+                        v-if="item.data.type === 'workshop'"
+                        class="workshop-badge"
+                        >WORKSHOP</span
+                      >
+                      <span
+                        v-if="item.data.type === 'keynote'"
+                        class="keynote-badge"
+                        >KEYNOTE</span
+                      >
                       <h3 class="session-card__title">{{ item.data.title }}</h3>
-                      
+
                       <!-- Speakers -->
-                      <div v-if="item.data.speaker && item.data.speaker.length > 0" class="session-card__speakers">
-                        <div 
-                          v-for="speakerId in item.data.speaker" 
+                      <div
+                        v-if="item.data.speaker && item.data.speaker.length > 0"
+                        class="session-card__speakers"
+                      >
+                        <div
+                          v-for="speakerId in item.data.speaker"
                           :key="speakerId"
                           class="session-card__speaker-item"
                         >
                           <template v-if="getSpeakerDetails(speakerId)">
                             <div class="speaker-avatar speaker-avatar--small">
-                              <img 
+                              <img
                                 v-if="getSpeakerDetails(speakerId).image"
-                                :src="`/images/speakers/${getSpeakerDetails(speakerId).image}`" 
+                                :src="`/images/speakers/${getSpeakerDetails(speakerId).image}`"
                                 :alt="getSpeakerDetails(speakerId).name"
                                 class="speaker-avatar__img"
                               />
                               <span v-else class="speaker-avatar__initials">
-                                {{ getInitials(getSpeakerDetails(speakerId).name) }}
+                                {{
+                                  getInitials(getSpeakerDetails(speakerId).name)
+                                }}
                               </span>
                             </div>
                             <div class="session-card__speaker-info">
-                              <p class="session-card__speaker-name">{{ getSpeakerDetails(speakerId).name }}</p>
+                              <p class="session-card__speaker-name">
+                                {{ getSpeakerDetails(speakerId).name }}
+                              </p>
                               <p class="session-card__speaker-role">
-                                {{ getSpeakerDetails(speakerId).agendaRole || getSpeakerDetails(speakerId).role }}
+                                {{
+                                  getSpeakerDetails(speakerId).agendaRole ||
+                                  getSpeakerDetails(speakerId).role
+                                }}
                               </p>
                             </div>
                           </template>
@@ -198,9 +308,13 @@
                   </div>
 
                   <!-- Placeholder -->
-                  <div v-else-if="item.type === 'placeholder'" 
+                  <div
+                    v-else-if="item.type === 'placeholder'"
                     class="hall-grid__cell hall-grid__cell--placeholder"
-                    :style="{ '--row-start': item.rowStart, '--col-start': item.hallIndex + 1 }"
+                    :style="{
+                      '--row-start': item.rowStart,
+                      '--col-start': item.hallIndex + 1,
+                    }"
                   >
                     <div class="session-card session-card--empty">
                       <p class="session-card__empty-text">Coming Soon</p>
@@ -211,15 +325,23 @@
 
               <!-- Reconvene indicator -->
               <div v-if="group.reconvenes" class="reconvene-indicator">
-                <svg class="reconvene-indicator__lines" viewBox="0 0 800 60" preserveAspectRatio="none">
-                  <path v-for="(hall, idx) in group.halls" :key="idx"
+                <svg
+                  class="reconvene-indicator__lines"
+                  viewBox="0 0 800 60"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    v-for="(hall, idx) in group.halls"
+                    :key="idx"
                     :d="getReconvenePath(idx, group.halls.length)"
                     :stroke="getHallColor(idx)"
                     stroke-width="3"
                     fill="none"
                   />
                 </svg>
-                <div class="reconvene-indicator__label">All Halls Reconvene</div>
+                <div class="reconvene-indicator__label">
+                  All Halls Reconvene
+                </div>
               </div>
             </div>
           </div>
@@ -233,7 +355,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 import agendaData from "~/assets/data/agenda.json";
 import speakersData from "~/assets/data/speakers.json";
 import SessionDialog from "~/components/shared/SessionDialog.vue";
@@ -250,8 +372,8 @@ const HALL_ORDER = ["Hall A", "Hall B", "Hall C", "Board Room"];
 
 // Helper to get end time from a time range string (e.g., "09:00 - 10:00")
 function getEndTime(timeRange) {
-  if (!timeRange || typeof timeRange !== 'string') return null;
-  const parts = timeRange.split(' - ');
+  if (!timeRange || typeof timeRange !== "string") return null;
+  const parts = timeRange.split(" - ");
   return parts.length > 1 ? parts[1] : parts[0]; // If no range, assume start is end for comparison
 }
 
@@ -259,27 +381,27 @@ function getEndTime(timeRange) {
 const timelineGroups = computed(() => {
   const groups = [];
   const timeMap = {};
-  
+
   // Group by start time
-  agendaData.forEach(item => {
-    const startTime = item.time.split(' - ')[0];
+  agendaData.forEach((item) => {
+    const startTime = item.time.split(" - ")[0];
     if (!timeMap[startTime]) {
       timeMap[startTime] = [];
     }
     timeMap[startTime].push(item);
   });
-  
+
   const times = Object.keys(timeMap).sort((a, b) => a.localeCompare(b));
-  
+
   let currentParallelGroup = null;
-  let activeMaxEndTime = '00:00';
-  
+  let activeMaxEndTime = "00:00";
+
   const pushCurrentParallel = () => {
     if (currentParallelGroup) {
       finalizeParallelGroup(currentParallelGroup);
       groups.push(currentParallelGroup);
       currentParallelGroup = null;
-      activeMaxEndTime = '00:00';
+      activeMaxEndTime = "00:00";
     }
   };
 
@@ -287,14 +409,14 @@ const timelineGroups = computed(() => {
     const items = timeMap[time];
     const isBreak = items.length === 1 && items[0].hall === null;
     const isMultiple = items.length > 1;
-    
+
     if (isBreak) {
       pushCurrentParallel();
       groups.push({
-        type: 'single',
+        type: "single",
         time: items[0].time,
         isBreak: true,
-        sessions: items
+        sessions: items,
       });
       return;
     }
@@ -303,24 +425,25 @@ const timelineGroups = computed(() => {
     // We stay in parallel if:
     // 1. Multiple sessions start at this time
     // 2. We are already in parallel mode AND this session starts before the previous ones end
-    const shouldBeParallel = isMultiple || (currentParallelGroup && time < activeMaxEndTime);
+    const shouldBeParallel =
+      isMultiple || (currentParallelGroup && time < activeMaxEndTime);
 
     if (shouldBeParallel) {
       if (!currentParallelGroup) {
         currentParallelGroup = {
-          type: 'parallel',
+          type: "parallel",
           halls: HALL_ORDER,
           hallCount: HALL_ORDER.length,
           scheduledItems: [],
-          reconvenes: false
+          reconvenes: false,
         };
       }
-      
-      items.forEach(item => {
+
+      items.forEach((item) => {
         currentParallelGroup.scheduledItems.push({
-          type: 'session',
+          type: "session",
           time: time,
-          data: item
+          data: item,
         });
         const endTime = getEndTime(item.time);
         if (endTime > activeMaxEndTime) activeMaxEndTime = endTime;
@@ -328,27 +451,27 @@ const timelineGroups = computed(() => {
     } else {
       pushCurrentParallel();
       groups.push({
-        type: 'single',
+        type: "single",
         time: items[0].time,
         isBreak: false,
-        sessions: items
+        sessions: items,
       });
       // Track end time even for single sessions to potentially start a parallel block if something overlaps
       const endTime = getEndTime(items[0].time);
       activeMaxEndTime = endTime;
     }
   });
-  
+
   pushCurrentParallel();
-  
+
   return groups;
 });
 
 function finalizeParallelGroup(group) {
   // 1. Identify all row boundary times
   const boundaryTimes = new Set();
-  group.scheduledItems.forEach(item => {
-    if (item.type === 'session') {
+  group.scheduledItems.forEach((item) => {
+    if (item.type === "session") {
       boundaryTimes.add(item.time); // start
       const endTime = getEndTime(item.data.time);
       if (endTime) boundaryTimes.add(endTime);
@@ -356,61 +479,66 @@ function finalizeParallelGroup(group) {
       boundaryTimes.add(item.time);
     }
   });
-  
-  const sortedBoundaries = [...boundaryTimes].sort((a, b) => a.localeCompare(b));
+
+  const sortedBoundaries = [...boundaryTimes].sort((a, b) =>
+    a.localeCompare(b),
+  );
   const rowIntervals = [];
   for (let i = 0; i < sortedBoundaries.length - 1; i++) {
     rowIntervals.push({
       start: sortedBoundaries[i],
-      end: sortedBoundaries[i+1]
+      end: sortedBoundaries[i + 1],
     });
   }
-  
+
   group.rows = rowIntervals;
-  
+
   // 2. Map sessions and breaks to grid positions
   const gridPositions = []; // { hallIndex, rowStart, rowSpan, type, data }
-  const occupied = Array.from({ length: rowIntervals.length }, () => Array(HALL_ORDER.length).fill(false));
-  
-  group.scheduledItems.forEach(item => {
-    if (item.type === 'session') {
+  const occupied = Array.from({ length: rowIntervals.length }, () =>
+    Array(HALL_ORDER.length).fill(false),
+  );
+
+  group.scheduledItems.forEach((item) => {
+    if (item.type === "session") {
       const hallIndex = HALL_ORDER.indexOf(item.data.hall);
       if (hallIndex === -1) return;
-      
-      const rowStart = rowIntervals.findIndex(r => r.start === item.time);
+
+      const rowStart = rowIntervals.findIndex((r) => r.start === item.time);
       const sessionEnd = getEndTime(item.data.time);
-      const rowEndIndex = rowIntervals.findIndex(r => r.end === sessionEnd);
-      const rowSpan = (rowEndIndex === -1 ? 1 : rowEndIndex - rowStart + 1);
-      
+      const rowEndIndex = rowIntervals.findIndex((r) => r.end === sessionEnd);
+      const rowSpan = rowEndIndex === -1 ? 1 : rowEndIndex - rowStart + 1;
+
       gridPositions.push({
         hallIndex,
         rowStart: rowStart + 1, // 1-indexed for CSS grid
         rowSpan,
-        type: 'session',
-        data: item.data
+        type: "session",
+        data: item.data,
       });
-      
+
       for (let r = rowStart; r < rowStart + rowSpan; r++) {
         if (occupied[r]) occupied[r][hallIndex] = true;
       }
     } else {
       // Break spans all halls
-      const rowStart = rowIntervals.findIndex(r => r.start === item.time);
+      const rowStart = rowIntervals.findIndex((r) => r.start === item.time);
       gridPositions.push({
         hallIndex: 1, // Start at 1
         colSpan: HALL_ORDER.length,
         rowStart: rowStart + 1,
         rowSpan: 1,
-        type: 'break',
-        data: item.data
+        type: "break",
+        data: item.data,
       });
-      
+
       if (occupied[rowStart]) {
-        for (let c = 0; c < HALL_ORDER.length; c++) occupied[rowStart][c] = true;
+        for (let c = 0; c < HALL_ORDER.length; c++)
+          occupied[rowStart][c] = true;
       }
     }
   });
-  
+
   // 3. Add placeholders
   for (let r = 0; r < rowIntervals.length; r++) {
     for (let c = 0; c < HALL_ORDER.length; c++) {
@@ -419,13 +547,13 @@ function finalizeParallelGroup(group) {
           hallIndex: c,
           rowStart: r + 1,
           rowSpan: 1,
-          type: 'placeholder'
+          type: "placeholder",
         });
         occupied[r][c] = true;
       }
     }
   }
-  
+
   group.gridItems = gridPositions;
   group.reconvenes = true;
 }
@@ -433,15 +561,15 @@ function finalizeParallelGroup(group) {
 // Helper functions
 function getSpeakerDetails(id) {
   if (!id) return null;
-  return speakersData.find(s => s.id === id) || null;
+  return speakersData.find((s) => s.id === id) || null;
 }
 
 function getInitials(name) {
-  if (!name) return '';
+  if (!name) return "";
   return name
-    .split(' ')
-    .map(n => n[0])
-    .join('')
+    .split(" ")
+    .map((n) => n[0])
+    .join("")
     .toUpperCase()
     .slice(0, 2);
 }
@@ -452,8 +580,8 @@ function getHallIndex(hallName) {
 }
 
 function getHallColor(index) {
-  const colors = ['#3b82f6', '#10b981', '#f59e0b', '#a855f7'];
-  return colors[index] || '#64748b';
+  const colors = ["#3b82f6", "#10b981", "#f59e0b", "#a855f7"];
+  return colors[index] || "#64748b";
 }
 
 function getParallelPath(index, total) {
@@ -462,7 +590,7 @@ function getParallelPath(index, total) {
   const width = 800;
   const spacing = width / (total + 1);
   const x = spacing * (index + 1);
-  
+
   return `M 400 ${startY} Q ${(400 + x) / 2} ${(startY + endY) / 2} ${x} ${endY}`;
 }
 
@@ -472,19 +600,17 @@ function getReconvenePath(index, total) {
   const width = 800;
   const spacing = width / (total + 1);
   const x = spacing * (index + 1);
-  
+
   return `M ${x} ${startY} Q ${(400 + x) / 2} ${(startY + endY) / 2} 400 ${endY}`;
 }
 
 function getDuration(time) {
-  if (!time || !time.includes(' - ')) return 0;
-  const [start, end] = time.split(' - ');
-  const [startH, startM] = start.split(':').map(Number);
-  const [endH, endM] = end.split(':').map(Number);
-  return (endH * 60 + endM) - (startH * 60 + startM);
+  if (!time || !time.includes(" - ")) return 0;
+  const [start, end] = time.split(" - ");
+  const [startH, startM] = start.split(":").map(Number);
+  const [endH, endM] = end.split(":").map(Number);
+  return endH * 60 + endM - (startH * 60 + startM);
 }
-
-
 
 function isLongSession(time) {
   return getDuration(time) > 30;
@@ -496,7 +622,7 @@ definePageMeta({
 
 useHead({
   title: "Agenda - CLOUDxAI Conference 2026 Bengaluru",
-// ... existing head config ...
+  // ... existing head config ...
   titleTemplate: "Agenda - CLOUDxAI Conference 2026 Bengaluru",
   description:
     "CloudxAI 2026 Bengaluru: Full agenda – keynotes, sessions, and networking. March 14, 2026.",
@@ -532,7 +658,10 @@ useHead({
     { name: "googlebot", content: "index, follow" },
     { name: "bingbot", content: "index, follow" },
     { name: "yandexbot", content: "index, follow" },
-    { property: "og:title", content: "Agenda - CLOUDxAI Conference 2026 Bengaluru" },
+    {
+      property: "og:title",
+      content: "Agenda - CLOUDxAI Conference 2026 Bengaluru",
+    },
     {
       property: "og:description",
       content:
@@ -552,9 +681,15 @@ useHead({
     { property: "og:url", content: "https://cloudconf.ai/" },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: "en_US" },
-    { property: "og:site_name", content: "Agenda - CLOUDxAI Conference 2026 Bengaluru" },
+    {
+      property: "og:site_name",
+      content: "Agenda - CLOUDxAI Conference 2026 Bengaluru",
+    },
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: "Agenda - CLOUDxAI Conference 2026 Bengaluru" },
+    {
+      name: "twitter:title",
+      content: "Agenda - CLOUDxAI Conference 2026 Bengaluru",
+    },
     {
       name: "twitter:description",
       content:
@@ -662,13 +797,17 @@ $timeline-color: #14b8a6;
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 11px;
     top: 24px;
     bottom: -2rem;
     width: 3px;
-    background: linear-gradient(to bottom, $timeline-color 0%, rgba($timeline-color, 0.3) 100%);
+    background: linear-gradient(
+      to bottom,
+      $timeline-color 0%,
+      rgba($timeline-color, 0.3) 100%
+    );
   }
 
   // &:last-child::before {
@@ -763,15 +902,35 @@ $timeline-color: #14b8a6;
     border-width: 2px;
     border-style: solid;
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
-    
+
     .card-time {
       font-weight: 700;
     }
 
-    &.hall-border--0 { border-color: #3b82f6; .card-time { color: #3b82f6; } }
-    &.hall-border--1 { border-color: #10b981; .card-time { color: #10b981; } }
-    &.hall-border--2 { border-color: #f59e0b; .card-time { color: #f59e0b; } }
-    &.hall-border--3 { border-color: #a855f7; .card-time { color: #a855f7; } }
+    &.hall-border--0 {
+      border-color: #3b82f6;
+      .card-time {
+        color: #3b82f6;
+      }
+    }
+    &.hall-border--1 {
+      border-color: #10b981;
+      .card-time {
+        color: #10b981;
+      }
+    }
+    &.hall-border--2 {
+      border-color: #f59e0b;
+      .card-time {
+        color: #f59e0b;
+      }
+    }
+    &.hall-border--3 {
+      border-color: #a855f7;
+      .card-time {
+        color: #a855f7;
+      }
+    }
   }
 }
 
@@ -826,21 +985,21 @@ $timeline-color: #14b8a6;
   color: #6b21a8;
 }
 
-  .hall-bg--0{
-    background: rgba(59, 130, 246, 0.05); // Light blue for Hall A
-  }
-  
-  .hall-bg--1 {
-    background: rgba(16, 185, 129, 0.05); // Light green for Hall B
-  }
-  
-  .hall-bg--2 {
-    background: rgba(245, 158, 11, 0.05); // Light orange for Hall C
-  }
-  
-.hall-bg--3{
-    background: rgba(168, 85, 247, 0.05); // Light purple for Board Room
-  }
+.hall-bg--0 {
+  background: rgba(59, 130, 246, 0.05); // Light blue for Hall A
+}
+
+.hall-bg--1 {
+  background: rgba(16, 185, 129, 0.05); // Light green for Hall B
+}
+
+.hall-bg--2 {
+  background: rgba(245, 158, 11, 0.05); // Light orange for Hall C
+}
+
+.hall-bg--3 {
+  background: rgba(168, 85, 247, 0.05); // Light purple for Board Room
+}
 
 /* Workshop Badge */
 .workshop-badge {
@@ -863,22 +1022,36 @@ $timeline-color: #14b8a6;
   border: 1px solid rgba(20, 184, 166, 0.25);
   padding: 0.75rem 1.25rem;
 
-  .card-time { margin-bottom: 0.25rem; }
-  .session-card__hall { margin-bottom: 0.25rem; }
-  .session-card__title { font-size: 1rem; margin-bottom: 0.375rem; }
-  .session-card__speakers { margin-bottom: 0; }
-  .session-card__speaker-item { gap: 0.5rem; }
-  .speaker-avatar { width: 36px; height: 36px; }
+  .card-time {
+    margin-bottom: 0.25rem;
+  }
+  .session-card__hall {
+    margin-bottom: 0.25rem;
+  }
+  .session-card__title {
+    font-size: 1rem;
+    margin-bottom: 0.375rem;
+  }
+  .session-card__speakers {
+    margin-bottom: 0;
+  }
+  .session-card__speaker-item {
+    gap: 0.5rem;
+  }
+  .speaker-avatar {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 /* Opening Badge */
 .opening-badge {
   display: inline-block;
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  padding: 0.3rem 0.75rem;
+  padding: 0.375rem 0.875rem;
   border-radius: 4px;
   background: rgba(20, 184, 166, 0.12);
   color: #0f766e;
@@ -888,7 +1061,11 @@ $timeline-color: #14b8a6;
 
 /* Keynote Card */
 .session-card--keynote {
-  background: linear-gradient(135deg, rgba(234, 179, 8, 0.06) 0%, rgba(245, 158, 11, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(234, 179, 8, 0.06) 0%,
+    rgba(245, 158, 11, 0.1) 100%
+  );
   border: 1.5px solid rgba(234, 179, 8, 0.3);
 }
 
@@ -997,7 +1174,6 @@ $timeline-color: #14b8a6;
 
 .session-card--compact .session-card__speaker-role {
   font-size: 0.75rem;
-  
 }
 
 .session-card__desc {
@@ -1171,11 +1347,11 @@ $timeline-color: #14b8a6;
     flex: 1;
     display: flex;
     flex-direction: column;
-    
+
     &--compact {
       padding: 1rem;
     }
-    
+
     &--empty {
       min-height: 150px;
     }
@@ -1244,7 +1420,7 @@ $timeline-color: #14b8a6;
     background: transparent !important;
     padding: 0;
     border-radius: 0;
-    
+
     &:not(:last-child) {
       margin-bottom: 0;
     }
@@ -1264,7 +1440,7 @@ $timeline-color: #14b8a6;
   .session-card {
     padding: 1.25rem;
   }
-  
+
   .session-card--compact {
     margin-bottom: 1rem;
   }
