@@ -46,11 +46,11 @@
                     >
                       Register
                     </v-btn> -->
-                    <div
+                    <!-- <div
                       style=""
                       ref="konfhubWidget"
                       @click="trackRedditClick"
-                    ></div>
+                    ></div> -->
                     <!-- <v-btn
                       color="white"
                       variant="outlined"

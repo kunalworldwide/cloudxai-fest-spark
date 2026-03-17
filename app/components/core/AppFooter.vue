@@ -2,7 +2,7 @@
   <v-footer class="footer-with-bg py-12">
     <v-container fluid class="footer-container">
       <!-- Main Footer Content -->
-      <v-row class="mb-8 px-3" v-if="route.path !== '/register'">
+      <!-- <v-row class="mb-8 px-3" v-if="route.path !== '/register'">
         <v-col cols="12" md="12" class=" cta-btn ga-4 " >
           <span class="" style="color: #fff; font-size: 20px;">
             <span style="font-weight: 600; font-size: 28px;">Secure your spot now at the CLOUDxAI conference.</span> <br> Be a part of the
@@ -14,8 +14,8 @@
             >Register Now</v-btn
           >
         </v-col>
-      </v-row>
-      <v-row class="text-white justify-space-between ">
+      </v-row> -->
+      <v-row class="text-white justify-space-between">
         <!-- Contact Info Section -->
         <v-col cols="12" md="12" lg="12">
           
@@ -246,9 +246,9 @@ const route = useRoute()
   }
 }
 
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .footer-with-bg {
     padding-top: 180px !important;
   }
-}
+} */
 </style>
