@@ -31,9 +31,10 @@
             color="error"
             append-icon="mdi-youtube"
             style="width: 180px"
-            class="mb-2"
+            class="my-3"
             aria-label="YouTube"
             :href="session.youtubeLink"
+            rounded="xl"
             target="_blank"
           >
             Watch Session
