@@ -7,7 +7,7 @@
     "description": "Check-in, networking, and light refreshments.",
     "type": "break"
   },
-  
+
   {
     "time": "09:30 - 09:40",
     "title": "Opening Address",
@@ -23,7 +23,8 @@
     "speaker": ["laurent-gil"],
     "hall": "Hall A",
     "description": "",
-    "type": "keynote"
+    "type": "keynote",
+    "youtubeLink": "https://youtu.be/e4pQy46zy5o?si=hm26a9R_MwCA4BDZ"
   },
   {
     "time": "10:00 - 10:30",
@@ -31,7 +32,8 @@
     "speaker": ["hitesh-choudhary"],
     "description": "Personalised AI track talks about making life easy with AI-powered software. AI at scale covers implementing AI for edtech SaaS — enabling low-cost AI access and use-case-based implementation so individual teachers can teach teams of 1,000 people.",
     "hall": "Hall A",
-    "type": "keynote"
+    "type": "keynote",
+    "youtubeLink": "https://youtu.be/AP9ZRdMjtVg?si=XE-h1FGEF1ttzi5F"
   },
   {
     "time": "10:30 - 11:00",
@@ -39,7 +41,8 @@
     "speaker": ["abhishek-veeramalla"],
     "hall": "Hall A",
     "description": "Modern IT systems generate massive volumes of operational data across logs, metrics, events, and traces. Traditional monitoring approaches struggle to keep up with the scale and complexity of cloud-native environments. AIOps (Artificial Intelligence for IT Operations) applies machine learning and analytics to operational data to detect anomalies, correlate events, and predict issues before they impact users. Some AIOps systems can predict infrastructure failures 20-30 days in advance with up to 90% accuracy, enabling organizations to move from reactive troubleshooting to proactive operations. This session introduces the fundamentals of AIOps, explores the current state of adoption, and discusses why it is becoming essential for modern IT operations.",
-    "type": "keynote"
+    "type": "keynote",
+    "youtubeLink": "https://youtu.be/n0QxeKj02ZE"
   },
   {
     "time": "11:00 - 11:10",
@@ -62,7 +65,8 @@
     "speaker": ["sushant-gulati"],
     "hall": "Hall A",
     "description": "",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/n0lUEGcIUcY"
   },
   {
     "time": "11:30 - 12:00",
@@ -70,7 +74,8 @@
     "description": "Modern cloud-native applications running on Kubernetes frequently encounter runtime failures such as OOMKilled pods, CrashLoopBackOff errors, and resource exhaustion — often requiring immediate human intervention at any hour. Traditional on-call workflows demand that engineers manually investigate logs, identify root causes, and apply fixes, consuming valuable time and leading to alert fatigue.\n\nThis session demonstrates how to build an autonomous remediation agent using Amazon Bedrock AgentCore and the Strands Agents framework, powered by Claude, that eliminates this manual toil.\n\nThe agent integrates directly with Prometheus and Alertmanager to receive real-time Kubernetes alerts. Upon receiving an alert, it autonomously investigates the affected workload — listing pods, reading logs, describing pod state, and analyzing events — before taking targeted remediation actions such as doubling memory limits and triggering rollout restarts. When the root cause is beyond safe automated intervention, the agent escalates by creating a JIRA ticket and sending a Slack notification.\n\nKey outcome: A DevOps task that takes a human 15-30 minutes is handled autonomously in under 4 minutes, 24/7, with zero idle infrastructure cost.",
     "speaker": ["ranjini-ganeshan", "chandika-s"],
     "hall": "Hall B",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/V2TlOpOHXDY"
   },
   {
     "time": "11:30 - 12:00",
@@ -78,7 +83,8 @@
     "description":"The era of static, chat-based AI is evolving into the age of \"Agentic AI\"—autonomous systems that actively reason, execute multi-step workflows, and manipulate external tools to achieve complex goals. However, moving these agents from a local Python notebook to a scalable, secure enterprise environment presents unique infrastructure challenges. Agents are often bursty, highly state-dependent, and require long-running execution times that defy traditional request-response paradigms.\n\nIn this session, we will deep-dive into why serverless containers have emerged as a premier substrate for hosting these autonomous workloads. Moving beyond basic deployment tutorials, we will explore the architectural patterns necessary to build robust, production-ready agentic systems. Attendees will learn how to leverage unique concurrency models to handle the \"waiting patterns\" of agents—such as awaiting external tool outputs or human-in-the-loop feedback—without incurring massive idle costs. Finally, we will address the critical security boundaries required when giving AI agents the keys to your enterprise data and APIs.",
     "speaker": ["shuva-jyoti-kar"],
     "hall": "Hall C",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/DyZMpa5cAQA"
   },
   {
     "time": "11:30 - 13:00",
@@ -93,15 +99,17 @@
     "title": "Using AI to Monitor AI: FinOps For The Agents Era.",
     "speaker": ["ravi-shankar"],
     "hall": "Hall B",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/uh5gcrgIiOw"
   },
   {
     "time": "12:00 - 12:30",
     "title": "Messaging at Scale: How We Built a Secure, Serverless Notification Platform on AWS. ",
-        "description":"Designing a scalable, multi-channel notification platform that supports millions of messages - across Email, SMS, Slack, MS Teams, and more - equires more than just “going serverless.” In this session, we’ll share how we architected and productionized a serverless-first notification system on AWS, optimized for speed, security, tenant isolation, and delivery guarantees.\n\nOur architecture uses Amazon SES, SQS, Lambda, EventBridge, DynamoDB, and AWS Fargate - combining the elasticity of Lambda with the sustained compute capacity of Fargate for handling high-throughput or long-running delivery workloads. We’ll dive into how we built priority-aware queuing to differentiate high-priority vs. low-priority messages, enforced fine-grained access control across tenants, and implemented SLA tracking to measure success rates and delivery latencies across channels.\n\nWhether you’re scaling a notification engine, building internal alerting systems, or serving multi-tenant SaaS needs, this talk will deliver real-world architectural patterns, AWS service integrations, and lessons learned from operating this system at scale - along with the trade-offs between serverless and container-based compute in messaging scenarios.",
+        "description":"Designing a scalable, multi-channel notification platform that supports millions of messages - across Email, SMS, Slack, MS Teams, and more - equires more than just \"going serverless.\" In this session, we'll share how we architected and productionized a serverless-first notification system on AWS, optimized for speed, security, tenant isolation, and delivery guarantees.\n\nOur architecture uses Amazon SES, SQS, Lambda, EventBridge, DynamoDB, and AWS Fargate - combining the elasticity of Lambda with the sustained compute capacity of Fargate for handling high-throughput or long-running delivery workloads. We'll dive into how we built priority-aware queuing to differentiate high-priority vs. low-priority messages, enforced fine-grained access control across tenants, and implemented SLA tracking to measure success rates and delivery latencies across channels.\n\nWhether you're scaling a notification engine, building internal alerting systems, or serving multi-tenant SaaS needs, this talk will deliver real-world architectural patterns, AWS service integrations, and lessons learned from operating this system at scale - along with the trade-offs between serverless and container-based compute in messaging scenarios.",
     "speaker": ["naresh-waswani"],
     "hall": "Hall C",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/i2y8sxSGkzw"
   },
   {
     "time": "12:00 - 13:00",
@@ -109,23 +117,26 @@
     "speaker": ["kaushik-deb", "pramod-singh","jose-jayanandaraj","hima-bindu","zilvinas-urbonas"],
     "hall": "Hall A",
     "description": "",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/7zWFOwqSRhk"
   },
   {
     "time": "12:30 - 13:00",
     "title": "Will Kubernetes Vanish Because of AI?",
-    "description":"Are we building the future of DevOps, or just writing the final documentation for the AI that will eventually replace our kubectl commands with a (single?) prompt.\nCould an AI-driven 'brain' bypass the scheduler entirely to optimize bin-packing at a level no human-tuned system could ever reach?\nWhat’s the best format to build and deploy AI artefacts on Kubernetes, especially for an ecosystem so invested in containers?\nCome to this talk to learn about how AI is impacting various areas of Kubernetes and Cloud Native.",
+    "description":"Are we building the future of DevOps, or just writing the final documentation for the AI that will eventually replace our kubectl commands with a (single?) prompt.\nCould an AI-driven 'brain' bypass the scheduler entirely to optimize bin-packing at a level no human-tuned system could ever reach?\nWhat's the best format to build and deploy AI artefacts on Kubernetes, especially for an ecosystem so invested in containers?\nCome to this talk to learn about how AI is impacting various areas of Kubernetes and Cloud Native.",
     "speaker": ["ram-iyengar"],
     "hall": "Hall B",
-    "type": "session"
-  },  
+    "type": "session",
+    "youtubeLink": "https://youtu.be/Toq0hIodUlI"
+  },
   {
     "time": "12:30 - 13:00",
     "title": "From Idle to Invisible: Eliminating GPU Waste with Kubernetes-Native Scale-to-Zero.",
     "description":"GPUs are among the most expensive resources in Kubernetes clusters, and many developers forget to shut it down after use or they remain idle when no traffic in development environments. One GPU left on by mistake can drain $6000 a month. We wanted to automatically shut down GPUs when not in use. While tools like Knative and KEDA support scale-to-zero, we found their tradeoffs unacceptable for our use-case. Knative requires adopting a different application model, and KEDA's HTTP-Addon stay in the request path, increasing operational coupling and risk. In contrast, our approach required no infrastructure rewrites—just a single CRD—and completely removes itself from the traffic path once workloads are active.In this talk, we share how we reduced GPU waste by designing an out-of-path, Kubernetes-native scale-to-zero system called KubeElasti. KubeElasti is now open-source and can be used to scale any application to 0 when there is no traffic. We break down the architectural decisions behind it, compare them explicitly with existing scale-to-zero models, and how you can use KubeElasti in your own Kubernetes clusters to scale applications to 0 specially in dev environments. ",
     "speaker": ["abhishek-choudhary","shubham-rai"],
     "hall": "Hall C",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/Ua7QV0Fw5jw"
   },
   {
     "time": "13:00 - 14:00",
@@ -139,16 +150,18 @@
     "title": "The Illusion of Safety with Prompt-Based Guardrails in LLMs.",
     "speaker": ["rahul-jadhav"],
     "hall": "Hall A",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/Vlq_ZKlCrTU"
   },
-  
+
   {
     "time": "14:00 - 14:30",
     "title": "Developing xApps for Cloud-based Cellular Networks.",
     "description":"The modern cellular communication networks are disaggregated, microservice-based and promote innovation, vendor-neutrality and interoperability. The growing demand encourages the operators to ensure QoS, intelligence, programmability in real time. xApps, lightweight containerized applications, running at the Radio Intelligent Controller are primarily used by the developers to influence handovers, traffic steering, real-time traffic adjustment and radio resource allocation.\nThe talk introduces xApps : zero to hero, an open-source toolkit to build and deploy these xApps using community-driven frameworks and intelligence.\n\nThe key takeaways-\n1) It highlights how open interfaces and modular software are disrupting a traditionally closed domain.\n2) How OSS developers can contribute to 5G infrastructure and beyond through xApp innovation.\n3)It connects the networking, cloud-native, and AI/ML communities in a single open RAN use case.",
     "speaker": ["arpit-tripathi"],
     "hall": "Hall C",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/wpgE9dLsk78"
   },
   {
     "time": "14:00 - 15:30",
@@ -163,7 +176,8 @@
     "description":"What if your AI Agents never failed?\n\nAgents are everywhere, but they fail - a lot.\nAPI Timeouts,\nMemory issues,\nLLM connectivity issues\n\nBut what if you build AI agents that are durable, reliable, resilient and can recover from failures?\n\nIn this session Shubham Londhe helps you for the DevOps for your AI Agents.",
     "speaker": ["shubham-londhe"],
     "hall": "Hall B",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/Kr8xnAdW-cA"
   },
   {
     "time": "14:30 - 14:50",
@@ -171,7 +185,8 @@
     "description":"Everyone is talking about context engineering for code. Nobody's talking about it for infrastructure, and that's why most AIOps tools still can't debug your specific environment.",
     "speaker": ["shiv-pratap-singh"],
     "hall": "Hall B",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/YWe3aOt38X4"
   },
   {
     "time": "14:30 - 15:00",
@@ -179,7 +194,8 @@
     "description":"Procurement in the semiconductor industry faces unique challenges. These include complex supply chains, unpredictable markets, and high operating costs. Procurement teams often rely on various tools that were created separately. This situation leads to silos that limit visibility and slow down decision making. As a result, it becomes hard to gather data, track spending, and negotiate effectively with suppliers. Cost360 Assistant is important because it can bring these fragmented processes together. This allows procurement teams to move from reactive to proactive decision making. By centralizing insights and automating workflows, it turns cost management into a strategic advantage, rather than a manual and time-consuming task. It enables Micron to manage billions in spending more efficiently and transparently. Users can access data and clear summaries that aid in making informed choices. The solution features Agentic AI for independent reasoning and workflow management. It identifies savings opportunities and simplifies actions. Built on Snowflake Cortex, it uses three main services: Cortex Analyst for interpreting natural language queries and structured analysis, Cortex Agents for carrying out multi-step tasks, and Cortex Search Service for swiftly retrieving both structured and unstructured data. This integrated approach removes silos, speeds up analysis, and gives procurement teams valuable insight into better supplier negotiations. The paper examines how Cost360 Assistant changes procurement practices, increasing agility, improving resource use, and enabling sustainable savings in a competitive market.",
     "speaker": ["utkarsh-tripathi"],
     "hall": "Hall C",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/0gOL6jN4E2U"
   },
   {
    "time": "14:30 - 15:00",
@@ -187,23 +203,26 @@
     "description": "AI adoption is exploding, but the challenge remains the same: how do you run inference at scale without managing GPUs or burning through budget? This session dives deep into serverless inference—a modern approach that lets teams deploy and scale AI workloads on-demand without provisioning or maintaining infrastructure. You will learn practical deployment patterns for LLMs, text-to-image models, and custom fine-tuned models, along with real-world examples and performance benchmarks. By the end of this talk, attendees will understand how to run production-grade AI workloads on DigitalOcean Gradient AI Platform with minimal operational overhead and significantly lower cost.",
     "speaker": ["akshit-pratiush"],
     "hall": "Hall A",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/nkAjHjx_7e0"
   },
-  
+
   {
     "time": "14:50 - 15:10",
     "title": "Agentic SDLC for the AI Coding Era.",
     "description":"AI coding agents are no longer assistants — they're autonomous contributors. Cursor, Claude Code, and GitHub Copilot now generate the majority of code in active development environments, with multi-agent frameworks like LangChain and AutoGPT orchestrating everything from architecture decisions to autonomous CI/CD. The attack surface has fundamentally changed: it's no longer just repositories and pipelines, but prompts, context sources, and agent reasoning chains.",
     "speaker": ["yogesh-trivedi"],
     "hall": "Hall B",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/YnCZFy-fqRY"
   },
   {
     "time": "15:10 - 15:30",
     "title": "From SaaS Chaos to BYOC Freedom.",
     "speaker": ["satish-dange"],
     "hall": "Hall B",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/CS3gnv-KuQA"
   },
   {
     "time": "15:00 - 15:30",
@@ -211,7 +230,8 @@
     "description":"Your team deploys an agent for operations. It needs kubectl, cloud access, observability tools. You create a service account with broad permissions.\n\nNow the agent has more access than the engineers.\n\nService accounts were designed for predictable services. Agents decide actions dynamically - a fundamental mismatch.\n\nThree security gaps:\n- Identity Attribution: Audit logs show the service account, not which user triggered the agent or why.\n- Permission Scope: Agents need broad capability but should execute with task-specific permissions. Static RBAC can't express this.\n- Tool Chain Opacity: Agents invoke MCP servers dynamically. Each needs different permissions; Kubernetes sees one identity.\n\nYour agents have the keys. This talk shows you the patterns to track who authorized them, what they decided, and why - before it's too late.",
     "speaker": ["atulpriya-sharma"],
     "hall": "Hall C",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/6uPiNumBlNA"
   },
   {
     "time": "15:00 - 15:30",
@@ -219,7 +239,8 @@
     "description":"AI coding tools are the fastest-growing line item in engineering budgets - and nobody's tracking them properly. At CAST AI, our Anthropic spend doubled in months as we scaled AI-assisted development across the org. When 50 engineers joined an internal hackathon using LLM-powered coding workflows, the math was brutal: 10 days of usage would have cost a full month of H100 compute - just on input tokens. We switched to open-source models on our own serverless GPU infrastructure and served the same workload at a fraction of the cost. This session covers the real numbers, the architecture, and why every company scaling AI-assisted development will face the same choice: keep renting AI, or start owning it.",
     "speaker": ["zilvinas-urbonas"],
     "hall": "Hall A",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/rjCBdfJiWCY"
   },
   {
     "time": "15:30 - 16:00",
@@ -233,7 +254,8 @@
     "title": "Panel discussion: Cloud is starting to think.",
     "speaker": ["shivay-lamba", "kunal-kushwaha", "ram-iyengar", "arsh-goyal"],
     "hall": "Hall A",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/5vYYuF31IdQ"
   },
   {
     "time": "16:00 - 16:30",
@@ -241,7 +263,8 @@
     "description":"The developer landscape has fundamentally shifted. In 2025, 85% of developers started using AI tools daily—but the real transformation wasn't about writing code faster. It was about thinking bigger. This talk explores how AI coding agents are creating 'augmented developers' who architect systems while agents handle implementation, debug complex issues in minutes instead of hours, and ship features that once took weeks. We'll look at the practical workflows, the mindset shifts required, and why the most valuable developers in 2026 aren't those who type the fastest, but those who direct AI most effectively.I've been experimenting with combining AI coding agents and containers, and the results have been eye-opening. I'll show you how I set up my development environment—AI agents running locally, Docker keeping everything reproducible, and MCP servers connecting it all together. It's not perfect, and I'll be honest about the rough edges. But if you're curious about what a modern augmented developer workflow actually looks like, this should give you plenty of ideas to try.Whether you're skeptical or all-in, this session will reshape how you think about your role as a developer.",
     "speaker": ["ajeet-singh-raina"],
     "hall": "Hall B",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/PIyNukEimR8"
   },
   {
     "time": "16:00 - 16:30",
@@ -249,7 +272,8 @@
     "description": "Modern backend development has become unnecessarily complex. Teams juggle Express for APIs, BullMQ for queues, separate frameworks for cron jobs, specialized tools for AI agents, and complex infrastructure for observability—all requiring constant synchronization and maintenance overhead.\n\nThis talk introduces a paradigm shift: the Step primitive—a single abstraction that unifies every backend pattern. Just as React revolutionized frontend development with components, Motia redefines backend engineering by treating APIs, background jobs, event handlers, workflows, and AI agents as instances of the same primitive concept.\n\nAttendees will learn:\n- Why backend fragmentation is killing developer productivity and increasing operational complexity\n- The core primitive concept: How one abstraction (Trigger → Subscribe → Handler → Emit) powers everything from REST endpoints to multi-step AI workflows\n- Real-world implementation: Building polyglot backends where TypeScript, Python, and JavaScript coexist seamlessly\n- Production patterns: Atomic deployments, automatic retry mechanisms, built-in observability without configuration\n- The evolution path: From APIs → Background Jobs → Workflows → AI Agents, all in one unified system\n\nThrough live demonstrations using Motia's visual Workbench, you'll see how a single framework eliminates the need for managing separate message queues, workflow engines, and observability stacks. Walk away with a blueprint for simplifying your DevOps workflows, reducing infrastructure complexity, and shipping production-ready backends faster.\n\nPerfect for platform engineers, DevOps practitioners, and architects tired of stitching together fragmented backend tooling.",
     "speaker": ["rohit-ghumare"],
     "hall": "Hall C",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/QzPZ-cYl850"
   },
   {
     "time": "16:00 - 17:30",
@@ -259,14 +283,15 @@
     "hall": "Board Room",
     "type": "workshop"
   },
-  
+
   {
     "time": "16:30 - 17:00",
     "title": "High Availability, Zero Drama: Building Resilient Storage in the Cloud. ",
-    "description":"Modern cloud native platforms demand storage systems that scale effortlessly across regions, survive failures gracefully and deliver consistent performance under unpredictable workloads. This talk explores how we have designed our managed storage platform to operate reliably across multiple DCs and regions without adding complexity for developers/end users.\nWe’ll walk through the architectural principles that enabled this evolution. This includes a declarative control plane, automated capacity management, region-aware placement and distributed failure-domain isolation. By separating data, metadata, and orchestration responsibilities, and layering in self-healing workflows, we built a storage system that remains stable even during infrastructure events or sudden traffic bursts.\nThe session will also talk about how we use observability-driven scaling, automated lifecycle operations, and multi-AZ design patterns to achieve high availability while optimizing for performance and cost (of course!).\nAttendees will leave with practical insights into applying cloud-native patterns to traditionally stateful systems and building storage platforms that are resilient, scalable, and operationally efficient.",
+    "description":"Modern cloud native platforms demand storage systems that scale effortlessly across regions, survive failures gracefully and deliver consistent performance under unpredictable workloads. This talk explores how we have designed our managed storage platform to operate reliably across multiple DCs and regions without adding complexity for developers/end users.\nWe'll walk through the architectural principles that enabled this evolution. This includes a declarative control plane, automated capacity management, region-aware placement and distributed failure-domain isolation. By separating data, metadata, and orchestration responsibilities, and layering in self-healing workflows, we built a storage system that remains stable even during infrastructure events or sudden traffic bursts.\nThe session will also talk about how we use observability-driven scaling, automated lifecycle operations, and multi-AZ design patterns to achieve high availability while optimizing for performance and cost (of course!).\nAttendees will leave with practical insights into applying cloud-native patterns to traditionally stateful systems and building storage platforms that are resilient, scalable, and operationally efficient.",
     "speaker": ["aparna-prabhu"],
     "hall": "Hall B",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/a6HeRoOorQU"
   },
   {
     "time": "16:30 - 17:00",
@@ -274,7 +299,8 @@
     "description":"Machine learning platforms aim to streamline the workflow for ML practitioners, allowing them to focus on developing their models while the platform handles repetitive tasks like packaging code, dependencies and configurations. Traditional methods using Dockerfiles require ML engineers to navigate complex Linux processes and maintain multiple Dockerfiles for different projects, which can be time-consuming and prone to errors. Additionally, security mandates for regular patching and updates adding further to the complexity.\n\nJoin this talk to explore how Cloud Native Buildpacks can simplify and secure MLOps deployments. By automating the packaging of ML projects, including custom libraries and hardware specifications, Buildpacks enhance flexibility, maintainability and security. This approach reduces the operational burden on both developers and security teams, ensuring a more efficient and scalable MLOps deployment proces.",
     "speaker": ["suman-chakraborty"],
     "hall": "Hall C",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/FvyxcVe9OQE"
   },
 
    {
@@ -283,7 +309,8 @@
     "description": "When your mission is to find a threat before an attacker can use it, your infrastructure becomes your greatest asset—or your biggest bottleneck. CloudSEK's platform perpetually crawls billions of pages across the surface and dark web to detect leaks and exposures in close to real-time. This requires solving a brutal engineering puzzle: orchestrating massively parallel crawlers across AWS and GCP, using Cast AI to autoscale Kubernetes clusters against unpredictable load spikes, and managing specialized detection services with vastly different failure modes. Varun KM breaks down CloudSEK's architecture, the multi-cloud trade-offs made for speed and resilience, and the lessons learned from operating where infrastructure lag can mean a client breach.",
     "speaker": ["varun-km"],
     "hall": "Hall B",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/Dg25I9wgL70"
   },
   {
     "time": "17:00 - 17:30",
@@ -291,7 +318,8 @@
     "description":"Everyone's chasing the next certification, the latest AI course, another CNCF project to master. Yet the engineers who consistently perform at 100x aren't defined by their tech stack. They've upgraded something deeper. After 25 years in engineering, Savinder Puri has observed what separates high performers: Clarity, Focus, Energy, Stillness, and Responsibility. The 'Inner Stack' that determines how you show up under pressure, make decisions, and lead.\nThis talk reframes engineering excellence. Reactive engineers firefight. Aware engineers architect. Attendees learn why technical skill alone plateaus, and practical techniques to operate from clarity when triaging incidents, navigating conflict, or making architectural bets. As AI handles routine work, what remains is judgment and presence. The next 100x leap isn't external. It's internal.",
     "speaker": ["savinder-puri"],
     "hall": "Hall C",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/A9SEmK_t4qY"
   },
   {
     "time": "17:00 - 17:30",
@@ -299,7 +327,8 @@
     "description": "As cloud systems grow, so does the cloud bill - sometimes faster than the system itself. If efficiency isn't built into the architecture with time, costs can quietly spiral out of control. At that point, cost optimization stops being a finance problem and becomes an engineering one. A huge and difficult one! In this talk, I'll talk about practical and battle-tested ways to build cost-efficient infrastructure at scale. From spotting common cost leaks, to improving cost visibility using tools like Cast AI, to applying strategies such as right-sizing resources and smart autoscaling. The goal is simple: help engineers design systems that stay reliable, scale smoothly, and don't give the finance team a headache!",
     "speaker": ["shishir-khandelwal"],
     "hall": "Hall A",
-    "type": "session"
+    "type": "session",
+    "youtubeLink": "https://youtu.be/dRvaEbw_MkI"
   },
   {
     "time": "17:30 - 17:40",
